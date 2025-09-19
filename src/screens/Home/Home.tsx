@@ -1,3 +1,4 @@
+import { ScrollReveal } from "@/components";
 import {
   CallToActionSection,
   FeaturesSection,
@@ -12,11 +13,21 @@ export const Home = (): JSX.Element => {
   return (
     <div className="bg-black w-full min-h-screen">
       <div className="bg-black w-full">
-        <FeaturesSection />
-        <ProductShowcaseSection />
-        <TestimonialsSection />
-        <ProductDetailsSection />
-        <CallToActionSection />
+        <ScrollReveal>
+          <FeaturesSection />
+        </ScrollReveal>
+        <ScrollReveal>
+          <ProductShowcaseSection />
+        </ScrollReveal>
+        <ScrollReveal>
+          <TestimonialsSection />
+        </ScrollReveal>
+        <ScrollReveal>
+          <ProductDetailsSection />
+        </ScrollReveal>
+        <ScrollReveal>
+          <CallToActionSection />
+        </ScrollReveal>
         <HeroSection />
         <FooterSection />
       </div>
