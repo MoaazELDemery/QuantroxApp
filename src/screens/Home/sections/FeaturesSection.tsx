@@ -12,6 +12,7 @@ export const FeaturesSection = (): JSX.Element => {
       label: "Solutions",
       hasDropdown: true,
       dropdownItems: [
+        { label: "For Assets Managers", href: "#" },
         { label: "For Brokerages", href: "#" },
         { label: "For Hedge Funds", href: "#" },
         { label: "B2B Robo-Advisory", href: "#" },
