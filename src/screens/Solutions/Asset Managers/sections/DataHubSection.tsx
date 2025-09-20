@@ -53,8 +53,7 @@ export const DataHubSection = (): JSX.Element => {
         </h2>
 
         <p className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-[#d9d9d9] text-[28px] text-center tracking-[0] leading-[normal]">
-          A unified framework built to remove friction and restore focus on
-          alpha.
+          A unified framework built to remove friction and restore focus on alpha.
         </p>
       </div>
 
@@ -80,7 +79,7 @@ export const DataHubSection = (): JSX.Element => {
 
               <Card className="mt-6 w-[545px] h-[152px] ml-[25px] border-0 bg-transparent">
                 <CardContent
-                  className="p-0 w-full h-full flex bg-cover bg-center bg-no-repeat"
+                  className="p-0 w-full h-full flex bg-cover bg-center bg-no-repeat relative"
                   style={{
                     backgroundImage: `url(${solution.backgroundImage})`,
                   }}

@@ -21,10 +21,10 @@ export const TechnologyOverviewSection = (): JSX.Element => {
 
   return (
     <section className="w-full py-[100px] flex flex-col items-center">
-      <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:0ms] flex w-[321px] h-[33px] items-center justify-center gap-[15px] px-[15px] py-0 rounded-[150px] overflow-hidden opacity-60">
+      <div className="flex justify-center items-center gap-[15px] px-[15px] py-0 rounded-[150px] overflow-hidden opacity-60 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:0ms]">
         <div className="w-[60px] h-[1.5px] rounded-[90px] bg-[linear-gradient(270deg,rgba(255,255,255,1)_0%,rgba(255,255,255,0)_100%)]" />
 
-        <div className="flex items-center justify-center w-fit [font-family:'Satoshi-Regular',Helvetica] font-normal text-[#e6e6e6] text-[24.5px] tracking-[0] leading-[normal]">
+        <div className="flex items-center justify-center [font-family:'Satoshi-Regular',Helvetica] font-normal text-[#e6e6e6] text-[24.5px] tracking-[0] leading-[normal]">
           Your Challenges
         </div>
 
