@@ -271,11 +271,11 @@ export const Header = (): JSX.Element => {
         </div>
       )}
       
-      <Button className="hidden lg:flex w-[140px] sm:w-[180px] md:w-[220px] lg:w-[250px] h-auto justify-center py-2 sm:py-3 md:py-4 bg-[#4a0082] rounded-[32px] hover:bg-[#4a0082]/90">
-        <span className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-sm sm:text-base md:text-lg text-[#ffffff] tracking-[0] leading-6">
-          Request a Demo
-        </span>
-      </Button>
+      <Button className="inline-flex items-center gap-4 px-10 py-2 bg-[#4a0082] rounded-[32px] h-auto hover:bg-[#4a0082]/90 transition-colors">
+            <span className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-[#ffffff] text-sm text-center tracking-[0] leading-6 whitespace-nowrap">
+              Request a Demo
+            </span>
+          </Button>
     </header>
   );
 };
