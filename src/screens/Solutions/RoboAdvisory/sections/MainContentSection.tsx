@@ -31,20 +31,18 @@ export const MainContentSection = (): JSX.Element => {
           {/* Left Column - Heading */}
           <div className="opacity-0 translate-y-[-1rem] animate-fade-in [--animation-delay:400ms] mb-8 lg:mb-0">
             <h1 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl tracking-[0] leading-tight text-center lg:text-left">
-              From Factor Idea To Portfolio Rebalance.
+              From Bank to Robo-Advisor in Weeks.
             </h1>
           </div>
 
           {/* Right Column - Description */}
           <div className="opacity-0 translate-y-[-1rem] animate-fade-in [--animation-delay:600ms]">
             <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-[#d9d9d9] text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[28px] tracking-[0] leading-relaxed text-center lg:text-left">
-              A portfolio manager identifies a new value factor. Using the 
-              Quantorx research environment, they model and backtest the factor
-              against 10 years of historical data. The results are positive.
-              With one click, the strategy is integrated into their model
-              portfolio, and the system generates the necessary orders to
-              rebalance, all while running pre-trade compliance checks. The
-              entire process takes hours, not weeks.
+            A regional bank wants to launch a digital wealth management service. 
+            Instead of building from scratch, they adopt Quantorx’s robo-advisory platform. 
+            Within weeks, the bank has a fully branded, 
+            integrated app offering clients automated portfolio allocation, rebalancing, 
+            and performance reporting.
             </p>
           </div>
         </div>

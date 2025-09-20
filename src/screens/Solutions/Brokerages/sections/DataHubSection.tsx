@@ -5,9 +5,9 @@ const solutionsData = [
   {
     id: 1,
     label: "Solution 1:",
-    title: "The Data Hub",
+    title: "Smart Order Router (SOR)",
     description:
-      "Access normalized, pre-cleaned market and alternative data via a single API, directly integrated into the research environment.",
+      "Dynamically scans the market to find the optimal execution path, minimizing market impact and information leakage.",
     backgroundImage:
       "https://c.animaapp.com/mfrchrkc1zUqBK/img/frame-427321921-2.svg",
     position: "justify-start",
@@ -15,9 +15,9 @@ const solutionsData = [
   {
     id: 2,
     label: "Solution 2:",
-    title: "The Backtesting Engine.",
+    title: "Algorithmic Trading Suite",
     description:
-      "Our engine accurately models transaction costs, slippage, and market impact, providing a true measure of a strategy's viability.",
+      "Offer battle-tested algorithms (VWAP, TWAP, POV) as a white-label solution, or let clients deploy their own via our API.",
     backgroundImage:
       "https://c.animaapp.com/mfrchrkc1zUqBK/img/frame-427321921.svg",
     position: "justify-end",
@@ -25,9 +25,9 @@ const solutionsData = [
   {
     id: 3,
     label: "Solution 3:",
-    title: "The Risk Framework",
+    title: "Integrated TCA",
     description:
-      "Analyze VaR, run stress tests, and monitor factor exposures across your entire portfolio from a single, unified dashboard.",
+      "Automatically generate detailed, post-trade TCA reports to prove execution quality to clients and regulators.",
     backgroundImage:
       "https://c.animaapp.com/mfrchrkc1zUqBK/img/frame-427321921-1.svg",
     position: "justify-center",

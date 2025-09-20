@@ -5,9 +5,9 @@ const solutionsData = [
   {
     id: 1,
     label: "Solution 1:",
-    title: "The Data Hub",
+    title: "Developer-Centric API",
     description:
-      "Access normalized, pre-cleaned market and alternative data via a single API, directly integrated into the research environment.",
+      "Full programmatic access to every component of the platform, from data feeds to the execution engine.",
     backgroundImage:
       "https://c.animaapp.com/mfrchrkc1zUqBK/img/frame-427321921-2.svg",
     position: "justify-start",
@@ -15,9 +15,9 @@ const solutionsData = [
   {
     id: 2,
     label: "Solution 2:",
-    title: "The Backtesting Engine.",
+    title: "Custom Algorithm Deployment",
     description:
-      "Our engine accurately models transaction costs, slippage, and market impact, providing a true measure of a strategy's viability.",
+      "Secure environment to deploy and run proprietary trading algorithms with low latency.",
     backgroundImage:
       "https://c.animaapp.com/mfrchrkc1zUqBK/img/frame-427321921.svg",
     position: "justify-end",
@@ -25,9 +25,9 @@ const solutionsData = [
   {
     id: 3,
     label: "Solution 3:",
-    title: "The Risk Framework",
+    title: "Alpha Research Environment",
     description:
-      "Analyze VaR, run stress tests, and monitor factor exposures across your entire portfolio from a single, unified dashboard.",
+      "A secure sandbox for testing and validating highly complex, data-intensive investment strategies.",
     backgroundImage:
       "https://c.animaapp.com/mfrchrkc1zUqBK/img/frame-427321921-1.svg",
     position: "justify-center",
@@ -49,11 +49,11 @@ export const DataHubSection = (): JSX.Element => {
 
       <div className="flex flex-col items-center gap-4 sm:gap-6 mt-8 sm:mt-12 md:mt-[67px] max-w-[1096px] mx-auto px-4 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
         <h2 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-[#ffffff] text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center tracking-[0] leading-tight md:leading-normal">
-          The Technology That Bridges The Gap
+          The Quantorx Platform for Hedge Funds
         </h2>
 
         <p className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-[#d9d9d9] text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[28px] text-center tracking-[0] leading-relaxed md:leading-normal">
-          A unified framework built to remove friction and restore focus on alpha.
+          A flexible, developer-first environment designed for speed, security, and alpha innovation.
         </p>
       </div>
 
