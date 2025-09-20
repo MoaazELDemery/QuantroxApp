@@ -1,6 +1,6 @@
 import { ChallengesSection } from "./sections/ChallengesSection";
 import { DataHubSection } from "./sections/DataHubSection";
-import { FooterSection } from "./../../sections/FooterSection";
+import { FooterSection } from "../../Home/sections/FooterSection";
 import { MainContentSection } from "./sections/MainContentSection";
 import { TechnologyOverviewSection } from "./sections/TechnologyOverviewSection";
 

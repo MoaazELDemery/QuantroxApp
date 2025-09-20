@@ -1,17 +1,21 @@
 import { ChevronDownIcon } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { Button } from "../../../components/ui/button";
+import { Link } from "react-router-dom";
 
 export const FeaturesSection = (): JSX.Element => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const solutionsNavRef = useRef<HTMLDivElement>(null);
+  
+  // <-- UPDATED: Changed the href for "For Assets Managers" -->
   const navigationItems = [
     { label: "Home" },
     {
       label: "Solutions",
       hasDropdown: true,
       dropdownItems: [
+          { label: "For Assets Managers", href: "/solutions/asset-managers" },
         { label: "For Brokerages", href: "#" },
         { label: "For Hedge Funds", href: "#" },
         { label: "B2B Robo-Advisory", href: "#" },
@@ -21,6 +25,7 @@ export const FeaturesSection = (): JSX.Element => {
     { label: "Insights" },
     { label: "About us" },
   ];
+
   const handleNavClick = (index: number) => {
     setActiveIndex(index);
     if (navigationItems[index].hasDropdown) {
@@ -51,7 +56,6 @@ export const FeaturesSection = (): JSX.Element => {
         
         <div className="absolute w-full h-[1250px] top-0 left-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(1,1,1,1)_63%)]" />
 
-        {/* <-- UPDATED: Made logo bigger and moved it down --> */}
         <img
           className="absolute w-[600px] h-[630px] top-[216px] left-1/2 transform -translate-x-1/2"
           alt="Logo SVG"
@@ -121,14 +125,25 @@ export const FeaturesSection = (): JSX.Element => {
                   {item.hasDropdown && isSolutionsOpen && (
                     <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-max min-w-[180px] bg-white rounded-lg shadow-lg z-10 py-1">
                       {item.dropdownItems?.map((dropdownItem, dIndex) => (
-                        <a
-                          key={dIndex}
-                          href={dropdownItem.href}
-                          className="block w-full text-left px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 [font-family:'Satoshi-Medium',Helvetica] whitespace-nowrap"
-                          onClick={() => setIsSolutionsOpen(false)}
-                        >
-                          {dropdownItem.label}
-                        </a>
+                        dropdownItem.href && dropdownItem.href.startsWith("/") ? (
+                          <Link
+                            key={dIndex}
+                            to={dropdownItem.href}
+                            className="block w-full text-left px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 [font-family:'Satoshi-Medium',Helvetica] whitespace-nowrap"
+                            onClick={() => setIsSolutionsOpen(false)}
+                          >
+                            {dropdownItem.label}
+                          </Link>
+                        ) : (
+                          <a
+                            key={dIndex}
+                            href={dropdownItem.href}
+                            className="block w-full text-left px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 [font-family:'Satoshi-Medium',Helvetica] whitespace-nowrap"
+                            onClick={() => setIsSolutionsOpen(false)}
+                          >
+                            {dropdownItem.label}
+                          </a>
+                        )
                       ))}
                     </div>
                   )}
@@ -136,8 +151,8 @@ export const FeaturesSection = (): JSX.Element => {
               ))}
             </div>
           </nav>
-          <Button className="w-[250px] h-auto justify-center py-4 bg-[#4a0082] rounded-[32px] hover:bg-[#4a0082]/90">
-            <span className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-lg text-[#ffffff] tracking-[0] leading-6">
+          <Button className="inline-flex items-center gap-4 px-10 py-2 bg-[#4a0082] rounded-[32px] h-auto hover:bg-[#4a0082]/90 transition-colors">
+            <span className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-[#ffffff] text-sm text-center tracking-[0] leading-6 whitespace-nowrap">
               Request a Demo
             </span>
           </Button>
