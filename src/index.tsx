@@ -16,6 +16,7 @@ createRoot(document.getElementById("app") as HTMLElement).render(
         <Route path="/solutions/asset-managers" element={<SolutionsForAsset />} />
         <Route path="/solutions/brokerages" element={<SolutionsForBrokerages />} />
         <Route path="/solutions/hedge-funds" element={<SolutionsForHedgeFunds />} />
+        <Route path="/solutions/robo-advisory" element={<SolutionsForRoboAdvisory />} />
         <Route path="/platform" element={<Platform />} />
       </Routes>
     </BrowserRouter>
