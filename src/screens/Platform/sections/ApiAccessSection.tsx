@@ -3,14 +3,14 @@ const features = [
     title: "The Research Environment",
     description:
       "A Python-native environment with curated, pre-cleaned data and an integrated backtesting engine. Test strategies against real market conditions, refine ideas with precision, and move seamlessly from research to deployment.",
-    image: "https://c.animaapp.com/mfsne9s3850VIj/img/frame-427321925.svg",
+    image: "/platformCube.png",
     imagePosition: "left",
   },
   {
     title: "The Execution Engine",
     description:
       "A low-latency execution system with a proprietary Smart Order Router and algorithmic trading suite. Built for speed and reliability, it minimizes slippage and delivers consistent best execution at scale.",
-    image: "https://c.animaapp.com/mfsne9s3850VIj/img/frame-427321926.svg",
+    image: "/platformCylinder.png",
     imagePosition: "right",
   },
 ];
