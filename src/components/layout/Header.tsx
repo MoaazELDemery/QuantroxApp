@@ -12,6 +12,8 @@ export const Header = (): JSX.Element => {
       return 1; // Solutions tab
     } else if (location.pathname.startsWith('/platform')) {
       return 2; // Platform tab
+    } else if (location.pathname.startsWith('/insights')) {
+      return 3; // Insights tab
     }
     return 0; // Home tab (default)
   };

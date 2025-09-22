@@ -13,7 +13,6 @@ export const ProductShowcaseSection = (): JSX.Element => {
   ];
 
   return (
-    // ----------------------------
     <section className="relative w-full bg-black h-[1200px]">
       <div className="relative w-full h-full overflow-hidden">
         <div className="absolute inset-0 flex items-center justify-center">
@@ -24,8 +23,16 @@ export const ProductShowcaseSection = (): JSX.Element => {
           />
         </div>
 
-        {/* This background will now fill the 1050px tall parent */}
-        <div className="absolute inset-0 z-0 bg-[url(/fragmentBackground.png)] bg-cover bg-center" />
+        {/* Fixed background implementation */}
+        <div
+          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url('/fragementOverlayBG.png')`,
+          }}
+        />
+
+        {/* Alternative: If the file doesn't exist, use a gradient fallback */}
+        {/* <div className="absolute inset-0 z-0 bg-gradient-to-br from-purple-600/20 via-transparent to-blue-600/20" /> */}
 
         <div className="relative z-10 max-w-7xl mx-auto px-8 pt-40">
           <div className="flex items-center justify-between gap-32">

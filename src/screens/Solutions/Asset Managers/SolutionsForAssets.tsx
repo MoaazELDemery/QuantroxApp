@@ -3,6 +3,7 @@ import { DataHubSection } from "./sections/DataHubSection";
 import { FooterSection } from "../../Home/sections/FooterSection";
 import { MainContentSection } from "./sections/MainContentSection";
 import { TechnologyOverviewSection } from "./sections/TechnologyOverviewSection";
+import { ScrollReveal } from "../../../components";
 
 export const SolutionsForAsset = (): JSX.Element => {
   return (
@@ -16,25 +17,35 @@ export const SolutionsForAsset = (): JSX.Element => {
 
       <div className="h-[24.38%] top-[43.38%] left-[calc(50.00%_+_68px)] w-[1200px] absolute rounded-[1857.89px] [background:radial-gradient(50%_50%_at_50%_50%,rgba(74,0,130,0.5)_5%,rgba(2,2,3,0.3)_89%,rgba(2,2,3,0)_100%)]" />
 
-      <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:0ms] w-full relative">
-        <ChallengesSection />
-      </div>
+      <ScrollReveal>
+        <section className="w-full relative">
+          <ChallengesSection />
+        </section>
+      </ScrollReveal>
 
-      <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms] w-full relative">
-        <TechnologyOverviewSection />
-      </div>
+      <ScrollReveal>
+        <section className="w-full relative">
+          <TechnologyOverviewSection />
+        </section>
+      </ScrollReveal>
 
-      <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms] w-full relative">
-        <DataHubSection />
-      </div>
+      <ScrollReveal>
+        <section className="w-full relative">
+          <DataHubSection />
+        </section>
+      </ScrollReveal>
 
-      <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms] w-full relative">
-        <MainContentSection />
-      </div>
+      <ScrollReveal>
+        <section className="w-full relative">
+          <MainContentSection />
+        </section>
+      </ScrollReveal>
 
-      <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:800ms] w-full relative">
-        <FooterSection />
-      </div>
+      <ScrollReveal>
+        <section className="w-full relative">
+          <FooterSection />
+        </section>
+      </ScrollReveal>
     </div>
   );
 };

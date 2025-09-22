@@ -7,6 +7,7 @@ import { SolutionsForHedgeFunds } from "./screens/Solutions/HedgeFunds/Solutions
 import { SolutionsForRoboAdvisory } from "./screens/Solutions/RoboAdvisory/SolutionsForRoboAdvisory";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Platform } from "./screens/Platform/Platform";
+import { Insights } from "./screens/Insights/Insights";
 
 createRoot(document.getElementById("app") as HTMLElement).render(
   <StrictMode>
@@ -18,6 +19,7 @@ createRoot(document.getElementById("app") as HTMLElement).render(
         <Route path="/solutions/hedge-funds" element={<SolutionsForHedgeFunds />} />
         <Route path="/solutions/robo-advisory" element={<SolutionsForRoboAdvisory />} />
         <Route path="/platform" element={<Platform />} />
+        <Route path="/insights" element={<Insights />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,

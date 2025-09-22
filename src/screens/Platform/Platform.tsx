@@ -3,6 +3,7 @@ import { ExecutionEngineSection } from "./sections/ExecutionEngineSection";
 import { FooterSection } from "../Home/sections/FooterSection";
 import { ResearchEnvironmentSection } from "./sections/ResearchEnvironmentSection";
 import { Header } from "../../components/layout/Header";
+import { ScrollReveal } from "../../components/ui/scroll-reveal";
 
 export const Platform = (): JSX.Element => {
   return (
@@ -18,22 +19,30 @@ export const Platform = (): JSX.Element => {
 
       <div className="h-[28.61%] top-[50.90%] left-[calc(50.00%_+_68px)] w-[1200px] [background:radial-gradient(50%_50%_at_50%_50%,rgba(74,0,130,0.5)_5%,rgba(2,2,3,0.3)_89%,rgba(2,2,3,0)_100%)] absolute rounded-[1857.89px]" />
 
-      {/* Sections with entrance animations */}
-      <section className="w-full relative translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:0ms]">
-        <ResearchEnvironmentSection />
-      </section>
+      {/* Sections with ScrollReveal animations */}
+      <ScrollReveal>
+        <section className="w-full relative">
+          <ResearchEnvironmentSection />
+        </section>
+      </ScrollReveal>
 
-      <section className="w-full relative translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
-        <ApiAccessSection />
-      </section>
+      <ScrollReveal>
+        <section className="w-full relative">
+          <ApiAccessSection />
+        </section>
+      </ScrollReveal>
 
-      <section className="w-full relative translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
-        <ExecutionEngineSection />
-      </section>
+      <ScrollReveal>
+        <section className="w-full relative">
+          <ExecutionEngineSection />
+        </section>
+      </ScrollReveal>
 
-      <section className="w-full relative translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]">
-        <FooterSection />
-      </section>
+      <ScrollReveal>
+        <section className="w-full relative">
+          <FooterSection />
+        </section>
+      </ScrollReveal>
     </main>
   );
 };
