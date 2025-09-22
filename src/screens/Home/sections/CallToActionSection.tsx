@@ -51,7 +51,7 @@ export const CallToActionSection = (): JSX.Element => {
     <section className="relative w-full bg-black min-h-[837px] flex items-center py-20">
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url(/wallStreetBackground.png)" }}
+        style={{ backgroundImage: "url(/wallSteetOverlayBG.png)" }}
       />
       <div className="relative max-w-[1200px] mx-auto bg-[#24004d33] rounded-3xl overflow-hidden backdrop-blur-[10px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(10px)_brightness(100%)] px-12 py-20">
         <div className="flex flex-col items-center gap-8 max-w-[1099px] mx-auto">

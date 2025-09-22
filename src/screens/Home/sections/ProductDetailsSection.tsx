@@ -29,7 +29,7 @@ export const ProductDetailsSection = (): JSX.Element => {
     <section className="relative w-full bg-black min-h-[837px] flex items-center py-20">
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url(/engineeredBackground.png)" }}
+        style={{ backgroundImage: "url(/engineeredOverlayBG.png)" }}
       />
 
       <div className="relative z-10 container mx-auto px-4 max-w-7xl">

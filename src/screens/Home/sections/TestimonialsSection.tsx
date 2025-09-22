@@ -39,7 +39,7 @@ export const TestimonialsSection = (): JSX.Element => {
 
     return (
         <section className="relative w-full min-h-screen flex flex-col items-center justify-center py-20 px-4">
-                        {/* Background ellipse */}
+            {/* Background ellipse */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none pt-20">
                 <img
                     className="w-[1200px] h-[1200px] object-contain opacity-50"
@@ -49,7 +49,7 @@ export const TestimonialsSection = (): JSX.Element => {
             </div>
 
             {/* Header content */}
-            <ScrollReveal>
+            <ScrollReveal delay={300}>
                 <header className="relative z-10 flex flex-col items-center justify-center gap-4 mb-16 max-w-[1272px] text-center">
                     <h1 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-3xl md:text-4xl lg:text-5xl tracking-[0] leading-normal">
                         One Platform.
@@ -68,35 +68,35 @@ export const TestimonialsSection = (): JSX.Element => {
                 {/* Central dashboard with features arranged around it */}
                 <div className="relative flex items-center justify-center">
                     
-                    {/* Top feature - Risk Management - moved lower */}
+                    {/* Top feature - Risk Management */}
                     <div className="absolute top-8 md:top-12 left-1/2 transform -translate-x-1/2">
-                        <ScrollReveal>
+                        <ScrollReveal delay={800}>
                             <FeatureItem feature={features[4]} position="top" />
                         </ScrollReveal>
                     </div>
 
-                    {/* Left features - moved more to the left */}
+                    {/* Left features */}
                     <div className="absolute -left-16 md:-left-32 lg:-left-48 top-1/2 transform -translate-y-1/2 space-y-8 md:space-y-16">
-                        <ScrollReveal>
+                        <ScrollReveal delay={1000}>
                             <FeatureItem feature={features[0]} position="left" />
                         </ScrollReveal>
-                        <ScrollReveal>
+                        <ScrollReveal delay={1400}>
                             <FeatureItem feature={features[2]} position="left" />
                         </ScrollReveal>
                     </div>
 
-                    {/* Right features - moved more to the right */}
+                    {/* Right features */}
                     <div className="absolute -right-16 md:-right-32 lg:-right-48 top-1/2 transform -translate-y-1/2 space-y-8 md:space-y-16">
-                        <ScrollReveal>
+                        <ScrollReveal delay={1200}>
                             <FeatureItem feature={features[1]} position="right" />
                         </ScrollReveal>
-                        <ScrollReveal>
+                        <ScrollReveal delay={1600}>
                             <FeatureItem feature={features[3]} position="right" />
                         </ScrollReveal>
                     </div>
 
                     {/* Central dashboard */}
-                    <ScrollReveal>
+                    <ScrollReveal delay={600}>
                         <div className="relative flex items-center justify-center">
                             {/* Background circles */}
                             <div className="absolute inset-0 flex items-center justify-center">
