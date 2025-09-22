@@ -18,35 +18,23 @@ export const SolutionsForHedgeFunds = (): JSX.Element => {
       <div className="h-[24.38%] top-[43.38%] left-[calc(50.00%_+_68px)] w-[1200px] absolute rounded-[1857.89px] [background:radial-gradient(50%_50%_at_50%_50%,rgba(74,0,130,0.5)_5%,rgba(2,2,3,0.3)_89%,rgba(2,2,3,0)_100%)]" />
 
 
-      <ScrollReveal delay={0}>
-        <section className="w-full relative">
-          <ChallengesSection />
-        </section>
+      <ScrollReveal>
+        <ChallengesSection />
       </ScrollReveal>
 
       <ScrollReveal>
-        <section className="w-full relative">
-          <TechnologyOverviewSection />
-        </section>
+        <TechnologyOverviewSection />
       </ScrollReveal>
 
       <ScrollReveal>
-        <section className="w-full relative">
-          <DataHubSection />
-        </section>
+        <DataHubSection />
       </ScrollReveal>
 
       <ScrollReveal>
-        <section className="w-full relative">
-          <MainContentSection />
-        </section>
+        <MainContentSection />
       </ScrollReveal>
 
-      <ScrollReveal>
-        <section className="w-full relative">
-          <FooterSection />
-        </section>
-      </ScrollReveal>
+      <FooterSection />
     </div>
   );
 };

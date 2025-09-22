@@ -19,40 +19,26 @@ export const Insights = (): JSX.Element => {
       <div className="h-[25.56%] top-[45.48%] left-[calc(50.00%_+_68px)] w-[1200px] [background:radial-gradient(50%_50%_at_50%_50%,rgba(74,0,130,0.5)_5%,rgba(2,2,3,0.3)_89%,rgba(2,2,3,0)_100%)] absolute rounded-[1857.89px]" />
 
       <ScrollReveal>
-        <section className="w-full relative">
-          <FeaturedArticlesSection />
-        </section>
+        <FeaturedArticlesSection />
       </ScrollReveal>
 
       <ScrollReveal>
-        <section className="w-full relative">
-          <LatestInsightsSection />
-        </section>
+        <LatestInsightsSection />
       </ScrollReveal>
 
       <ScrollReveal>
-        <section className="w-full relative">
-          <HighlightsSection />
-        </section>
+        <HighlightsSection />
       </ScrollReveal>
 
       <ScrollReveal>
-        <section className="w-full relative">
-          <WhitepapersSection />
-        </section>
+        <WhitepapersSection />
       </ScrollReveal>
 
       <ScrollReveal>
-        <section className="w-full relative">
-          <ResearchSection />
-        </section>
-        </ScrollReveal>
-
-      <ScrollReveal>
-        <section className="w-full relative">
-          <FooterSection />
-        </section>
+        <ResearchSection />
       </ScrollReveal>
+
+      <FooterSection />
     </div>
   );
 };
