@@ -1,4 +1,4 @@
-import { LinkedinIcon, MailIcon, MapPinIcon, PhoneIcon } from "lucide-react";
+import { MailIcon, MapPinIcon, PhoneIcon } from "lucide-react";
 
 export const FooterSection = (): JSX.Element => {
   const contactInfo = [
@@ -21,7 +21,7 @@ export const FooterSection = (): JSX.Element => {
   ];
   const quickLinks = ["Home", "Solutions", "Platform", "Insights", "About us"];
   return (
-    <footer className="flex flex-col w-full items-start justify-center gap-20 px-0 py-[50px] bg-zinc-950">
+    <footer className="flex flex-col w-full items-start justify-center gap-20 px-0 py-[50px] bg-zinc-950 relative z-20">
       <div className="flex items-start justify-between px-[250px] py-20 w-full">
         <div className="inline-flex flex-col items-start gap-[34px]">
           <img
@@ -37,7 +37,11 @@ export const FooterSection = (): JSX.Element => {
             consulting
           </div>
           <div className="flex items-start gap-6 w-full">
-            <LinkedinIcon className="w-6 h-6 text-grey" />
+            <img 
+              src="/linkedinPlain.svg" 
+              alt="LinkedIn" 
+              className="w-6 h-6" 
+            />
           </div>
         </div>
         <div className="flex w-[579px] items-start gap-[84px]">

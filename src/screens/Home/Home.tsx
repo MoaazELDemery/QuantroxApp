@@ -25,9 +25,7 @@ export const Home = (): JSX.Element => {
         <ScrollReveal>
           <ProductDetailsSection />
         </ScrollReveal>
-        <ScrollReveal>
-          <CallToActionSection />
-        </ScrollReveal>
+      
         <ScrollReveal>
           <HeroSection />
         </ScrollReveal>

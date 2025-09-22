@@ -8,7 +8,7 @@ import { ScrollReveal } from "../../components";
 export const AboutUs = (): JSX.Element => {
     return (
         <main
-            className="bg-black overflow-hidden w-full min-w-[1512px] relative"
+            className="bg-black w-full relative min-h-screen"
             data-model-id="717:2640"
         >
             <div className="absolute h-[56.95%] top-[3.01%] left-[calc(50.00%_-_1173px)] w-[2346px] rounded-[1857.89px] [background:radial-gradient(50%_50%_at_50%_50%,rgba(74,0,130,0.5)_5%,rgba(2,2,3,0.3)_100%)]" />
