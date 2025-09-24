@@ -39,9 +39,9 @@ export const TestimonialsSection = (): JSX.Element => {
     return (
         <section className="relative w-full min-h-screen flex flex-col items-center justify-center py-20 px-4">
             {/* Central circular gradient background - aligned with dashboard */}
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none pt-16">
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none pt-40">
                 <div 
-                    className="w-[600px] h-[600px] md:w-[700px] md:h-[700px] lg:w-[800px] lg:h-[800px] rounded-full opacity-70"
+                    className="w-[600px] h-[600px] md:w-[700px] md:h-[700px] lg:w-[600px] lg:h-[600px] rounded-full opacity-70"
                     style={{
                         background: 'radial-gradient(circle, #9810FF 0%, #23003E 40%, transparent 70%)'
                     }}
