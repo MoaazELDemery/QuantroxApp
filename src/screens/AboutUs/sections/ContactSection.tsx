@@ -20,7 +20,7 @@ export const ContactSection = (): JSX.Element => {
   return (
     <section className="flex flex-col items-center gap-2.5 pt-24 pb-40 px-4 md:px-[138px] w-full relative">
       <div className="flex flex-col items-start justify-center gap-40 relative w-full max-w-[1200px] mx-auto">
-        {visionMissionData.map((item, index) => (
+        {visionMissionData.map((item) => (
           <div
             key={item.type}
             className="flex flex-col md:flex-row items-start gap-8 relative w-full"

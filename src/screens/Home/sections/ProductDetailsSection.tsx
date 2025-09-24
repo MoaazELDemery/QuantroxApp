@@ -72,14 +72,16 @@ const [currentSlide, setCurrentSlide] = useState(1);
   ];
 
   return (
-    <section className="relative w-full bg-black h-[2000px] py-20 overflow-hidden">
+    <section className="relative w-full bg-black h-[1500px] py-20 overflow-hidden">
       <div
-        className="absolute inset-0 bg-cover bg-center min-w-full min-h-full"
+        className="absolute inset-0 bg-center min-w-full min-h-full"
         style={{ 
           backgroundImage: "url(/engineeredFragOverlayBG.png)",
           backgroundAttachment: "scroll",
-          backgroundSize: "cover",
-          transform: "scale(1.1)"
+          backgroundSize: "100% 80%",
+          backgroundPosition: "center center",
+          backgroundRepeat: "no-repeat",
+          transform: "scale(1)"
         }}
       />
 

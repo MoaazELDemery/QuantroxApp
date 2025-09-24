@@ -8,8 +8,6 @@ const solutionsData = [
     title: "The Data Hub",
     description:
       "Access normalized, pre-cleaned market and alternative data via a single API, directly integrated into the research environment.",
-    backgroundImage:
-      "https://c.animaapp.com/mfrchrkc1zUqBK/img/frame-427321921-2.svg",
     position: "justify-start",
   },
   {
@@ -18,8 +16,6 @@ const solutionsData = [
     title: "The Backtesting Engine.",
     description:
       "Our engine accurately models transaction costs, slippage, and market impact, providing a true measure of a strategy's viability.",
-    backgroundImage:
-      "https://c.animaapp.com/mfrchrkc1zUqBK/img/frame-427321921.svg",
     position: "justify-end",
   },
   {
@@ -28,8 +24,6 @@ const solutionsData = [
     title: "The Risk Framework",
     description:
       "Analyze VaR, run stress tests, and monitor factor exposures across your entire portfolio from a single, unified dashboard.",
-    backgroundImage:
-      "https://c.animaapp.com/mfrchrkc1zUqBK/img/frame-427321921-1.svg",
     position: "justify-center",
   },
 ];
@@ -78,13 +72,8 @@ export const DataHubSection = (): JSX.Element => {
               </div>
 
               <Card className="w-full max-w-[545px] mx-auto lg:mx-0 h-auto border-0 bg-transparent">
-                <CardContent
-                  className="p-4 sm:p-6 lg:p-0 w-full h-full flex bg-cover bg-center bg-no-repeat relative min-h-[140px] sm:min-h-[160px] lg:min-h-[152px] rounded-lg lg:rounded-none"
-                  style={{
-                    backgroundImage: `url(${solution.backgroundImage})`,
-                  }}
-                >
-                  <div className="mt-2 sm:mt-4 lg:mt-7 w-full max-w-[489px] h-auto lg:ml-7 [font-family:'Satoshi-Regular',Helvetica] font-normal text-[#d9d9d9] text-sm sm:text-base lg:text-lg xl:text-xl tracking-[0] leading-relaxed flex items-center">
+                <CardContent className="p-4 sm:p-6 lg:p-0 w-full h-full flex relative min-h-[140px] sm:min-h-[160px] lg:min-h-[152px] rounded-lg lg:rounded-none">
+                  <div className="mt-2 sm:mt-4 lg:mt-7 w-full max-w-[489px] h-auto lg:ml-7 bg-gradient-to-r from-purple-900/10 to-indigo-900/10 backdrop-blur-sm rounded-lg p-4 sm:p-5 lg:p-6 [font-family:'Satoshi-Regular',Helvetica] font-normal text-[#d9d9d9] text-sm sm:text-base lg:text-lg xl:text-xl tracking-[0] leading-relaxed flex items-center">
                     {solution.description}
                   </div>
                 </CardContent>

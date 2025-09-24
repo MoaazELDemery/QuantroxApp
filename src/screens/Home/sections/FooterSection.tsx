@@ -29,18 +29,18 @@ export const FooterSection = (): JSX.Element => {
 
   const contactInfo = [
     {
-      icon: <MapPinIcon className="w-6 h-6" />,
+      icon: <MapPinIcon className="w-6 h-6 text-white" />,
       title: "Location",
       content:
         "Cairo, Maadi, Al-Ma'arag City, Building No. 5158, Ground Floor, behind Carrefour Maadi",
     },
     {
-      icon: <PhoneIcon className="w-6 h-6" />,
+      icon: <PhoneIcon className="w-6 h-6 text-white" />,
       title: "Phone",
       content: "+20 127 984 7374 - +966 53 750 7578",
     },
     {
-      icon: <MailIcon className="w-6 h-6" />,
+      icon: <MailIcon className="w-6 h-6 text-white" />,
       title: "Email",
       content: "technology.team@quantorx.com",
     },

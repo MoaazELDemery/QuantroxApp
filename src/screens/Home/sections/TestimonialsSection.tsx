@@ -9,37 +9,63 @@ export const TestimonialsSection = (): JSX.Element => {
             title: "Research",
             iconSrc: "/vuesax-linear-search-normal.svg",
             description: "A Python-native environment for advanced factor modeling and strategy development.",
+            // Positioning constraints relative to dashboard
+            position: {
+                top: "20%",
+                left: "-280px",
+                transform: "translateY(-50%)"
+            }
         },
         {
             id: "execution",
             title: "Execution",
             iconSrc: "/vuesax-linear-check.svg",
             description: "A low-latency EMS with Smart Order Routing and customizable trading algorithms.",
+            position: {
+                top: "20%",
+                right: "-280px",
+                transform: "translateY(-50%)"
+            }
         },
         {
             id: "data",
             title: "Data",
             iconSrc: "/vuesax-linear-data.svg",
             description: "Unified access to curated, pre-cleaned market and alternative datasets.",
+            position: {
+                bottom: "50%",
+                left: "-320px",
+                transform: "translateY(50%)"
+            }
         },
         {
             id: "backtest",
             title: "Backtest",
             iconSrc: "/vuesax-linear-box.svg",
             description: "A low-latency EMS with Smart Order Routing and customizable trading algorithms.",
+            position: {
+                bottom: "50%",
+                right: "-320px",
+                transform: "translateY(50%)"
+            }
         },
         {
             id: "risk",
             title: "Risk Management",
             iconSrc: "/vuesax-linear-chart-success.svg",
             description: "Real-time portfolio risk management with VaR, stress tests, and factor analysis.",
+            position: {
+                top: "-40px",
+                left: "50%",
+                transform: "translateX(-50%)"
+            }
         },
     ];
 
     return (
         <section className="relative w-full min-h-screen flex flex-col items-center justify-center py-20 px-4">
             {/* Central circular gradient background - aligned with dashboard */}
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none pt-40">
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none pt-64">
                 <div 
                     className="w-[600px] h-[600px] md:w-[700px] md:h-[700px] lg:w-[600px] lg:h-[600px] rounded-full opacity-70"
                     style={{
@@ -50,7 +76,7 @@ export const TestimonialsSection = (): JSX.Element => {
 
             {/* Header content */}
             <ScrollReveal delay={300}>
-                <header className="relative z-10 flex flex-col items-center justify-center gap-4 mb-16 max-w-[1272px] text-center">
+                <header className="relative z-10 flex flex-col items-center justify-center gap-4 mb-40 max-w-[1272px] text-center">
                     <h1 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-3xl md:text-4xl lg:text-5xl tracking-[0] leading-normal">
                         One Platform.
                         <br />
@@ -65,39 +91,12 @@ export const TestimonialsSection = (): JSX.Element => {
 
             {/* Main content container */}
             <div className="relative z-10 w-full max-w-7xl mx-auto">
-                {/* Central dashboard with features arranged around it */}
+                {/* Central dashboard container with constrained feature positioning */}
                 <div className="relative flex items-center justify-center">
                     
-                    {/* Top feature - Risk Management */}
-                    <div className="absolute top-8 md:top-12 left-1/2 transform -translate-x-1/2">
-                        <ScrollReveal delay={400}>
-                            <FeatureItem feature={features[4]} position="top" />
-                        </ScrollReveal>
-                    </div>
-
-                    {/* Left features */}
-                    <div className="absolute -left-16 md:-left-32 lg:-left-48 top-1/2 transform -translate-y-1/2 space-y-8 md:space-y-16">
-                        <ScrollReveal delay={400}>
-                            <FeatureItem feature={features[0]} position="left" />
-                        </ScrollReveal>
-                        <ScrollReveal delay={400}>
-                            <FeatureItem feature={features[2]} position="left" />
-                        </ScrollReveal>
-                    </div>
-
-                    {/* Right features */}
-                    <div className="absolute -right-16 md:-right-32 lg:-right-48 top-1/2 transform -translate-y-1/2 space-y-8 md:space-y-16">
-                        <ScrollReveal delay={400}>
-                            <FeatureItem feature={features[1]} position="right" />
-                        </ScrollReveal>
-                        <ScrollReveal delay={400}>
-                            <FeatureItem feature={features[3]} position="right" />
-                        </ScrollReveal>
-                    </div>
-
-                    {/* Central dashboard */}
+                    {/* Dashboard container - this is the reference point for all features */}
                     <ScrollReveal delay={600}>
-                        <div className="relative flex items-center justify-center">
+                        <div className="relative flex items-center justify-center dashboard-container">
                             {/* Background circles */}
                             <div className="absolute inset-0 flex items-center justify-center">
                                 <div className="w-[200px] h-[200px] md:w-[250px] md:h-[250px] bg-[#0000001a] rounded-full backdrop-blur-[10px] backdrop-brightness-[100%]" />
@@ -120,12 +119,44 @@ export const TestimonialsSection = (): JSX.Element => {
                                     loading="lazy"
                                 />
                             </div>
+
+                            {/* Features positioned relative to dashboard */}
+                            {features.map((feature, index) => (
+                                <div
+                                    key={feature.id}
+                                    className="absolute"
+                                    style={feature.position}
+                                >
+                                    <ScrollReveal delay={400 + (index * 100)}>
+                                        <FeatureItem 
+                                            feature={feature} 
+                                            alignmentDirection={getAlignmentDirection(feature.id)}
+                                        />
+                                    </ScrollReveal>
+                                </div>
+                            ))}
                         </div>
                     </ScrollReveal>
                 </div>
             </div>
         </section>
     );
+};
+
+// Helper function to determine card alignment direction
+const getAlignmentDirection = (featureId: string): 'left' | 'right' | 'top' | 'center' => {
+    switch (featureId) {
+        case 'research':
+        case 'data':
+            return 'left';
+        case 'execution':
+        case 'backtest':
+            return 'right';
+        case 'risk':
+            return 'top';
+        default:
+            return 'center';
+    }
 };
 
 // Feature item component
@@ -136,13 +167,13 @@ const FeatureItem: React.FC<{
         iconSrc: string;
         description: string;
     };
-    position: 'left' | 'right' | 'top';
-}> = ({ feature, position }) => {
+    alignmentDirection: 'left' | 'right' | 'top' | 'center';
+}> = ({ feature, alignmentDirection }) => {
 
     return (
         <div className="flex items-center justify-center gap-4 group">
-            {/* Left positioned card */}
-            {position === 'left' && (
+            {/* Left aligned card */}
+            {alignmentDirection === 'left' && (
                 <Card className="w-[200px] md:w-[265px] bg-[#0000004c] border-none backdrop-blur-[10px] backdrop-brightness-[100%] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <CardContent className="flex items-center justify-center gap-3 p-3">
                         <div className="flex-1 [font-family:'Satoshi-Medium',Helvetica] font-medium text-white text-sm md:text-base tracking-[0] leading-normal">
@@ -157,7 +188,6 @@ const FeatureItem: React.FC<{
                 <h3 className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-white text-lg md:text-[22px] text-center tracking-[0] leading-normal">
                     {feature.title}
                 </h3>
-                {/* Icon frame explicitly 44x44 (padding removed so total size matches spec) */}
                 <div className="flex w-[44px] h-[44px] items-center justify-center bg-[#0000004c] rounded-full overflow-hidden backdrop-blur-[10px] backdrop-brightness-[100%]">
                     <img
                         src={feature.iconSrc}
@@ -167,8 +197,8 @@ const FeatureItem: React.FC<{
                 </div>
             </div>
 
-            {/* Right positioned card */}
-            {position === 'right' && (
+            {/* Right aligned card */}
+            {alignmentDirection === 'right' && (
                 <Card className="w-[200px] md:w-[265px] bg-[#0000004c] border-none backdrop-blur-[10px] backdrop-brightness-[100%] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <CardContent className="flex items-center justify-center gap-3 p-3">
                         <div className="flex-1 [font-family:'Satoshi-Medium',Helvetica] font-medium text-white text-sm md:text-base tracking-[0] leading-normal">
@@ -178,9 +208,9 @@ const FeatureItem: React.FC<{
                 </Card>
             )}
 
-            {/* Top positioned card */}
-            {position === 'top' && (
-                <Card className="absolute -top-16 md:-top-20 left-1/2 transform -translate-x-1/2 w-[200px] md:w-[265px] bg-[#0000004c] border-none backdrop-blur-[10px] backdrop-brightness-[100%] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            {/* Top aligned card */}
+            {alignmentDirection === 'top' && (
+                <Card className="absolute -top-24 md:-top-28 left-1/2 transform -translate-x-1/2 w-[200px] md:w-[265px] bg-[#0000004c] border-none backdrop-blur-[10px] backdrop-brightness-[100%] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <CardContent className="flex items-center justify-center gap-3 p-3">
                         <div className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-white text-sm md:text-base tracking-[0] leading-normal text-center">
                             {feature.description}

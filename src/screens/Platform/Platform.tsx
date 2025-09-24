@@ -2,7 +2,6 @@ import { ApiAccessSection } from "./sections/ApiAccessSection";
 import { ExecutionEngineSection } from "./sections/ExecutionEngineSection";
 import { FooterSection } from "../Home/sections/FooterSection";
 import { ResearchEnvironmentSection } from "./sections/ResearchEnvironmentSection";
-import { Header } from "../../components/layout/Header";
 import { ScrollReveal } from "../../components/ui/scroll-reveal";
 
 export const Platform = (): JSX.Element => {
@@ -11,7 +10,6 @@ export const Platform = (): JSX.Element => {
       className="bg-black overflow-hidden w-full min-w-[1512px] relative"
       data-model-id="637:8890"
     >
-      <Header />
       {/* Background gradient elements */}
       <div className="h-[57.33%] top-[3.03%] left-[calc(50.00%_-_1173px)] w-[2346px] [background:radial-gradient(50%_50%_at_50%_50%,rgba(74,0,130,0.5)_5%,rgba(2,2,3,0.3)_100%)] absolute rounded-[1857.89px]" />
 

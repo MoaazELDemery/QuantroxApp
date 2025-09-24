@@ -1,4 +1,3 @@
-export { CallToActionSection } from './CallToActionSection';
 export { FeaturesSection } from './FeaturesSection';
 export { FooterSection } from './FooterSection';
 export { HeroSection } from './HeroSection';

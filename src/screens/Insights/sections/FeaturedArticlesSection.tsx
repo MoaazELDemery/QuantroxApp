@@ -4,14 +4,14 @@ import { Header } from "../../../components/layout/Header";
 
 export const FeaturedArticlesSection = (): JSX.Element => {
   return (
-    <section className="relative w-full min-h-screen overflow-hidden">
+    <section className="relative w-full h-auto overflow-hidden">
       <div className="absolute inset-0 w-full h-full [background:radial-gradient(50%_50%_at_50%_0%,rgba(74,0,130,0.5)_0%,rgba(0,0,0,0)_100%)]" />
 
       {/* Header */}
       <Header />
 
       {/* Main content - centered with auto layout */}
-      <main className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 py-20">
+      <main className="relative z-10 flex flex-col items-center justify-center px-4 py-20 min-h-[850px]">
         <div className="flex flex-col items-center gap-10 max-w-[1073px] w-full mx-auto">
           {/* Hero text section */}
           <div className="flex flex-col items-center gap-8 text-center">
