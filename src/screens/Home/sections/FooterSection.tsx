@@ -1,6 +1,32 @@
-import { MailIcon, MapPinIcon, PhoneIcon } from "lucide-react";
+import { MailIcon, MapPinIcon, PhoneIcon, ChevronDownIcon } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
+import { useState, useRef, useEffect } from "react";
 
 export const FooterSection = (): JSX.Element => {
+  const location = useLocation();
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+  const [selectedDropdownItem, setSelectedDropdownItem] = useState<string | null>(null);
+  const solutionsRef = useRef<HTMLDivElement>(null);
+
+  // Function to get the currently selected dropdown item based on current route
+  const getSelectedDropdownItem = () => {
+    if (location.pathname.startsWith('/solutions/asset-managers')) {
+      return '/solutions/asset-managers';
+    } else if (location.pathname.startsWith('/solutions/brokerages')) {
+      return '/solutions/brokerages';
+    } else if (location.pathname.startsWith('/solutions/hedge-funds')) {
+      return '/solutions/hedge-funds';
+    } else if (location.pathname.startsWith('/solutions/robo-advisory')) {
+      return '/solutions/robo-advisory';
+    }
+    return null;
+  };
+
+  // Update selected dropdown item when route changes
+  useEffect(() => {
+    setSelectedDropdownItem(getSelectedDropdownItem());
+  }, [location.pathname]);
+
   const contactInfo = [
     {
       icon: <MapPinIcon className="w-6 h-6" />,
@@ -19,7 +45,40 @@ export const FooterSection = (): JSX.Element => {
       content: "technology.team@quantorx.com",
     },
   ];
-  const quickLinks = ["Home", "Solutions", "Platform", "Insights", "About us"];
+  const quickLinks = [
+    { label: "Home", href: "/" },
+    {
+      label: "Solutions",
+      hasDropdown: true,
+      dropdownItems: [
+        { label: "For Assets Managers", href: "/solutions/asset-managers" },
+        { label: "For Brokerages", href: "/solutions/brokerages" },
+        { label: "For Hedge Funds", href: "/solutions/hedge-funds" },
+        { label: "B2B Robo-Advisory", href: "/solutions/robo-advisory" },
+      ],
+    },
+    { label: "Platform", href: "/platform" },
+    { label: "Insights", href: "/insights" },
+    { label: "About us", href: "/about-us" },
+  ];
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        solutionsRef.current &&
+        !solutionsRef.current.contains(event.target as Node)
+      ) {
+        setIsSolutionsOpen(false);
+      }
+    };
+    if (isSolutionsOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isSolutionsOpen]);
+
   return (
     <footer className="flex flex-col w-full items-start justify-center gap-20 px-0 py-[50px] bg-zinc-950 relative z-20">
       <div className="flex items-start justify-between px-[250px] py-20 w-full">
@@ -72,11 +131,52 @@ export const FooterSection = (): JSX.Element => {
             </div>
             <div className="inline-flex flex-col items-start gap-2.5">
               {quickLinks.map((link, index) => (
-                <div
-                  key={index}
-                  className={`w-fit ${index === 0 ? "mt-[-1.00px]" : ""} [font-family:'Satoshi-Regular',Helvetica] font-normal text-grey text-base tracking-[0.32px] leading-[25.6px] whitespace-nowrap cursor-pointer hover:text-white transition-colors`}
-                >
-                  {link}
+                <div key={index} className="relative" ref={link.hasDropdown ? solutionsRef : null}>
+                  {link.href ? (
+                    <Link
+                      to={link.href}
+                      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                      className={`w-fit ${index === 0 ? "mt-[-1.00px]" : ""} [font-family:'Satoshi-Regular',Helvetica] font-normal text-grey text-base tracking-[0.32px] leading-[25.6px] whitespace-nowrap cursor-pointer hover:text-white transition-colors`}
+                    >
+                      {link.label}
+                    </Link>
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={() => setIsSolutionsOpen(!isSolutionsOpen)}
+                      className={`flex items-center gap-1 w-fit ${index === 0 ? "mt-[-1.00px]" : ""} [font-family:'Satoshi-Regular',Helvetica] font-normal text-grey text-base tracking-[0.32px] leading-[25.6px] whitespace-nowrap cursor-pointer hover:text-white transition-colors bg-transparent border-none p-0`}
+                    >
+                      {link.label}
+                      {link.hasDropdown && (
+                        <ChevronDownIcon
+                          className={`w-4 h-4 text-grey transition-transform duration-200 ${
+                            isSolutionsOpen ? "rotate-180" : "rotate-0"
+                          }`}
+                        />
+                      )}
+                    </button>
+                  )}
+                  {link.hasDropdown && isSolutionsOpen && (
+                    <div className="absolute bottom-full left-0 mb-2 w-max min-w-[200px] bg-white rounded-lg shadow-lg z-10 py-2">
+                      {link.dropdownItems?.map((dropdownItem, dIndex) => (
+                        <Link
+                          key={dIndex}
+                          to={dropdownItem.href}
+                          className={`block w-full text-left px-4 py-2 text-sm [font-family:'Satoshi-Medium',Helvetica] whitespace-nowrap transition-colors ${
+                            selectedDropdownItem === dropdownItem.href 
+                              ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold' 
+                              : 'text-gray-800 hover:bg-gray-100 hover:text-gray-900'
+                          }`}
+                          onClick={() => {
+                            setIsSolutionsOpen(false);
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                          }}
+                        >
+                          {dropdownItem.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
                 </div>
               ))}
             </div>

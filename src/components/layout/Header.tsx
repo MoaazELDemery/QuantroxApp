@@ -23,7 +23,22 @@ export const Header = (): JSX.Element => {
   const [activeIndex, setActiveIndex] = useState(getActiveIndex());
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [selectedDropdownItem, setSelectedDropdownItem] = useState<string | null>(null);
   const solutionsNavRef = useRef<HTMLDivElement>(null);
+
+  // Function to get the currently selected dropdown item based on current route
+  const getSelectedDropdownItem = () => {
+    if (location.pathname.startsWith('/solutions/asset-managers')) {
+      return '/solutions/asset-managers';
+    } else if (location.pathname.startsWith('/solutions/brokerages')) {
+      return '/solutions/brokerages';
+    } else if (location.pathname.startsWith('/solutions/hedge-funds')) {
+      return '/solutions/hedge-funds';
+    } else if (location.pathname.startsWith('/solutions/robo-advisory')) {
+      return '/solutions/robo-advisory';
+    }
+    return null;
+  };
   const navigationItems = [
     { label: "Home", href: "/" },
     {
@@ -53,6 +68,7 @@ export const Header = (): JSX.Element => {
   // Update active index when route changes
   useEffect(() => {
     setActiveIndex(getActiveIndex());
+    setSelectedDropdownItem(getSelectedDropdownItem());
   }, [location.pathname]);
 
   useEffect(() => {
@@ -166,7 +182,11 @@ export const Header = (): JSX.Element => {
                       <Link
                         key={dIndex}
                         to={dropdownItem.href}
-                        className="block w-full text-left px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 [font-family:'Satoshi-Medium',Helvetica] whitespace-nowrap"
+                        className={`block w-full text-left px-4 py-2 text-sm [font-family:'Satoshi-Medium',Helvetica] whitespace-nowrap transition-colors ${
+                          selectedDropdownItem === dropdownItem.href 
+                            ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold' 
+                            : 'text-gray-800 hover:bg-gray-100 hover:text-gray-900'
+                        }`}
                         onClick={() => setIsSolutionsOpen(false)}
                       >
                         {dropdownItem.label}

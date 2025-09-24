@@ -1,6 +1,5 @@
 import React from "react";
 import { Card, CardContent } from "../../../components/ui/card";
-import { SearchIcon, CheckIcon, DatabaseIcon, BoxIcon, TrendingUpIcon } from "lucide-react";
 import { ScrollReveal } from "../../../components/ui/scroll-reveal";
 
 export const TestimonialsSection = (): JSX.Element => {
@@ -8,43 +7,44 @@ export const TestimonialsSection = (): JSX.Element => {
         {
             id: "research",
             title: "Research",
-            icon: SearchIcon,
+            iconSrc: "/vuesax-linear-search-normal.svg",
             description: "A Python-native environment for advanced factor modeling and strategy development.",
         },
         {
             id: "execution",
             title: "Execution",
-            icon: CheckIcon,
+            iconSrc: "/vuesax-linear-check.svg",
             description: "A low-latency EMS with Smart Order Routing and customizable trading algorithms.",
         },
         {
             id: "data",
             title: "Data",
-            icon: DatabaseIcon,
+            iconSrc: "/vuesax-linear-data.svg",
             description: "Unified access to curated, pre-cleaned market and alternative datasets.",
         },
         {
             id: "backtest",
             title: "Backtest",
-            icon: BoxIcon,
+            iconSrc: "/vuesax-linear-box.svg",
             description: "A low-latency EMS with Smart Order Routing and customizable trading algorithms.",
         },
         {
             id: "risk",
             title: "Risk Management",
-            icon: TrendingUpIcon,
+            iconSrc: "/vuesax-linear-chart-success.svg",
             description: "Real-time portfolio risk management with VaR, stress tests, and factor analysis.",
         },
     ];
 
     return (
         <section className="relative w-full min-h-screen flex flex-col items-center justify-center py-20 px-4">
-            {/* Background ellipse */}
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none pt-20">
-                <img
-                    className="w-[1200px] h-[1200px] object-contain opacity-50"
-                    alt="Background overlay"
-                    src="/homeOverlaybg.png"
+            {/* Central circular gradient background - aligned with dashboard */}
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none pt-16">
+                <div 
+                    className="w-[600px] h-[600px] md:w-[700px] md:h-[700px] lg:w-[800px] lg:h-[800px] rounded-full opacity-70"
+                    style={{
+                        background: 'radial-gradient(circle, #9810FF 0%, #23003E 40%, transparent 70%)'
+                    }}
                 />
             </div>
 
@@ -70,27 +70,27 @@ export const TestimonialsSection = (): JSX.Element => {
                     
                     {/* Top feature - Risk Management */}
                     <div className="absolute top-8 md:top-12 left-1/2 transform -translate-x-1/2">
-                        <ScrollReveal delay={800}>
+                        <ScrollReveal delay={400}>
                             <FeatureItem feature={features[4]} position="top" />
                         </ScrollReveal>
                     </div>
 
                     {/* Left features */}
                     <div className="absolute -left-16 md:-left-32 lg:-left-48 top-1/2 transform -translate-y-1/2 space-y-8 md:space-y-16">
-                        <ScrollReveal delay={1000}>
+                        <ScrollReveal delay={400}>
                             <FeatureItem feature={features[0]} position="left" />
                         </ScrollReveal>
-                        <ScrollReveal delay={1400}>
+                        <ScrollReveal delay={400}>
                             <FeatureItem feature={features[2]} position="left" />
                         </ScrollReveal>
                     </div>
 
                     {/* Right features */}
                     <div className="absolute -right-16 md:-right-32 lg:-right-48 top-1/2 transform -translate-y-1/2 space-y-8 md:space-y-16">
-                        <ScrollReveal delay={1200}>
+                        <ScrollReveal delay={400}>
                             <FeatureItem feature={features[1]} position="right" />
                         </ScrollReveal>
-                        <ScrollReveal delay={1600}>
+                        <ScrollReveal delay={400}>
                             <FeatureItem feature={features[3]} position="right" />
                         </ScrollReveal>
                     </div>
@@ -133,12 +133,11 @@ const FeatureItem: React.FC<{
     feature: {
         id: string;
         title: string;
-        icon: React.ComponentType<{ className?: string }>;
+        iconSrc: string;
         description: string;
     };
     position: 'left' | 'right' | 'top';
 }> = ({ feature, position }) => {
-    const IconComponent = feature.icon;
 
     return (
         <div className="flex items-center justify-center gap-4 group">
@@ -158,8 +157,13 @@ const FeatureItem: React.FC<{
                 <h3 className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-white text-lg md:text-[22px] text-center tracking-[0] leading-normal">
                     {feature.title}
                 </h3>
-                <div className="flex w-11 h-11 items-center justify-center gap-2.5 px-[15px] py-1.5 bg-[#0000004c] rounded-[30px] overflow-hidden backdrop-blur-[10px] backdrop-brightness-[100%]">
-                    <IconComponent className="w-6 h-6 text-white" />
+                {/* Icon frame explicitly 44x44 (padding removed so total size matches spec) */}
+                <div className="flex w-[44px] h-[44px] items-center justify-center bg-[#0000004c] rounded-full overflow-hidden backdrop-blur-[10px] backdrop-brightness-[100%]">
+                    <img
+                        src={feature.iconSrc}
+                        alt={feature.title}
+                        className="w-6 h-6 filter brightness-0 invert"
+                    />
                 </div>
             </div>
 

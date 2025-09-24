@@ -1,5 +1,4 @@
 import {
-  CallToActionSection,
   FeaturesSection,
   FooterSection,
   HeroSection,
@@ -25,7 +24,6 @@ export const Home = (): JSX.Element => {
         <ScrollReveal>
           <ProductDetailsSection />
         </ScrollReveal>
-      
         <ScrollReveal>
           <HeroSection />
         </ScrollReveal>
