@@ -50,13 +50,13 @@ export const TestimonialsSection = (): JSX.Element => {
 
             {/* Header content */}
             <ScrollReveal delay={300}>
-                <header className="relative z-10 flex flex-col items-center justify-center gap-4 mb-16 max-w-[1272px] text-center">
-                    <h1 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-3xl md:text-4xl lg:text-5xl tracking-[0] leading-normal">
+                <header className="relative z-10 flex flex-col items-center justify-center gap-4 mb-8 max-w-[1272px] text-center">
+                    <h1 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-5xl tracking-tight leading-tight">
                         One Platform.
                         <br />
                         the Entire Investment Lifecycle.
                     </h1>
-                    <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-[#d9d9d9] text-lg md:text-xl lg:text-[28px] tracking-[0] leading-normal max-w-4xl">
+                    <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-gray-300 text-xl leading-relaxed max-w-4xl">
                         Quantorx integrates every critical function into a single, high-performance environment. Move
                         seamlessly from hypothesis to execution on a platform engineered for precision and speed.
                     </p>
@@ -64,35 +64,37 @@ export const TestimonialsSection = (): JSX.Element => {
             </ScrollReveal>
 
             {/* Main content container */}
-            <div className="relative z-10 w-full max-w-7xl mx-auto">
+            <div className="relative z-10 w-full max-w-7xl mx-auto mt-24">
                 {/* Central dashboard with features arranged around it */}
-                <div className="relative flex items-center justify-center">
+                <div className="relative flex items-center justify-center h-[600px]">
                     
                     {/* Top feature - Risk Management */}
-                    <div className="absolute top-8 md:top-12 left-1/2 transform -translate-x-1/2">
+                    <div className="absolute top-0 left-1/2 transform -translate-x-1/2">
                         <ScrollReveal delay={400}>
                             <FeatureItem feature={features[4]} position="top" />
                         </ScrollReveal>
                     </div>
 
-                    {/* Left features */}
-                    <div className="absolute -left-16 md:-left-32 lg:-left-48 top-1/2 transform -translate-y-1/2 space-y-8 md:space-y-16">
-                        <ScrollReveal delay={400}>
-                            <FeatureItem feature={features[0]} position="left" />
-                        </ScrollReveal>
-                        <ScrollReveal delay={400}>
-                            <FeatureItem feature={features[2]} position="left" />
-                        </ScrollReveal>
-                    </div>
+                    <div className="absolute inset-0 flex items-center justify-between px-32">
+                        {/* Left features */}
+                        <div className="flex flex-col space-y-32">
+                            <ScrollReveal delay={400}>
+                                <FeatureItem feature={features[0]} position="left" />
+                            </ScrollReveal>
+                            <ScrollReveal delay={400}>
+                                <FeatureItem feature={features[2]} position="left" />
+                            </ScrollReveal>
+                        </div>
 
-                    {/* Right features */}
-                    <div className="absolute -right-16 md:-right-32 lg:-right-48 top-1/2 transform -translate-y-1/2 space-y-8 md:space-y-16">
-                        <ScrollReveal delay={400}>
-                            <FeatureItem feature={features[1]} position="right" />
-                        </ScrollReveal>
-                        <ScrollReveal delay={400}>
-                            <FeatureItem feature={features[3]} position="right" />
-                        </ScrollReveal>
+                        {/* Right features */}
+                        <div className="flex flex-col space-y-32">
+                            <ScrollReveal delay={400}>
+                                <FeatureItem feature={features[1]} position="right" />
+                            </ScrollReveal>
+                            <ScrollReveal delay={400}>
+                                <FeatureItem feature={features[3]} position="right" />
+                            </ScrollReveal>
+                        </div>
                     </div>
 
                     {/* Central dashboard */}
@@ -100,9 +102,9 @@ export const TestimonialsSection = (): JSX.Element => {
                         <div className="relative flex items-center justify-center">
                             {/* Background circles */}
                             <div className="absolute inset-0 flex items-center justify-center">
-                                <div className="w-[200px] h-[200px] md:w-[250px] md:h-[250px] bg-[#0000001a] rounded-full backdrop-blur-[10px] backdrop-brightness-[100%]" />
+                                <div className="w-[250px] h-[250px] bg-[#0000001a] rounded-full backdrop-blur-[10px] backdrop-brightness-[100%]" />
                             </div>
-                            <div className="relative w-[400px] h-[400px] md:w-[500px] md:h-[500px] lg:w-[600px] lg:h-[600px] flex items-center justify-center">
+                            <div className="relative w-[600px] h-[600px] flex items-center justify-center">
                                 <img
                                     className="absolute inset-0 w-full h-full object-contain opacity-70"
                                     alt="Background ellipse 1"
@@ -114,7 +116,7 @@ export const TestimonialsSection = (): JSX.Element => {
                                     src="/ellipse-2.svg"
                                 />
                                 <img
-                                    className="relative z-10 w-[280px] h-[280px] md:w-[350px] md:h-[350px] lg:w-[420px] lg:h-[420px] object-contain rounded-md"
+                                    className="relative z-10 w-[420px] h-[420px] object-contain rounded-md"
                                     alt="Dashboard preview"
                                     src="/Dashboard.png"
                                     loading="lazy"
@@ -140,12 +142,12 @@ const FeatureItem: React.FC<{
 }> = ({ feature, position }) => {
 
     return (
-        <div className="flex items-center justify-center gap-4 group">
+        <div className="flex items-center justify-center gap-4 group relative">
             {/* Left positioned card */}
             {position === 'left' && (
-                <Card className="w-[200px] md:w-[265px] bg-[#0000004c] border-none backdrop-blur-[10px] backdrop-brightness-[100%] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <Card className="absolute right-full mr-4 w-[265px] bg-[#0000004c] border-none backdrop-blur-[10px] backdrop-brightness-[100%] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <CardContent className="flex items-center justify-center gap-3 p-3">
-                        <div className="flex-1 [font-family:'Satoshi-Medium',Helvetica] font-medium text-white text-sm md:text-base tracking-[0] leading-normal">
+                        <div className="flex-1 [font-family:'Satoshi-Medium',Helvetica] font-medium text-white text-base tracking-[0] leading-normal">
                             {feature.description}
                         </div>
                     </CardContent>
@@ -154,7 +156,7 @@ const FeatureItem: React.FC<{
 
             {/* Feature icon and title */}
             <div className="flex flex-col items-center gap-3 min-w-[100px]">
-                <h3 className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-white text-lg md:text-[22px] text-center tracking-[0] leading-normal">
+                <h3 className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-white text-[22px] text-center tracking-[0] leading-normal">
                     {feature.title}
                 </h3>
                 {/* Icon frame explicitly 44x44 (padding removed so total size matches spec) */}
@@ -169,9 +171,9 @@ const FeatureItem: React.FC<{
 
             {/* Right positioned card */}
             {position === 'right' && (
-                <Card className="w-[200px] md:w-[265px] bg-[#0000004c] border-none backdrop-blur-[10px] backdrop-brightness-[100%] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <Card className="absolute left-full ml-4 w-[265px] bg-[#0000004c] border-none backdrop-blur-[10px] backdrop-brightness-[100%] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <CardContent className="flex items-center justify-center gap-3 p-3">
-                        <div className="flex-1 [font-family:'Satoshi-Medium',Helvetica] font-medium text-white text-sm md:text-base tracking-[0] leading-normal">
+                        <div className="flex-1 [font-family:'Satoshi-Medium',Helvetica] font-medium text-white text-base tracking-[0] leading-normal">
                             {feature.description}
                         </div>
                     </CardContent>
@@ -180,9 +182,9 @@ const FeatureItem: React.FC<{
 
             {/* Top positioned card */}
             {position === 'top' && (
-                <Card className="absolute -top-16 md:-top-20 left-1/2 transform -translate-x-1/2 w-[200px] md:w-[265px] bg-[#0000004c] border-none backdrop-blur-[10px] backdrop-brightness-[100%] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <Card className="absolute bottom-full mb-4 w-[265px] bg-[#0000004c] border-none backdrop-blur-[10px] backdrop-brightness-[100%] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <CardContent className="flex items-center justify-center gap-3 p-3">
-                        <div className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-white text-sm md:text-base tracking-[0] leading-normal text-center">
+                        <div className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-white text-base tracking-[0] leading-normal text-center">
                             {feature.description}
                         </div>
                     </CardContent>
