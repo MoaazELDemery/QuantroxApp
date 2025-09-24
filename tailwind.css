@@ -197,8 +197,10 @@
     @apply border-border;
   }
 
-  body {
+  html, body {
+    background: #0a0712;
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
+    overscroll-behavior: none;
   }
 }

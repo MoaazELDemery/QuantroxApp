@@ -63,7 +63,7 @@ export const TestimonialsSection = (): JSX.Element => {
     ];
 
     return (
-        <section className="relative w-full min-h-screen flex flex-col items-center justify-center py-20 px-4">
+    <section className="relative w-full min-h-[600px] max-h-[calc(100vh-200px)] overflow-y-auto flex flex-col items-center justify-center py-10 md:py-14 px-4">
             {/* Central circular gradient background - aligned with dashboard */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none pt-64">
                 <div 
@@ -76,7 +76,7 @@ export const TestimonialsSection = (): JSX.Element => {
 
             {/* Header content */}
             <ScrollReveal delay={300}>
-                <header className="relative z-10 flex flex-col items-center justify-center gap-4 mb-40 max-w-[1272px] text-center">
+                <header className="relative z-10 flex flex-col items-center justify-center gap-4 mb-48 max-w-[1272px] text-center">
                     <h1 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-3xl md:text-4xl lg:text-5xl tracking-[0] leading-normal">
                         One Platform.
                         <br />

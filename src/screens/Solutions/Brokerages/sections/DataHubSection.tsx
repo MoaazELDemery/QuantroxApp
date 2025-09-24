@@ -8,7 +8,6 @@ const solutionsData = [
     title: "Smart Order Router (SOR)",
     description:
       "Dynamically scans the market to find the optimal execution path, minimizing market impact and information leakage.",
-    position: "justify-start",
   },
   {
     id: 2,
@@ -16,7 +15,6 @@ const solutionsData = [
     title: "Algorithmic Trading Suite",
     description:
       "Offer battle-tested algorithms (VWAP, TWAP, POV) as a white-label solution, or let clients deploy their own via our API.",
-    position: "justify-end",
   },
   {
     id: 3,
@@ -24,7 +22,6 @@ const solutionsData = [
     title: "Integrated TCA",
     description:
       "Automatically generate detailed, post-trade TCA reports to prove execution quality to clients and regulators.",
-    position: "justify-center",
   },
 ];
 
@@ -51,37 +48,39 @@ export const DataHubSection = (): JSX.Element => {
         </p>
       </div>
 
-      <div className="flex flex-col gap-8 sm:gap-10 md:gap-12 mt-12 sm:mt-16 md:mt-[89px] max-w-[1400px] mx-auto w-full">
-        {solutionsData.map((solution, index) => (
-          <div
-            key={solution.id}
-            className={`flex w-full justify-center lg:${solution.position} translate-y-[-1rem] animate-fade-in opacity-0`}
-            style={
-              {
-                "--animation-delay": `${400 + index * 200}ms`,
-              } as React.CSSProperties
-            }
-          >
-            <div className="w-full max-w-[570px] relative px-4 text-center lg:text-left">
-              <div className="h-auto mb-3 [font-family:'Satoshi-Medium',Helvetica] font-medium text-[#6e6179] text-sm sm:text-base tracking-[0] leading-[normal]">
-                {solution.label}
-              </div>
-
-              <div className="mb-4 sm:mb-6 h-auto [font-family:'Satoshi-Medium',Helvetica] font-medium text-[#ffffff] text-xl sm:text-2xl md:text-3xl lg:text-[34px] tracking-[0] leading-tight">
-                {solution.title}
-              </div>
-
-              <Card className="w-full max-w-[545px] mx-auto lg:mx-0 h-auto border-0 bg-transparent">
-                <CardContent className="p-4 sm:p-6 lg:p-0 w-full h-full flex relative min-h-[140px] sm:min-h-[160px] lg:min-h-[152px] rounded-lg lg:rounded-none">
-                  <div className="mt-2 sm:mt-4 lg:mt-7 w-full max-w-[489px] h-auto lg:ml-7 bg-gradient-to-r from-purple-900/10 to-indigo-900/10 backdrop-blur-sm rounded-lg p-4 sm:p-5 lg:p-6 [font-family:'Satoshi-Regular',Helvetica] font-normal text-[#d9d9d9] text-sm sm:text-base lg:text-lg xl:text-xl tracking-[0] leading-relaxed flex items-center">
-                    {solution.description}
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-};
+          <div className="flex flex-col gap-8 sm:gap-10 md:gap-12 mt-12 sm:mt-16 md:mt-[89px] max-w-[1400px] mx-auto w-full">
+             {solutionsData.map((solution, index) => {
+               // Alternate: even index left, odd index right
+               const alignment = index % 2 === 0 ? 'justify-start' : 'justify-end';
+               // Add left margin to Solution 3 (index 2) for right shift
+               const extraMargin = index === 2 ? 'lg:ml-48' : '';
+               return (
+                 <div
+                   key={solution.id}
+                   className={`flex w-full justify-center lg:${alignment} ${extraMargin} translate-y-[-1rem] animate-fade-in opacity-0`}
+                   style={{
+                     "--animation-delay": `${400 + index * 200}ms`,
+                   } as React.CSSProperties}
+                 >
+                   <div className="w-full max-w-[570px] relative px-4 text-center lg:text-left">
+                     <div className="h-auto mb-3 [font-family:'Satoshi-Medium',Helvetica] font-medium text-[#6e6179] text-sm sm:text-base tracking-[0] leading-[normal]">
+                       {solution.label}
+                     </div>
+                     <div className="mb-4 sm:mb-6 h-auto [font-family:'Satoshi-Medium',Helvetica] font-medium text-[#ffffff] text-xl sm:text-2xl md:text-3xl lg:text-[34px] tracking-[0] leading-tight">
+                       {solution.title}
+                     </div>
+                     <Card className="w-full max-w-[545px] mx-auto lg:mx-0 h-auto border-0 bg-transparent">
+                       <CardContent className="p-4 sm:p-6 lg:p-0 w-full h-full flex relative min-h-[140px] sm:min-h-[160px] lg:min-h-[152px] rounded-lg lg:rounded-none">
+                         <div className="mt-2 sm:mt-4 lg:mt-7 w-full max-w-[489px] h-auto lg:ml-7 bg-gradient-to-r from-purple-900/10 to-indigo-900/10 backdrop-blur-sm rounded-lg p-4 sm:p-5 lg:p-6 [font-family:'Satoshi-Regular',Helvetica] font-normal text-[#d9d9d9] text-sm sm:text-base lg:text-lg xl:text-xl tracking-[0] leading-relaxed flex items-center">
+                           {solution.description}
+                         </div>
+                       </CardContent>
+                     </Card>
+                   </div>
+                 </div>
+               );
+             })}
+             </div>
+           </section>
+         );
+       }
