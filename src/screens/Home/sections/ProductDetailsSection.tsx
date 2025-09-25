@@ -72,7 +72,7 @@ const [currentSlide, setCurrentSlide] = useState(1);
   ];
 
   return (
-    <section className="relative w-full bg-black min-h-[1200px] h-[140vh] max-h-[1800px] py-20 overflow-hidden">
+    <section className="relative w-full bg-black min-h-[800px] md:min-h-[1000px] lg:min-h-[1200px] py-10 md:py-20">
       <div
         className="absolute inset-0 bg-center min-w-full min-h-full"
         style={{ 
@@ -142,7 +142,7 @@ const [currentSlide, setCurrentSlide] = useState(1);
                   </p>
                 </header>
       
-                <div className="relative w-full max-w-[990px] h-[487px] overflow-hidden">
+                <div className="relative w-full sm:max-w-[990px] h-[487px] overflow-hidden">
                   <div
                     className="flex transition-transform duration-300 ease-in-out"
                     style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -150,44 +150,49 @@ const [currentSlide, setCurrentSlide] = useState(1);
                     {teamMembers.map((member, index) => (
                       <Card
                         key={index}
-                        className="min-w-full bg-transparent border-0"
+                        className="min-w-full sm:min-w-[990px] bg-transparent border-0"
                       >
                         <CardContent className="p-0">
-                          <div className="relative h-[401px]">
+                          <div className="relative h-[401px] w-full sm:w-[990px]">
                             <div
-                              className="absolute w-[990px] h-[401px]"
+                              className="absolute w-full sm:w-[990px] h-[401px] flex justify-center items-center"
                               style={{
-                                backgroundImage: "url(/photoOunlineImage.png)",
-                                backgroundSize: "cover",
-                                backgroundPosition: "center",
+                                backgroundImage: 'none',
                               }}
                             >
+                              {/* Only show background image on desktop */}
+                              <div
+                                className="hidden sm:block absolute inset-0 w-full h-full"
+                                style={{
+                                  backgroundImage: "url(/photoOunlineImage.png)",
+                                  backgroundSize: "cover",
+                                  backgroundPosition: "center",
+                                }}
+                              />
                               <img
-                                className="w-[217px] h-[217px] rounded-[20px] object-cover absolute top-[86px] left-[202px] z-10"
+                                className="w-[120px] h-[120px] sm:w-[217px] sm:h-[217px] rounded-[20px] object-cover absolute top-[30px] left-1/2 sm:top-[86px] sm:left-[202px] -translate-x-1/2 sm:translate-x-0 z-10"
                                 alt={`${member.name} avatar`}
                                 src={member.avatar}
                               />
-                              <div className="flex flex-col gap-3 max-w-[551px] absolute top-[90px] right-[60px]">
+                              <div className="flex flex-col gap-3 max-w-full sm:max-w-[551px] absolute top-[170px] left-1/2 -translate-x-1/2 sm:top-[90px] sm:right-[60px] sm:left-auto sm:translate-x-0 w-[90%] sm:w-auto items-center sm:items-start text-center sm:text-left">
                                 <div className="flex flex-col gap-1">
-                                  <h3 className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-[#ffffff] text-2xl tracking-[0] leading-normal">
+                                  <h3 className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-[#ffffff] text-xl sm:text-2xl tracking-[0] leading-normal">
                                     {member.name}
                                   </h3>
-                                  <p className="[font-family:'Inter',Helvetica] font-normal text-[#ffffffb2] text-sm tracking-[0] leading-normal">
+                                  <p className="[font-family:'Inter',Helvetica] font-normal text-[#ffffffb2] text-xs sm:text-sm tracking-[0] leading-normal">
                                     {member.title}
                                   </p>
                                 </div>
-      
-                                <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-[#ffffff] text-xl tracking-[0] leading-normal max-w-[490px]">
+                                <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-[#ffffff] text-base sm:text-xl tracking-[0] leading-normal max-w-full sm:max-w-[490px]">
                                   {member.description}
                                 </p>
-      
-                                <div className="inline-flex items-center gap-2">
+                                <div className="inline-flex items-center gap-2 justify-center sm:justify-start">
                                   <img
-                                    className="w-5 h-5"
+                                    className="w-4 h-4 sm:w-5 sm:h-5"
                                     alt="LinkedIn"
                                     src="/linkedin---original.svg"
                                   />
-                                  <span className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-base underline text-[#ffffff] tracking-[0] leading-normal">
+                                  <span className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-sm sm:text-base underline text-[#ffffff] tracking-[0] leading-normal">
                                     {member.linkedinUrl}
                                   </span>
                                 </div>
