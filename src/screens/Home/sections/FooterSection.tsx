@@ -29,22 +29,23 @@ export const FooterSection = (): JSX.Element => {
 
   const contactInfo = [
     {
-      icon: <MapPinIcon className="w-6 h-6 text-white" />,
+      icon: <MapPinIcon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />,
       title: "Location",
       content:
         "Cairo, Maadi, Al-Ma'arag City, Building No. 5158, Ground Floor, behind Carrefour Maadi",
     },
     {
-      icon: <PhoneIcon className="w-6 h-6 text-white" />,
+      icon: <PhoneIcon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />,
       title: "Phone",
       content: "+20 127 984 7374 - +966 53 750 7578",
     },
     {
-      icon: <MailIcon className="w-6 h-6 text-white" />,
+      icon: <MailIcon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />,
       title: "Email",
       content: "technology.team@quantorx.com",
     },
   ];
+
   const quickLinks = [
     { label: "Home", href: "/" },
     {
@@ -80,15 +81,18 @@ export const FooterSection = (): JSX.Element => {
   }, [isSolutionsOpen]);
 
   return (
-    <footer className="flex flex-col w-full items-start justify-center gap-20 px-0 py-[50px] bg-zinc-950 relative z-20">
-      <div className="flex items-start justify-between px-[250px] py-20 w-full">
-        <div className="inline-flex flex-col items-start gap-[34px]">
+    <footer className="flex flex-col w-full items-start justify-center gap-8 sm:gap-12 lg:gap-20 px-4 sm:px-8 lg:px-[250px] py-8 sm:py-12 lg:py-[50px] bg-zinc-950 relative z-20">
+      {/* Main Footer Content */}
+      <div className="flex flex-col lg:flex-row items-start justify-between gap-8 sm:gap-12 lg:gap-0 py-4 sm:py-8 lg:py-20 w-full">
+        
+        {/* Company Info Section */}
+        <div className="flex flex-col items-start gap-6 sm:gap-8 lg:gap-[34px] w-full lg:w-auto">
           <img
-            className="w-[137px] h-10 object-cover"
+            className="w-28 h-8 sm:w-32 sm:h-9 lg:w-[137px] lg:h-10 object-cover"
             alt="Logo white"
             src="/logo-white-1-1.png"
           />
-          <div className="w-[371px] [font-family:'Satoshi-Regular',Helvetica] font-normal text-grey text-base tracking-[0.32px] leading-[25.6px]">
+          <div className="w-full max-w-md lg:w-[371px] [font-family:'Satoshi-Regular',Helvetica] font-normal text-grey text-sm sm:text-base tracking-[0.32px] leading-relaxed lg:leading-[25.6px]">
             Experts shaping markets with precision, offering deep insights into
             regional and global finance.
             <br />
@@ -99,44 +103,50 @@ export const FooterSection = (): JSX.Element => {
             <img 
               src="/linkedinPlain.svg" 
               alt="LinkedIn" 
-              className="w-6 h-6" 
+              className="w-5 h-5 sm:w-6 sm:h-6 hover:opacity-80 transition-opacity cursor-pointer" 
             />
           </div>
         </div>
-        <div className="flex w-[579px] items-start gap-[84px]">
-          <div className="flex flex-col w-[327px] items-start gap-6">
-            <div className="w-fit mt-[-1.00px] [font-family:'Satoshi-Black',Helvetica] font-black text-white text-xl tracking-[0.40px] leading-8 whitespace-nowrap">
+
+        {/* Contact & Links Section */}
+        <div className="flex flex-col sm:flex-row lg:flex-row items-start gap-8 sm:gap-12 lg:gap-[84px] w-full lg:w-[579px]">
+          
+          {/* Contact Info */}
+          <div className="flex flex-col w-full sm:w-auto lg:w-[327px] items-start gap-4 sm:gap-5 lg:gap-6">
+            <div className="w-fit [font-family:'Satoshi-Black',Helvetica] font-black text-white text-lg sm:text-xl tracking-[0.40px] leading-6 sm:leading-8 whitespace-nowrap">
               Contact Us
             </div>
             {contactInfo.map((item, index) => (
               <div
                 key={index}
-                className="flex flex-col w-[327px] items-start gap-2.5"
+                className="flex flex-col w-full lg:w-[327px] items-start gap-2 lg:gap-2.5"
               >
-                <div className="inline-flex items-start gap-2.5 mr-[-21.00px]">
+                <div className="inline-flex items-start gap-2 sm:gap-2.5">
                   {item.icon}
-                  <div className="w-[314px] mt-[-1.00px] [font-family:'Satoshi-Bold',Helvetica] font-bold text-[#ffffff] text-base tracking-[0.32px] leading-[25.6px]">
+                  <div className="flex-1 lg:w-[314px] [font-family:'Satoshi-Bold',Helvetica] font-bold text-[#ffffff] text-sm sm:text-base tracking-[0.32px] leading-relaxed lg:leading-[25.6px]">
                     {item.title}
                   </div>
                 </div>
-                <div className="w-[327px] [font-family:'Satoshi-Regular',Helvetica] font-normal text-grey text-base tracking-[0.32px] leading-[25.6px]">
+                <div className="w-full lg:w-[327px] [font-family:'Satoshi-Regular',Helvetica] font-normal text-grey text-sm sm:text-base tracking-[0.32px] leading-relaxed lg:leading-[25.6px]">
                   {item.content}
                 </div>
               </div>
             ))}
           </div>
-          <div className="inline-flex flex-col h-[312px] items-start gap-6">
-            <div className="w-fit mt-[-1.00px] [font-family:'Satoshi-Black',Helvetica] font-black text-white text-xl tracking-[0.40px] leading-8 whitespace-nowrap">
+
+          {/* Quick Links */}
+          <div className="inline-flex flex-col items-start gap-4 sm:gap-5 lg:gap-6 w-full sm:w-auto">
+            <div className="w-fit [font-family:'Satoshi-Black',Helvetica] font-black text-white text-lg sm:text-xl tracking-[0.40px] leading-6 sm:leading-8 whitespace-nowrap">
               Quick Link
             </div>
-            <div className="inline-flex flex-col items-start gap-2.5">
+            <div className="inline-flex flex-col items-start gap-2 lg:gap-2.5">
               {quickLinks.map((link, index) => (
                 <div key={index} className="relative" ref={link.hasDropdown ? solutionsRef : null}>
                   {link.href ? (
                     <Link
                       to={link.href}
                       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                      className={`w-fit ${index === 0 ? "mt-[-1.00px]" : ""} [font-family:'Satoshi-Regular',Helvetica] font-normal text-grey text-base tracking-[0.32px] leading-[25.6px] whitespace-nowrap cursor-pointer hover:text-white transition-colors`}
+                      className={`w-fit [font-family:'Satoshi-Regular',Helvetica] font-normal text-grey text-sm sm:text-base tracking-[0.32px] leading-relaxed lg:leading-[25.6px] whitespace-nowrap cursor-pointer hover:text-white transition-colors`}
                     >
                       {link.label}
                     </Link>
@@ -144,12 +154,12 @@ export const FooterSection = (): JSX.Element => {
                     <button
                       type="button"
                       onClick={() => setIsSolutionsOpen(!isSolutionsOpen)}
-                      className={`flex items-center gap-1 w-fit ${index === 0 ? "mt-[-1.00px]" : ""} [font-family:'Satoshi-Regular',Helvetica] font-normal text-grey text-base tracking-[0.32px] leading-[25.6px] whitespace-nowrap cursor-pointer hover:text-white transition-colors bg-transparent border-none p-0`}
+                      className={`flex items-center gap-1 w-fit [font-family:'Satoshi-Regular',Helvetica] font-normal text-grey text-sm sm:text-base tracking-[0.32px] leading-relaxed lg:leading-[25.6px] whitespace-nowrap cursor-pointer hover:text-white transition-colors bg-transparent border-none p-0`}
                     >
                       {link.label}
                       {link.hasDropdown && (
                         <ChevronDownIcon
-                          className={`w-4 h-4 text-grey transition-transform duration-200 ${
+                          className={`w-3 h-3 sm:w-4 sm:h-4 text-grey transition-transform duration-200 ${
                             isSolutionsOpen ? "rotate-180" : "rotate-0"
                           }`}
                         />

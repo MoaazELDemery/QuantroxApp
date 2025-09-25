@@ -10,8 +10,8 @@ import { ScrollReveal } from "../../components/ui/scroll-reveal";
 
 export const Home = (): JSX.Element => {
   return (
-    <div className="bg-black w-full min-h-screen min-w-[1512px] flex flex-col">
-      <div className="bg-black w-full flex-1 flex flex-col">
+    <div className="bg-black w-full min-h-screen flex flex-col">
+      <div className="">
         <ScrollReveal>
           <FeaturesSection />
         </ScrollReveal>

@@ -3,28 +3,50 @@ import { Header } from "../../../components/layout/Header";
 
 export const FeaturesSection = (): JSX.Element => {
   return (
-    <section className="relative w-full h-[1000px] overflow-hidden bg-[url(/illusionGIF.gif)] bg-cover bg-[50%_50%]">
-      <div className="relative h-full [background:radial-gradient(50%_50%_at_50%_0%,rgba(74,0,130,0.5)_0%,rgba(0,0,0,0)_100%)]">
-        <div className="absolute w-full h-[1250px] top-0 left-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(1,1,1,1)_63%)]" />
+    <section className="relative w-full min-h-screen overflow-hidden bg-[url(/illusionGIF.gif)] bg-cover bg-center">
+      <div className="relative h-full min-h-screen [background:radial-gradient(50%_50%_at_50%_0%,rgba(74,0,130,0.5)_0%,rgba(0,0,0,0)_100%)]">
+        <div className="absolute w-full h-full top-0 left-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(1,1,1,1)_63%)]" />
         <Header />
+        
+        {/* Logo - responsive sizing and positioning */}
         <img
-          className="absolute w-[600px] h-[630px] top-[216px] left-1/2 transform -translate-x-1/2"
+          className="absolute w-[300px] h-[315px] top-[120px] left-1/2 transform -translate-x-1/2 
+                     md:w-[500px] md:h-[525px] md:top-[180px]
+                     lg:w-[600px] lg:h-[630px] lg:top-[216px]"
           alt="Logo SVG"
           src="/logo-svg-1.svg"
         />
-        <div className="absolute top-[286px] left-1/2 transform -translate-x-1/2 flex flex-col items-center justify-center gap-10">
-          <div className="flex flex-col items-center gap-8">
-            <h1 className="w-[817px] bg-[linear-gradient(180deg,rgba(255,255,255,1)_0%,rgba(235,228,245,1)_39%,rgba(222,210,238,1)_65%,rgba(82,61,109,1)_100%)] [-webkit-background-clip:text] bg-clip-text [-webkit-text-fill-color:transparent] [text-fill-color:transparent] [font-family:'Satoshi-Bold',Helvetica] font-bold text-transparent text-7xl text-center tracking-[-1.80px] leading-normal">
+        
+        {/* Content container - responsive positioning and spacing */}
+        <div className="absolute top-[200px] left-1/2 transform -translate-x-1/2 flex flex-col items-center justify-center gap-6 px-4
+                        md:top-[250px] md:gap-8
+                        lg:top-[286px] lg:gap-10 lg:px-0">
+          <div className="flex flex-col items-center gap-4 md:gap-6 lg:gap-8">
+            {/* Title - responsive text sizing and width */}
+            <h1 className="w-full max-w-[90vw] bg-[linear-gradient(180deg,rgba(255,255,255,1)_0%,rgba(235,228,245,1)_39%,rgba(222,210,238,1)_65%,rgba(82,61,109,1)_100%)] [-webkit-background-clip:text] bg-clip-text [-webkit-text-fill-color:transparent] [text-fill-color:transparent] [font-family:'Satoshi-Bold',Helvetica] font-bold text-transparent text-3xl text-center tracking-[-1.20px] leading-tight
+                       sm:text-4xl sm:tracking-[-1.40px]
+                       md:text-5xl md:max-w-[700px] md:tracking-[-1.60px] md:leading-normal
+                       lg:text-7xl lg:max-w-[817px] lg:tracking-[-1.80px]">
               The Architecture of Alpha
             </h1>
-            <p className="w-[817px] [font-family:'Satoshi-Medium',Helvetica] font-medium text-[#d9d9d9] text-[28px] text-center tracking-[0] leading-normal">
+            
+            {/* Description - responsive text sizing and width */}
+            <p className="w-full max-w-[90vw] [font-family:'Satoshi-Medium',Helvetica] font-medium text-[#d9d9d9] text-base text-center tracking-[0] leading-relaxed
+                          sm:text-lg
+                          md:text-xl md:max-w-[700px] md:leading-normal
+                          lg:text-[28px] lg:max-w-[817px]">
               The definitive end-to-end platform for institutional quantitative
               investment. We engineer the native technology that powers
               Egypt&#39;s most sophisticated financial leaders.
             </p>
           </div>
-          <Button className="w-[250px] h-auto justify-center py-4 bg-[#4a0082] rounded-[32px] hover:bg-[#4a0082]/90">
-            <span className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-lg text-[#ffffff] tracking-[0] leading-6">
+          
+          {/* Button - responsive sizing */}
+          <Button className="w-[200px] h-auto justify-center py-3 bg-[#4a0082] rounded-[32px] hover:bg-[#4a0082]/90
+                             md:w-[220px] md:py-3.5
+                             lg:w-[250px] lg:py-4">
+            <span className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-base text-[#ffffff] tracking-[0] leading-6
+                             lg:text-lg">
               Request a demo
             </span>
           </Button>

@@ -126,7 +126,7 @@ const [currentSlide, setCurrentSlide] = useState(1);
         </div>
 
         {/* Second Section: Team Members */}
-        <div className="relative max-w-[1200px] mx-auto bg-[#24004d33] rounded-3xl overflow-hidden backdrop-blur-[10px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(10px)_brightness(100%)] px-12 py-20">
+        <div className="relative max-w-6xl mx-auto bg-[#24004d33] rounded-3xl overflow-hidden backdrop-blur-[10px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(10px)_brightness(100%)] px-6 sm:px-12 py-12 sm:py-20">
               <div className="flex flex-col items-center gap-8 max-w-[1099px] mx-auto">
                 <header className="flex flex-col items-center gap-8 text-center">
                   <h2 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-[#e6e6e6] text-5xl tracking-[-1.80px] leading-normal">

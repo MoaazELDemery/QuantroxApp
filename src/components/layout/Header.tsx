@@ -89,17 +89,18 @@ export const Header = (): JSX.Element => {
   }, [isSolutionsOpen]);
 
   return (
-    <header className="absolute top-0 left-0 w-full flex items-center justify-between px-4 sm:px-8 md:px-16 lg:px-24 xl:px-[138px] py-4 md:py-6 lg:py-8 z-50">
+    <header className="absolute top-0 left-0 w-full flex items-center justify-between px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 2xl:px-[138px] py-3 sm:py-4 md:py-6 lg:py-8 z-50">
       <img
-        className="w-[100px] sm:w-[120px] md:w-[137px] h-7 sm:h-8 md:h-10 object-cover"
+        className="w-20 sm:w-24 md:w-32 lg:w-36 h-7 sm:h-8 md:h-10 object-cover"
         alt="Logo white"
         src="/logo-white-1-1.png"
       />
       
       {/* Mobile Menu Button */}
       <button 
-        className="lg:hidden flex items-center justify-center w-8 h-8 text-white"
+        className="lg:hidden flex items-center justify-center w-10 h-10 text-white hover:bg-white/10 rounded-lg transition-colors"
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        aria-label="Toggle mobile menu"
       >
         {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
       </button>
@@ -117,7 +118,7 @@ export const Header = (): JSX.Element => {
                 <Link
                   to={item.href}
                   onClick={() => handleNavClick(index)}
-                  className={`flex items-center justify-center w-[100px] h-11 focus:outline-none ${
+                  className={`flex items-center justify-center w-20 lg:w-24 h-11 focus:outline-none ${
                     item.hasDropdown ? "gap-0.5" : ""
                   }`}
                   style={{
@@ -148,7 +149,7 @@ export const Header = (): JSX.Element => {
                 <button
                   type="button"
                   onClick={() => handleNavClick(index)}
-                  className={`flex items-center justify-center w-[100px] h-11 focus:outline-none ${
+                  className={`flex items-center justify-center w-20 lg:w-24 h-11 focus:outline-none ${
                     item.hasDropdown ? "gap-0.5" : ""
                   }`}
                   style={{
@@ -176,7 +177,7 @@ export const Header = (): JSX.Element => {
                 </button>
               )}
               {item.hasDropdown && isSolutionsOpen && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-max min-w-[180px] bg-white rounded-lg shadow-lg z-10 py-1">
+                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-max min-w-44 bg-white rounded-lg shadow-lg z-10 py-1">
                   {item.dropdownItems?.map((dropdownItem, dIndex) =>
                     dropdownItem.href && dropdownItem.href.startsWith("/") ? (
                       <Link
@@ -211,10 +212,10 @@ export const Header = (): JSX.Element => {
       
       {/* Mobile Navigation Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 w-full bg-black/95 backdrop-blur-sm border-t border-white/10">
-          <nav className="flex flex-col py-4">
+        <div className="lg:hidden absolute top-full left-0 w-full bg-black/95 backdrop-blur-sm border-t border-white/10 shadow-lg">
+          <nav className="flex flex-col py-4 px-4 sm:px-6 max-h-[calc(100vh-80px)] overflow-y-auto">
             {navigationItems.map((item, index) => (
-              <div key={index} className="px-6 py-2">
+              <div key={index} className="border-b border-white/5 last:border-b-0">
                 {item.href ? (
                   <Link
                     to={item.href}
@@ -222,7 +223,11 @@ export const Header = (): JSX.Element => {
                       handleNavClick(index);
                       setIsMobileMenuOpen(false);
                     }}
-                    className="block w-full text-left py-2 text-white [font-family:'Satoshi-Medium',Helvetica] font-medium text-base"
+                    className={`block w-full text-left py-4 transition-colors [font-family:'Satoshi-Medium',Helvetica] font-medium text-base ${
+                      activeIndex === index 
+                        ? 'text-white bg-white/5' 
+                        : 'text-gray-300 hover:text-white hover:bg-white/5'
+                    }`}
                   >
                     {item.label}
                   </Link>
@@ -230,23 +235,31 @@ export const Header = (): JSX.Element => {
                   <div>
                     <button
                       onClick={() => setIsSolutionsOpen(!isSolutionsOpen)}
-                      className="flex items-center justify-between w-full text-left py-2 text-white [font-family:'Satoshi-Medium',Helvetica] font-medium text-base"
+                      className={`flex items-center justify-between w-full text-left py-4 transition-colors [font-family:'Satoshi-Medium',Helvetica] font-medium text-base ${
+                        activeIndex === index 
+                          ? 'text-white bg-white/5' 
+                          : 'text-gray-300 hover:text-white hover:bg-white/5'
+                      }`}
                     >
                       {item.label}
                       <ChevronDownIcon
-                        className={`w-4 h-4 text-white transition-transform duration-200 ${
+                        className={`w-4 h-4 text-current transition-transform duration-200 ${
                           isSolutionsOpen ? "rotate-180" : "rotate-0"
                         }`}
                       />
                     </button>
                     {isSolutionsOpen && (
-                      <div className="ml-4 mt-2">
+                      <div className="bg-white/5 rounded-lg mx-2 mb-2">
                         {item.dropdownItems?.map((dropdownItem, dIndex) => (
                           dropdownItem.href && dropdownItem.href.startsWith("/") ? (
                             <Link
                               key={dIndex}
                               to={dropdownItem.href}
-                              className="block py-2 text-gray-300 [font-family:'Satoshi-Regular',Helvetica] text-sm"
+                              className={`block py-3 px-4 transition-colors [font-family:'Satoshi-Regular',Helvetica] text-sm first:rounded-t-lg last:rounded-b-lg ${
+                                selectedDropdownItem === dropdownItem.href
+                                  ? 'text-white bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-l-2 border-blue-500'
+                                  : 'text-gray-400 hover:text-white hover:bg-white/10'
+                              }`}
                               onClick={() => {
                                 setIsSolutionsOpen(false);
                                 setIsMobileMenuOpen(false);
@@ -258,7 +271,7 @@ export const Header = (): JSX.Element => {
                             <a
                               key={dIndex}
                               href={dropdownItem.href}
-                              className="block py-2 text-gray-300 [font-family:'Satoshi-Regular',Helvetica] text-sm"
+                              className="block py-3 px-4 text-gray-400 hover:text-white hover:bg-white/10 [font-family:'Satoshi-Regular',Helvetica] text-sm first:rounded-t-lg last:rounded-b-lg transition-colors"
                               onClick={() => {
                                 setIsSolutionsOpen(false);
                                 setIsMobileMenuOpen(false);
@@ -277,15 +290,19 @@ export const Header = (): JSX.Element => {
                       handleNavClick(index);
                       setIsMobileMenuOpen(false);
                     }}
-                    className="block w-full text-left py-2 text-white [font-family:'Satoshi-Medium',Helvetica] font-medium text-base"
+                    className={`block w-full text-left py-4 transition-colors [font-family:'Satoshi-Medium',Helvetica] font-medium text-base ${
+                      activeIndex === index 
+                        ? 'text-white bg-white/5' 
+                        : 'text-gray-300 hover:text-white hover:bg-white/5'
+                    }`}
                   >
                     {item.label}
                   </button>
                 )}
               </div>
             ))}
-            <div className="px-6 py-4">
-              <Button className="w-full bg-[#4a0082] rounded-[32px] hover:bg-[#4a0082]/90 py-3">
+            <div className="pt-6 pb-2">
+              <Button className="w-full bg-[#4a0082] rounded-[32px] hover:bg-[#4a0082]/90 py-3 transition-colors">
                 <span className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-base text-[#ffffff]">
                   Request a Demo
                 </span>
@@ -295,11 +312,12 @@ export const Header = (): JSX.Element => {
         </div>
       )}
       
-      <Button className="inline-flex items-center gap-4 px-10 py-2 bg-[#4a0082] rounded-[32px] h-auto hover:bg-[#4a0082]/90 transition-colors">
-            <span className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-[#ffffff] text-sm text-center tracking-[0] leading-6 whitespace-nowrap">
-              Request a Demo
-            </span>
-          </Button>
+      {/* Desktop CTA Button */}
+      <Button className="hidden lg:inline-flex items-center gap-4 px-6 xl:px-10 py-2 bg-[#4a0082] rounded-[32px] h-auto hover:bg-[#4a0082]/90 transition-colors">
+        <span className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-[#ffffff] text-sm text-center tracking-[0] leading-6 whitespace-nowrap">
+          Request a Demo
+        </span>
+      </Button>
     </header>
   );
 };
