@@ -38,8 +38,8 @@ export const TestimonialsSection = (): JSX.Element => {
 
     return (
         <section className="relative w-full min-h-[900px] flex flex-col items-center justify-center py-10 px-4 lg:py-20">
-            {/* Central circular gradient background */}
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            {/* Central circular gradient background for desktop only */}
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none mt-32 hidden lg:flex">
                 <div 
                     className="w-96 h-96 sm:w-[500px] sm:h-[500px] md:w-[700px] md:h-[700px] lg:w-[800px] lg:h-[800px] rounded-full opacity-70"
                     style={{
@@ -50,7 +50,7 @@ export const TestimonialsSection = (): JSX.Element => {
 
             {/* Header content */}
             <ScrollReveal delay={300}>
-                <header className="relative z-10 flex flex-col items-center justify-center gap-4 mb-10 sm:mb-16 lg:mb-20 max-w-6xl text-center">
+                <header className="relative z-10 flex flex-col items-center justify-center gap-4 mb-32 sm:mb-36 lg:mb-40 max-w-6xl text-center">
                     <h1 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-[0] leading-tight lg:leading-normal">
                         One Platform.
                         <br />
@@ -130,15 +130,23 @@ export const TestimonialsSection = (): JSX.Element => {
 
             {/* Mobile/Tablet Layout */}
             <div className="lg:hidden relative z-10 w-full max-w-4xl mx-auto">
-                {/* Dashboard */}
+                {/* Dashboard with gradient background under image */}
                 <ScrollReveal delay={600}>
-                    <div className="relative flex items-center justify-center mb-8 sm:mb-12">
+                    <div className="relative flex items-center justify-center mb-24 sm:mb-28">
                         {/* Background circles */}
                         <div className="absolute inset-0 flex items-center justify-center">
                             <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 bg-[#0000001a] rounded-full backdrop-blur-[10px] backdrop-brightness-[100%]" />
                         </div>
-                        
-                        <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 flex items-center justify-center">
+                        {/* Radial gradient background for mobile */}
+                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none z-0">
+                            <div 
+                                className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full opacity-70"
+                                style={{
+                                    background: 'radial-gradient(circle, #9810FF 0%, #23003E 40%, transparent 70%)'
+                                }}
+                            />
+                        </div>
+                        <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 flex items-center justify-center z-10">
                             <img
                                 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[70%] h-[70%] object-contain opacity-100"
                                 alt="Background ellipse 1"
@@ -155,7 +163,7 @@ export const TestimonialsSection = (): JSX.Element => {
                                 src="/ellipse-2.svg"
                             />
                             <img
-                                className="relative z-10 w-48 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 object-contain rounded-md -mt-4 sm:-mt-6"
+                                className="relative z-20 w-48 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 object-contain rounded-md -mt-4 sm:-mt-6"
                                 alt="Dashboard preview"
                                 src="/Dashboard.png"
                                 loading="lazy"
@@ -165,7 +173,7 @@ export const TestimonialsSection = (): JSX.Element => {
                 </ScrollReveal>
 
                 {/* Mobile Features Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 max-w-2xl mx-auto">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 max-w-2xl mx-auto mt-24 sm:mt-28">
                     {features.map((feature, index) => (
                         <ScrollReveal key={feature.id} delay={500 + (index * 100)}>
                             <MobileFeatureItem feature={feature} />

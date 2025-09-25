@@ -15,13 +15,7 @@ export const ProductShowcaseSection = (): JSX.Element => {
   return (
     <section className="relative w-full bg-black min-h-[1000px] h-[calc(100vh+200px)] max-h-[1400px] overflow-hidden">
       <div className="relative w-full h-full overflow-hidden">
-        <div className="absolute inset-0 flex items-center justify-center">
-          <img
-            className="w-full max-w-6xl h-auto object-cover opacity-30"
-            alt="Ellipse background"
-            src="/ellipse-5.svg"
-          />
-        </div>
+        {/* Removed ellipse-5.svg background image */}
 
         {/* Fixed background implementation */}
         <div
