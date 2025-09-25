@@ -13,7 +13,7 @@ export const ProductShowcaseSection = (): JSX.Element => {
   ];
 
   return (
-  <section className="relative w-full bg-black h-[1200px] max-h-screen overflow-y-auto">
+    <section className="relative w-full bg-black min-h-[1000px] h-[calc(100vh+200px)] max-h-[1400px] overflow-hidden">
       <div className="relative w-full h-full overflow-hidden">
         <div className="absolute inset-0 flex items-center justify-center">
           <img
@@ -28,6 +28,11 @@ export const ProductShowcaseSection = (): JSX.Element => {
           className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: `url('/fragementOverlayBG.png')`,
+            backgroundAttachment: "scroll",
+            backgroundSize: "100% 100%",
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat",
+            transform: "scale(1)"
           }}
         />
 

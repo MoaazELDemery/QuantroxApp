@@ -11,8 +11,8 @@ export const TestimonialsSection = (): JSX.Element => {
             description: "A Python-native environment for advanced factor modeling and strategy development.",
             // Positioning constraints relative to dashboard
             position: {
-                top: "20%",
-                left: "-280px",
+                top: "10%",
+                left: "-270px",
                 transform: "translateY(-50%)"
             }
         },
@@ -22,8 +22,8 @@ export const TestimonialsSection = (): JSX.Element => {
             iconSrc: "/vuesax-linear-check.svg",
             description: "A low-latency EMS with Smart Order Routing and customizable trading algorithms.",
             position: {
-                top: "20%",
-                right: "-280px",
+                top: "10%",
+                right: "-270px",
                 transform: "translateY(-50%)"
             }
         },
@@ -33,8 +33,8 @@ export const TestimonialsSection = (): JSX.Element => {
             iconSrc: "/vuesax-linear-data.svg",
             description: "Unified access to curated, pre-cleaned market and alternative datasets.",
             position: {
-                bottom: "50%",
-                left: "-320px",
+                bottom: "55%",
+                left: "-340px",
                 transform: "translateY(50%)"
             }
         },
@@ -44,8 +44,8 @@ export const TestimonialsSection = (): JSX.Element => {
             iconSrc: "/vuesax-linear-box.svg",
             description: "A low-latency EMS with Smart Order Routing and customizable trading algorithms.",
             position: {
-                bottom: "50%",
-                right: "-320px",
+                bottom: "55%",
+                right: "-340px",
                 transform: "translateY(50%)"
             }
         },
@@ -55,7 +55,7 @@ export const TestimonialsSection = (): JSX.Element => {
             iconSrc: "/vuesax-linear-chart-success.svg",
             description: "Real-time portfolio risk management with VaR, stress tests, and factor analysis.",
             position: {
-                top: "-40px",
+                top: "-80px",
                 left: "50%",
                 transform: "translateX(-50%)"
             }
@@ -63,11 +63,11 @@ export const TestimonialsSection = (): JSX.Element => {
     ];
 
     return (
-    <section className="relative w-full min-h-[600px] max-h-[calc(100vh-200px)] overflow-y-auto flex flex-col items-center justify-center py-10 md:py-14 px-4">
+        <section className="relative w-full min-h-[900px] h-[100vh] max-h-[1400px] flex flex-col items-center justify-center py-20 px-4">
             {/* Central circular gradient background - aligned with dashboard */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none pt-64">
                 <div 
-                    className="w-[600px] h-[600px] md:w-[700px] md:h-[700px] lg:w-[600px] lg:h-[600px] rounded-full opacity-70"
+                    className="w-[700px] h-[700px] md:w-[800px] md:h-[800px] lg:w-[800px] lg:h-[800px] rounded-full opacity-70"
                     style={{
                         background: 'radial-gradient(circle, #9810FF 0%, #23003E 40%, transparent 70%)'
                     }}
@@ -76,7 +76,7 @@ export const TestimonialsSection = (): JSX.Element => {
 
             {/* Header content */}
             <ScrollReveal delay={300}>
-                <header className="relative z-10 flex flex-col items-center justify-center gap-4 mb-48 max-w-[1272px] text-center">
+                <header className="relative z-10 flex flex-col items-center justify-center gap-4 mb-40 max-w-[1272px] text-center">
                     <h1 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-3xl md:text-4xl lg:text-5xl tracking-[0] leading-normal">
                         One Platform.
                         <br />
@@ -103,17 +103,22 @@ export const TestimonialsSection = (): JSX.Element => {
                             </div>
                             <div className="relative w-[400px] h-[400px] md:w-[500px] md:h-[500px] lg:w-[600px] lg:h-[600px] flex items-center justify-center">
                                 <img
-                                    className="absolute inset-0 w-full h-full object-contain opacity-70"
+                                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[70%] h-[70%] object-contain opacity-100"
                                     alt="Background ellipse 1"
                                     src="/ellipse-1.svg"
                                 />
                                 <img
-                                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[85%] h-[85%] object-contain opacity-70"
+                                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[85%] h-[85%] object-contain opacity-100"
                                     alt="Background ellipse 2"
                                     src="/ellipse-2.svg"
                                 />
                                 <img
-                                    className="relative z-10 w-[280px] h-[280px] md:w-[350px] md:h-[350px] lg:w-[420px] lg:h-[420px] object-contain rounded-md"
+                                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[100%] h-[100%] object-contain opacity-100"
+                                    alt="Background ellipse 2"
+                                    src="/ellipse-2.svg"
+                                />
+                                <img
+                                    className="relative z-10 w-[280px] h-[2380px] md:w-[350px] md:h-[350px] lg:w-[420px] lg:h-[420px] object-contain rounded-md -mt-16"
                                     alt="Dashboard preview"
                                     src="/Dashboard.png"
                                     loading="lazy"
@@ -127,7 +132,7 @@ export const TestimonialsSection = (): JSX.Element => {
                                     className="absolute"
                                     style={feature.position}
                                 >
-                                    <ScrollReveal delay={400 + (index * 100)}>
+                                    <ScrollReveal delay={500 + (index * 100)}>
                                         <FeatureItem 
                                             feature={feature} 
                                             alignmentDirection={getAlignmentDirection(feature.id)}
