@@ -34,7 +34,7 @@ export const WhitepapersSection = (): JSX.Element => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[106px] w-full">
+  <div className="flex flex-row flex-nowrap overflow-x-auto gap-6 w-full">
           {whitepapers.map((whitepaper, index) => (
             <Card
               key={index}

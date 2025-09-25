@@ -29,17 +29,21 @@ export const LeadershipSection = (): JSX.Element => {
   ];
 
   return (
-    <section className="flex flex-col items-start gap-2.5 px-4 md:px-[138px] py-40 w-full">
-      <div className="flex flex-col items-start gap-[114px] w-full">
-        <h2 className="flex items-center justify-center w-full [font-family:'Satoshi-Bold',Helvetica] font-bold text-[#ffffff] text-5xl text-center tracking-[0] leading-[normal]">
+    <section className="flex flex-col items-start gap-2 px-2 sm:px-4 py-16 w-full">
+      <div className="flex flex-col items-start gap-12 w-full">
+        <h2 className="flex items-center justify-center w-full [font-family:'Satoshi-Bold',Helvetica] font-bold text-[#ffffff] text-2xl sm:text-4xl md:text-5xl text-center tracking-[0] leading-[normal]">
           Our Leadership
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-[1200px] mx-auto">
+        {/* --- CHANGES START HERE --- */}
+
+        {/* 1. Added max-w-6xl to constrain the grid's width on larger screens, making cards narrower. */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full max-w-6xl mx-auto">
           {leadershipData.map((leader, index) => (
             <Card
               key={index}
-              className="flex flex-col h-full min-h-[480px] rounded-2xl overflow-hidden border-[0.2px] border-solid border-[#6e6179] bg-transparent"
+              /* 2. Reduced min-h from 480px to 420px to make cards shorter. */
+              className="flex flex-col h-full min-h-[420px] rounded-2xl overflow-hidden border-[0.2px] border-solid border-[#6e6179] bg-transparent"
             >
               <CardContent className="p-0 flex flex-col h-full">
                 <div className="relative w-full aspect-[4/3] flex-shrink-0">
@@ -49,8 +53,9 @@ export const LeadershipSection = (): JSX.Element => {
                     src={leader.image}
                   />
                 </div>
-
-                <div className="flex flex-col flex-grow justify-between gap-4 p-6">
+                
+                {/* 3. Reduced padding from p-6 to p-4 for a more compact content area. */}
+                <div className="flex flex-col flex-grow justify-between gap-4 p-4">
                   <div className="flex flex-col items-center text-center gap-3">
                     <h3 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-[#ffffff] text-lg leading-tight">
                       {leader.name}
@@ -69,6 +74,7 @@ export const LeadershipSection = (): JSX.Element => {
             </Card>
           ))}
         </div>
+        {/* --- CHANGES END HERE --- */}
       </div>
     </section>
   );
