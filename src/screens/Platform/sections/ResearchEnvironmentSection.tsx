@@ -5,6 +5,8 @@ export const ResearchEnvironmentSection = (): JSX.Element => {
     <section className="relative w-full min-h-[560px] md:min-h-[700px] overflow-visible pb-0">
       {/* Header */}
       <Header />
+      {/* Small gap below header only on mobile */}
+      <div className="block sm:hidden h-20" />
 
       {/* Background gradient */}
       <div className="absolute inset-0 w-full h-full [background:radial-gradient(50%_50%_at_50%_0%,rgba(74,0,130,0.5)_0%,rgba(0,0,0,0)_100%)]" />

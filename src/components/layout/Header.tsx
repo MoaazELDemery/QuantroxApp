@@ -22,6 +22,7 @@ export const Header = (): JSX.Element => {
   
   const [activeIndex, setActiveIndex] = useState(getActiveIndex());
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+  const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [selectedDropdownItem, setSelectedDropdownItem] = useState<string | null>(null);
   const solutionsNavRef = useRef<HTMLDivElement>(null);
@@ -234,7 +235,10 @@ export const Header = (): JSX.Element => {
                 ) : item.hasDropdown ? (
                   <div>
                     <button
-                      onClick={() => setIsSolutionsOpen(!isSolutionsOpen)}
+                      onClick={() => {
+                        setOpenDropdownIndex(openDropdownIndex === index ? null : index);
+                        setIsSolutionsOpen(openDropdownIndex !== index);
+                      }}
                       className={`flex items-center justify-between w-full text-left py-4 transition-colors [font-family:'Satoshi-Medium',Helvetica] font-medium text-base ${
                         activeIndex === index 
                           ? 'text-white bg-white/5' 
@@ -244,11 +248,11 @@ export const Header = (): JSX.Element => {
                       {item.label}
                       <ChevronDownIcon
                         className={`w-4 h-4 text-current transition-transform duration-200 ${
-                          isSolutionsOpen ? "rotate-180" : "rotate-0"
+                          openDropdownIndex === index ? "rotate-180" : "rotate-0"
                         }`}
                       />
                     </button>
-                    {isSolutionsOpen && (
+                    {openDropdownIndex === index && (
                       <div className="bg-white/5 rounded-lg mx-2 mb-2">
                         {item.dropdownItems?.map((dropdownItem, dIndex) => (
                           dropdownItem.href && dropdownItem.href.startsWith("/") ? (
@@ -263,6 +267,8 @@ export const Header = (): JSX.Element => {
                               onClick={() => {
                                 setIsSolutionsOpen(false);
                                 setIsMobileMenuOpen(false);
+                                setOpenDropdownIndex(null);
+                                setActiveIndex(1);
                               }}
                             >
                               {dropdownItem.label}
@@ -275,6 +281,7 @@ export const Header = (): JSX.Element => {
                               onClick={() => {
                                 setIsSolutionsOpen(false);
                                 setIsMobileMenuOpen(false);
+                                setOpenDropdownIndex(null);
                               }}
                             >
                               {dropdownItem.label}
