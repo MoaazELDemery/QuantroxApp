@@ -41,7 +41,7 @@ export const TechnologyOverviewSection = (): JSX.Element => {
         </p>
       </div>
 
-      <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms] flex w-full max-w-[1216px] items-center gap-8 mt-[138px] justify-center">
+  <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms] flex flex-col sm:flex-row w-full max-w-[1216px] items-center gap-8 mt-[138px] justify-center">
         {challenges.map((challenge, index) => (
           <Card
             key={`challenge-${index}`}
