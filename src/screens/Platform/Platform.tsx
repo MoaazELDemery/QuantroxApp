@@ -7,7 +7,7 @@ import { ScrollReveal } from "../../components/ui/scroll-reveal";
 export const Platform = (): JSX.Element => {
   return (
     <main
-      className="bg-black overflow-hidden w-full min-w-[1512px] min-h-screen flex flex-col relative"
+      className="bg-black overflow-hidden w-full min-h-screen flex flex-col relative"
       data-model-id="637:8890"
     >
       {/* Background gradient elements */}

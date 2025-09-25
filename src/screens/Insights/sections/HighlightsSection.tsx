@@ -86,11 +86,10 @@ export const HighlightsSection = (): JSX.Element => {
 								variant="ghost"
 								size="sm"
 								onClick={() => setActiveFilter(option.id)}
-								className={`h-auto flex flex-col items-center justify-center gap-2.5 px-2.5 py-0.5 relative rounded-2xl transition-colors ${
-									activeFilter === option.id
+								className={`h-auto flex flex-col items-center justify-center gap-2.5 px-2.5 py-0.5 relative rounded-2xl transition-colors ${activeFilter === option.id
 										? "bg-[#4a0082] text-[#ffffff]"
 										: "text-[#ffffff] hover:bg-[#2a2a2a]"
-								}`}
+									}`}
 							>
 								<span className="relative w-fit [font-family:'Satoshi-Medium',Helvetica] font-medium text-sm md:text-base tracking-[0.32px] leading-normal whitespace-nowrap">
 									{option.label}
@@ -100,22 +99,20 @@ export const HighlightsSection = (): JSX.Element => {
 					</nav>
 				</header>
 
-				<div className="grid grid-cols-3 md:grid-cols-3 xl:grid-cols-3 gap-6 lg:gap-8 xl:gap-12 relative w-full">
+				<div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 xl:gap-12 w-full max-w-6xl mx-auto">
 					{contentCards.map((card, index) => (
 						<Card
 							key={card.id}
-							className="flex flex-col w-full items-start gap-0 relative rounded-2xl overflow-hidden border-[0.2px] border-solid border-[#6e6179] bg-transparent translate-y-[-1rem] animate-fade-in opacity-0"
-							style={
-								{
-									"--animation-delay": `${400 + index * 100}ms`,
-								} as React.CSSProperties
-							}
+							className="flex flex-col min-w-[220px] max-w-[390px] min-h-[420px] lg:min-h-[340px] max-h-[400px] h-full items-start gap-0 relative rounded-2xl overflow-hidden border-[0.2px] border-solid border-[#6e6179]/30 bg-transparent translate-y-[-1rem] animate-fade-in opacity-0"
+							style={{
+								"--animation-delay": `${400 + index * 100}ms`,
+							} as React.CSSProperties}
 						>
-							<div className="relative self-stretch w-full h-32 md:h-40 lg:h-44 bg-[linear-gradient(180deg,rgba(152,16,255,0.5)_0%,rgba(35,0,62,0.5)_100%)]" />
+							<div className="relative self-stretch w-full h-56 sm:h-32 md:h-40 lg:h-44 bg-[linear-gradient(180deg,rgba(152,16,255,0.5)_0%,rgba(35,0,62,0.5)_100%)]" />
 
-							<CardContent className="flex flex-col items-start gap-4 lg:gap-6 xl:gap-8 pt-0 pb-4 lg:pb-6 px-4 lg:px-6 relative self-stretch w-full">
-								<div className="flex flex-col items-start gap-2 lg:gap-2.5 relative self-stretch w-full">
-									<Badge className="inline-flex items-center justify-center gap-[5px] px-2 py-1 relative bg-[#1f1f1f] rounded-lg border-none">
+							<CardContent className="flex flex-col items-start justify-between gap-0 pt-0 pb-2 px-4 lg:px-6 relative self-stretch w-full h-full">
+								<div className="flex flex-col items-start gap-0 relative self-stretch w-full flex-grow">
+									<Badge className="inline-flex items-center justify-center gap-[5px] px-2 py-1 relative bg-[#1f1f1f] rounded-lg border-none mt-3">
 										<span className="text-[10px] leading-3 relative flex items-center justify-center w-fit [font-family:'Satoshi-Medium',Helvetica] font-medium text-[#ffffff] text-center tracking-[0] whitespace-nowrap">
 											{card.category}
 										</span>

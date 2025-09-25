@@ -21,12 +21,9 @@ export const FeaturesSection = (): JSX.Element => {
         <div className="absolute top-[200px] left-1/2 transform -translate-x-1/2 flex flex-col items-center justify-center gap-6 px-4
                         md:top-[250px] md:gap-8
                         lg:top-[286px] lg:gap-10 lg:px-0">
-          <div className="flex flex-col items-center gap-4 md:gap-6 lg:gap-8">
+          <div className="flex flex-col items-center gap-8 text-center">
             {/* Title - responsive text sizing and width */}
-            <h1 className="w-full max-w-[90vw] bg-[linear-gradient(180deg,rgba(255,255,255,1)_0%,rgba(235,228,245,1)_39%,rgba(222,210,238,1)_65%,rgba(82,61,109,1)_100%)] [-webkit-background-clip:text] bg-clip-text [-webkit-text-fill-color:transparent] [text-fill-color:transparent] [font-family:'Satoshi-Bold',Helvetica] font-bold text-transparent text-3xl text-center tracking-[-1.20px] leading-tight
-                       sm:text-4xl sm:tracking-[-1.40px]
-                       md:text-5xl md:max-w-[700px] md:tracking-[-1.60px] md:leading-normal
-                       lg:text-7xl lg:max-w-[817px] lg:tracking-[-1.80px]">
+            <h1 className="bg-[linear-gradient(180deg,rgba(255,255,255,1)_0%,rgba(235,228,245,1)_39%,rgba(222,210,238,1)_65%,rgba(82,61,109,1)_100%)] [-webkit-background-clip:text] bg-clip-text [-webkit-text-fill-color:transparent] [text-fill-color:transparent] [font-family:'Satoshi-Bold',Helvetica] font-bold text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center tracking-[-1.80px] leading-tight translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
               The Architecture of Alpha
             </h1>
             

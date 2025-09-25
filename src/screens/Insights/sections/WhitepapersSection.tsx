@@ -26,36 +26,36 @@ const whitepapers = [
 
 export const WhitepapersSection = (): JSX.Element => {
   return (
-    <section className="w-full py-[100px] px-[126px]">
-      <div className="max-w-[1248px] mx-auto flex flex-col items-start gap-12">
+    <section className="w-full py-8 px-2 sm:px-4 md:px-8 lg:px-16 xl:px-24">
+      <div className="max-w-5xl mx-auto flex flex-col items-start gap-8">
         <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:0ms]">
-          <h2 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-[#ffffff] text-5xl tracking-[0] leading-[normal]">
+          <h2 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-[#ffffff] text-3xl md:text-4xl lg:text-5xl tracking-[0] leading-[normal]">
             Whitepapers & Deep Dives
           </h2>
         </div>
 
-  <div className="flex flex-row flex-nowrap overflow-x-auto gap-6 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8 w-full">
           {whitepapers.map((whitepaper, index) => (
             <Card
               key={index}
-              className={`w-full max-w-[390px] rounded-2xl border-[0.2px] border-[#6e6179] bg-transparent translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:${200 + index * 200}ms]`}
+              className={`w-full min-w-[220px] max-w-[390px] mx-auto rounded-2xl border-[0.2px] border-[#6e6179]/30 bg-transparent translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:${200 + index * 200}ms]`}
             >
-              <CardContent className="p-6 flex flex-col gap-8">
+              <CardContent className="p-4 sm:p-6 h-full flex flex-col justify-between">
                 <div className="flex flex-col gap-2.5">
-                  <h3 className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-[#ffffff] text-2xl tracking-[0] leading-[normal]">
+                  <h3 className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-[#ffffff] text-lg sm:text-xl md:text-2xl tracking-[0] leading-[normal]">
                     {whitepaper.title}
                   </h3>
 
-                  <p className="text-sm [font-family:'Satoshi-Medium',Helvetica] font-medium text-[#a9a9a9] tracking-[0] leading-[normal]">
+                  <p className="text-xs sm:text-sm [font-family:'Satoshi-Medium',Helvetica] font-medium text-[#a9a9a9] tracking-[0] leading-[normal]">
                     {whitepaper.date}
                   </p>
 
-                  <p className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-[#a9a9a9] text-base tracking-[0] leading-[normal]">
+                  <p className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-[#a9a9a9] text-sm sm:text-base tracking-[0] leading-[normal]">
                     {whitepaper.description}
                   </p>
                 </div>
 
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between mt-6">
                   <Badge
                     variant="secondary"
                     className="bg-[#1f1f1f] text-[#ffffff] text-[12.5px] leading-[15px] px-2.5 py-[5px] rounded-[10px] [font-family:'Satoshi-Medium',Helvetica] font-medium"

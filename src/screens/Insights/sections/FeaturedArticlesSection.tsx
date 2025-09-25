@@ -26,7 +26,7 @@ export const FeaturedArticlesSection = (): JSX.Element => {
           </div>
 
           {/* Subscription section - inline layout */}
-          <div className="flex items-center gap-4 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]">
+          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-4 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]">
             <div className="flex w-[300px] h-12 items-center gap-2 px-4 py-2 rounded-[32px] border-[0.8px] border-solid border-[#a9a9a9]">
               <Input
                 className="flex-1 bg-transparent border-0 p-0 [font-family:'Satoshi-Regular',Helvetica] font-normal text-[#a9a9a9] text-base tracking-[0] leading-6 placeholder:text-[#a9a9a9] focus-visible:ring-0 focus-visible:ring-offset-0"

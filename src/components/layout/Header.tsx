@@ -91,7 +91,7 @@ export const Header = (): JSX.Element => {
   return (
     <header className="absolute top-0 left-0 w-full flex items-center justify-between px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 2xl:px-[138px] py-3 sm:py-4 md:py-6 lg:py-8 z-50">
       <img
-        className="w-20 sm:w-24 md:w-32 lg:w-36 h-7 sm:h-8 md:h-10 object-cover"
+        className="object-contain -ml-2 sm:ml-0 scale-[0.7]"
         alt="Logo white"
         src="/logo-white-1-1.png"
       />
