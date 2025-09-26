@@ -18,17 +18,17 @@ export const ProductShowcaseSection = (): JSX.Element => {
         {/* Removed ellipse-5.svg background image */}
 
         {/* Fixed background implementation */}
-        <div
-          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('/fragementOverlayBG.png')`,
-            backgroundAttachment: "scroll",
-            backgroundSize: "100% 100%",
-            backgroundPosition: "center center",
-            backgroundRepeat: "no-repeat",
-            transform: "scale(1)"
-          }}
-        />
+        <div className="absolute inset-0 z-0 flex items-center justify-center mt-[105rem]">
+          <img
+            src="/GradientPackRingFull.png"
+            alt="Gradient Ring"
+            className="w-[1200px] h-[1200px] object-contain"
+            style={{
+              animation: "spin 20s linear infinite reverse",
+              scale: "3",
+            }}
+          />
+        </div>
 
         {/* Alternative: If the file doesn't exist, use a gradient fallback */}
         {/* <div className="absolute inset-0 z-0 bg-gradient-to-br from-purple-600/20 via-transparent to-blue-600/20" /> */}
