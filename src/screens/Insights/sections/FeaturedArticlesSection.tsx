@@ -12,7 +12,7 @@ export const FeaturedArticlesSection = (): JSX.Element => {
 
       {/* Main content - centered with auto layout */}
       <main className="relative z-10 flex flex-col items-center justify-center px-4 py-20 min-h-[850px]">
-        <div className="flex flex-col items-center gap-10 max-w-[1073px] w-full mx-auto">
+        <div className="flex flex-col items-center gap-10 max-w-[1200px] w-full mx-auto">
           {/* Hero text section */}
           <div className="flex flex-col items-center gap-8 text-center">
             <h1 className="bg-[linear-gradient(180deg,rgba(255,255,255,1)_0%,rgba(235,228,245,1)_39%,rgba(222,210,238,1)_65%,rgba(82,61,109,1)_100%)] [-webkit-background-clip:text] bg-clip-text [-webkit-text-fill-color:transparent] [text-fill-color:transparent] [font-family:'Satoshi-Bold',Helvetica] font-bold text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center tracking-[-1.80px] leading-tight translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
@@ -46,3 +46,4 @@ export const FeaturedArticlesSection = (): JSX.Element => {
     </section>
   );
 };
+ 

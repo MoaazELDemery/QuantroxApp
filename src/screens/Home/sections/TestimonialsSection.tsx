@@ -39,9 +39,9 @@ export const TestimonialsSection = (): JSX.Element => {
     return (
         <section className="relative w-full min-h-[900px] flex flex-col items-center justify-center py-10 px-4 lg:py-20">
             {/* Central circular gradient background for desktop only */}
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none mt-32 hidden lg:flex">
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none mt-48 hidden lg:flex">
                 <div 
-                    className="w-96 h-96 sm:w-[500px] sm:h-[500px] md:w-[700px] md:h-[700px] lg:w-[800px] lg:h-[800px] rounded-full opacity-70"
+                    className="w-96 h-96 sm:w-[500px] sm:h-[500px] md:w-[700px] md:h-[700px] lg:w-[800px] lg:h-[800px] rounded-full opacity-70 animate-spin overflow-hidden"
                     style={{
                         background: 'radial-gradient(circle, #9810FF 0%, #23003E 40%, transparent 70%)'
                     }}
@@ -49,14 +49,14 @@ export const TestimonialsSection = (): JSX.Element => {
             </div>
 
             {/* Header content */}
-            <ScrollReveal delay={300}>
-                <header className="relative z-10 flex flex-col items-center justify-center gap-4 mb-32 sm:mb-36 lg:mb-40 max-w-6xl text-center">
+            <ScrollReveal delay={50}>
+                <header className="relative z-10 flex flex-col items-center justify-center gap-4 mb-32 sm:mb-36 lg:mb-40 max-w-7xl text-center">
                     <h1 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-[0] leading-tight lg:leading-normal">
                         One Platform.
                         <br />
                         the Entire Investment Lifecycle.
                     </h1>
-                    <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-[#d9d9d9] text-base sm:text-lg md:text-xl lg:text-[28px] tracking-[0] leading-relaxed lg:leading-normal max-w-4xl px-4">
+                    <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-[#d9d9d9] text-base sm:text-lg md:text-xl lg:text-[28px] tracking-[0] leading-relaxed lg:leading-normal w-full px-04 mb-10">
                         Quantorx integrates every critical function into a single, high-performance environment. Move
                         seamlessly from hypothesis to execution on a platform engineered for precision and speed.
                     </p>
@@ -66,7 +66,7 @@ export const TestimonialsSection = (): JSX.Element => {
             {/* Desktop Layout */}
             <div className="hidden lg:block relative z-10 w-full max-w-7xl mx-auto">
                 <div className="relative flex items-center justify-center">
-                    <ScrollReveal delay={600}>
+                    <ScrollReveal delay={200}>
                         <div className="relative flex items-center justify-center dashboard-container">
                             {/* Background circles */}
                             <div className="absolute inset-0 flex items-center justify-center">
@@ -99,27 +99,27 @@ export const TestimonialsSection = (): JSX.Element => {
 
                             {/* Desktop Features positioned absolutely */}
                             <div className="absolute top-[10%] left-[-270px] transform -translate-y-1/2">
-                                <ScrollReveal delay={500}>
+                                <ScrollReveal delay={50}>
                                     <DesktopFeatureItem feature={features[0]} alignmentDirection="left" />
                                 </ScrollReveal>
                             </div>
                             <div className="absolute top-[10%] right-[-270px] transform -translate-y-1/2">
-                                <ScrollReveal delay={600}>
+                                <ScrollReveal delay={50}>
                                     <DesktopFeatureItem feature={features[1]} alignmentDirection="right" />
                                 </ScrollReveal>
                             </div>
                             <div className="absolute bottom-[55%] left-[-340px] transform translate-y-1/2">
-                                <ScrollReveal delay={700}>
+                                <ScrollReveal delay={50}>
                                     <DesktopFeatureItem feature={features[2]} alignmentDirection="left" />
                                 </ScrollReveal>
                             </div>
                             <div className="absolute bottom-[55%] right-[-340px] transform translate-y-1/2">
-                                <ScrollReveal delay={800}>
+                                <ScrollReveal delay={50}>
                                     <DesktopFeatureItem feature={features[3]} alignmentDirection="right" />
                                 </ScrollReveal>
                             </div>
                             <div className="absolute top-[-80px] left-1/2 transform -translate-x-1/2">
-                                <ScrollReveal delay={900}>
+                                <ScrollReveal delay={50}>
                                     <DesktopFeatureItem feature={features[4]} alignmentDirection="top" />
                                 </ScrollReveal>
                             </div>
@@ -131,7 +131,7 @@ export const TestimonialsSection = (): JSX.Element => {
             {/* Mobile/Tablet Layout */}
             <div className="lg:hidden relative z-10 w-full max-w-4xl mx-auto">
                 {/* Dashboard with gradient background under image */}
-                <ScrollReveal delay={600}>
+                <ScrollReveal delay={50}>
                     <div className="relative flex items-center justify-center mb-24 sm:mb-28">
                         {/* Background circles */}
                         <div className="absolute inset-0 flex items-center justify-center">
@@ -175,7 +175,7 @@ export const TestimonialsSection = (): JSX.Element => {
                 {/* Mobile Features Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 max-w-2xl mx-auto mt-24 sm:mt-28">
                     {features.map((feature, index) => (
-                        <ScrollReveal key={feature.id} delay={500 + (index * 100)}>
+                        <ScrollReveal key={feature.id} delay={50 + (index * 100)}>
                             <MobileFeatureItem feature={feature} />
                         </ScrollReveal>
                     ))}

@@ -13,25 +13,23 @@ export const ProductShowcaseSection = (): JSX.Element => {
   ];
 
   return (
-    <section className="relative w-full bg-black min-h-[1000px] h-[calc(100vh+200px)] max-h-[1400px] overflow-hidden">
+    <section className="relative w-full bg-black min-h-[1000px] h-[calc(100vh+200px)] max-h-[850px] overflow-hidden">
       <div className="relative w-full h-full overflow-hidden">
-        {/* Removed ellipse-5.svg background image */}
 
-        {/* Fixed background implementation */}
-        <div className="absolute inset-0 z-0 flex items-center justify-center mt-[105rem]">
+        <div className="absolute inset-0 z-0 flex items-start justify-center w-full">
           <img
             src="/GradientPackRingFull.png"
             alt="Gradient Ring"
-            className="w-[1200px] h-[1200px] object-contain"
+            className="object-contain"
             style={{
-              animation: "spin 20s linear infinite reverse",
-              scale: "3",
+              animation: "spin 10s linear infinite reverse",
+              width: 'min(600vw, 7000px)',
+              minWidth: '4000px',
+              maxWidth: '7000px',
+              height: 'auto',
             }}
           />
         </div>
-
-        {/* Alternative: If the file doesn't exist, use a gradient fallback */}
-        {/* <div className="absolute inset-0 z-0 bg-gradient-to-br from-purple-600/20 via-transparent to-blue-600/20" /> */}
 
         <div className="relative z-10 max-w-7xl mx-auto px-8 pt-40">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-32">

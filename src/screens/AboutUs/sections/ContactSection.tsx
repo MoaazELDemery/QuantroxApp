@@ -19,11 +19,11 @@ export const ContactSection = (): JSX.Element => {
 
   return (
     <section className="flex flex-col items-center gap-2.5 pt-12 pb-20 px-2 sm:px-4 w-full relative">
-      <div className="flex flex-col items-start justify-center gap-20 relative w-full max-w-[1200px] mx-auto">
+      <div className="flex flex-col items-start justify-center gap-28 relative w-full max-w-[1000px] mx-auto">
         {visionMissionData.map((item) => (
           <div
             key={item.type}
-            className="flex flex-col md:flex-row items-start gap-6 relative w-full"
+            className="flex flex-col md:flex-row items-start gap-12 relative w-[1000px]"
           >
             {item.titlePosition === "left" ? (
               <>
@@ -34,7 +34,7 @@ export const ContactSection = (): JSX.Element => {
                   </h3>
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-[#ffffff] text-sm sm:text-lg md:text-[24px] leading-relaxed">
+                  <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-[#ffffff] text-sm sm:text-lg md:text-[24px] leading-relaxed max-w-[780px]">
                     {item.content}
                   </p>
                 </div>
@@ -42,7 +42,7 @@ export const ContactSection = (): JSX.Element => {
             ) : (
               <>
                 <div className="flex-1 min-w-0 order-2 md:order-1">
-                  <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-[#ffffff] text-sm sm:text-lg md:text-[24px] leading-relaxed">
+                  <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-[#ffffff] text-sm sm:text-lg md:text-[24px] leading-relaxed max-w-[780px]">
                     {item.content}
                   </p>
                 </div>

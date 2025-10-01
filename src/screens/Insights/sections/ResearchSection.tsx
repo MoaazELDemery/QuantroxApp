@@ -1,6 +1,6 @@
 export const ResearchSection = (): JSX.Element => {
   return (
-    <section className="w-full flex items-center justify-center py-16">
+    <section className="w-full h-[450px] flex items-center justify-center py-16">
       <div className="flex flex-col lg:flex-row max-w-[1248px] w-full items-center justify-center lg:justify-between gap-8 px-4">
         <div className="flex flex-col max-w-[658px] w-full items-center lg:items-start justify-between gap-6 translate-y-[-1rem] animate-fade-in opacity-0 text-center lg:text-left">
           <h2 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-[#f2f2f2] text-5xl tracking-[0] leading-[normal] w-full">

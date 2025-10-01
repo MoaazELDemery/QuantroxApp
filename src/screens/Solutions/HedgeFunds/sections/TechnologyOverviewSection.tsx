@@ -31,7 +31,7 @@ export const TechnologyOverviewSection = (): JSX.Element => {
         <div className="w-[60px] h-[1.5px] rounded-[90px] rotate-180 bg-[linear-gradient(270deg,rgba(255,255,255,1)_0%,rgba(255,255,255,0)_100%)]" />
       </div>
 
-      <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms] flex w-full max-w-[1096px] flex-col items-center gap-6 mt-[67px]">
+      <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms] flex w-full max-w-[1100px] flex-col items-center gap-6 mt-[67px]">
         <h2 className="flex items-center justify-center text-center [font-family:'Satoshi-Bold',Helvetica] font-bold text-[#ffffff] text-5xl tracking-[0] leading-[normal]">
           The Complexity of Alpha at Scale
         </h2>

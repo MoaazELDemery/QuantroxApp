@@ -17,19 +17,22 @@ export const Platform = (): JSX.Element => {
 
       <div className="h-[28.61%] top-[50.90%] left-[calc(50.00%_+_68px)] w-[1200px] [background:radial-gradient(50%_50%_at_50%_50%,rgba(74,0,130,0.5)_5%,rgba(2,2,3,0.3)_89%,rgba(2,2,3,0)_100%)] absolute rounded-[1857.89px]" />
 
-      <ScrollReveal>
-        <ResearchEnvironmentSection />
-      </ScrollReveal>
+      <div className="flex-1 flex flex-col">
+        <ScrollReveal>
+          <ResearchEnvironmentSection />
+        </ScrollReveal>
 
-      <ScrollReveal>
-        <ApiAccessSection />
-      </ScrollReveal>
+        <ScrollReveal>
+          <ApiAccessSection />
+        </ScrollReveal>
 
-      <ScrollReveal>
-        <ExecutionEngineSection />
-      </ScrollReveal>
-
-      <FooterSection />
+        <ScrollReveal>
+          <ExecutionEngineSection />
+        </ScrollReveal>
+      </div>
+      <div className="flex-shrink-0">
+        <FooterSection />
+      </div>
     </main>
   );
 };

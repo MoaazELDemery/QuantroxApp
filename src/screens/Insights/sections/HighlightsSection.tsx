@@ -68,11 +68,15 @@ const contentCards = [
 	},
 ];
 
-export const HighlightsSection = (): JSX.Element => {
+export const  HighlightsSection = (): JSX.Element => {
 	const [activeFilter, setActiveFilter] = useState("all");
 
-	return (
-		<section className="flex flex-col w-full items-center justify-center px-4 sm:px-8 lg:px-16 xl:px-24 py-16 lg:py-20 xl:py-24 relative">
+		const filteredCards = activeFilter === 'all'
+			? contentCards
+			: contentCards.filter(card => card.category.toLowerCase().replace(/\s/g, '-') === activeFilter);
+
+		return (
+			<section className="flex flex-col w-full items-center justify-center px-4 sm:px-8 lg:px-16 xl:px-24 py-16 lg:py-20 xl:py-24 relative">
 			<div className="flex flex-col items-start gap-8 lg:gap-12 relative w-full max-w-7xl mx-auto">
 				<header className="flex flex-col w-full max-w-2xl items-start gap-4 lg:gap-6 relative translate-y-[-1rem] animate-fade-in opacity-0">
 					<h2 className="relative w-full [font-family:'Satoshi-Bold',Helvetica] font-bold text-[#ffffff] text-3xl md:text-4xl lg:text-5xl tracking-[0] leading-tight">
@@ -99,8 +103,8 @@ export const HighlightsSection = (): JSX.Element => {
 					</nav>
 				</header>
 
-				<div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 xl:gap-12 w-full max-w-6xl mx-auto">
-					{contentCards.map((card, index) => (
+						<div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 xl:gap-12 w-full max-w-6xl mx-auto">
+							{filteredCards.map((card, index) => (
 						<Card
 							key={card.id}
 							className="flex flex-col min-w-[220px] max-w-[390px] min-h-[420px] lg:min-h-[340px] max-h-[400px] h-full items-start gap-0 relative rounded-2xl overflow-hidden border-[0.2px] border-solid border-[#6e6179]/30 bg-transparent translate-y-[-1rem] animate-fade-in opacity-0"

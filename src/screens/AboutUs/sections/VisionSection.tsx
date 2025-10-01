@@ -10,12 +10,12 @@ export const VisionSection = (): JSX.Element => {
 
       {/* Main Content */}
       <main className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center gap-6 w-full max-w-full">
-        <div className="flex flex-col items-center gap-6 w-full max-w-full">
-            <h1 className="bg-[linear-gradient(180deg,rgba(255,255,255,1)_0%,rgba(235,228,245,1)_39%,rgba(222,210,238,1)_65%,rgba(82,61,109,1)_100%)] [-webkit-background-clip:text] bg-clip-text [-webkit-text-fill-color:transparent] [text-fill-color:transparent] [font-family:'Satoshi-Bold',Helvetica] font-bold text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center tracking-[-1.80px] leading-tight translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
+        <div className="flex flex-col items-center gap-6 w-[900px] max-w-full">
+          <h1 className="bg-[linear-gradient(180deg,rgba(255,255,255,1)_0%,rgba(235,228,245,1)_39%,rgba(222,210,238,1)_65%,rgba(82,61,109,1)_100%)] [-webkit-background-clip:text] bg-clip-text [-webkit-text-fill-color:transparent] [text-fill-color:transparent] [font-family:'Satoshi-Bold',Helvetica] font-bold text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center tracking-[-1.80px] leading-tight translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
             Engineering the Future of Finance.
           </h1>
 
-          <p className="w-full max-w-[95vw] sm:max-w-[700px] [font-family:'Satoshi-Medium',Helvetica] font-medium text-[#d9d9d9] text-base sm:text-lg md:text-[28px] text-center tracking-[0] leading-[normal]">
+          <p className="w-full max-w-[95vw] sm:max-w-[800px] [font-family:'Satoshi-Medium',Helvetica] font-medium text-[#d9d9d9] text-base sm:text-lg md:text-[28px] text-center tracking-[0] leading-[normal]">
             We build the unified technology powering the next generation of
             <br className="hidden sm:block" />
             institutional investment.
