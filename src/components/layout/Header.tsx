@@ -94,23 +94,21 @@ export const Header = (): JSX.Element => {
   }, [isSolutionsOpen]);
 
   return (
-  <header className="absolute top-0 left-0 w-full flex items-center px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 2xl:px-[138px] py-3 sm:py-4 md:py-6 lg:py-8 z-50">
-
-      <div className="flex w-full items-center justify-between">
-        <img
-          className="object-contain -ml-2 sm:ml-0 scale-[0.7]"
-          alt="Logo white"
-          src="/logo-white-1-1.png"
-        />
-        {/* Mobile Menu Button */}
-        <button 
-          className="lg:hidden flex items-center justify-center w-10 h-10 text-white hover:bg-white/10 rounded-lg transition-colors ml-auto"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label="Toggle mobile menu"
-        >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
+     <header className="absolute top-0 left-0 w-full flex items-center justify-between px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 2xl:px-[138px] py-3 sm:py-4 md:py-6 lg:py-8 z-50">
+      <img
+        className="object-contain -ml-2 sm:ml-0 scale-[0.7]"
+        alt="Logo white"
+        src="/logo-white-1-1.png"
+      />
+      
+      {/* Mobile Menu Button */}
+      <button 
+        className="lg:hidden flex items-center justify-center w-10 h-10 text-white hover:bg-white/10 rounded-lg transition-colors"
+        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        aria-label="Toggle mobile menu"
+      >
+        {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+      </button>
       
       {/* Desktop Navigation */}
       <nav className="hidden lg:flex flex-1 items-center justify-center">
@@ -184,32 +182,34 @@ export const Header = (): JSX.Element => {
                 </button>
               )}
               {item.hasDropdown && isSolutionsOpen && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-max min-w-44 bg-white rounded-lg shadow-lg z-10 py-1">
-                  {item.dropdownItems?.map((dropdownItem, dIndex) =>
-                    dropdownItem.href && dropdownItem.href.startsWith("/") ? (
-                      <Link
-                        key={dIndex}
-                        to={dropdownItem.href}
-                        className={`block w-full text-left px-4 py-2 text-sm [font-family:'Satoshi-Medium',Helvetica] whitespace-nowrap transition-colors ${
-                          selectedDropdownItem === dropdownItem.href 
-                            ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold' 
-                            : 'text-gray-800 hover:bg-gray-100 hover:text-gray-900'
-                        }`}
-                        onClick={() => setIsSolutionsOpen(false)}
-                      >
-                        {dropdownItem.label}
-                      </Link>
-                    ) : (
-                      <a
-                        key={dIndex}
-                        href={dropdownItem.href}
-                        className="block w-full text-left px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 [font-family:'Satoshi-Medium',Helvetica] whitespace-nowrap"
-                        onClick={() => setIsSolutionsOpen(false)}
-                      >
-                        {dropdownItem.label}
-                      </a>
-                    )
-                  )}
+                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[270px] bg-[#290E3F33] rounded-2xl shadow-2xl z-20 py-4 px-2 flex flex-col gap-2 backdrop-blur-md">
+                  {item.dropdownItems?.map((dropdownItem, dIndex) => (
+                    <Link
+                      key={dIndex}
+                      to={dropdownItem.href}
+                      onClick={() => setIsSolutionsOpen(false)}
+                      className={`flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-150 ${selectedDropdownItem === dropdownItem.href ? 'bg-white/10' : 'hover:bg-white/5'}`}
+                    >
+                      <span className="flex items-center justify-center w-10 h-10 rounded-lg bg-white/10 text-white">
+                        {dIndex === 0 ? (
+                          <img src="/vuesax-linear-wallet-money.svg" alt="Assets Managers" className="w-6 h-6" />
+                        ) : dIndex === 1 ? (
+                          <img src="/vuesax-linear-trade.svg" alt="Brokerages" className="w-6 h-6" />
+                        ) : dIndex === 2 ? (
+                          <img src="/vuesax-linear-kyber-network--knc-.svg" alt="Hedge Funds" className="w-6 h-6" />
+                        ) : dIndex === 3 ? (
+                          <img src="/vuesax-linear-hashtag.svg" alt="Robo-Advisory" className="w-6 h-6" />
+                        ) : (
+                          <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 opacity-80">
+                            <rect x="4" y="4" width="16" height="16" rx="4" />
+                          </svg>
+                        )}
+                      </span>
+                      <span className="flex flex-col">
+                        <span className="[font-family:'Satoshi-Medium',Helvetica] text-lg text-white font-semibold">{dropdownItem.label.replace('For ', '').replace('B2B ', '')}</span>
+                      </span>
+                    </Link>
+                  ))}
                 </div>
               )}
             </div>

@@ -4,6 +4,7 @@ import { FooterSection } from "../../Home/sections/FooterSection";
 import { MainContentSection } from "./sections/MainContentSection";
 import { TechnologyOverviewSection } from "./sections/TechnologyOverviewSection";
 import { ScrollReveal } from "../../../components";
+import { ThePlatformSection } from "./sections/ThePlatformSection";
 
 export const SolutionsForHedgeFunds = (): JSX.Element => {
   return (
@@ -33,7 +34,9 @@ export const SolutionsForHedgeFunds = (): JSX.Element => {
       <ScrollReveal>
         <MainContentSection />
       </ScrollReveal>
-
+      <ScrollReveal>
+        <ThePlatformSection />
+      </ScrollReveal>
       <FooterSection />
     </div>
   );
