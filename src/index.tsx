@@ -9,6 +9,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Platform } from "./screens/Platform/Platform";
 import { Insights } from "./screens/Insights/Insights";
 import { AboutUs } from "./screens/AboutUs/AboutUs";
+import { RequestDemo } from "./screens/RequestDemo/RequestDemo";
 
 createRoot(document.getElementById("app") as HTMLElement).render(
   <StrictMode>
@@ -22,6 +23,7 @@ createRoot(document.getElementById("app") as HTMLElement).render(
         <Route path="/platform" element={<Platform />} />
         <Route path="/insights" element={<Insights />} />
         <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/request-demo" element={<RequestDemo />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,

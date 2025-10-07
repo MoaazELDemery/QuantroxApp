@@ -20,7 +20,7 @@ export const Header = (): JSX.Element => {
     return 0; // Home tab (default)
   };
   
-  const [activeIndex, setActiveIndex] = useState(getActiveIndex());
+  const [activeIndex, setActiveIndex] = useState<number | null>(getActiveIndex());
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -68,7 +68,11 @@ export const Header = (): JSX.Element => {
 
   // Update active index when route changes
   useEffect(() => {
-    setActiveIndex(getActiveIndex());
+    if (location.pathname === '/request-demo') {
+      setActiveIndex(null);
+    } else {
+      setActiveIndex(getActiveIndex());
+    }
     setSelectedDropdownItem(getSelectedDropdownItem());
   }, [location.pathname]);
 
@@ -90,21 +94,23 @@ export const Header = (): JSX.Element => {
   }, [isSolutionsOpen]);
 
   return (
-    <header className="absolute top-0 left-0 w-full flex items-center justify-between px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 2xl:px-[138px] py-3 sm:py-4 md:py-6 lg:py-8 z-50">
-      <img
-        className="object-contain -ml-2 sm:ml-0 scale-[0.7]"
-        alt="Logo white"
-        src="/logo-white-1-1.png"
-      />
-      
-      {/* Mobile Menu Button */}
-      <button 
-        className="lg:hidden flex items-center justify-center w-10 h-10 text-white hover:bg-white/10 rounded-lg transition-colors"
-        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        aria-label="Toggle mobile menu"
-      >
-        {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-      </button>
+  <header className="absolute top-0 left-0 w-full flex items-center px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 2xl:px-[138px] py-3 sm:py-4 md:py-6 lg:py-8 z-50">
+
+      <div className="flex w-full items-center justify-between">
+        <img
+          className="object-contain -ml-2 sm:ml-0 scale-[0.7]"
+          alt="Logo white"
+          src="/logo-white-1-1.png"
+        />
+        {/* Mobile Menu Button */}
+        <button 
+          className="lg:hidden flex items-center justify-center w-10 h-10 text-white hover:bg-white/10 rounded-lg transition-colors ml-auto"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle mobile menu"
+        >
+          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+      </div>
       
       {/* Desktop Navigation */}
       <nav className="hidden lg:flex flex-1 items-center justify-center">
@@ -309,22 +315,28 @@ export const Header = (): JSX.Element => {
               </div>
             ))}
             <div className="pt-6 pb-2">
-              <Button className="w-full bg-[#4a0082] rounded-[32px] hover:bg-[#4a0082]/90 py-3 transition-colors">
-                <span className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-base text-[#ffffff]">
-                  Request a Demo
-                </span>
-              </Button>
+              <div className="flex justify-center">
+                <Link to="/request-demo">
+                  <Button className="w-[60vw] max-w-xs bg-[#4a0082] rounded-[32px] hover:bg-[#4a0082]/90 py-3 transition-colors">
+                    <span className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-base text-[#ffffff]">
+                      Request a Demo
+                    </span>
+                  </Button>
+                </Link>
+              </div>
             </div>
           </nav>
         </div>
       )}
       
       {/* Desktop CTA Button */}
-      <Button className="hidden lg:inline-flex items-center gap-4 px-6 xl:px-10 py-2 bg-[#4a0082] rounded-[32px] h-auto hover:bg-[#4a0082]/90 transition-colors">
-        <span className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-[#ffffff] text-sm text-center tracking-[0] leading-6 whitespace-nowrap">
-          Request a Demo
-        </span>
-      </Button>
+      <Link to="/request-demo">
+        <Button className="hidden lg:inline-flex items-center gap-4 px-6 xl:px-10 py-2 bg-[#4a0082] rounded-[32px] h-auto hover:bg-[#4a0082]/90 transition-colors">
+          <span className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-[#ffffff] text-sm text-center tracking-[0] leading-6 whitespace-nowrap">
+            Request a Demo
+          </span>
+        </Button>
+      </Link>
     </header>
   );
 };

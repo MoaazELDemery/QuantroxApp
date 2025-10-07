@@ -1,4 +1,5 @@
 import { Button } from "../../../components/ui/button";
+import { Link } from "react-router-dom";
 import { Header } from "../../../components/layout/Header";
 
 export const FeaturesSection = (): JSX.Element => {
@@ -28,7 +29,8 @@ export const FeaturesSection = (): JSX.Element => {
             </h1>
 
             {/* Description */}
-            <p className="w-[98vw] max-w-[98vw] [font-family:'Satoshi-Medium',Helvetica] font-medium text-[#d9d9d9] text-base text-center tracking-[0] leading-relaxed
+            <p className="w-[98vw] max-w-[98vw] [font-family:'Satoshi-Medium',Helvetica] 
+                          font-medium text-[#d9d9d9] text-base text-center tracking-[0] leading-relaxed
                           sm:text-lg
                           md:text-xl md:max-w-[700px] md:leading-normal
                           lg:text-[28px] lg:max-w-[817px]">
@@ -39,14 +41,17 @@ export const FeaturesSection = (): JSX.Element => {
           </div>
 
           {/* Button */}
-          <Button className="w-[200px] h-auto justify-center py-3 bg-[#4a0082] rounded-[32px] hover:bg-[#4a0082]/90
-                             md:w-[220px] md:py-3.5
-                             lg:w-[250px] lg:py-4">
-            <span className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-base text-[#ffffff] tracking-[0] leading-6
-                             lg:text-lg">
-              Request a demo
-            </span>
-          </Button>
+          <Link to="/request-demo">
+            <Button className="w-[200px] h-auto justify-center py-3 bg-[#4a0082] rounded-[32px] hover:bg-[#4a0082]/90
+                               md:w-[220px] md:py-3.5
+                               lg:w-[250px] lg:py-4">
+              <span className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-base 
+                               text-[#ffffff] tracking-[0] leading-6
+                               lg:text-lg">
+                Request a demo
+              </span>
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

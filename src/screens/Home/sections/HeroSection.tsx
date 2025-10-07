@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "../../../components/ui/button";
 
 export const HeroSection = (): JSX.Element => {
@@ -19,11 +20,17 @@ export const HeroSection = (): JSX.Element => {
               configured to solve your specific challenges.
             </p>
           </div>
-          <Button className="w-[266px] h-auto justify-center px-[72px] py-4 bg-[#4a0082] hover:bg-[#4a0082]/90 rounded-[32px] border-0">
-            <span className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-lg text-[#ffffff] text-center tracking-[0] leading-6 whitespace-nowrap">
-              Request A Demo
-            </span>
-          </Button>
+          <Link to="/request-demo">
+            <Button className="w-[200px] h-auto justify-center py-3 bg-[#4a0082] rounded-[32px] hover:bg-[#4a0082]/90
+                                         md:w-[220px] md:py-3.5
+                                         lg:w-[250px] lg:py-4">
+              <span className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-base 
+                                         text-[#ffffff] tracking-[0] leading-6
+                                         lg:text-lg">
+                Request a demo
+              </span>
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
