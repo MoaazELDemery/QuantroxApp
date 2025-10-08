@@ -5,7 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 
 export const Header = (): JSX.Element => {
   const location = useLocation();
-  
+
   // Function to get active index based on current route
   const getActiveIndex = () => {
     if (location.pathname.startsWith('/solutions')) {
@@ -19,7 +19,7 @@ export const Header = (): JSX.Element => {
     }
     return 0; // Home tab (default)
   };
-  
+
   const [activeIndex, setActiveIndex] = useState<number | null>(getActiveIndex());
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(null);
@@ -94,23 +94,23 @@ export const Header = (): JSX.Element => {
   }, [isSolutionsOpen]);
 
   return (
-     <header className="absolute top-0 left-0 w-full flex items-center justify-between px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 2xl:px-[138px] py-3 sm:py-4 md:py-6 lg:py-8 z-50">
-      <img
-        className="object-contain -ml-2 sm:ml-0 scale-[0.7]"
-        alt="Logo white"
-        src="/logo-white-1-1.png"
-      />
-      
-      {/* Mobile Menu Button */}
-      <button 
-        className="lg:hidden flex items-center justify-center w-10 h-10 text-white hover:bg-white/10 rounded-lg transition-colors"
-        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        aria-label="Toggle mobile menu"
-      >
-        {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-      </button>
-      
-      {/* Desktop Navigation */}
+    <header className="absolute top-0 left-0 w-full flex items-center justify-between px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 2xl:px-[138px] py-3 sm:py-4 md:py-6 lg:py-8 z-50">
+      <div className="flex items-center h-12 w-full lg:w-auto justify-between lg:justify-start" style={{ minWidth: 140 }}>
+        <img
+          className="object-contain -ml-2 sm:ml-0"
+          alt="Logo white"
+          src="/LOGO_SVG.svg"
+          style={{ filter: 'brightness(0) invert(1)', height: '48px', width: 'auto', maxWidth: '180px' }}
+        />
+        <button
+          className="lg:hidden flex items-center justify-center w-10 h-10 text-white hover:bg-white/10 rounded-lg transition-colors ml-auto"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle mobile menu"
+        >
+          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+      </div>
+
       <nav className="hidden lg:flex flex-1 items-center justify-center">
         <div className="inline-flex items-center justify-center px-2.5 py-[7px] bg-[#ffffff0d] rounded-[40px]">
           {navigationItems.map((item, index) => (
@@ -123,9 +123,8 @@ export const Header = (): JSX.Element => {
                 <Link
                   to={item.href}
                   onClick={() => handleNavClick(index)}
-                  className={`flex items-center justify-center w-20 lg:w-24 h-11 focus:outline-none ${
-                    item.hasDropdown ? "gap-0.5" : ""
-                  }`}
+                  className={`flex items-center justify-center w-20 lg:w-24 h-11 focus:outline-none ${item.hasDropdown ? "gap-0.5" : ""
+                    }`}
                   style={{
                     background: "none",
                     border: "none",
@@ -134,19 +133,17 @@ export const Header = (): JSX.Element => {
                   }}
                 >
                   <span
-                    className={`[font-family:'Satoshi-Medium',Helvetica] text-base tracking-[0] leading-normal ${
-                      activeIndex === index
+                    className={`[font-family:'Satoshi-Medium',Helvetica] text-base tracking-[0] leading-normal ${activeIndex === index
                         ? "font-bold text-[#ffffff]"
                         : "font-medium text-[#a9a9a9]"
-                    }`}
+                      }`}
                   >
                     {item.label}
                   </span>
                   {item.hasDropdown && (
                     <ChevronDownIcon
-                      className={`w-4 h-4 text-[#a9a9a9] transition-transform duration-200 ${
-                        isSolutionsOpen ? "rotate-180" : "rotate-0"
-                      }`}
+                      className={`w-4 h-4 text-[#a9a9a9] transition-transform duration-200 ${isSolutionsOpen ? "rotate-180" : "rotate-0"
+                        }`}
                     />
                   )}
                 </Link>
@@ -154,9 +151,8 @@ export const Header = (): JSX.Element => {
                 <button
                   type="button"
                   onClick={() => handleNavClick(index)}
-                  className={`flex items-center justify-center w-20 lg:w-24 h-11 focus:outline-none ${
-                    item.hasDropdown ? "gap-0.5" : ""
-                  }`}
+                  className={`flex items-center justify-center w-20 lg:w-24 h-11 focus:outline-none ${item.hasDropdown ? "gap-0.5" : ""
+                    }`}
                   style={{
                     background: "none",
                     border: "none",
@@ -164,19 +160,17 @@ export const Header = (): JSX.Element => {
                   }}
                 >
                   <span
-                    className={`[font-family:'Satoshi-Medium',Helvetica] text-base tracking-[0] leading-normal ${
-                      activeIndex === index
+                    className={`[font-family:'Satoshi-Medium',Helvetica] text-base tracking-[0] leading-normal ${activeIndex === index
                         ? "font-bold text-[#ffffff]"
                         : "font-medium text-[#a9a9a9]"
-                    }`}
+                      }`}
                   >
                     {item.label}
                   </span>
                   {item.hasDropdown && (
                     <ChevronDownIcon
-                      className={`w-4 h-4 text-[#a9a9a9] transition-transform duration-200 ${
-                        isSolutionsOpen ? "rotate-180" : "rotate-0"
-                      }`}
+                      className={`w-4 h-4 text-[#a9a9a9] transition-transform duration-200 ${isSolutionsOpen ? "rotate-180" : "rotate-0"
+                        }`}
                     />
                   )}
                 </button>
@@ -216,7 +210,7 @@ export const Header = (): JSX.Element => {
           ))}
         </div>
       </nav>
-      
+
       {/* Mobile Navigation Menu */}
       {isMobileMenuOpen && (
         <div className="lg:hidden absolute top-full left-0 w-full bg-black/95 backdrop-blur-sm border-t border-white/10 shadow-lg">
@@ -230,11 +224,10 @@ export const Header = (): JSX.Element => {
                       handleNavClick(index);
                       setIsMobileMenuOpen(false);
                     }}
-                    className={`block w-full text-left py-4 transition-colors [font-family:'Satoshi-Medium',Helvetica] font-medium text-base ${
-                      activeIndex === index 
-                        ? 'text-white bg-white/5' 
+                    className={`block w-full text-left py-4 transition-colors [font-family:'Satoshi-Medium',Helvetica] font-medium text-base ${activeIndex === index
+                        ? 'text-white bg-white/5'
                         : 'text-gray-300 hover:text-white hover:bg-white/5'
-                    }`}
+                      }`}
                   >
                     {item.label}
                   </Link>
@@ -245,17 +238,15 @@ export const Header = (): JSX.Element => {
                         setOpenDropdownIndex(openDropdownIndex === index ? null : index);
                         setIsSolutionsOpen(openDropdownIndex !== index);
                       }}
-                      className={`flex items-center justify-between w-full text-left py-4 transition-colors [font-family:'Satoshi-Medium',Helvetica] font-medium text-base ${
-                        activeIndex === index 
-                          ? 'text-white bg-white/5' 
+                      className={`flex items-center justify-between w-full text-left py-4 transition-colors [font-family:'Satoshi-Medium',Helvetica] font-medium text-base ${activeIndex === index
+                          ? 'text-white bg-white/5'
                           : 'text-gray-300 hover:text-white hover:bg-white/5'
-                      }`}
+                        }`}
                     >
                       {item.label}
                       <ChevronDownIcon
-                        className={`w-4 h-4 text-current transition-transform duration-200 ${
-                          openDropdownIndex === index ? "rotate-180" : "rotate-0"
-                        }`}
+                        className={`w-4 h-4 text-current transition-transform duration-200 ${openDropdownIndex === index ? "rotate-180" : "rotate-0"
+                          }`}
                       />
                     </button>
                     {openDropdownIndex === index && (
@@ -265,11 +256,10 @@ export const Header = (): JSX.Element => {
                             <Link
                               key={dIndex}
                               to={dropdownItem.href}
-                              className={`block py-3 px-4 transition-colors [font-family:'Satoshi-Regular',Helvetica] text-sm first:rounded-t-lg last:rounded-b-lg ${
-                                selectedDropdownItem === dropdownItem.href
+                              className={`block py-3 px-4 transition-colors [font-family:'Satoshi-Regular',Helvetica] text-sm first:rounded-t-lg last:rounded-b-lg ${selectedDropdownItem === dropdownItem.href
                                   ? 'text-white bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-l-2 border-blue-500'
                                   : 'text-gray-400 hover:text-white hover:bg-white/10'
-                              }`}
+                                }`}
                               onClick={() => {
                                 setIsSolutionsOpen(false);
                                 setIsMobileMenuOpen(false);
@@ -303,11 +293,10 @@ export const Header = (): JSX.Element => {
                       handleNavClick(index);
                       setIsMobileMenuOpen(false);
                     }}
-                    className={`block w-full text-left py-4 transition-colors [font-family:'Satoshi-Medium',Helvetica] font-medium text-base ${
-                      activeIndex === index 
-                        ? 'text-white bg-white/5' 
+                    className={`block w-full text-left py-4 transition-colors [font-family:'Satoshi-Medium',Helvetica] font-medium text-base ${activeIndex === index
+                        ? 'text-white bg-white/5'
                         : 'text-gray-300 hover:text-white hover:bg-white/5'
-                    }`}
+                      }`}
                   >
                     {item.label}
                   </button>
@@ -328,7 +317,7 @@ export const Header = (): JSX.Element => {
           </nav>
         </div>
       )}
-      
+
       {/* Desktop CTA Button */}
       <Link to="/request-demo">
         <Button className="hidden lg:inline-flex items-center gap-4 px-6 xl:px-10 py-2 bg-[#4a0082] rounded-[32px] h-auto hover:bg-[#4a0082]/90 transition-colors">
