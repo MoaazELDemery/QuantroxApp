@@ -29,12 +29,14 @@ export const ContactSection = (): JSX.Element => {
               <>
                 <div className="flex w-full md:w-auto md:min-w-[120px] items-center gap-2 flex-shrink-0">
                   <div className="w-5 h-5 bg-[#8a2be2] rounded-[10px] flex-shrink-0" />
-                  <h3 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-[#ffffff] text-base sm:text-xl md:text-[32px] leading-tight whitespace-nowrap">
+                  <h3 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-[#ffffff] 
+                  text-base sm:text-xl md:text-[32px] leading-tight whitespace-nowrap">
                     {item.title}
                   </h3>
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-[#ffffff] text-sm sm:text-lg md:text-[24px] leading-relaxed max-w-[780px]">
+                  <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-[#ffffff] 
+                  text-sm sm:text-lg md:text-[24px] leading-relaxed max-w-[780px]">
                     {item.content}
                   </p>
                 </div>
@@ -42,13 +44,16 @@ export const ContactSection = (): JSX.Element => {
             ) : (
               <>
                 <div className="flex-1 min-w-0 order-2 md:order-1">
-                  <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-[#ffffff] text-sm sm:text-lg md:text-[24px] leading-relaxed max-w-[780px]">
+                  <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-[#ffffff] 
+                  text-sm sm:text-lg md:text-[24px] leading-relaxed max-w-[780px]">
                     {item.content}
                   </p>
                 </div>
-                <div className="flex w-full md:w-auto md:min-w-[120px] items-center justify-start md:justify-end gap-2 flex-shrink-0 order-1 md:order-2">
+                <div className="flex w-full md:w-auto md:min-w-[120px] items-center justify-start 
+                md:justify-end gap-2 flex-shrink-0 order-1 md:order-2">
                   <div className="w-5 h-5 bg-[#8a2be2] rounded-[10px] flex-shrink-0" />
-                  <h3 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-[#ffffff] text-base sm:text-xl md:text-[32px] leading-tight whitespace-nowrap">
+                  <h3 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-[#ffffff] 
+                  text-base sm:text-xl md:text-[32px] leading-tight whitespace-nowrap">
                     {item.title}
                   </h3>
                 </div>

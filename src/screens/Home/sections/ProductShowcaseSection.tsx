@@ -13,7 +13,8 @@ export const ProductShowcaseSection = (): JSX.Element => {
   ];
 
   return (
-    <section className="relative w-full bg-black min-h-[1000px] h-[calc(100vh+200px)] max-h-[850px] overflow-hidden">
+    <section className="relative w-full bg-black min-h-[1000px] h-[calc(100vh+200px)] max-h-[850px] 
+    overflow-hidden">
       <div className="relative w-full h-full overflow-hidden">
 
         <div className="absolute inset-0 z-0 flex items-start justify-center w-full">
@@ -35,25 +36,30 @@ export const ProductShowcaseSection = (): JSX.Element => {
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-32">
             <div className="flex flex-col w-full max-w-4xl gap-8 lg:gap-16">
               <div className="flex flex-col gap-4 text-center lg:text-left">
-                <h2 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-[#f0f0f0] text-3xl sm:text-4xl md:text-5xl leading-normal">
+                <h2 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-[#f0f0f0] 
+                text-3xl sm:text-4xl md:text-5xl leading-normal">
                   The Fragmentation Barrier
                 </h2>
 
-                <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-[#d9d9d9] text-lg sm:text-xl md:text-2xl leading-normal">
+                <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-[#d9d9d9] 
+                text-lg sm:text-xl md:text-2xl leading-normal">
                   Legacy systems, siloed data, and disjointed workflows silently
                   tax performance - creating inefficiencies that compound over
                   time and erode competitiveness.
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-8 text-center sm:text-left">
+              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-8 
+              text-center sm:text-left">
                 {contentSections.map((section, index) => (
                   <div key={index} className="flex flex-col gap-3 flex-1">
-                    <h3 className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-[#f0f0f0] text-xl sm:text-2xl leading-normal">
+                    <h3 className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-[#f0f0f0] 
+                    text-xl sm:text-2xl leading-normal">
                       {section.title}
                     </h3>
 
-                    <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-[#d9d9d9] text-base sm:text-[22px] leading-normal">
+                    <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-[#d9d9d9] 
+                    text-base sm:text-[22px] leading-normal">
                       {section.description}
                     </p>
                   </div>

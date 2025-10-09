@@ -11,12 +11,19 @@ export const ChallengesSection = (): JSX.Element => {
         </div>
 
         {/* Main Content */}
-         <main className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center gap-6 w-full max-w-full">
-          <h1 className="bg-[linear-gradient(180deg,rgba(255,255,255,1)_0%,rgba(235,228,245,1)_39%,rgba(222,210,238,1)_65%,rgba(82,61,109,1)_100%)] [-webkit-background-clip:text] bg-clip-text [-webkit-text-fill-color:transparent] [text-fill-color:transparent] [font-family:'Satoshi-Bold',Helvetica] font-bold text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center tracking-[-1.80px] leading-tight translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
+        <main className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center 
+         justify-center gap-6 w-full max-w-full">
+          <h1 className="bg-[linear-gradient(180deg,rgba(255,255,255,1)_0%,rgba(235,228,245,1)_39%,rgba(222,210,238,1)_65%,rgba(82,61,109,1)_100%)] 
+          [-webkit-background-clip:text] bg-clip-text [-webkit-text-fill-color:transparent] 
+          [text-fill-color:transparent] [font-family:'Satoshi-Bold',Helvetica] 
+          font-bold text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center tracking-[-1.80px] leading-tight 
+          translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
             The New Standard for Execution
           </h1>
 
-          <p className="w-full max-w-[1000px] [font-family:'Satoshi-Medium',Helvetica] font-medium text-[#d9d9d9] text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[28px] text-center tracking-[0] leading-relaxed translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms] px-2">
+          <p className="w-full max-w-[1000px] [font-family:'Satoshi-Medium',Helvetica] font-medium text-[#d9d9d9] 
+          text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[28px] text-center tracking-[0] leading-relaxed 
+          translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms] px-2">
             Provide your clients with superior execution quality and sophisticated trading tools through our institutional-grade EMS and Smart Order Router.
           </p>
         </main>

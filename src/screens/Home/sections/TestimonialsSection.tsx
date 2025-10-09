@@ -37,11 +37,13 @@ export const TestimonialsSection = (): JSX.Element => {
     ];
 
     return (
-        <section className="relative w-full min-h-[900px] flex flex-col items-center justify-center py-10 px-4 lg:py-20">
+        <section className="relative w-full min-h-[900px] flex flex-col items-center justify-center 
+        py-10 px-4 lg:py-20">
             {/* Central circular gradient background for desktop only */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none mt-48 hidden lg:flex">
-                <div 
-                    className="w-96 h-96 sm:w-[500px] sm:h-[500px] md:w-[700px] md:h-[700px] lg:w-[800px] lg:h-[800px] rounded-full opacity-70 animate-spin overflow-hidden"
+                <div
+                    className="w-96 h-96 sm:w-[500px] sm:h-[500px] md:w-[700px] md:h-[700px] 
+                    lg:w-[800px] lg:h-[800px] rounded-full opacity-70 animate-spin overflow-hidden"
                     style={{
                         background: 'radial-gradient(circle, #9810FF 0%, #23003E 40%, transparent 70%)'
                     }}
@@ -50,13 +52,17 @@ export const TestimonialsSection = (): JSX.Element => {
 
             {/* Header content */}
             <ScrollReveal delay={50}>
-                <header className="relative z-10 flex flex-col items-center justify-center gap-4 mb-32 sm:mb-36 lg:mb-40 max-w-7xl text-center">
-                    <h1 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-[0] leading-tight lg:leading-normal">
+                <header className="relative z-10 flex flex-col items-center justify-center gap-4 mb-32 
+                sm:mb-36 lg:mb-40 max-w-7xl text-center">
+                    <h1 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-2xl 
+                    sm:text-3xl md:text-4xl lg:text-5xl tracking-[0] leading-tight lg:leading-normal">
                         One Platform.
                         <br />
                         the Entire Investment Lifecycle.
                     </h1>
-                    <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-[#d9d9d9] text-base sm:text-lg md:text-xl lg:text-[28px] tracking-[0] leading-relaxed lg:leading-normal w-full px-04 mb-10">
+                    <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-[#d9d9d9] 
+                    text-base sm:text-lg md:text-xl lg:text-[28px] tracking-[0] leading-relaxed 
+                    lg:leading-normal w-full px-04 mb-10">
                         Quantorx integrates every critical function into a single, high-performance environment. Move
                         seamlessly from hypothesis to execution on a platform engineered for precision and speed.
                     </p>
@@ -70,22 +76,26 @@ export const TestimonialsSection = (): JSX.Element => {
                         <div className="relative flex items-center justify-center dashboard-container">
                             {/* Background circles */}
                             <div className="absolute inset-0 flex items-center justify-center">
-                                <div className="w-[250px] h-[250px] bg-[#0000001a] rounded-full backdrop-blur-[10px] backdrop-brightness-[100%]" />
+                                <div className="w-[250px] h-[250px] bg-[#0000001a] rounded-full 
+                                backdrop-blur-[10px] backdrop-brightness-[100%]" />
                             </div>
-                            
+
                             <div className="relative w-[600px] h-[600px] flex items-center justify-center">
                                 <img
-                                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[70%] h-[70%] object-contain opacity-100"
+                                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+                                    w-[70%] h-[70%] object-contain opacity-100"
                                     alt="Background ellipse 1"
                                     src="/ellipse-1.svg"
                                 />
                                 <img
-                                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[85%] h-[85%] object-contain opacity-100"
+                                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+                                    w-[85%] h-[85%] object-contain opacity-100"
                                     alt="Background ellipse 2"
                                     src="/ellipse-2.svg"
                                 />
                                 <img
-                                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[100%] h-[100%] object-contain opacity-100"
+                                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+                                    w-[100%] h-[100%] object-contain opacity-100"
                                     alt="Background ellipse 2"
                                     src="/ellipse-2.svg"
                                 />
@@ -139,7 +149,7 @@ export const TestimonialsSection = (): JSX.Element => {
                         </div>
                         {/* Radial gradient background for mobile */}
                         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none z-0">
-                            <div 
+                            <div
                                 className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full opacity-70"
                                 style={{
                                     background: 'radial-gradient(circle, #9810FF 0%, #23003E 40%, transparent 70%)'
@@ -199,7 +209,8 @@ const DesktopFeatureItem: React.FC<{
         <div className="flex items-center justify-center gap-4 group">
             {/* Left aligned card */}
             {alignmentDirection === 'left' && (
-                <Card className="w-[265px] bg-[#0000004c] border-none backdrop-blur-[10px] backdrop-brightness-[100%] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <Card className="w-[265px] bg-[#0000004c] border-none backdrop-blur-[10px] backdrop-brightness-[100%] opacity-0 group-hover:opacity-100 
+                transition-opacity duration-300">
                     <CardContent className="flex items-center justify-center gap-3 p-3">
                         <div className="flex-1 [font-family:'Satoshi-Medium',Helvetica] font-medium text-white text-base tracking-[0] leading-normal">
                             {feature.description}
@@ -213,7 +224,8 @@ const DesktopFeatureItem: React.FC<{
                 <h3 className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-white text-[22px] text-center tracking-[0] leading-normal">
                     {feature.title}
                 </h3>
-                <div className="flex w-[44px] h-[44px] items-center justify-center bg-[#0000004c] rounded-full overflow-hidden backdrop-blur-[10px] backdrop-brightness-[100%]">
+                <div className="flex w-[44px] h-[44px] items-center justify-center bg-[#0000004c] rounded-full 
+                overflow-hidden backdrop-blur-[10px] backdrop-brightness-[100%]">
                     <img
                         src={feature.iconSrc}
                         alt={feature.title}
@@ -224,9 +236,11 @@ const DesktopFeatureItem: React.FC<{
 
             {/* Right aligned card */}
             {alignmentDirection === 'right' && (
-                <Card className="w-[265px] bg-[#0000004c] border-none backdrop-blur-[10px] backdrop-brightness-[100%] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <Card className="w-[265px] bg-[#0000004c] border-none backdrop-blur-[10px] 
+                backdrop-brightness-[100%] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <CardContent className="flex items-center justify-center gap-3 p-3">
-                        <div className="flex-1 [font-family:'Satoshi-Medium',Helvetica] font-medium text-white text-base tracking-[0] leading-normal">
+                        <div className="flex-1 [font-family:'Satoshi-Medium',Helvetica] 
+                        font-medium text-white text-base tracking-[0] leading-normal">
                             {feature.description}
                         </div>
                     </CardContent>
@@ -235,9 +249,12 @@ const DesktopFeatureItem: React.FC<{
 
             {/* Top aligned card */}
             {alignmentDirection === 'top' && (
-                <Card className="absolute -top-28 left-1/2 transform -translate-x-1/2 w-[265px] bg-[#0000004c] border-none backdrop-blur-[10px] backdrop-brightness-[100%] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <Card className="absolute -top-28 left-1/2 transform -translate-x-1/2 w-[265px] 
+                bg-[#0000004c] border-none backdrop-blur-[10px] backdrop-brightness-[100%] opacity-0 
+                group-hover:opacity-100 transition-opacity duration-300">
                     <CardContent className="flex items-center justify-center gap-3 p-3">
-                        <div className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-white text-base tracking-[0] leading-normal text-center">
+                        <div className="[font-family:'Satoshi-Medium',Helvetica] font-medium 
+                        text-white text-base tracking-[0] leading-normal text-center">
                             {feature.description}
                         </div>
                     </CardContent>
@@ -257,19 +274,23 @@ const MobileFeatureItem: React.FC<{
     };
 }> = ({ feature }) => {
     return (
-        <Card className="bg-[#0000004c] border-none backdrop-blur-[10px] backdrop-brightness-[100%] hover:bg-[#00000066] transition-colors duration-300">
+        <Card className="bg-[#0000004c] border-none backdrop-blur-[10px] backdrop-brightness-[100%] 
+        hover:bg-[#00000066] transition-colors duration-300">
             <CardContent className="flex flex-col items-center gap-4 p-6 text-center">
-                <div className="flex w-[44px] h-[44px] items-center justify-center bg-[#0000004c] rounded-full overflow-hidden backdrop-blur-[10px] backdrop-brightness-[100%]">
+                <div className="flex w-[44px] h-[44px] items-center justify-center bg-[#0000004c] 
+                rounded-full overflow-hidden backdrop-blur-[10px] backdrop-brightness-[100%]">
                     <img
                         src={feature.iconSrc}
                         alt={feature.title}
                         className="w-6 h-6 filter brightness-0 invert"
                     />
                 </div>
-                <h3 className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-white text-lg sm:text-xl tracking-[0] leading-normal">
+                <h3 className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-white text-lg 
+                sm:text-xl tracking-[0] leading-normal">
                     {feature.title}
                 </h3>
-                <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-[#d9d9d9] text-sm sm:text-base tracking-[0] leading-relaxed">
+                <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-[#d9d9d9] 
+                text-sm sm:text-base tracking-[0] leading-relaxed">
                     {feature.description}
                 </p>
             </CardContent>

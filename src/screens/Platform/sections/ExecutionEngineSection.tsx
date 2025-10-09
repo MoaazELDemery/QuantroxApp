@@ -104,27 +104,32 @@ export const ExecutionEngineSection = (): JSX.Element => {
     <section className="w-full flex items-center justify-center py-24">
       <div className="flex flex-col items-center gap-[156px] w-full max-w-[1236px] px-4">
         <header className="flex flex-col items-center gap-6 w-full translate-y-[-1rem] animate-fade-in opacity-0">
-          <h2 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-5xl text-center tracking-[0] leading-normal">
+          <h2 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-5xl 
+          text-center tracking-[0] leading-normal">
             Institutional-grade Api Access
           </h2>
 
-          <p className="max-w-[934px] [font-family:'Satoshi-Medium',Helvetica] font-medium text-[#d9d9d9] text-[28px] text-center tracking-[0] leading-normal">
+          <p className="max-w-[934px] [font-family:'Satoshi-Medium',Helvetica] font-medium 
+          text-[#d9d9d9] text-[28px] text-center tracking-[0] leading-normal">
             A secure, well-documented REST API exposing every function of the
             Quantorx platform. Pull data, run backtests, submit orders, and
             integrate seamlessly into your proprietary systems.
           </p>
         </header>
 
-        <div className="relative w-full max-w-[881px] translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
+        <div className="relative w-full max-w-[881px] translate-y-[-1rem] animate-fade-in 
+        opacity-0 [--animation-delay:400ms]">
           <img
             className="absolute top-[225px] left-0 w-full h-[369px] object-contain"
             alt="Group"
             src="platformCirclesBackground.png"
           />
 
-          <Card className="w-full max-w-[588px] h-[594px] mx-auto rounded-2xl overflow-hidden bg-transparent border-0">
+          <Card className="w-full max-w-[588px] h-[594px] mx-auto rounded-2xl overflow-hidden bg-transparent 
+          border-0">
             <CardContent className="p-6 h-full relative">
-              <div className="relative z-10 [font-family:'Fragment_Mono',Helvetica] font-normal text-xs leading-[18px] text-[#eeeeee]">
+              <div className="relative z-10 [font-family:'Fragment_Mono',Helvetica] font-normal text-xs 
+              leading-[18px] text-[#eeeeee]">
                 {codeSnippets.map((snippet, index) => (
                   <div
                     key={`code-${index}`}
