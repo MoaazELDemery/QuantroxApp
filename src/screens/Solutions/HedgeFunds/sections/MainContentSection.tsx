@@ -1,6 +1,6 @@
 export const MainContentSection = (): JSX.Element => {
   return (
-    <section className="w-full h-[750px] py-8 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-6 md:px-8">
+    <section className="w-full h-auto py-8 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-6 md:px-8">
       {/* Use Case in Action Header */}
       <div className="flex items-center justify-center gap-3 sm:gap-4 mb-8 sm:mb-12 md:mb-16 lg:mb-20 opacity-0 translate-y-[-1rem] animate-fade-in [--animation-delay:0ms]">
         <div className="w-[30px] sm:w-[40px] md:w-[60px] h-[1px] sm:h-[1.5px] rounded-[90px] bg-gradient-to-r from-transparent to-white opacity-60" />

@@ -1,51 +1,51 @@
 import { Card, CardContent } from "../../../components/ui/card";
-import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
-import { useState } from "react";
-import { Button } from "../../../components/ui/button";
+// import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
+// import { useState } from "react";
+// import { Button } from "../../../components/ui/button";
 
 export const ProductDetailsSection = (): JSX.Element => {
-  const teamMembers = [
-    {
-      name: "Khaled Hassan",
-      title: "Chief Technology Officer (CTO)",
-      description:
-        "Specialist in low-latency trading infrastructure and scalable financial platforms, with a track record in top-tier Wall Street firms.",
-      avatar: "/avatar-3x-1-2.png",
-      linkedinUrl: "Khaled Hassan",
-    },
-    {
-      name: "Ahmed Nasser",
-      title: "Chief Executive Officer (CEO)",
-      description:
-        "Veteran quant with 15+ years in global asset management. Leading Quantorx's mission to architect the future of finance.",
-      avatar: "/avatar-3x-1-2.png",
-      linkedinUrl: "Ahmed Nasser",
-    },
-    {
-      name: "Omar El-Sayed",
-      title: "Head of Quantitative Research",
-      description:
-        "Expert in factor modeling, machine learning, and portfolio optimization. Driving innovation in Quantorx's research environment.",
-      avatar: "/avatar-3x-1-2.png",
-      linkedinUrl: "Omar ElSayed",
-    },
-  ];
+  // const teamMembers = [
+  //   {
+  //     name: "Khaled Hassan",
+  //     title: "Chief Technology Officer (CTO)",
+  //     description:
+  //       "Specialist in low-latency trading infrastructure and scalable financial platforms, with a track record in top-tier Wall Street firms.",
+  //     avatar: "/avatar-3x-1-2.png",
+  //     linkedinUrl: "Khaled Hassan",
+  //   },
+  //   {
+  //     name: "Ahmed Nasser",
+  //     title: "Chief Executive Officer (CEO)",
+  //     description:
+  //       "Veteran quant with 15+ years in global asset management. Leading Quantorx's mission to architect the future of finance.",
+  //     avatar: "/avatar-3x-1-2.png",
+  //     linkedinUrl: "Ahmed Nasser",
+  //   },
+  //   {
+  //     name: "Omar El-Sayed",
+  //     title: "Head of Quantitative Research",
+  //     description:
+  //       "Expert in factor modeling, machine learning, and portfolio optimization. Driving innovation in Quantorx's research environment.",
+  //     avatar: "/avatar-3x-1-2.png",
+  //     linkedinUrl: "Omar ElSayed",
+  //   },
+  // ];
 
-  const [currentSlide, setCurrentSlide] = useState(1);
+  // const [currentSlide, setCurrentSlide] = useState(1);
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % teamMembers.length);
-  };
+  // const nextSlide = () => {
+  //   setCurrentSlide((prev) => (prev + 1) % teamMembers.length);
+  // };
 
-  const prevSlide = () => {
-    setCurrentSlide(
-      (prev) => (prev - 1 + teamMembers.length) % teamMembers.length,
-    );
-  };
+  // const prevSlide = () => {
+  //   setCurrentSlide(
+  //     (prev) => (prev - 1 + teamMembers.length) % teamMembers.length,
+  //   );
+  // };
 
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-  };
+  // const goToSlide = (index: number) => {
+  //   setCurrentSlide(index);
+  // };
 
   const productCards = [
     {
@@ -72,7 +72,7 @@ export const ProductDetailsSection = (): JSX.Element => {
   ];
 
   return (
-    <section className="relative w-full bg-black min-h-[800px] md:min-h-[1000px] lg:min-h-[1200px] py-10 md:py-20">
+    <section className="relative w-full bg-black min-h-[400px] md:min-h-[500px] lg:min-h-[600px] py-10 md:py-20">
       <div
         className="absolute inset-0 bg-center min-w-full min-h-full"
         style={{
@@ -132,7 +132,7 @@ export const ProductDetailsSection = (): JSX.Element => {
         </div>
 
         {/* Second Section: Team Members */}
-        <div className="relative max-w-6xl mx-auto bg-[#24004d33] rounded-3xl overflow-hidden 
+        {/* <div className="relative max-w-6xl mx-auto bg-[#24004d33] rounded-3xl overflow-hidden 
         backdrop-blur-[10px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(10px)_brightness(100%)] 
         px-6 sm:px-12 py-12 sm:py-20">
           <div className="flex flex-col items-center gap-8 max-w-[1099px] mx-auto">
@@ -169,9 +169,9 @@ export const ProductDetailsSection = (): JSX.Element => {
                           style={{
                             backgroundImage: 'none',
                           }}
-                        >
+                        > */}
                           {/* Only show background image on desktop */}
-                          <div
+                          {/* <div
                             className="hidden sm:block absolute inset-0 w-full h-full"
                             style={{
                               backgroundImage: "url(/photoOunlineImage.png)",
@@ -222,9 +222,9 @@ export const ProductDetailsSection = (): JSX.Element => {
                     </CardContent>
                   </Card>
                 ))}
-              </div>
+              </div> */}
 
-              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex items-center gap-[9.43px] p-[9.43px]">
+              {/* <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex items-center gap-[9.43px] p-[9.43px]">
                 <Button
                   variant="ghost"
                   size="icon"
@@ -258,7 +258,7 @@ export const ProductDetailsSection = (): JSX.Element => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -89,11 +89,18 @@ export const FooterSection = (): JSX.Element => {
 
         {/* Company Info Section */}
         <div className="flex flex-col items-start gap-6 sm:gap-8 lg:gap-[34px] w-full lg:w-auto">
-          <img
-            className="w-28 h-8 sm:w-32 sm:h-9 lg:w-[137px] lg:h-10 object-cover"
-            alt="Logo white"
-            src="/logo-white-1-1.png"
-          />
+          <Link 
+            to="/" 
+            onClick={() => {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+          >
+            <img
+              className="w-28 h-8 sm:w-32 sm:h-9 lg:w-[137px] lg:h-10 object-cover filter invert brightness-0 cursor-pointer hover:opacity-80 transition-opacity"
+              alt="Logo white"
+              src="/LOGO_SVG.svg"
+            />
+          </Link>
           <div className="w-full max-w-md lg:w-[371px] [font-family:'Satoshi-Regular',Helvetica] font-normal 
           text-grey text-sm sm:text-base tracking-[0.32px] leading-relaxed lg:leading-[25.6px]">
             Experts shaping markets with precision, offering deep insights into
@@ -103,11 +110,18 @@ export const FooterSection = (): JSX.Element => {
             consulting
           </div>
           <div className="flex items-start gap-6 w-full">
-            <img
-              src="/linkedinPlain.svg"
-              alt="LinkedIn"
-              className="w-5 h-5 sm:w-6 sm:h-6 hover:opacity-80 transition-opacity cursor-pointer"
-            />
+            <a 
+              href="https://www.linkedin.com/company/quantorx/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:opacity-80 transition-opacity"
+            >
+              <img
+                src="/linkedinPlain.svg"
+                alt="LinkedIn"
+                className="w-5 h-5 sm:w-6 sm:h-6 cursor-pointer"
+              />
+            </a>
           </div>
         </div>
 
@@ -179,7 +193,7 @@ export const FooterSection = (): JSX.Element => {
                     </button>
                   )}
                   {link.hasDropdown && isSolutionsOpen && (
-                    <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-4 w-[270px] 
+                    <div className="absolute bottom-full mb-2 left-0 lg:left-1/2 lg:-translate-x-1/2 lg:mb-4 w-[270px] 
                     bg-[#290E3F33] rounded-2xl shadow-2xl z-20 py-4 px-2 flex 
                     flex-col gap-2 backdrop-blur-md backdrop-saturate-150">
                       {link.dropdownItems?.map((dropdownItem, dIndex) => (
@@ -211,8 +225,8 @@ export const FooterSection = (): JSX.Element => {
                             )}
                           </span>
                           <span className="flex flex-col">
-                            <span className="[font-family:'Satoshi-Medium',Helvetica] text-lg 
-                            text-white font-semibold">{dropdownItem.label.replace('For ', '').replace('B2B ', '')}</span>
+                            <span className="[font-family:'Satoshi-Medium',Helvetica] text-m 
+                            text-white font-semibold">{dropdownItem.label.replace('For ', '')}</span>
                           </span>
                         </Link>
                       ))}

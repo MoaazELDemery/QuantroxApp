@@ -1,6 +1,13 @@
 import { Button } from "../../../components/ui/button";
 
 export const MissionSection = (): JSX.Element => {
+  const scrollToFooter = () => {
+    const footer = document.querySelector('footer') || document.querySelector('[data-footer]');
+    if (footer) {
+      footer.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="w-full py-10 px-2 sm:px-4 relative">
       <div className="flex flex-col items-center gap-8 max-w-full mx-auto">
@@ -19,7 +26,9 @@ export const MissionSection = (): JSX.Element => {
           </p>
         </div>
 
-        <Button className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms] 
+        <Button 
+          onClick={scrollToFooter}
+          className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms] 
         h-auto inline-flex items-center gap-4 px-6 py-3 sm:px-[72px] sm:py-4 bg-[#4a0082] 
         rounded-[32px] hover:bg-[#5a0092] transition-colors">
           <span className="[font-family:'Satoshi-Bold',Helvetica] font-bold 

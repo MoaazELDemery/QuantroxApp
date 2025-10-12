@@ -4,28 +4,28 @@ import { Header } from "../../../components/layout/Header";
 
 export const FeaturesSection = (): JSX.Element => {
   return (
-    <section className="relative w-full h-[1080px] overflow-hidden 
-    bg-[url(/illusionGIF.gif)] bg-cover bg-center">
-      <div className="relative h-full 
+    <section className="relative w-full h-[700px] lg:h-[850px] overflow-hidden 
+    bg-[url(/illusionGIF.gif)] bg-cover bg-center bg-no-repeat before:content-[''] before:absolute before:inset-0 before:bg-black/40 before:z-0">
+      <div className="relative h-full z-10
       [background:radial-gradient(50%_50%_at_50%_0%,rgba(74,0,130,0.5)_0%,rgba(0,0,0,0)_100%)]">
         <div className="absolute w-full h-full top-0 left-0 
-        bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(1,1,1,1)_63%)]" />
+        bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(1,1,1,1)_75%)] lg:bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(1,1,1,1)_70%)]" />
         <Header />
 
         {/* Logo - responsive sizing and positioning */}
         <img
-          className="absolute w-[380px] h-[400px] top-[170px] left-1/2 transform -translate-x-1/2 
-                     md:w-[500px] md:h-[525px] md:top-[180px]
-                     lg:w-[600px] lg:h-[630px] lg:top-[216px]"
+          className="absolute w-[280px] h-[300px] top-[120px] left-1/2 transform -translate-x-1/2 
+                     md:w-[380px] md:h-[400px] md:top-[130px]
+                     lg:w-[500px] lg:h-[525px] lg:top-[170px]"
           alt="Logo SVG"
           src="/logo-svg-1.svg"
         />
 
         {/* Content container - responsive positioning and spacing */}
-        <div className="absolute top-[240px] left-1/2 transform -translate-x-1/2 flex flex-col 
-        items-center justify-center gap-6 px-4
-                        md:top-[290px] md:gap-8
-                        lg:top-[326px] lg:gap-10 lg:px-0">
+        <div className="absolute top-[180px] left-1/2 transform -translate-x-1/2 flex flex-col 
+        items-center justify-center gap-4 px-4
+                        md:top-[220px] md:gap-5
+                        lg:top-[270px] lg:gap-8 lg:px-0">
           <div className="flex flex-col items-center gap-8 text-center">
             {/* Title */}
             <h1 className="bg-[linear-gradient(180deg,rgba(255,255,255,1)_0%,rgba(235,228,245,1)_39%,rgba(222,210,238,1)_65%,rgba(82,61,109,1)_100%)] 

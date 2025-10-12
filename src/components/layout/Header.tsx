@@ -94,16 +94,24 @@ export const Header = (): JSX.Element => {
   }, [isSolutionsOpen]);
 
   return (
-    <header className="absolute top-0 left-0 w-full flex items-center justify-between px-4 
-    sm:px-6 md:px-8 lg:px-16 xl:px-24 2xl:px-[138px] py-3 sm:py-4 md:py-6 lg:py-8 z-50">
+    <header className="absolute top-0 left-0 w-full flex items-center justify-between px-6 
+    sm:px-6 md:px-8 lg:px-16 xl:px-24 2xl:px-[138px] py-4 sm:py-4 md:py-6 lg:py-8 z-50">
       <div className="flex items-center h-12 w-full lg:w-auto justify-between lg:justify-start"
         style={{ minWidth: 140 }}>
-        <img
-          className="object-contain -ml-2 sm:ml-0"
-          alt="Logo white"
-          src="/LOGO_SVG.svg"
-          style={{ filter: 'brightness(0) invert(1)', height: '48px', width: 'auto', maxWidth: '180px' }}
-        />
+        <Link 
+          to="/" 
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
+          className="hover:opacity-80 transition-opacity"
+        >
+          <img
+            className="object-contain -ml-2 sm:ml-0 cursor-pointer"
+            alt="Logo white"
+            src="/LOGO_SVG.svg"
+            style={{ filter: 'brightness(0) invert(1)', height: '48px', width: 'auto', maxWidth: '180px' }}
+          />
+        </Link>
         <button
           className="lg:hidden flex items-center justify-center w-10 h-10 text-white hover:bg-white/10 
           rounded-lg transition-colors ml-auto"
@@ -214,8 +222,8 @@ export const Header = (): JSX.Element => {
                         )}
                       </span>
                       <span className="flex flex-col">
-                        <span className="[font-family:'Satoshi-Medium',Helvetica] text-lg text-white 
-                        font-semibold">{dropdownItem.label.replace('For ', '').replace('B2B ', '')}</span>
+                        <span className="[font-family:'Satoshi-Medium',Helvetica] text-m text-white 
+                        font-semibold">{dropdownItem.label.replace('For ', '')}</span>
                       </span>
                     </Link>
                   ))}

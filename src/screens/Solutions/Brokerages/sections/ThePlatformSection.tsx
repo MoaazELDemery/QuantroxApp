@@ -1,6 +1,6 @@
 export const ThePlatformSection = (): JSX.Element => {
   return (
-    <section className="w-full h-[950px] py-8 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-6 md:px-8">
+    <section className="w-full h-auto md:h-[950px] py-8 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-6 md:px-8 pb-16 md:pb-20">
       {/* Use Case in Action Header */}
       <div className="flex items-center justify-center gap-3 sm:gap-4 mb-8 sm:mb-12 md:mb-16 
       lg:mb-20 opacity-0 translate-y-[-1rem] animate-fade-in [--animation-delay:0ms]">
@@ -13,8 +13,7 @@ export const ThePlatformSection = (): JSX.Element => {
         <div className="w-[30px] sm:w-[40px] md:w-[60px] h-[1px] sm:h-[1.5px] rounded-[90px] 
         bg-gradient-to-l from-transparent to-white opacity-60" />
       </div>
-      <div className="flex flex-col items-center gap-4 sm:gap-6 mt-8 sm:mt-12 md:mt-[67px] max-w-[1096px] 
-       mx-auto px-4 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms] mb-16 sm:mb-24 md:mb-32 lg:mb-36 xl:mb-40">
+      <div className="flex flex-col items-center gap-4 sm:gap-6 mt-8 sm:mt-12 md:mt-[67px] max-w-[1096px] mx-auto px-4 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms] mb-8 sm:mb-16 md:mb-32 lg:mb-36 xl:mb-40">
         <h2 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-[#ffffff] text-2xl 
         sm:text-3xl md:text-4xl lg:text-5xl text-center tracking-[0] leading-tight md:leading-normal">
           Simplify portfolio tracking and Client Management in One Place.
