@@ -72,7 +72,7 @@ export const TestimonialsSection = (): JSX.Element => {
             {/* Desktop Layout */}
             <div className="hidden lg:block relative z-10 w-full max-w-7xl mx-auto">
                 <div className="relative flex items-center justify-center">
-                    <ScrollReveal delay={200}>
+                    <ScrollReveal delay={100}>
                         <div className="relative flex items-center justify-center dashboard-container">
                             {/* Background circles */}
                             <div className="absolute inset-0 flex items-center justify-center">

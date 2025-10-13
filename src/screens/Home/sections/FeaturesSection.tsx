@@ -9,7 +9,7 @@ export const FeaturesSection = (): JSX.Element => {
       <div className="relative h-full z-10
       [background:radial-gradient(50%_50%_at_50%_0%,rgba(74,0,130,0.5)_0%,rgba(0,0,0,0)_100%)]">
         <div className="absolute w-full h-full top-0 left-0 
-        bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(1,1,1,1)_75%)] lg:bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(1,1,1,1)_70%)]" />
+        bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(1,1,1,0.85)_90%,rgba(1,1,1,1)_100%)] lg:bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(1,1,1,0.85)_85%,rgba(1,1,1,1)_100%)]" />
         <Header />
 
         {/* Logo - responsive sizing and positioning */}
