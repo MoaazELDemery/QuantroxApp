@@ -33,16 +33,21 @@ export const FooterSection = (): JSX.Element => {
       title: "Location",
       content:
         "Cairo, Maadi, Al-Ma'arag City, Building No. 5158, Ground Floor, behind Carrefour Maadi",
+      isClickable: false,
     },
     {
       icon: <PhoneIcon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />,
       title: "Phone",
       content: "+20 127 984 7374 - +966 53 750 7578",
+      isClickable: true,
+      phones: ["+20 127 984 7374", "+966 53 750 7578"],
     },
     {
       icon: <MailIcon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />,
       title: "Email",
       content: "technology.team@quantorx.com",
+      isClickable: true,
+      href: "mailto:technology.team@quantorx.com",
     },
   ];
 
@@ -149,7 +154,36 @@ export const FooterSection = (): JSX.Element => {
                 </div>
                 <div className="w-full lg:w-[327px] [font-family:'Satoshi-Regular',Helvetica] font-normal 
                 text-grey text-sm sm:text-base tracking-[0.32px] leading-relaxed lg:leading-[25.6px]">
-                  {item.content}
+                  {item.isClickable ? (
+                    item.phones ? (
+                      // Phone numbers
+                      <span>
+                        <a 
+                          href={`tel:${item.phones[0].replace(/\s/g, '')}`}
+                          className="hover:text-white transition-colors cursor-pointer"
+                        >
+                          {item.phones[0]}
+                        </a>
+                        {" - "}
+                        <a 
+                          href={`tel:${item.phones[1].replace(/\s/g, '')}`}
+                          className="hover:text-white transition-colors cursor-pointer"
+                        >
+                          {item.phones[1]}
+                        </a>
+                      </span>
+                    ) : (
+                      // Email
+                      <a 
+                        href={item.href}
+                        className="hover:text-white transition-colors cursor-pointer"
+                      >
+                        {item.content}
+                      </a>
+                    )
+                  ) : (
+                    item.content
+                  )}
                 </div>
               </div>
             ))}
