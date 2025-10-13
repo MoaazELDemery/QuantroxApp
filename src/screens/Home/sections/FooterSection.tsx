@@ -12,8 +12,8 @@ export const FooterSection = (): JSX.Element => {
   const getSelectedDropdownItem = () => {
     if (location.pathname.startsWith('/solutions/asset-managers')) {
       return '/solutions/asset-managers';
-    } else if (location.pathname.startsWith('/solutions/brokerages')) {
-      return '/solutions/brokerages';
+    } else if (location.pathname.startsWith('/solutions/banks')) {
+      return '/solutions/banks';
     } else if (location.pathname.startsWith('/solutions/hedge-funds')) {
       return '/solutions/hedge-funds';
     } else if (location.pathname.startsWith('/solutions/robo-advisory')) {
@@ -53,7 +53,7 @@ export const FooterSection = (): JSX.Element => {
       hasDropdown: true,
       dropdownItems: [
         { label: "For Assets Managers", href: "/solutions/asset-managers" },
-        { label: "For Brokerages", href: "/solutions/brokerages" },
+        { label: "For Banks", href: "/solutions/banks" },
         { label: "For Hedge Funds", href: "/solutions/hedge-funds" },
         { label: "B2B Robo-Advisory", href: "/solutions/robo-advisory" },
       ],
@@ -211,7 +211,7 @@ export const FooterSection = (): JSX.Element => {
                             {dIndex === 0 ? (
                               <img src="/vuesax-linear-wallet-money.svg" alt="Assets Managers" className="w-6 h-6" />
                             ) : dIndex === 1 ? (
-                              <img src="/vuesax-linear-trade.svg" alt="Brokerages" className="w-6 h-6" />
+                              <img src="/vuesax-linear-trade.svg" alt="Banks" className="w-6 h-6" />
                             ) : dIndex === 2 ? (
                               <img src="/vuesax-linear-kyber-network--knc-.svg" alt="Hedge Funds" className="w-6 h-6" />
                             ) : dIndex === 3 ? (

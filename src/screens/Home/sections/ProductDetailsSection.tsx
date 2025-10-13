@@ -57,9 +57,9 @@ export const ProductDetailsSection = (): JSX.Element => {
     },
     {
       icon: "/vuesax-linear-trade.svg",
-      title: "Brokerages",
+      title: "Banks",
       description:
-        "Deliver superior execution for your clients with our low-latency smart order routing and algorithmic trading solutions.",
+        "Engineer a more resilient and profitable bank portfolio  & balance sheet with our quant & AI modeling solutions that master everything from credit risk and stress testing to the complex valuation of structured products and derivatives.",
       alt: "Vuesax linear trade",
     },
     {
@@ -101,7 +101,7 @@ export const ProductDetailsSection = (): JSX.Element => {
             </p>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-8">
+          <div className="flex flex-wrap justify-center items-start gap-8">
             {productCards.map((card, index) => (
               <Card
                 key={index}
@@ -114,12 +114,12 @@ export const ProductDetailsSection = (): JSX.Element => {
                     <img className="w-6 h-6" alt={card.alt} src={card.icon} />
 
                     <div className="flex flex-col items-start gap-1 w-full">
-                      <h3 className="w-full h-9 [font-family:'Satoshi-Medium',Helvetica] 
+                      <h3 className="w-full [font-family:'Satoshi-Medium',Helvetica] 
                       font-medium text-white text-2xl text-center tracking-[0] leading-9">
                         {card.title}
                       </h3>
 
-                      <p className="w-full min-h-[66px] [font-family:'Satoshi-Medium',Helvetica] 
+                      <p className="w-full [font-family:'Satoshi-Medium',Helvetica] 
                       font-medium text-[#d9d9d9] text-base text-center tracking-[0] leading-normal">
                         {card.description}
                       </p>
