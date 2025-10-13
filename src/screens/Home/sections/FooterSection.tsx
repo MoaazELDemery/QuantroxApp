@@ -157,28 +157,26 @@ export const FooterSection = (): JSX.Element => {
                   {item.isClickable ? (
                     item.phones ? (
                       // Phone numbers
-                      <span>
+                      <div className="flex flex-col gap-1">
                         <a
                           href={`tel:${item.phones[0].replace(/\s/g, '')}`}
                           className="hover:text-white transition-colors cursor-pointer"
                         >
                           {item.phones[0]}
                         </a>
-                        {" - "}
                         <a
                           href={`tel:${item.phones[1].replace(/\s/g, '')}`}
                           className="hover:text-white transition-colors cursor-pointer"
                         >
                           {item.phones[1]}
                         </a>
-                        {" - "}
                         <a
                           href={`tel:${item.phones[2].replace(/\s/g, '')}`}
                           className="hover:text-white transition-colors cursor-pointer"
                         >
                           {item.phones[2]}
                         </a>
-                      </span>
+                      </div>
                     ) : (
                       // Email
                       <a
