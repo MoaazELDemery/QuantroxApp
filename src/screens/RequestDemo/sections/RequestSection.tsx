@@ -96,7 +96,7 @@ export const RequestSection = (): JSX.Element => {
               />
 
               <Button
-                type="submit"
+                type="button"
                 className="w-full h-auto px-[72px] py-4 bg-[#4a0082] rounded-[32px] 
                 hover:bg-[#5a0092] transition-colors"
               >

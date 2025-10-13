@@ -127,7 +127,7 @@ export const HighlightsSection = (): JSX.Element => {
 						>
 							<div className="relative self-stretch w-full h-56 sm:h-32 md:h-40 lg:h-44 bg-[linear-gradient(180deg,rgba(152,16,255,0.5)_0%,rgba(35,0,62,0.5)_100%)]" />
 
-							<CardContent className="flex flex-col items-start justify-between gap-0 pt-0 pb-2 
+							<CardContent className="flex flex-col items-start justify-between gap-0 pt-0 pb-4 
 							px-4 lg:px-6 relative self-stretch w-full h-full">
 								<div className="flex flex-col items-start gap-0 relative self-stretch w-full 
 								flex-grow">

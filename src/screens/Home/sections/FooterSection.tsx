@@ -32,22 +32,22 @@ export const FooterSection = (): JSX.Element => {
       icon: <MapPinIcon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />,
       title: "Location",
       content:
-        "Cairo, Maadi, Al-Ma'arag City, Building No. 5158, Ground Floor, behind Carrefour Maadi",
+        "511 W Cleveland St, STE 414, Tampa, FL 33606",
       isClickable: false,
     },
     {
       icon: <PhoneIcon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />,
       title: "Phone",
-      content: "+20 127 984 7374 - +966 53 750 7578",
+      content: "+18134471388 - +966537507578 - +201221388009",
       isClickable: true,
-      phones: ["+20 127 984 7374", "+966 53 750 7578"],
+      phones: ["+18134471388", "+966537507578", "+201221388009"],
     },
     {
       icon: <MailIcon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />,
       title: "Email",
-      content: "technology.team@quantorx.com",
+      content: "innovation@quantorx.com",
       isClickable: true,
-      href: "mailto:technology.team@quantorx.com",
+      href: "mailto:innovation@quantorx.com",
     },
   ];
 
@@ -94,8 +94,8 @@ export const FooterSection = (): JSX.Element => {
 
         {/* Company Info Section */}
         <div className="flex flex-col items-start gap-6 sm:gap-8 lg:gap-[34px] w-full lg:w-auto">
-          <Link 
-            to="/" 
+          <Link
+            to="/"
             onClick={() => {
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
@@ -115,9 +115,9 @@ export const FooterSection = (): JSX.Element => {
             consulting
           </div>
           <div className="flex items-start gap-6 w-full">
-            <a 
-              href="https://www.linkedin.com/company/quantorx/" 
-              target="_blank" 
+            <a
+              href="https://www.linkedin.com/company/quantorx/"
+              target="_blank"
               rel="noopener noreferrer"
               className="hover:opacity-80 transition-opacity"
             >
@@ -158,23 +158,30 @@ export const FooterSection = (): JSX.Element => {
                     item.phones ? (
                       // Phone numbers
                       <span>
-                        <a 
+                        <a
                           href={`tel:${item.phones[0].replace(/\s/g, '')}`}
                           className="hover:text-white transition-colors cursor-pointer"
                         >
                           {item.phones[0]}
                         </a>
                         {" - "}
-                        <a 
+                        <a
                           href={`tel:${item.phones[1].replace(/\s/g, '')}`}
                           className="hover:text-white transition-colors cursor-pointer"
                         >
                           {item.phones[1]}
                         </a>
+                        {" - "}
+                        <a
+                          href={`tel:${item.phones[2].replace(/\s/g, '')}`}
+                          className="hover:text-white transition-colors cursor-pointer"
+                        >
+                          {item.phones[2]}
+                        </a>
                       </span>
                     ) : (
                       // Email
-                      <a 
+                      <a
                         href={item.href}
                         className="hover:text-white transition-colors cursor-pointer"
                       >
