@@ -38,9 +38,9 @@ export const FooterSection = (): JSX.Element => {
     {
       icon: <PhoneIcon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />,
       title: "Phone",
-      content: "+18134471388 - +966537507578 - +201221388009",
+      content: "+18134471388 - +966537507578 - +201119974983",
       isClickable: true,
-      phones: ["+18134471388", "+966537507578", "+201221388009"],
+      phones: ["+18134471388", "+966537507578", "+201119974983"],
     },
     {
       icon: <MailIcon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />,
@@ -68,6 +68,31 @@ export const FooterSection = (): JSX.Element => {
     { label: "About us", href: "/about-us" },
   ];
 
+  const handleNavigation = () => {
+    // The #app div is the actual scroll container!
+    const appContainer = document.getElementById('app');
+    
+    if (appContainer) {
+      appContainer.scrollTop = 0;
+    }
+    window.scrollTo(0, 0);
+    
+    // Multiple attempts to ensure scroll happens
+    setTimeout(() => {
+      if (appContainer) {
+        appContainer.scrollTop = 0;
+      }
+      window.scrollTo(0, 0);
+    }, 10);
+    
+    setTimeout(() => {
+      if (appContainer) {
+        appContainer.scrollTop = 0;
+      }
+      window.scrollTo(0, 0);
+    }, 100);
+  };
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -94,11 +119,9 @@ export const FooterSection = (): JSX.Element => {
 
         {/* Company Info Section */}
         <div className="flex flex-col items-start gap-6 sm:gap-8 lg:gap-[34px] w-full lg:w-auto">
-          <Link
+          <Link 
             to="/"
-            onClick={() => {
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }}
+            onClick={handleNavigation}
           >
             <img
               className="w-28 h-8 sm:w-32 sm:h-9 lg:w-[137px] lg:h-10 object-cover filter invert brightness-0 cursor-pointer hover:opacity-80 transition-opacity"
@@ -206,7 +229,7 @@ export const FooterSection = (): JSX.Element => {
                   {link.href ? (
                     <Link
                       to={link.href}
-                      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                      onClick={handleNavigation}
                       className={`w-fit [font-family:'Satoshi-Regular',Helvetica] font-normal text-grey 
                         text-sm sm:text-base tracking-[0.32px] leading-relaxed lg:leading-[25.6px] 
                         whitespace-nowrap cursor-pointer hover:text-white transition-colors`}
@@ -243,7 +266,7 @@ export const FooterSection = (): JSX.Element => {
                             transition-all duration-150 ${selectedDropdownItem === dropdownItem.href ? 'bg-white/10' : 'hover:bg-white/5'}`}
                           onClick={() => {
                             setIsSolutionsOpen(false);
-                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                            handleNavigation();
                           }}
                         >
                           <span className="flex items-center justify-center w-10 h-10 rounded-lg bg-white/10 text-white">

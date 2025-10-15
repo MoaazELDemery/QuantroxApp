@@ -10,10 +10,12 @@ import { Platform } from "./screens/Platform/Platform";
 import { Insights } from "./screens/Insights/Insights";
 import { AboutUs } from "./screens/AboutUs/AboutUs";
 import { RequestDemo } from "./screens/RequestDemo/RequestDemo";
+import { ScrollToTop } from "./components/ScrollToTop";
 
 createRoot(document.getElementById("app") as HTMLElement).render(
   <StrictMode>
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/solutions/asset-managers" element={<SolutionsForAsset />} />

@@ -100,9 +100,6 @@ export const Header = (): JSX.Element => {
         style={{ minWidth: 140 }}>
         <Link 
           to="/" 
-          onClick={() => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }}
           className="hover:opacity-80 transition-opacity"
         >
           <img
