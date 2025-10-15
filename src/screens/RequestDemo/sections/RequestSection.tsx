@@ -88,9 +88,9 @@ export const RequestSection = (): JSX.Element => {
 
     try {
       // EmailJS configuration
-      const serviceId = "service_s6780hs";
-      const templateId = "template_3npt8n3";
-      const publicKey = "k0QnW5AcS3XvXI_SB";
+      const serviceId = "service_zban55p";
+      const templateId = "template_ee7n6g8";
+      const publicKey = "ldyxcf_QiGp4t_arv";
 
       // Template parameters - These variable names must match your EmailJS template
       const templateParams = {
@@ -131,7 +131,7 @@ export const RequestSection = (): JSX.Element => {
       
       // Show error message
       showToast(
-        "Sorry, there was an error sending your request. Please contact us directly at moaazeldemery@gmail.com",
+        "Sorry, there was an error sending your request. Please contact us directly at innovation@quantorx.com",
         "error"
       );
     } finally {

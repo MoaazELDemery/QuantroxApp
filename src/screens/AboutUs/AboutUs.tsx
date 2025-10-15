@@ -29,9 +29,9 @@ export const AboutUs = (): JSX.Element => {
                     <ContactSection />
                 </ScrollReveal>
 
-                <ScrollReveal>
+                {/* <ScrollReveal>
                     <LeadershipSection />
-                </ScrollReveal>
+                </ScrollReveal> */}
 
                 <ScrollReveal>
                     <MissionSection />
