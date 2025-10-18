@@ -69,7 +69,7 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        "fade-in": {
+             "fade-in": {
           "0%": {
             opacity: "0",
             transform: "translateY(10px)",

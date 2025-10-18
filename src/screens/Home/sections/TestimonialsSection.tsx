@@ -1,138 +1,299 @@
 import React from "react";
 import { Card, CardContent } from "../../../components/ui/card";
-import { SearchIcon, CheckIcon, DatabaseIcon, BoxIcon, TrendingUpIcon } from "lucide-react";
+import { ScrollReveal } from "../../../components/ui/scroll-reveal";
 
 export const TestimonialsSection = (): JSX.Element => {
     const features = [
         {
             id: "research",
             title: "Research",
-            icon: SearchIcon,
+            iconSrc: "/vuesax-linear-search-normal.svg",
             description: "A Python-native environment for advanced factor modeling and strategy development.",
-            position: "top-[310px] left-[80px]",
-            cardPosition: "left",
         },
         {
             id: "execution",
             title: "Execution",
-            icon: CheckIcon,
+            iconSrc: "/vuesax-linear-check.svg",
             description: "A low-latency EMS with Smart Order Routing and customizable trading algorithms.",
-            position: "top-[310px] right-[-20px]",
-            cardPosition: "right",
         },
         {
             id: "data",
             title: "Data",
-            icon: DatabaseIcon,
+            iconSrc: "/vuesax-linear-data.svg",
             description: "Unified access to curated, pre-cleaned market and alternative datasets.",
-            position: "top-[591px] left-[15px]",
-            cardPosition: "left",
         },
         {
             id: "backtest",
             title: "Backtest",
-            icon: BoxIcon,
+            iconSrc: "/vuesax-linear-box.svg",
             description: "A low-latency EMS with Smart Order Routing and customizable trading algorithms.",
-            position: "top-[591px] right-[-85px]",
-            cardPosition: "right",
         },
         {
             id: "risk",
             title: "Risk Management",
-            icon: TrendingUpIcon,
+            iconSrc: "/vuesax-linear-chart-success.svg",
             description: "Real-time portfolio risk management with VaR, stress tests, and factor analysis.",
-            position: "top-[115px] left-[550px]",
-            cardPosition: "top",
         },
     ];
+
     return (
-        <section className="relative w-full min-h-[1415px] flex flex-col items-center justify-center">
-            {/* Background ellipse */}
-            <div className="absolute top-[450px] left-1/2 transform -translate-x-1/2 w-[1200px] h-[1200px] flex items-center justify-center">
-                <img
-                    className="w-[1200px] h-[1200px] object-contain"
-                    alt="Background ellipse"
-                    src="https://c.animaapp.com/mfq1vaxrSS67Pt/img/ellipse-12.svg"
+        <section className="relative w-full min-h-[900px] flex flex-col items-center justify-center 
+        py-10 px-4 lg:py-20">
+            {/* Central circular gradient background for desktop only */}
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none mt-48 hidden lg:flex">
+                <div
+                    className="w-96 h-96 sm:w-[500px] sm:h-[500px] md:w-[700px] md:h-[700px] 
+                    lg:w-[800px] lg:h-[800px] rounded-full opacity-70 animate-spin overflow-hidden"
+                    style={{
+                        background: 'radial-gradient(circle, #9810FF 0%, #23003E 40%, transparent 70%)'
+                    }}
                 />
             </div>
-            {/* Header content */}
-            <header className="relative z-10 flex flex-col w-full max-w-[1272px] items-center justify-center gap-4 mt-[97px] translate-y-[-1rem] animate-fade-in opacity-0">
-                <h1 className="text-center [font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-5xl tracking-[0] leading-normal">
-                    One Platform.
-                    <br />
-                    the Entire Investment Lifecycle.
-                </h1>
-                <p className="text-center [font-family:'Satoshi-Regular',Helvetica] font-normal text-[#d9d9d9] text-[28px] tracking-[0] leading-normal max-w-full">
-                    Quantorx integrates every critical function into a single, high-performance environment. Move
-                    seamlessly from hypothesis to execution on a platform engineered for precision and speed.
-                </p>
-            </header>
-            {/* Central diagram and features */}
-            <div className="relative w-full max-w-[1402px] h-[1101px] mt-[60px]">
-                {/* Central circular diagram */}
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[100px] h-[200px] translate-y-[20px] animate-fade-in opacity-0 [--animation-delay:200ms]">
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[250px] h-[250px] bg-[#0000001a] rounded-full backdrop-blur-[10px] backdrop-brightness-[100%]" />
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] flex items-center justify-center bg-[url(https://c.animaapp.com/mfq1vaxrSS67Pt/img/ellipse-1.svg)] bg-[100%_100%] bg-center bg-no-repeat">
-                     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] flex items-center justify-center bg-[url(https://c.animaapp.com/mfq1vaxrSS67Pt/img/ellipse-2.svg)] bg-[100%_100%] bg-center bg-no-repeat"></div>
-                        <img
-                            className="w-[480px] h-[480px] object-contain rounded-md"
-                            alt="Dashboard preview"
-                            src="/Dashboard.png"
-                            loading="lazy"
-                        />
-                    </div>
-                </div>
-                {/* Feature sections */}
-                {features.map((feature, index) => {
-                    const IconComponent = feature.icon;
-                    const animationDelay = 400 + index * 100;
-                    return (
-                        <div
-                            key={feature.id}
-                            className={`flex w-[400px] h-[200px] items-center justify-center gap-4 absolute ${feature.position} translate-y-[-1rem] animate-fade-in opacity-0`}
-                            style={{ "--animation-delay": `${animationDelay}ms` } as React.CSSProperties}
-                        >
-                            {feature.cardPosition === "left" && (
-                                <Card className="w-[265px] bg-[#0000004c] border-none backdrop-blur-[10px] backdrop-brightness-[100%] opacity-0 hover:opacity-100 transition-opacity duration-300">
-                                    <CardContent className="flex items-center justify-center gap-3 p-3">
-                                        <div className="flex-1 [font-family:'Satoshi-Medium',Helvetica] font-medium text-white text-base tracking-[0] leading-normal">
-                                            {feature.description}
-                                        </div>
-                                    </CardContent>
-                                </Card>
-                            )}
 
-                            <div className="flex flex-col w-[100px] items-center gap-3">
-                                <h3 className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-white text-[22px] text-center tracking-[0] leading-normal">
-                                    {feature.title}
-                                </h3>
-                                <div className="flex w-11 h-11 items-center justify-center gap-2.5 px-[15px] py-1.5 bg-[#0000004c] rounded-[30px] overflow-hidden backdrop-blur-[10px] backdrop-brightness-[100%]">
-                                    <IconComponent className="w-6 h-6 text-white" />
-                                </div>
+            {/* Header content */}
+            <ScrollReveal delay={50}>
+                <header className="relative z-10 flex flex-col items-center justify-center gap-4 mb-12 
+                sm:mb-20 lg:mb-40 max-w-7xl text-center">
+                    <h1 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-2xl 
+                    sm:text-3xl md:text-4xl lg:text-5xl tracking-[0] leading-tight lg:leading-normal">
+                        One Platform.
+                        <br />
+                        the Entire Investment Lifecycle.
+                    </h1>
+                    <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-[#d9d9d9] 
+                    text-base sm:text-lg md:text-xl lg:text-[28px] tracking-[0] leading-relaxed 
+                    lg:leading-normal w-full px-04 mb-10">
+                        Quantorx integrates every critical function into a single, high-performance environment. Move
+                        seamlessly from hypothesis to execution on a platform engineered for precision and speed.
+                    </p>
+                </header>
+            </ScrollReveal>
+
+            {/* Desktop Layout */}
+            <div className="hidden lg:block relative z-10 w-full max-w-7xl mx-auto">
+                <div className="relative flex items-center justify-center">
+                    <ScrollReveal delay={100}>
+                        <div className="relative flex items-center justify-center dashboard-container">
+                            {/* Background circles */}
+                            <div className="absolute inset-0 flex items-center justify-center">
+                                <div className="w-[250px] h-[250px] bg-[#0000001a] rounded-full 
+                                backdrop-blur-[10px] backdrop-brightness-[100%]" />
                             </div>
-                            {feature.cardPosition === "right" && (
-                                <Card className="w-[265px] bg-[#0000004c] border-none backdrop-blur-[10px] backdrop-brightness-[100%] opacity-0 hover:opacity-100 transition-opacity duration-300">
-                                    <CardContent className="flex items-center justify-center gap-3 p-3">
-                                        <div className="flex-1 [font-family:'Satoshi-Medium',Helvetica] font-medium text-white text-base tracking-[0] leading-normal">
-                                            {feature.description}
-                                        </div>
-                                    </CardContent>
-                                </Card>
-                            )}
-                            {feature.cardPosition === "top" && (
-                                <Card className="absolute -top-[80px] left-1/2 transform -translate-x-1/2 bg-[#0000004c] border-none backdrop-blur-[10px] backdrop-brightness-[100%] opacity-0 hover:opacity-100 transition-opacity duration-300">
-                                    <CardContent className="inline-flex items-center justify-center gap-3 p-3">
-                                        <div className="w-[241px] [font-family:'Satoshi-Medium',Helvetica] font-medium text-white text-base tracking-[0] leading-normal">
-                                            {feature.description}
-                                        </div>
-                                    </CardContent>
-                                </Card>
-                            )}
+
+                            <div className="relative w-[600px] h-[600px] flex items-center justify-center">
+                                <img
+                                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+                                    w-[70%] h-[70%] object-contain opacity-100"
+                                    alt="Background ellipse 1"
+                                    src="/ellipse-1.svg"
+                                />
+                                <img
+                                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+                                    w-[85%] h-[85%] object-contain opacity-100"
+                                    alt="Background ellipse 2"
+                                    src="/ellipse-2.svg"
+                                />
+                                <img
+                                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+                                    w-[100%] h-[100%] object-contain opacity-100"
+                                    alt="Background ellipse 2"
+                                    src="/ellipse-2.svg"
+                                />
+                                <img
+                                    className="relative z-10 w-[420px] h-[420px] object-contain rounded-md -mt-16"
+                                    alt="Dashboard preview"
+                                    src="/Dashboard.png"
+                                    loading="lazy"
+                                />
+                            </div>
+
+                            {/* Desktop Features positioned absolutely */}
+                            <div className="absolute top-[10%] left-[-270px] transform -translate-y-1/2">
+                                <ScrollReveal delay={50}>
+                                    <DesktopFeatureItem feature={features[0]} alignmentDirection="left" />
+                                </ScrollReveal>
+                            </div>
+                            <div className="absolute top-[10%] right-[-270px] transform -translate-y-1/2">
+                                <ScrollReveal delay={50}>
+                                    <DesktopFeatureItem feature={features[1]} alignmentDirection="right" />
+                                </ScrollReveal>
+                            </div>
+                            <div className="absolute bottom-[55%] left-[-340px] transform translate-y-1/2">
+                                <ScrollReveal delay={50}>
+                                    <DesktopFeatureItem feature={features[2]} alignmentDirection="left" />
+                                </ScrollReveal>
+                            </div>
+                            <div className="absolute bottom-[55%] right-[-340px] transform translate-y-1/2">
+                                <ScrollReveal delay={50}>
+                                    <DesktopFeatureItem feature={features[3]} alignmentDirection="right" />
+                                </ScrollReveal>
+                            </div>
+                            <div className="absolute top-[-80px] left-1/2 transform -translate-x-1/2">
+                                <ScrollReveal delay={50}>
+                                    <DesktopFeatureItem feature={features[4]} alignmentDirection="top" />
+                                </ScrollReveal>
+                            </div>
                         </div>
-                    );
-                })}
+                    </ScrollReveal>
+                </div>
             </div>
-            {/* Dashboard mockup */}
+
+            {/* Mobile/Tablet Layout */}
+            <div className="lg:hidden relative z-10 w-full max-w-4xl mx-auto">
+                {/* Dashboard with gradient background under image */}
+                <ScrollReveal delay={50}>
+                    <div className="relative flex items-center justify-center mb-12 sm:mb-20">
+                        {/* Background circles */}
+                        <div className="absolute inset-0 flex items-center justify-center">
+                            <div className="w-56 h-56 sm:w-64 sm:h-64 md:w-64 md:h-64 bg-[#0000001a] rounded-full backdrop-blur-[10px] backdrop-brightness-[100%]" />
+                        </div>
+                        {/* Radial gradient background for mobile */}
+                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none z-0">
+                            <div
+                                className="w-[450px] h-[450px] sm:w-[500px] sm:h-[500px] md:w-[500px] md:h-[500px] rounded-full opacity-70"
+                                style={{
+                                    background: 'radial-gradient(circle, #9810FF 0%, #23003E 40%, transparent 70%)'
+                                }}
+                            />
+                        </div>
+                        <div className="relative w-[450px] h-[450px] sm:w-[500px] sm:h-[500px] md:w-[500px] md:h-[500px] flex items-center justify-center z-10">
+                            <img
+                                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[70%] h-[70%] object-contain opacity-100"
+                                alt="Background ellipse 1"
+                                src="/ellipse-1.svg"
+                            />
+                            <img
+                                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[85%] h-[85%] object-contain opacity-100"
+                                alt="Background ellipse 2"
+                                src="/ellipse-2.svg"
+                            />
+                            <img
+                                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[100%] h-[100%] object-contain opacity-100"
+                                alt="Background ellipse 2"
+                                src="/ellipse-2.svg"
+                            />
+                            <img
+                                className="relative z-20 w-[350px] h-[350px] sm:w-[400px] sm:h-[400px] md:w-[400px] md:h-[400px] object-contain rounded-md -mt-4 sm:-mt-6"
+                                alt="Dashboard preview"
+                                src="/Dashboard.png"
+                                loading="lazy"
+                            />
+                        </div>
+                    </div>
+                </ScrollReveal>
+
+                {/* Mobile Features Grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 max-w-2xl mx-auto mt-12 sm:mt-20">
+                    {features.map((feature, index) => (
+                        <ScrollReveal key={feature.id} delay={50 + (index * 100)}>
+                            <MobileFeatureItem feature={feature} />
+                        </ScrollReveal>
+                    ))}
+                </div>
+            </div>
         </section>
+    );
+};
+
+// Desktop Feature Item Component
+const DesktopFeatureItem: React.FC<{
+    feature: {
+        id: string;
+        title: string;
+        iconSrc: string;
+        description: string;
+    };
+    alignmentDirection: 'left' | 'right' | 'top';
+}> = ({ feature, alignmentDirection }) => {
+    return (
+        <div className="flex items-center justify-center gap-4 group">
+            {/* Left aligned card */}
+            {alignmentDirection === 'left' && (
+                <Card className="w-[265px] bg-[#0000004c] border-none backdrop-blur-[10px] backdrop-brightness-[100%] opacity-0 group-hover:opacity-100 
+                transition-opacity duration-300">
+                    <CardContent className="flex items-center justify-center gap-3 p-3">
+                        <div className="flex-1 [font-family:'Satoshi-Medium',Helvetica] font-medium text-white text-base tracking-[0] leading-normal">
+                            {feature.description}
+                        </div>
+                    </CardContent>
+                </Card>
+            )}
+
+            {/* Feature icon and title */}
+            <div className="flex flex-col items-center gap-3 min-w-[100px]">
+                <h3 className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-white text-[22px] text-center tracking-[0] leading-normal">
+                    {feature.title}
+                </h3>
+                <div className="flex w-[44px] h-[44px] items-center justify-center bg-[#0000004c] rounded-full 
+                overflow-hidden backdrop-blur-[10px] backdrop-brightness-[100%]">
+                    <img
+                        src={feature.iconSrc}
+                        alt={feature.title}
+                        className="w-6 h-6 filter brightness-0 invert"
+                    />
+                </div>
+            </div>
+
+            {/* Right aligned card */}
+            {alignmentDirection === 'right' && (
+                <Card className="w-[265px] bg-[#0000004c] border-none backdrop-blur-[10px] 
+                backdrop-brightness-[100%] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <CardContent className="flex items-center justify-center gap-3 p-3">
+                        <div className="flex-1 [font-family:'Satoshi-Medium',Helvetica] 
+                        font-medium text-white text-base tracking-[0] leading-normal">
+                            {feature.description}
+                        </div>
+                    </CardContent>
+                </Card>
+            )}
+
+            {/* Top aligned card */}
+            {alignmentDirection === 'top' && (
+                <Card className="absolute -top-28 left-1/2 transform -translate-x-1/2 w-[265px] 
+                bg-[#0000004c] border-none backdrop-blur-[10px] backdrop-brightness-[100%] opacity-0 
+                group-hover:opacity-100 transition-opacity duration-300">
+                    <CardContent className="flex items-center justify-center gap-3 p-3">
+                        <div className="[font-family:'Satoshi-Medium',Helvetica] font-medium 
+                        text-white text-base tracking-[0] leading-normal text-center">
+                            {feature.description}
+                        </div>
+                    </CardContent>
+                </Card>
+            )}
+        </div>
+    );
+};
+
+// Mobile Feature Item Component
+const MobileFeatureItem: React.FC<{
+    feature: {
+        id: string;
+        title: string;
+        iconSrc: string;
+        description: string;
+    };
+}> = ({ feature }) => {
+    return (
+        <Card className="bg-[#0000004c] border-none backdrop-blur-[10px] backdrop-brightness-[100%] 
+        hover:bg-[#00000066] transition-colors duration-300">
+            <CardContent className="flex flex-col items-center gap-4 p-6 text-center">
+                <div className="flex w-[44px] h-[44px] items-center justify-center bg-[#0000004c] 
+                rounded-full overflow-hidden backdrop-blur-[10px] backdrop-brightness-[100%]">
+                    <img
+                        src={feature.iconSrc}
+                        alt={feature.title}
+                        className="w-6 h-6 filter brightness-0 invert"
+                    />
+                </div>
+                <h3 className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-white text-lg 
+                sm:text-xl tracking-[0] leading-normal">
+                    {feature.title}
+                </h3>
+                <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-[#d9d9d9] 
+                text-sm sm:text-base tracking-[0] leading-relaxed">
+                    {feature.description}
+                </p>
+            </CardContent>
+        </Card>
     );
 };
