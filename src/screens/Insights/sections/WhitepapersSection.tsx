@@ -1,24 +1,24 @@
-import { DownloadIcon } from "lucide-react";
-import { Badge } from "../../../components/ui/badge";
-import { Button } from "../../../components/ui/button";
+// import { DownloadIcon } from "lucide-react";
+// import { Badge } from "../../../components/ui/badge";
+// import { Button } from "../../../components/ui/button";
 import { Card, CardContent } from "../../../components/ui/card";
 
 const whitepapers = [
   {
     title: "Stochastic Processes in Quantitative Finance",
-    date: "May 10, 2025",
+    // date: "May 10, 2025",
     description:
       "How low-latency order routing and market-impact modeling tighten slippage for institutional flow.",
   },
   {
     title: "Transaction Cost Analysis: A Practical Guide",
-    date: "May 10, 2025",
+    // date: "May 10, 2025",
     description:
       "Measuring market impact, venue quality, and adverse selection in emerging markets.",
   },
   {
     title: "Backtesting Pitfalls & Live Decay",
-    date: "May 10, 2025",
+    // date: "May 10, 2025",
     description:
       "From data leakage to regime shifts—guardrails for robust research.",
   },
@@ -39,7 +39,7 @@ export const WhitepapersSection = (): JSX.Element => {
           {whitepapers.map((whitepaper, index) => (
             <Card
               key={index}
-              className={`w-full min-w-[220px] max-w-[390px] mx-auto rounded-2xl border-[0.2px] 
+              className={`w-full min-w-[220px] max-w-[340px] mx-auto rounded-2xl border-[0.2px] 
                 border-[#6e6179]/30 bg-transparent translate-y-[-1rem] animate-fade-in opacity-0 
                 [--animation-delay:${200 + index * 200}ms]`}
             >
@@ -50,10 +50,11 @@ export const WhitepapersSection = (): JSX.Element => {
                     {whitepaper.title}
                   </h3>
 
-                  <p className="text-xs sm:text-sm [font-family:'Satoshi-Medium',Helvetica] font-medium 
+                  {/* Date - commented out for future use */}
+                  {/* <p className="text-xs sm:text-sm [font-family:'Satoshi-Medium',Helvetica] font-medium 
                   text-[#a9a9a9] tracking-[0] leading-[normal]">
                     {whitepaper.date}
-                  </p>
+                  </p> */}
 
                   <p className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-[#a9a9a9] 
                   text-sm sm:text-base tracking-[0] leading-[normal]">
@@ -61,7 +62,8 @@ export const WhitepapersSection = (): JSX.Element => {
                   </p>
                 </div>
 
-                <div className="flex items-center justify-between mt-6">
+                {/* PDF Badge and Download Button - commented out for future use */}
+                {/* <div className="flex items-center justify-between mt-6">
                   <Badge
                     variant="secondary"
                     className="bg-[#1f1f1f] text-[#ffffff] text-[12.5px] leading-[15px] px-2.5 py-[5px] 
@@ -78,7 +80,7 @@ export const WhitepapersSection = (): JSX.Element => {
                     <DownloadIcon className="w-[14.47px] h-[14.47px] mr-[7.89px]" />
                     Download
                   </Button>
-                </div>
+                </div> */}
               </CardContent>
             </Card>
           ))}

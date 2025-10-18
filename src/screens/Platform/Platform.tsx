@@ -1,5 +1,5 @@
 import { ApiAccessSection } from "./sections/ApiAccessSection";
-import { ExecutionEngineSection } from "./sections/ExecutionEngineSection";
+// import { ExecutionEngineSection } from "./sections/ExecutionEngineSection";
 import { FooterSection } from "../Home/sections/FooterSection";
 import { ResearchEnvironmentSection } from "./sections/ResearchEnvironmentSection";
 import { ScrollReveal } from "../../components/ui/scroll-reveal";
@@ -32,9 +32,9 @@ export const Platform = (): JSX.Element => {
           <ApiAccessSection />
         </ScrollReveal>
 
-        <ScrollReveal>
+        {/* <ScrollReveal>
           <ExecutionEngineSection />
-        </ScrollReveal>
+        </ScrollReveal> */}
       </div>
       <div className="flex-shrink-0">
         <FooterSection />

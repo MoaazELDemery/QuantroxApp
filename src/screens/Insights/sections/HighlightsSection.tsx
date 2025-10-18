@@ -1,4 +1,4 @@
-import { ArrowRightIcon, CalendarIcon, ClockIcon } from "lucide-react";
+// import { ArrowRightIcon, CalendarIcon, ClockIcon } from "lucide-react";
 import React, { useState } from "react";
 import { Badge } from "../../../components/ui/badge";
 import { Button } from "../../../components/ui/button";
@@ -18,8 +18,8 @@ const contentCards = [
 		title: "Advances in Execution Microstructure for EGX",
 		description:
 			"How low-latency order routing and market-impact modeling tighten slippage for institutional flow.",
-		readTime: "12 min",
-		date: "May 10, 2025",
+		// readTime: "12 min",
+		// date: "May 10, 2025",
 	},
 	{
 		id: 2,
@@ -27,8 +27,8 @@ const contentCards = [
 		title: "Brokerage X: -180 bps Implementation Shortfall",
 		description:
 			"How a smart order router improved client execution and reduced information leakage.",
-		readTime: "12 min",
-		date: "May 10, 2025",
+		// readTime: "12 min",
+		// date: "May 10, 2025",
 	},
 	{
 		id: 3,
@@ -36,35 +36,8 @@ const contentCards = [
 		title: "Stochastic Processes for Portfolio Construction",
 		description:
 			"Download our technical note on diffusion models and risk budgeting.",
-		readTime: "12 min",
-		date: "May 10, 2025",
-	},
-	{
-		id: 4,
-		category: "Articles",
-		title: "Advances in Execution Microstructure for EGX",
-		description:
-			"How low-latency order routing and market-impact modeling tighten slippage for institutional flow.",
-		readTime: "12 min",
-		date: "May 10, 2025",
-	},
-	{
-		id: 5,
-		category: "Articles",
-		title: "Advances in Execution Microstructure for EGX",
-		description:
-			"How low-latency order routing and market-impact modeling tighten slippage for institutional flow.",
-		readTime: "12 min",
-		date: "May 10, 2025",
-	},
-	{
-		id: 6,
-		category: "Articles",
-		title: "Advances in Execution Microstructure for EGX",
-		description:
-			"How low-latency order routing and market-impact modeling tighten slippage for institutional flow.",
-		readTime: "12 min",
-		date: "May 10, 2025",
+		// readTime: "12 min",
+		// date: "May 10, 2025",
 	},
 ];
 
@@ -113,12 +86,12 @@ export const HighlightsSection = (): JSX.Element => {
 				</header>
 
 				<div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 xl:gap-12 
-						w-full max-w-6xl mx-auto">
+						w-full max-w-6xl mx-auto justify-items-center lg:justify-items-start">
 					{filteredCards.map((card, index) => (
 						<Card
 							key={card.id}
-							className="flex flex-col min-w-[220px] max-w-[390px] min-h-[420px] 
-							lg:min-h-[340px] max-h-[400px] h-full items-start gap-0 relative rounded-2xl 
+							className="flex flex-col min-w-[220px] max-w-[340px] min-h-[300px] 
+							lg:min-h-[280px] max-h-[320px] h-full items-start gap-0 relative rounded-2xl 
 							overflow-hidden border-[0.2px] border-solid border-[#6e6179]/30 bg-transparent 
 							translate-y-[-1rem] animate-fade-in opacity-0"
 							style={{
@@ -152,7 +125,8 @@ export const HighlightsSection = (): JSX.Element => {
 									</p>
 								</div>
 
-								<footer className="flex items-center justify-between relative self-stretch w-full">
+								{/* Footer with date, time, and read button - commented out for future use */}
+								{/* <footer className="flex items-center justify-between relative self-stretch w-full">
 									<div className="inline-flex items-center gap-3 lg:gap-4 relative">
 										<div className="inline-flex items-center justify-center gap-1 
 										lg:gap-1.5 relative">
@@ -190,7 +164,7 @@ export const HighlightsSection = (): JSX.Element => {
 										<ArrowRightIcon className="relative w-3 h-3 md:w-4 md:h-4 text-[#8a2be2] 
 										group-hover:text-[#9932cc] transition-colors" />
 									</Button>
-								</footer>
+								</footer> */}
 							</CardContent>
 						</Card>
 					))}

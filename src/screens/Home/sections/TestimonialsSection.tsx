@@ -52,8 +52,8 @@ export const TestimonialsSection = (): JSX.Element => {
 
             {/* Header content */}
             <ScrollReveal delay={50}>
-                <header className="relative z-10 flex flex-col items-center justify-center gap-4 mb-32 
-                sm:mb-36 lg:mb-40 max-w-7xl text-center">
+                <header className="relative z-10 flex flex-col items-center justify-center gap-4 mb-12 
+                sm:mb-20 lg:mb-40 max-w-7xl text-center">
                     <h1 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-2xl 
                     sm:text-3xl md:text-4xl lg:text-5xl tracking-[0] leading-tight lg:leading-normal">
                         One Platform.
@@ -142,21 +142,21 @@ export const TestimonialsSection = (): JSX.Element => {
             <div className="lg:hidden relative z-10 w-full max-w-4xl mx-auto">
                 {/* Dashboard with gradient background under image */}
                 <ScrollReveal delay={50}>
-                    <div className="relative flex items-center justify-center mb-24 sm:mb-28">
+                    <div className="relative flex items-center justify-center mb-12 sm:mb-20">
                         {/* Background circles */}
                         <div className="absolute inset-0 flex items-center justify-center">
-                            <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 bg-[#0000001a] rounded-full backdrop-blur-[10px] backdrop-brightness-[100%]" />
+                            <div className="w-56 h-56 sm:w-64 sm:h-64 md:w-64 md:h-64 bg-[#0000001a] rounded-full backdrop-blur-[10px] backdrop-brightness-[100%]" />
                         </div>
                         {/* Radial gradient background for mobile */}
                         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none z-0">
                             <div
-                                className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full opacity-70"
+                                className="w-[450px] h-[450px] sm:w-[500px] sm:h-[500px] md:w-[500px] md:h-[500px] rounded-full opacity-70"
                                 style={{
                                     background: 'radial-gradient(circle, #9810FF 0%, #23003E 40%, transparent 70%)'
                                 }}
                             />
                         </div>
-                        <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 flex items-center justify-center z-10">
+                        <div className="relative w-[450px] h-[450px] sm:w-[500px] sm:h-[500px] md:w-[500px] md:h-[500px] flex items-center justify-center z-10">
                             <img
                                 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[70%] h-[70%] object-contain opacity-100"
                                 alt="Background ellipse 1"
@@ -173,7 +173,7 @@ export const TestimonialsSection = (): JSX.Element => {
                                 src="/ellipse-2.svg"
                             />
                             <img
-                                className="relative z-20 w-48 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 object-contain rounded-md -mt-4 sm:-mt-6"
+                                className="relative z-20 w-[350px] h-[350px] sm:w-[400px] sm:h-[400px] md:w-[400px] md:h-[400px] object-contain rounded-md -mt-4 sm:-mt-6"
                                 alt="Dashboard preview"
                                 src="/Dashboard.png"
                                 loading="lazy"
@@ -183,7 +183,7 @@ export const TestimonialsSection = (): JSX.Element => {
                 </ScrollReveal>
 
                 {/* Mobile Features Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 max-w-2xl mx-auto mt-24 sm:mt-28">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 max-w-2xl mx-auto mt-12 sm:mt-20">
                     {features.map((feature, index) => (
                         <ScrollReveal key={feature.id} delay={50 + (index * 100)}>
                             <MobileFeatureItem feature={feature} />

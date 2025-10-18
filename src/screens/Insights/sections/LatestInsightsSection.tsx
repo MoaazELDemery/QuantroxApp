@@ -1,4 +1,4 @@
-import { ArrowRightIcon, CalendarIcon, ClockIcon } from "lucide-react";
+// import { ArrowRightIcon, CalendarIcon, ClockIcon } from "lucide-react";
 
 export const LatestInsightsSection = (): JSX.Element => {
   return (
@@ -21,7 +21,8 @@ export const LatestInsightsSection = (): JSX.Element => {
               Advances in Execution Microstructure for EGX
             </h2>
 
-            <div className="flex items-center gap-[26px]">
+            {/* Date and Time - commented out for future use */}
+            {/* <div className="flex items-center gap-[26px]">
               <div className="flex items-center justify-center gap-2">
                 <ClockIcon className="w-[22px] h-[22px] text-[#a9a9a9]" />
                 <span className="text-base font-medium text-[#a9a9a9] [font-family:'Satoshi-Medium',Helvetica]">
@@ -35,7 +36,7 @@ export const LatestInsightsSection = (): JSX.Element => {
                   May 10, 2025
                 </span>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <p className="text-2xl font-medium text-[#a9a9a9] [font-family:'Satoshi-Medium',Helvetica] 
@@ -44,13 +45,14 @@ export const LatestInsightsSection = (): JSX.Element => {
             slippage for institutional flow.
           </p>
 
-          <button
+          {/* Read Articles Button - commented out for future use */}
+          {/* <button
             className="flex items-center gap-3 p-0 h-auto text-2xl font-medium text-[#8a2be2] 
             [font-family:'Satoshi-Medium',Helvetica] hover:bg-transparent"
           >
             Read articles
             <ArrowRightIcon className="w-[22px] h-[22px]" />
-          </button>
+          </button> */}
         </div>
       </div>
     </section>
