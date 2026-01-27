@@ -44,7 +44,7 @@ export const FeaturesSection = (): JSX.Element => {
                           lg:text-[28px] lg:max-w-[817px]">
               The definitive end-to-end platform for institutional quantitative
               investment. We engineer the native technology that powers
-              Egypt&#39;s most sophisticated financial leaders.
+              MENA's most sophisticated financial leaders.
             </p>
           </div>
 

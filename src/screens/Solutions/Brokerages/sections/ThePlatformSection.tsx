@@ -22,8 +22,8 @@ export const ThePlatformSection = (): JSX.Element => {
       <div className="flex justify-center">
         <img
           className="relative z-10 w-[720px] h-[512px] object-contain rounded-md -mt-16"
-          alt="Dashboard preview"
-          src="/BrokeragesDashboard.png"
+          alt="Banks Dashboard"
+          src="/BanksDashoardNew.png"
           loading="lazy"
         />
       </div>

@@ -5,7 +5,7 @@ export const ContactSection = (): JSX.Element => {
       type: "vision",
       title: "Vision",
       content:
-        "To Be The Central Nervous System Of Quantitative Finance In Egypt And The Wider Mena Region, Empowering Sophisticated Institutions To Compete And Win Globally With Precision, Reliability, And Innovation.",
+        "To Be The Central Nervous System Of Quantitative Finance In The Wider Mena Region, Empowering Sophisticated Institutions To Compete And Win Globally With Precision, Reliability, And Innovation.",
       titlePosition: "left",
     },
     {

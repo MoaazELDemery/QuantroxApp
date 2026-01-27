@@ -3,7 +3,7 @@ import { Input } from "../../../components/ui/input";
 import { Header } from "../../../components/layout/Header";
 import { Toast } from "../../../components/ui/toast";
 import { useState, FormEvent } from "react";
-import emailjs from "@emailjs/browser";
+// import emailjs from "@emailjs/browser";
 
 export const FeaturedArticlesSection = (): JSX.Element => {
   const [email, setEmail] = useState("");
@@ -47,17 +47,18 @@ export const FeaturedArticlesSection = (): JSX.Element => {
 
     try {
       // EmailJS configuration
-      const serviceId = "service_zban55p";
-      const templateId = "template_ee7n6g8";
-      const publicKey = "ldyxcf_QiGp4t_arv";
+      // const serviceId = "service_zban55p";
+      // const templateId = "template_ee7n6g8";
+      // const publicKey = "ldyxcf_QiGp4t_arv";
 
       // Template parameters
-      const templateParams = {
-        from_email: email,
-        message: "New newsletter subscription request",
-      };
+      // const templateParams = {
+      //   from_email: email,
+      //   message: "New newsletter subscription request",
+      // };
 
-      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      // await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate network request
 
       setSubmitStatus("success");
       showToast("Thank you for subscribing! You'll receive our latest insights soon.", "success");
@@ -92,61 +93,61 @@ export const FeaturedArticlesSection = (): JSX.Element => {
         {/* Header */}
         <Header />
 
-      {/* Main content - centered with auto layout */}
-      <main className="relative z-10 flex flex-col items-center justify-center px-4 py-20 min-h-[850px]">
-        <div className="flex flex-col items-center gap-10 max-w-[1200px] w-full mx-auto">
-          {/* Hero text section */}
-          <div className="flex flex-col items-center gap-8 text-center">
-            <h1 className="bg-[linear-gradient(180deg,rgba(255,255,255,1)_0%,rgba(235,228,245,1)_39%,rgba(222,210,238,1)_65%,rgba(82,61,109,1)_100%)] 
+        {/* Main content - centered with auto layout */}
+        <main className="relative z-10 flex flex-col items-center justify-center px-4 py-20 min-h-[850px]">
+          <div className="flex flex-col items-center gap-10 max-w-[1200px] w-full mx-auto">
+            {/* Hero text section */}
+            <div className="flex flex-col items-center gap-8 text-center">
+              <h1 className="bg-[linear-gradient(180deg,rgba(255,255,255,1)_0%,rgba(235,228,245,1)_39%,rgba(222,210,238,1)_65%,rgba(82,61,109,1)_100%)] 
             [-webkit-background-clip:text] bg-clip-text [-webkit-text-fill-color:transparent] 
             [text-fill-color:transparent] [font-family:'Satoshi-Bold',Helvetica] font-bold text-4xl md:text-5xl 
             lg:text-6xl xl:text-7xl text-center tracking-[-1.80px] leading-tight translate-y-[-1rem] 
             animate-fade-in opacity-0 [--animation-delay:200ms]">
-              The Operating System for Egypt's Most Sophisticated Investors
-            </h1>
+                The Operating System for MENA's Most Sophisticated Investors
+              </h1>
 
-            <p className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-[#d9d9d9] text-lg 
+              <p className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-[#d9d9d9] text-lg 
             md:text-xl lg:text-2xl xl:text-[28px] text-center tracking-[0] leading-normal max-w-[1001px] 
             translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
-              Research, analysis, and commentary in quantitative finance—engineered
-              with precision & power.
-            </p>
-          </div>
-
-          {/* Subscription section - inline layout */}
-          <form 
-            onSubmit={handleSubscribe}
-            className="flex flex-col sm:flex-row items-center gap-4 sm:gap-4 translate-y-[-1rem] animate-fade-in 
-            opacity-0 [--animation-delay:600ms]"
-          >
-            <div className="flex w-[300px] h-12 items-center gap-2 px-4 py-2 rounded-[32px] border-[0.8px] 
-            border-solid border-[#a9a9a9]">
-              <Input
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="flex-1 bg-transparent border-0 p-0 [font-family:'Satoshi-Regular',Helvetica] 
-                font-normal text-[#a9a9a9] text-base tracking-[0] leading-6 placeholder:text-[#a9a9a9] 
-                focus-visible:ring-0 focus-visible:ring-offset-0"
-                placeholder="Your email"
-                type="email"
-                required
-              />
+                Research, analysis, and commentary in quantitative finance—engineered
+                with precision & power.
+              </p>
             </div>
 
-            <Button 
-              type="submit"
-              disabled={isSubmitting || submitStatus === "success"}
-              className="px-12 py-3 h-12 bg-[#4a0082] rounded-[32px] hover:bg-[#4a0082]/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            {/* Subscription section - inline layout */}
+            <form
+              onSubmit={handleSubscribe}
+              className="flex flex-col sm:flex-row items-center gap-4 sm:gap-4 translate-y-[-1rem] animate-fade-in 
+            opacity-0 [--animation-delay:600ms]"
             >
-              <span className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-[#ffffff] text-sm 
+              <div className="flex w-[300px] h-12 items-center gap-2 px-4 py-2 rounded-[32px] border-[0.8px] 
+            border-solid border-[#a9a9a9]">
+                <Input
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="flex-1 bg-transparent border-0 p-0 [font-family:'Satoshi-Regular',Helvetica] 
+                font-normal text-[#a9a9a9] text-base tracking-[0] leading-6 placeholder:text-[#a9a9a9] 
+                focus-visible:ring-0 focus-visible:ring-offset-0"
+                  placeholder="Your email"
+                  type="email"
+                  required
+                />
+              </div>
+
+              <Button
+                type="submit"
+                disabled={isSubmitting || submitStatus === "success"}
+                className="px-12 py-3 h-12 bg-[#4a0082] rounded-[32px] hover:bg-[#4a0082]/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                <span className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-[#ffffff] text-sm 
               text-center tracking-[0] leading-6 whitespace-nowrap">
-                {isSubmitting ? "Subscribing..." : submitStatus === "success" ? "Subscribed!" : "Subscribe"}
-              </span>
-            </Button>
-          </form>
-        </div>
-      </main>
-    </section>
+                  {isSubmitting ? "Subscribing..." : submitStatus === "success" ? "Subscribed!" : "Subscribe"}
+                </span>
+              </Button>
+            </form>
+          </div>
+        </main>
+      </section>
     </>
   );
 };
