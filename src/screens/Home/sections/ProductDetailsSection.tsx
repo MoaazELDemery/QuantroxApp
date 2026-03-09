@@ -50,23 +50,38 @@ export const ProductDetailsSection = (): JSX.Element => {
   const productCards = [
     {
       icon: "/vuesax-linear-wallet-money.svg",
-      title: "Asset Managers",
-      description:
-        "Deliver superior execution for your clients with our low-latency smart order routing and algorithmic trading solutions.",
+      title: "BANKING HUB",
+      description: (
+        <>
+          <strong>The Promise:</strong> One suite for the core banking decisions that move revenue.
+          <br />
+          <strong>The Reality:</strong> A single workspace that brings together credit, product optimization, open banking insights, and guided client journeys-designed to be demo-ready and stakeholder-friendly.
+        </>
+      ),
       alt: "Vuesax linear wallet",
     },
     {
       icon: "/vuesax-linear-trade.svg",
-      title: "Banks",
-      description:
-        "Engineer a more resilient and profitable bank portfolio  & balance sheet with our quant & AI modeling solutions that master everything from credit risk and stress testing to the complex valuation of structured products and derivatives.",
+      title: "ROBO-ADVISOR",
+      description: (
+        <>
+          <strong>The Promise:</strong> Turn investor onboarding into a guided, compliant workflow.
+          <br />
+          <strong>The Reality:</strong> A step-by-step experience that captures risk appetite, recommends allocation, explains “why”, and produces an investment action trail-without requiring a quant team in the room.
+        </>
+      ),
       alt: "Vuesax linear trade",
     },
     {
       icon: "/vuesax-linear-kyber-network--knc-.svg",
-      title: "Hedge Funds",
-      description:
-        "Deploy your most complex strategies with confidence on a flexible, developer-centric platform built for speed.",
+      title: "CREDIT BUNDLE OPTIMIZER",
+      description: (
+        <>
+          <strong>The Promise:</strong> Stop offering products in isolation.
+          <br />
+          <strong>The Reality:</strong> A guided deal-structuring flow that assesses risk, validates constraints, and recommends the best bundle across multiple products-backed by interactive “what-if” levers for relationship managers.
+        </>
+      ),
       alt: "Vuesax linear kyber",
     },
   ];
@@ -170,8 +185,8 @@ export const ProductDetailsSection = (): JSX.Element => {
                             backgroundImage: 'none',
                           }}
                         > */}
-                          {/* Only show background image on desktop */}
-                          {/* <div
+        {/* Only show background image on desktop */}
+        {/* <div
                             className="hidden sm:block absolute inset-0 w-full h-full"
                             style={{
                               backgroundImage: "url(/photoOunlineImage.png)",
@@ -224,7 +239,7 @@ export const ProductDetailsSection = (): JSX.Element => {
                 ))}
               </div> */}
 
-              {/* <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex items-center gap-[9.43px] p-[9.43px]">
+        {/* <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex items-center gap-[9.43px] p-[9.43px]">
                 <Button
                   variant="ghost"
                   size="icon"

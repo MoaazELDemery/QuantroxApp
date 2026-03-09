@@ -29,12 +29,12 @@ export const Header = (): JSX.Element => {
 
   // Function to get the currently selected dropdown item based on current route
   const getSelectedDropdownItem = () => {
-    if (location.pathname.startsWith('/solutions/asset-managers')) {
-      return '/solutions/asset-managers';
-    } else if (location.pathname.startsWith('/solutions/banks')) {
-      return '/solutions/banks';
-    } else if (location.pathname.startsWith('/solutions/hedge-funds')) {
-      return '/solutions/hedge-funds';
+    if (location.pathname.startsWith('/solutions/nexus-ai')) {
+      return '/solutions/nexus-ai';
+    } else if (location.pathname.startsWith('/solutions/axon-ai')) {
+      return '/solutions/axon-ai';
+    } else if (location.pathname.startsWith('/solutions/q-core')) {
+      return '/solutions/q-core';
     } else if (location.pathname.startsWith('/solutions/robo-advisory')) {
       return '/solutions/robo-advisory';
     }
@@ -46,9 +46,9 @@ export const Header = (): JSX.Element => {
       label: "Solutions",
       hasDropdown: true,
       dropdownItems: [
-        { label: "For Assets Managers", href: "/solutions/asset-managers" },
-        { label: "For Banks", href: "/solutions/banks" },
-        { label: "For Hedge Funds", href: "/solutions/hedge-funds" },
+        { label: "NEXUS AI", href: "/solutions/nexus-ai" },
+        { label: "AXON AI", href: "/solutions/axon-ai" },
+        { label: "Q-Core", href: "/solutions/q-core" },
         { label: "B2B Robo-Advisory", href: "/solutions/robo-advisory" },
       ],
     },
@@ -98,8 +98,8 @@ export const Header = (): JSX.Element => {
     sm:px-6 md:px-8 lg:px-16 xl:px-24 2xl:px-[138px] py-4 sm:py-4 md:py-6 lg:py-8 z-50">
       <div className="flex items-center h-12 w-full lg:w-auto justify-between lg:justify-start"
         style={{ minWidth: 140 }}>
-        <Link 
-          to="/" 
+        <Link
+          to="/"
           className="hover:opacity-80 transition-opacity"
         >
           <img
@@ -204,11 +204,11 @@ export const Header = (): JSX.Element => {
                       <span className="flex items-center justify-center w-10 h-10 rounded-lg bg-white/10 
                       text-white">
                         {dIndex === 0 ? (
-                          <img src="/vuesax-linear-wallet-money.svg" alt="Assets Managers" className="w-6 h-6" />
+                          <img src="/vuesax-linear-wallet-money.svg" alt="NEXUS AI" className="w-6 h-6" />
                         ) : dIndex === 1 ? (
-                          <img src="/vuesax-linear-trade.svg" alt="Banks" className="w-6 h-6" />
+                          <img src="/vuesax-linear-trade.svg" alt="AXON AI" className="w-6 h-6" />
                         ) : dIndex === 2 ? (
-                          <img src="/vuesax-linear-kyber-network--knc-.svg" alt="Hedge Funds" className="w-6 h-6" />
+                          <img src="/vuesax-linear-kyber-network--knc-.svg" alt="Q-Core" className="w-6 h-6" />
                         ) : dIndex === 3 ? (
                           <img src="/vuesax-linear-hashtag.svg" alt="Robo-Advisory" className="w-6 h-6" />
                         ) : (

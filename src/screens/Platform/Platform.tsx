@@ -2,6 +2,9 @@ import { ApiAccessSection } from "./sections/ApiAccessSection";
 // import { ExecutionEngineSection } from "./sections/ExecutionEngineSection";
 import { FooterSection } from "../Home/sections/FooterSection";
 import { ResearchEnvironmentSection } from "./sections/ResearchEnvironmentSection";
+import { SecuritySection } from "./sections/SecuritySection";
+import { DeploymentSection } from "./sections/DeploymentSection";
+import { FinalActionSection } from "./sections/FinalActionSection";
 import { ScrollReveal } from "../../components/ui/scroll-reveal";
 
 export const Platform = (): JSX.Element => {
@@ -32,9 +35,17 @@ export const Platform = (): JSX.Element => {
           <ApiAccessSection />
         </ScrollReveal>
 
-        {/* <ScrollReveal>
-          <ExecutionEngineSection />
-        </ScrollReveal> */}
+        <ScrollReveal>
+          <SecuritySection />
+        </ScrollReveal>
+
+        <ScrollReveal>
+          <DeploymentSection />
+        </ScrollReveal>
+
+        <ScrollReveal>
+          <FinalActionSection />
+        </ScrollReveal>
       </div>
       <div className="flex-shrink-0">
         <FooterSection />
@@ -42,3 +53,4 @@ export const Platform = (): JSX.Element => {
     </main>
   );
 };
+

@@ -1,9 +1,11 @@
-import { ContactSection } from "./sections/ContactSection";
 import { FooterSection } from "../Home/sections/FooterSection";
-import { LeadershipSection } from "./sections/LeadershipSection";
+// import { LeadershipSection } from "./sections/LeadershipSection";
 import { MissionSection } from "./sections/MissionSection";
+// import { OriginSection } from "./sections/OriginSection";
+// import { ValuesSection } from "./sections/ValuesSection";
 import { VisionSection } from "./sections/VisionSection";
 import { ScrollReveal } from "../../components";
+import { ContactSection } from "./sections/ContactSection";
 
 export const AboutUs = (): JSX.Element => {
     return (
@@ -32,6 +34,10 @@ export const AboutUs = (): JSX.Element => {
                 {/* <ScrollReveal>
                     <LeadershipSection />
                 </ScrollReveal> */}
+
+                {/*<ScrollReveal>
+                    <ValuesSection />
+                </ScrollReveal>*/}
 
                 <ScrollReveal>
                     <MissionSection />

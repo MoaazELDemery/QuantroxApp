@@ -33,7 +33,7 @@ export const FeaturesSection = (): JSX.Element => {
             [text-fill-color:transparent] [font-family:'Satoshi-Bold',Helvetica] font-bold text-4xl 
             md:text-5xl lg:text-6xl xl:text-7xl text-center tracking-[-1.80px] leading-tight 
             translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
-              The Architecture of Alpha
+              DECISIONS YOU CAN DEFEND
             </h1>
 
             {/* Description */}
@@ -41,10 +41,9 @@ export const FeaturesSection = (): JSX.Element => {
                           font-medium text-[#d9d9d9] text-base text-center tracking-[0] leading-relaxed
                           sm:text-lg
                           md:text-xl md:max-w-[700px] md:leading-normal
-                          lg:text-[28px] lg:max-w-[817px]">
-              The definitive end-to-end platform for institutional quantitative
-              investment. We engineer the native technology that powers
-              Egypt&#39;s most sophisticated financial leaders.
+                          lg:text-[28px] lg:max-w-[867px]">
+              QuantStation turns complex banking workflows into guided, explainable
+              decisions-built for leaders who need speed and control.
             </p>
           </div>
 
@@ -56,7 +55,7 @@ export const FeaturesSection = (): JSX.Element => {
               <span className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-base 
                                text-[#ffffff] tracking-[0] leading-6
                                lg:text-lg">
-                Request a demo
+                Explore the Platform
               </span>
             </Button>
           </Link>

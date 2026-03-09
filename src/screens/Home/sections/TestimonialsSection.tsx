@@ -5,34 +5,22 @@ import { ScrollReveal } from "../../../components/ui/scroll-reveal";
 export const TestimonialsSection = (): JSX.Element => {
     const features = [
         {
-            id: "research",
-            title: "Research",
+            id: "clarity",
+            title: "Clarity Over Hype",
             iconSrc: "/vuesax-linear-search-normal.svg",
-            description: "A Python-native environment for advanced factor modeling and strategy development.",
+            description: "Every output is designed to be understood by decision-makers, not just data teams",
         },
         {
-            id: "execution",
-            title: "Execution",
+            id: "governed",
+            title: "Governed By Design",
             iconSrc: "/vuesax-linear-check.svg",
-            description: "A low-latency EMS with Smart Order Routing and customizable trading algorithms.",
+            description: "Built for regulated environments: approvals, traceability, and consistent decision logic.",
         },
         {
-            id: "data",
-            title: "Data",
-            iconSrc: "/vuesax-linear-data.svg",
-            description: "Unified access to curated, pre-cleaned market and alternative datasets.",
-        },
-        {
-            id: "backtest",
-            title: "Backtest",
-            iconSrc: "/vuesax-linear-box.svg",
-            description: "A low-latency EMS with Smart Order Routing and customizable trading algorithms.",
-        },
-        {
-            id: "risk",
-            title: "Risk Management",
+            id: "value",
+            title: "Prove Value Fast",
             iconSrc: "/vuesax-linear-chart-success.svg",
-            description: "Real-time portfolio risk management with VaR, stress tests, and factor analysis.",
+            description: "Demo-ready modules that help you align stakeholders and accelerate buy-in.",
         },
     ];
 
@@ -55,17 +43,9 @@ export const TestimonialsSection = (): JSX.Element => {
                 <header className="relative z-10 flex flex-col items-center justify-center gap-4 mb-12 
                 sm:mb-20 lg:mb-40 max-w-7xl text-center">
                     <h1 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-2xl 
-                    sm:text-3xl md:text-4xl lg:text-5xl tracking-[0] leading-tight lg:leading-normal">
-                        One Platform.
-                        <br />
-                        the Entire Investment Lifecycle.
+                    sm:text-3xl md:text-4xl lg:text-5xl tracking-[0] leading-tight lg:leading-normal uppercase">
+                        BUILT FOR BUSINESS REALITY.
                     </h1>
-                    <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-[#d9d9d9] 
-                    text-base sm:text-lg md:text-xl lg:text-[28px] tracking-[0] leading-relaxed 
-                    lg:leading-normal w-full px-04 mb-10">
-                        Quantorx integrates every critical function into a single, high-performance environment. Move
-                        seamlessly from hypothesis to execution on a platform engineered for precision and speed.
-                    </p>
                 </header>
             </ScrollReveal>
 
@@ -115,22 +95,12 @@ export const TestimonialsSection = (): JSX.Element => {
                             </div>
                             <div className="absolute top-[10%] right-[-270px] transform -translate-y-1/2">
                                 <ScrollReveal delay={50}>
-                                    <DesktopFeatureItem feature={features[1]} alignmentDirection="right" />
-                                </ScrollReveal>
-                            </div>
-                            <div className="absolute bottom-[55%] left-[-340px] transform translate-y-1/2">
-                                <ScrollReveal delay={50}>
-                                    <DesktopFeatureItem feature={features[2]} alignmentDirection="left" />
-                                </ScrollReveal>
-                            </div>
-                            <div className="absolute bottom-[55%] right-[-340px] transform translate-y-1/2">
-                                <ScrollReveal delay={50}>
-                                    <DesktopFeatureItem feature={features[3]} alignmentDirection="right" />
+                                    <DesktopFeatureItem feature={features[2]} alignmentDirection="right" />
                                 </ScrollReveal>
                             </div>
                             <div className="absolute top-[-80px] left-1/2 transform -translate-x-1/2">
                                 <ScrollReveal delay={50}>
-                                    <DesktopFeatureItem feature={features[4]} alignmentDirection="top" />
+                                    <DesktopFeatureItem feature={features[1]} alignmentDirection="top" />
                                 </ScrollReveal>
                             </div>
                         </div>

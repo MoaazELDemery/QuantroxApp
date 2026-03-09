@@ -39,7 +39,7 @@ export const MainContentSection = (): JSX.Element => {
           [--animation-delay:400ms] mb-8 lg:mb-0  w-full max-w-[600px] ">
             <h1 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-2xl 
             sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl tracking-[0] leading-tight text-center lg:text-left">
-              Delivering Best Execution at Scale.
+              From Location Insight To Confident Decision.
             </h1>
           </div>
 
@@ -48,11 +48,7 @@ export const MainContentSection = (): JSX.Element => {
             <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-[#d9d9d9] 
             text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[28px] tracking-[0] 
             leading-relaxed text-center lg:text-left">
-              A brokerage integrates Quantorx’s Smart Order Router.
-              When a client submits a large order,
-              the SOR intelligently routes portions of the trade across multiple venues to minimize market impact.
-              The system then generates a TCA report automatically,
-              allowing the brokerage to demonstrate execution quality with full transparency.
+              A regional or operations leader evaluates expansion, routing, or risk scenarios using AXON AI. The platform analyzes demand patterns, geographic constraints, environmental risks, and operational costs—presenting clear trade-offs and explainable recommendations. Decisions are made with full spatial context, documented rationale, and audit-ready governance—turning location intelligence into confident execution.
             </p>
           </div>
         </div>

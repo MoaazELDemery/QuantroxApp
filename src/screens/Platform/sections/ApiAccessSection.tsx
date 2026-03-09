@@ -1,15 +1,29 @@
 const features = [
   {
-    title: "The Research Environment",
+    title: "The Sovereign Data Vault",
     description:
-      "A Python-native environment with curated, pre-cleaned data and an integrated backtesting engine. Test strategies against real market conditions, refine ideas with precision, and move seamlessly from research to deployment.",
+      "QuantHub organizes your decision inputs (customer data, financials, transactions, policies, and optional external signals) so every workflow starts from a consistent view of reality.",
     image: "/platformCube.png",
     imagePosition: "left",
   },
   {
-    title: "The Execution Engine",
+    title: "The Adaptive Inference Router",
     description:
-      "A low-latency execution system with a proprietary Smart Order Router and algorithmic trading suite. Built for speed and reliability, it minimizes slippage and delivers consistent best execution at scale.",
+      "Not every decision needs the same type of intelligence. QuantHub routes work to the right capability—rules, scoring, optimization, or an AI assistant—so teams get answers that are fast, consistent, and aligned to policy.",
+    image: "/platformCylinder.png",
+    imagePosition: "right",
+  },
+  {
+    title: "The Deterministic Guardrail",
+    description:
+      "Banking requires governance. QuantHub enforces decision policies (eligibility rules, constraints, approvals, and exceptions) so recommendations remain compliant and explainable.",
+    image: "/platformCube.png",
+    imagePosition: "left",
+  },
+  {
+    title: "The Action Bus",
+    description:
+      "A connector layer that allows workflows to move beyond insight into execution—so teams can trigger the next step in a process without switching tools.",
     image: "/platformCylinder.png",
     imagePosition: "right",
   },

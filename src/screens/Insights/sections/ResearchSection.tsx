@@ -84,52 +84,51 @@ export const ResearchSection = (): JSX.Element => {
         </div>
       )}
       <section className="w-full h-[450px] flex items-center justify-center py-16">
-      <div className="flex flex-col lg:flex-row max-w-[1248px] w-full items-center justify-center 
+        <div className="flex flex-col lg:flex-row max-w-[1248px] w-full items-center justify-center 
       lg:justify-between gap-8 px-4">
-        <div className="flex flex-col max-w-[658px] w-full items-center lg:items-start justify-between 
+          <div className="flex flex-col max-w-[658px] w-full items-center lg:items-start justify-between 
         gap-6 translate-y-[-1rem] animate-fade-in opacity-0 text-center lg:text-left">
-          <h2 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-[#f2f2f2] text-5xl 
+            <h2 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-[#f2f2f2] text-5xl 
           tracking-[0] leading-[normal] w-full">
-            Subscribe to Research
-          </h2>
+              RECEIVE THE QUARTERLY ENGINEERING REPORT.
+            </h2>
 
-          <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-[#d9d9d9] text-2xl 
+            <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-[#d9d9d9] text-2xl 
           tracking-[0] leading-[normal] w-full">
-            Understand how Quantorx can be configured to solve your specific
-            execution, research, and risk challenges.
-          </p>
-        </div>
+              No marketing spam. Just clear, useful breakdowns on banking decision workflows, risk, and delivery.
+            </p>
+          </div>
 
-        <form 
-          onSubmit={handleSubscribe}
-          className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6 flex-shrink-0 
+          <form
+            onSubmit={handleSubscribe}
+            className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6 flex-shrink-0 
           translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]"
-        >
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Your email"
-            required
-            className="w-[300px] h-12 px-4 py-2 rounded-[32px] border-[0.8px] border-solid 
+          >
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Your email"
+              required
+              className="w-[300px] h-12 px-4 py-2 rounded-[32px] border-[0.8px] border-solid 
             border-[#a9a9a9] bg-transparent [font-family:'Satoshi-Regular',Helvetica] font-normal 
             text-[#a9a9a9] text-base placeholder:text-[#a9a9a9]"
-          />
+            />
 
-          <button 
-            type="submit"
-            disabled={isSubmitting || submitStatus === "success"}
-            className="px-12 py-3 h-auto bg-[#4a0082] rounded-[32px] hover:bg-[#4a0082]/90 
+            <button
+              type="submit"
+              disabled={isSubmitting || submitStatus === "success"}
+              className="px-12 py-3 h-auto bg-[#4a0082] rounded-[32px] hover:bg-[#4a0082]/90 
             transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-          >
-            <span className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-[#ffffff] 
+            >
+              <span className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-[#ffffff] 
             text-sm text-center tracking-[0] leading-6 whitespace-nowrap">
-              {isSubmitting ? "Subscribing..." : submitStatus === "success" ? "Subscribed!" : "Subscribe"}
-            </span>
-          </button>
-        </form>
-      </div>
-    </section>
+                {isSubmitting ? "Subscribing..." : submitStatus === "success" ? "Subscribed!" : "SUBSCRIBE TO INTEGRITY"}
+              </span>
+            </button>
+          </form>
+        </div>
+      </section>
     </>
   );
 };

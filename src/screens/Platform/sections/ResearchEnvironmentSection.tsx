@@ -20,15 +20,14 @@ export const ResearchEnvironmentSection = (): JSX.Element => {
           [-webkit-background-clip:text] bg-clip-text [-webkit-text-fill-color:transparent] 
           [text-fill-color:transparent] [font-family:'Satoshi-Bold',Helvetica] font-bold text-4xl 
           md:text-5xl lg:text-6xl xl:text-7xl text-center tracking-[-1.80px] leading-tight translate-y-[-1rem] 
-          animate-fade-in opacity-0 [--animation-delay:200ms]">
-            The Quantorx Core: <br />A Technical Deep Dive.
+          animate-fade-in opacity-0 [--animation-delay:200ms] uppercase">
+            The Decision Intelligence Platform
           </h1>
 
           <p className="w-full max-w-[1200px] [font-family:'Satoshi-Medium',Helvetica] font-medium text-[#d9d9d9] 
           text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[28px] text-center tracking-[0] leading-relaxed 
           translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms] px-2">
-            An open, extensible, and high-performance architecture designed for
-            the most demanding quantitative workflows.
+            QuantHub is the platform behind QuantStation—built to design, govern, and deploy decision workflows across credit, wealth, treasury/FX risk, and geospatial operations.
           </p>
         </div>
       </main>

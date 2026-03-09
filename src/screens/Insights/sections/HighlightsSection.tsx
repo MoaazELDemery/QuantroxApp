@@ -6,36 +6,36 @@ import { Card, CardContent } from "../../../components/ui/card";
 
 const filterOptions = [
 	{ id: "all", label: "All", active: true },
-	{ id: "articles", label: "Articles", active: false },
-	{ id: "case-studies", label: "Case Studies", active: false },
-	{ id: "news", label: "News", active: false },
+	{ id: "delivery", label: "Delivery", active: false },
+	{ id: "logistics", label: "Logistics", active: false },
+	{ id: "credit", label: "Credit", active: false },
 ];
 
 const contentCards = [
 	{
 		id: 1,
-		category: "Articles",
-		title: "Advances in Execution Microstructure for EGX",
+		category: "Delivery",
+		title: "Validating Synthetic Reality",
 		description:
-			"How low-latency order routing and market-impact modeling tighten slippage for institutional flow.",
+			"How to safely prove decision workflows before production data and regulations slow you down.",
 		// readTime: "12 min",
 		// date: "May 10, 2025",
 	},
 	{
 		id: 2,
-		category: "Case Studies",
-		title: "Brokerage X: -180 bps Implementation Shortfall",
+		category: "Logistics",
+		title: "The Spatial Compute Revolution",
 		description:
-			"How a smart order router improved client execution and reduced information leakage.",
+			"Moving beyond static maps: how spatial intelligence supports logistics planning, network optimization, and risk visibility.",
 		// readTime: "12 min",
 		// date: "May 10, 2025",
 	},
 	{
 		id: 3,
-		category: "Whitepapers",
-		title: "Stochastic Processes for Portfolio Construction",
+		category: "Credit",
+		title: "Alternative Credit Scoring",
 		description:
-			"Download our technical note on diffusion models and risk budgeting.",
+			"How banks can extend credit to thin-file SMEs using explainable signals and policy-driven decisioning.",
 		// readTime: "12 min",
 		// date: "May 10, 2025",
 	},

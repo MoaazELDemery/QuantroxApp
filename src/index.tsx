@@ -18,9 +18,9 @@ createRoot(document.getElementById("app") as HTMLElement).render(
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/solutions/asset-managers" element={<SolutionsForAsset />} />
-        <Route path="/solutions/banks" element={<SolutionsForBrokerages />} />
-        <Route path="/solutions/hedge-funds" element={<SolutionsForHedgeFunds />} />
+        <Route path="/solutions/nexus-ai" element={<SolutionsForAsset />} />
+        <Route path="/solutions/axon-ai" element={<SolutionsForBrokerages />} />
+        <Route path="/solutions/q-core" element={<SolutionsForHedgeFunds />} />
         <Route path="/solutions/robo-advisory" element={<SolutionsForRoboAdvisory />} />
         <Route path="/platform" element={<Platform />} />
         <Route path="/insights" element={<Insights />} />

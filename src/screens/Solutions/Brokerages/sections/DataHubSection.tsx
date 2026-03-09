@@ -4,24 +4,31 @@ import { Card, CardContent } from "../../../../components/ui/card";
 const solutionsData = [
   {
     id: 1,
-    label: "Solution 1:",
-    title: "Smart Order Router (SOR)",
+    label: "Capability 1:",
+    title: "Location-driven planning",
     description:
-      "Dynamically scans the market to find the optimal execution path, minimizing market impact and information leakage.",
+      "Transforms geographic data into actionable insight for expansion, optimization, and strategic planning.",
   },
   {
     id: 2,
-    label: "Solution 2:",
-    title: "Algorithmic Trading Suite",
+    label: "Capability 2:",
+    title: "Operational intelligence",
     description:
-      "Offer battle-tested algorithms (VWAP, TWAP, POV) as a white-label solution, or let clients deploy their own via our API.",
+      "Supports territory design, field routing, and resource allocation using real-world constraints and spatial logic.",
   },
   {
     id: 3,
-    label: "Solution 3:",
-    title: "Integrated TCA",
+    label: "Capability 3:",
+    title: "Risk & exposure visibility",
     description:
-      "Automatically generate detailed, post-trade TCA reports to prove execution quality to clients and regulators.",
+      "Identifies assets, customers, and operations within high-risk zones (weather events, security threats, fraud hotspots, regulatory boundaries).",
+  },
+  {
+    id: 4,
+    label: "Capability 4:",
+    title: "Governance & explainability",
+    description:
+      "Every spatial recommendation is transparent, traceable, and defensible—ready for executive review and audit.",
   },
 ];
 
@@ -35,7 +42,7 @@ export const DataHubSection = (): JSX.Element => {
 
         <div className="flex items-center justify-center [font-family:'Satoshi-Regular',Helvetica] 
         font-normal text-[#e6e6e6] text-lg sm:text-xl md:text-[24.5px] tracking-[0] leading-[normal] whitespace-nowrap">
-          The Quantorx Solution
+          The QuantorX Solution
         </div>
 
         <div className="w-[40px] sm:w-[60px] h-[1.5px] rounded-[90px] rotate-180 
@@ -46,12 +53,12 @@ export const DataHubSection = (): JSX.Element => {
       mx-auto px-4 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
         <h2 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-[#ffffff] text-2xl sm:text-3xl 
         md:text-4xl lg:text-5xl text-center tracking-[0] leading-tight md:leading-normal">
-          The Quantorx Edge in Execution
+          AXON is QuantorX’s Spatial AI Assistant
         </h2>
 
         <p className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-[#d9d9d9] text-base sm:text-lg 
         md:text-xl lg:text-2xl xl:text-[28px] text-center tracking-[0] leading-relaxed md:leading-normal">
-          Advanced tools that redefine execution quality, transparency, and client trust.
+          Designed to embed geographic intelligence directly into planning, risk assessment, and operational workflows—enabling leaders to make location-aware decisions with clarity, speed, and confidence.
         </p>
       </div>
 

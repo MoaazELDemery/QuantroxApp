@@ -5,25 +5,19 @@ export const LeadershipSection = (): JSX.Element => {
     {
       name: "Omar Khaled",
       title: "Co-Founder & CEO",
-      bio: "Veteran of top-tier global finance/tech firms. Detailed bio to be provided.",
+      bio: '"The gap between a chatbot and a business solution is precision. We bridge that gap."',
       image: "aboutUsLeadershipImage.png",
     },
     {
-      name: "Omar Khaled",
-      title: "Co-Founder & CEO",
-      bio: "Veteran of top-tier global finance/tech firms. Detailed bio to be provided.",
+      name: "Khaled Hassan",
+      title: "CTO",
+      bio: '"We don\'t build software that \'thinks.\' We build software that \'knows\' and \'acts\'."',
       image: "aboutUsLeadershipImage.png",
     },
     {
-      name: "Omar Khaled",
-      title: "Co-Founder & CEO",
-      bio: "Veteran of top-tier global finance/tech firms. Detailed bio to be provided.",
-      image: "aboutUsLeadershipImage.png",
-    },
-    {
-      name: "Omar Khaled",
-      title: "Co-Founder & CEO",
-      bio: "Veteran of top-tier global finance/tech firms. Detailed bio to be provided.",
+      name: "Omar El-Sayed",
+      title: "Head of Quantitative Research",
+      bio: '"Math is the only universal language. Our models speak it fluent."',
       image: "aboutUsLeadershipImage.png",
     },
   ];
@@ -39,7 +33,7 @@ export const LeadershipSection = (): JSX.Element => {
         {/* --- CHANGES START HERE --- */}
 
         {/* 1. Added max-w-6xl to constrain the grid's width on larger screens, making cards narrower. */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-6xl mx-auto">
           {leadershipData.map((leader, index) => (
             <Card
               key={index}

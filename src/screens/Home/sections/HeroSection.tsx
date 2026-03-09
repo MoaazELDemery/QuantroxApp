@@ -3,7 +3,7 @@ import { Button } from "../../../components/ui/button";
 
 export const HeroSection = (): JSX.Element => {
   return (
-    <section className="relative w-full bg-black min-h-[600px] h-[80vh] max-h-[800px] py-20">
+    <section className="relative w-full bg-black min-h-[600px] h-[70vh] max-h-[800px] py-20">
       <div className="relative w-full max-w-5xl mx-auto px-4 h-full flex items-center">
         <div className="absolute w-full max-w-2xl h-60 sm:h-80 top-12 sm:top-[74px] left-1/2 
         transform -translate-x-1/2 bg-[#ffffff01] overflow-hidden blur-[192px]">
@@ -17,13 +17,13 @@ export const HeroSection = (): JSX.Element => {
         <div className="flex flex-col w-full items-center justify-center gap-[20px] relative z-10">
           <div className="flex flex-col items-center gap-3 w-full">
             <h1 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-[#f2f2f2] 
-            text-5xl text-center tracking-[-1.80px] leading-normal">
-              Schedule a Technical Demonstration
+            text-4xl text-center tracking-[-1.80px] leading-normal uppercase">
+              TURN COMPLEXITY INTO A CLEAR DECISION.
             </h1>
             <p className="max-w-[961px] [font-family:'Satoshi-Regular',Helvetica] font-normal text-[#d9d9d9] 
-            text-[28px] text-center tracking-[0] leading-normal">
-              See the architecture in action. Understand how our platform can be
-              configured to solve your specific challenges.
+            text-[24px] text-center tracking-[0] leading-normal">
+              If you lead banking, credit, or wealth teams-QuantStation is built to
+              help you move faster with confidence.
             </p>
           </div>
           <Link to="/request-demo">
@@ -32,8 +32,8 @@ export const HeroSection = (): JSX.Element => {
                                          lg:w-[250px] lg:py-4">
               <span className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-base 
                                          text-[#ffffff] tracking-[0] leading-6
-                                         lg:text-lg">
-                Request a demo
+                                         lg:text-lg uppercase">
+                REQUEST A DEMO
               </span>
             </Button>
           </Link>

@@ -10,12 +10,12 @@ export const FooterSection = (): JSX.Element => {
 
   // Function to get the currently selected dropdown item based on current route
   const getSelectedDropdownItem = () => {
-    if (location.pathname.startsWith('/solutions/asset-managers')) {
-      return '/solutions/asset-managers';
-    } else if (location.pathname.startsWith('/solutions/banks')) {
-      return '/solutions/banks';
-    } else if (location.pathname.startsWith('/solutions/hedge-funds')) {
-      return '/solutions/hedge-funds';
+    if (location.pathname.startsWith('/solutions/nexus-ai')) {
+      return '/solutions/nexus-ai';
+    } else if (location.pathname.startsWith('/solutions/axon-ai')) {
+      return '/solutions/axon-ai';
+    } else if (location.pathname.startsWith('/solutions/q-core')) {
+      return '/solutions/q-core';
     } else if (location.pathname.startsWith('/solutions/robo-advisory')) {
       return '/solutions/robo-advisory';
     }
@@ -57,9 +57,9 @@ export const FooterSection = (): JSX.Element => {
       label: "Solutions",
       hasDropdown: true,
       dropdownItems: [
-        { label: "For Assets Managers", href: "/solutions/asset-managers" },
-        { label: "For Banks", href: "/solutions/banks" },
-        { label: "For Hedge Funds", href: "/solutions/hedge-funds" },
+        { label: "NEXUS AI", href: "/solutions/nexus-ai" },
+        { label: "AXON AI", href: "/solutions/axon-ai" },
+        { label: "Q-Core", href: "/solutions/q-core" },
         { label: "B2B Robo-Advisory", href: "/solutions/robo-advisory" },
       ],
     },
@@ -71,12 +71,12 @@ export const FooterSection = (): JSX.Element => {
   const handleNavigation = () => {
     // The #app div is the actual scroll container!
     const appContainer = document.getElementById('app');
-    
+
     if (appContainer) {
       appContainer.scrollTop = 0;
     }
     window.scrollTo(0, 0);
-    
+
     // Multiple attempts to ensure scroll happens
     setTimeout(() => {
       if (appContainer) {
@@ -84,7 +84,7 @@ export const FooterSection = (): JSX.Element => {
       }
       window.scrollTo(0, 0);
     }, 10);
-    
+
     setTimeout(() => {
       if (appContainer) {
         appContainer.scrollTop = 0;
@@ -111,15 +111,15 @@ export const FooterSection = (): JSX.Element => {
   }, [isSolutionsOpen]);
 
   return (
-    <footer className="flex flex-col w-full items-start justify-center gap-8 sm:gap-12 lg:gap-20 px-4 
-    sm:px-8 lg:px-[250px] py-8 sm:py-12 lg:py-[50px] bg-zinc-950 relative z-20">
+    <footer className="flex flex-col w-full items-start justify-center gap-8 sm:gap-12 lg:gap-20 px-6 
+    sm:px-8 lg:px-16 xl:px-24 2xl:px-[138px] py-8 sm:py-12 lg:py-[50px] bg-zinc-950 relative z-20">
       {/* Main Footer Content */}
-      <div className="flex flex-col lg:flex-row items-start justify-between gap-8 sm:gap-12 lg:gap-0 
-      py-4 sm:py-8 lg:py-20 w-full">
+      <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-12 lg:gap-0 
+      py-4 sm:py-8 lg:py-20">
 
         {/* Company Info Section */}
-        <div className="flex flex-col items-start gap-6 sm:gap-8 lg:gap-[34px] w-full lg:w-auto">
-          <Link 
+        <div className="flex flex-col items-start gap-6 sm:gap-8 lg:gap-[34px] w-full lg:w-auto lg:justify-self-start">
+          <Link
             to="/"
             onClick={handleNavigation}
           >
@@ -131,11 +131,9 @@ export const FooterSection = (): JSX.Element => {
           </Link>
           <div className="w-full max-w-md lg:w-[371px] [font-family:'Satoshi-Regular',Helvetica] font-normal 
           text-grey text-sm sm:text-base tracking-[0.32px] leading-relaxed lg:leading-[25.6px]">
-            Experts shaping markets with precision, offering deep insights into
-            regional and global finance.
+            No fluff. No cookie-cutter solutions. We design, build, and execute end-to-end AI, machine learning, and quantitative solutions—taking full ownership from problem definition to production.
             <br />
-            Specializing in quantitative modeling, valuation, and business
-            consulting
+            Our focus is simple: solve real problems, drive measurable impact, and enable sustainable organizational growth.
           </div>
           <div className="flex items-start gap-6 w-full">
             <a
@@ -153,150 +151,145 @@ export const FooterSection = (): JSX.Element => {
           </div>
         </div>
 
-        {/* Contact & Links Section */}
-        <div className="flex flex-col sm:flex-row lg:flex-row items-start gap-8 sm:gap-12 lg:gap-[84px] 
-        w-full lg:w-[579px]">
-
-          {/* Contact Info */}
-          <div className="flex flex-col w-full sm:w-auto lg:w-[327px] items-start gap-4 sm:gap-5 lg:gap-6">
-            <div className="w-fit [font-family:'Satoshi-Black',Helvetica] font-black text-white text-lg 
+        {/* Contact Info */}
+        <div className="flex flex-col w-full sm:w-auto lg:w-[327px] items-start gap-4 sm:gap-5 lg:gap-6 lg:justify-self-center">
+          <div className="w-fit [font-family:'Satoshi-Black',Helvetica] font-black text-white text-lg 
             sm:text-xl tracking-[0.40px] leading-6 sm:leading-8 whitespace-nowrap">
-              Contact Us
-            </div>
-            {contactInfo.map((item, index) => (
-              <div
-                key={index}
-                className="flex flex-col w-full lg:w-[327px] items-start gap-2 lg:gap-2.5"
-              >
-                <div className="inline-flex items-start gap-2 sm:gap-2.5">
-                  {item.icon}
-                  <div className="flex-1 lg:w-[314px] [font-family:'Satoshi-Bold',Helvetica] font-bold 
+            Contact Us
+          </div>
+          {contactInfo.map((item, index) => (
+            <div
+              key={index}
+              className="flex flex-col w-full lg:w-[327px] items-start gap-2 lg:gap-2.5"
+            >
+              <div className="inline-flex items-start gap-2 sm:gap-2.5">
+                {item.icon}
+                <div className="flex-1 lg:w-[314px] [font-family:'Satoshi-Bold',Helvetica] font-bold 
                   text-[#ffffff] text-sm sm:text-base tracking-[0.32px] leading-relaxed lg:leading-[25.6px]">
-                    {item.title}
-                  </div>
-                </div>
-                <div className="w-full lg:w-[327px] [font-family:'Satoshi-Regular',Helvetica] font-normal 
-                text-grey text-sm sm:text-base tracking-[0.32px] leading-relaxed lg:leading-[25.6px]">
-                  {item.isClickable ? (
-                    item.phones ? (
-                      // Phone numbers
-                      <div className="flex flex-col gap-1">
-                        <a
-                          href={`tel:${item.phones[0].replace(/\s/g, '')}`}
-                          className="hover:text-white transition-colors cursor-pointer"
-                        >
-                          {item.phones[0]}
-                        </a>
-                        <a
-                          href={`tel:${item.phones[1].replace(/\s/g, '')}`}
-                          className="hover:text-white transition-colors cursor-pointer"
-                        >
-                          {item.phones[1]}
-                        </a>
-                        <a
-                          href={`tel:${item.phones[2].replace(/\s/g, '')}`}
-                          className="hover:text-white transition-colors cursor-pointer"
-                        >
-                          {item.phones[2]}
-                        </a>
-                      </div>
-                    ) : (
-                      // Email
-                      <a
-                        href={item.href}
-                        className="hover:text-white transition-colors cursor-pointer"
-                      >
-                        {item.content}
-                      </a>
-                    )
-                  ) : (
-                    item.content
-                  )}
+                  {item.title}
                 </div>
               </div>
-            ))}
-          </div>
-
-          {/* Quick Links */}
-          <div className="inline-flex flex-col items-start gap-4 sm:gap-5 lg:gap-6 w-full sm:w-auto">
-            <div className="w-fit [font-family:'Satoshi-Black',Helvetica] font-black text-white text-lg 
-            sm:text-xl tracking-[0.40px] leading-6 sm:leading-8 whitespace-nowrap">
-              Quick Link
+              <div className="w-full lg:w-[327px] [font-family:'Satoshi-Regular',Helvetica] font-normal 
+                text-grey text-sm sm:text-base tracking-[0.32px] leading-relaxed lg:leading-[25.6px]">
+                {item.isClickable ? (
+                  item.phones ? (
+                    // Phone numbers
+                    <div className="flex flex-col gap-1">
+                      <a
+                        href={`tel:${item.phones[0].replace(/\s/g, '')}`}
+                        className="hover:text-white transition-colors cursor-pointer"
+                      >
+                        {item.phones[0]}
+                      </a>
+                      <a
+                        href={`tel:${item.phones[1].replace(/\s/g, '')}`}
+                        className="hover:text-white transition-colors cursor-pointer"
+                      >
+                        {item.phones[1]}
+                      </a>
+                      <a
+                        href={`tel:${item.phones[2].replace(/\s/g, '')}`}
+                        className="hover:text-white transition-colors cursor-pointer"
+                      >
+                        {item.phones[2]}
+                      </a>
+                    </div>
+                  ) : (
+                    // Email
+                    <a
+                      href={item.href}
+                      className="hover:text-white transition-colors cursor-pointer"
+                    >
+                      {item.content}
+                    </a>
+                  )
+                ) : (
+                  item.content
+                )}
+              </div>
             </div>
-            <div className="inline-flex flex-col items-start gap-2 lg:gap-2.5">
-              {quickLinks.map((link, index) => (
-                <div key={index} className="relative" ref={link.hasDropdown ? solutionsRef : null}>
-                  {link.href ? (
-                    <Link
-                      to={link.href}
-                      onClick={handleNavigation}
-                      className={`w-fit [font-family:'Satoshi-Regular',Helvetica] font-normal text-grey 
+          ))}
+        </div>
+
+        {/* Quick Links */}
+        <div className="inline-flex flex-col items-start gap-4 sm:gap-5 lg:gap-6 w-full sm:w-auto lg:justify-self-center">
+          <div className="w-fit [font-family:'Satoshi-Black',Helvetica] font-black text-white text-lg 
+            sm:text-xl tracking-[0.40px] leading-6 sm:leading-8 whitespace-nowrap">
+            Quick Link
+          </div>
+          <div className="inline-flex flex-col items-start gap-2 lg:gap-2.5">
+            {quickLinks.map((link, index) => (
+              <div key={index} className="relative" ref={link.hasDropdown ? solutionsRef : null}>
+                {link.href ? (
+                  <Link
+                    to={link.href}
+                    onClick={handleNavigation}
+                    className={`w-fit [font-family:'Satoshi-Regular',Helvetica] font-normal text-grey 
                         text-sm sm:text-base tracking-[0.32px] leading-relaxed lg:leading-[25.6px] 
                         whitespace-nowrap cursor-pointer hover:text-white transition-colors`}
-                    >
-                      {link.label}
-                    </Link>
-                  ) : (
-                    <button
-                      type="button"
-                      onClick={() => setIsSolutionsOpen(!isSolutionsOpen)}
-                      className={`flex items-center gap-1 w-fit [font-family:'Satoshi-Regular',Helvetica] 
+                  >
+                    {link.label}
+                  </Link>
+                ) : (
+                  <button
+                    type="button"
+                    onClick={() => setIsSolutionsOpen(!isSolutionsOpen)}
+                    className={`flex items-center gap-1 w-fit [font-family:'Satoshi-Regular',Helvetica] 
                         font-normal text-grey text-sm sm:text-base tracking-[0.32px] leading-relaxed 
                         lg:leading-[25.6px] whitespace-nowrap cursor-pointer hover:text-white 
                         transition-colors bg-transparent border-none p-0`}
-                    >
-                      {link.label}
-                      {link.hasDropdown && (
-                        <ChevronDownIcon
-                          className={`w-3 h-3 sm:w-4 sm:h-4 text-grey transition-transform duration-200 ${isSolutionsOpen ? "rotate-180" : "rotate-0"
-                            }`}
-                        />
-                      )}
-                    </button>
-                  )}
-                  {link.hasDropdown && isSolutionsOpen && (
-                    <div className="absolute bottom-full mb-2 left-0 lg:left-1/2 lg:-translate-x-1/2 lg:mb-4 w-[270px] 
+                  >
+                    {link.label}
+                    {link.hasDropdown && (
+                      <ChevronDownIcon
+                        className={`w-3 h-3 sm:w-4 sm:h-4 text-grey transition-transform duration-200 ${isSolutionsOpen ? "rotate-180" : "rotate-0"
+                          }`}
+                      />
+                    )}
+                  </button>
+                )}
+                {link.hasDropdown && isSolutionsOpen && (
+                  <div className="absolute bottom-full mb-2 left-0 lg:left-1/2 lg:-translate-x-1/2 lg:mb-4 w-[270px] 
                     bg-[#290E3F33] rounded-2xl shadow-2xl z-20 py-4 px-2 flex 
                     flex-col gap-2 backdrop-blur-md backdrop-saturate-150">
-                      {link.dropdownItems?.map((dropdownItem, dIndex) => (
-                        <Link
-                          key={dIndex}
-                          to={dropdownItem.href}
-                          className={`flex items-center gap-4 px-4 py-3 rounded-xl 
+                    {link.dropdownItems?.map((dropdownItem, dIndex) => (
+                      <Link
+                        key={dIndex}
+                        to={dropdownItem.href}
+                        className={`flex items-center gap-4 px-4 py-3 rounded-xl 
                             transition-all duration-150 ${selectedDropdownItem === dropdownItem.href ? 'bg-white/10' : 'hover:bg-white/5'}`}
-                          onClick={() => {
-                            setIsSolutionsOpen(false);
-                            handleNavigation();
-                          }}
-                        >
-                          <span className="flex items-center justify-center w-10 h-10 rounded-lg bg-white/10 text-white">
-                            {dIndex === 0 ? (
-                              <img src="/vuesax-linear-wallet-money.svg" alt="Assets Managers" className="w-6 h-6" />
-                            ) : dIndex === 1 ? (
-                              <img src="/vuesax-linear-trade.svg" alt="Banks" className="w-6 h-6" />
-                            ) : dIndex === 2 ? (
-                              <img src="/vuesax-linear-kyber-network--knc-.svg" alt="Hedge Funds" className="w-6 h-6" />
-                            ) : dIndex === 3 ? (
-                              <img src="/vuesax-linear-hashtag.svg" alt="Robo-Advisory" className="w-6 h-6" />
-                            ) : (
-                              <svg width="24" height="24" fill="none" stroke="currentColor"
-                                strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
-                                className="w-6 h-6 opacity-80">
-                                <rect x="4" y="4" width="16" height="16" rx="4" />
-                              </svg>
-                            )}
-                          </span>
-                          <span className="flex flex-col">
-                            <span className="[font-family:'Satoshi-Medium',Helvetica] text-m 
+                        onClick={() => {
+                          setIsSolutionsOpen(false);
+                          handleNavigation();
+                        }}
+                      >
+                        <span className="flex items-center justify-center w-10 h-10 rounded-lg bg-white/10 text-white">
+                          {dIndex === 0 ? (
+                            <img src="/vuesax-linear-wallet-money.svg" alt="NEXUS AI" className="w-6 h-6" />
+                          ) : dIndex === 1 ? (
+                            <img src="/vuesax-linear-trade.svg" alt="AXON AI" className="w-6 h-6" />
+                          ) : dIndex === 2 ? (
+                            <img src="/vuesax-linear-kyber-network--knc-.svg" alt="Q-Core" className="w-6 h-6" />
+                          ) : dIndex === 3 ? (
+                            <img src="/vuesax-linear-hashtag.svg" alt="Robo-Advisory" className="w-6 h-6" />
+                          ) : (
+                            <svg width="24" height="24" fill="none" stroke="currentColor"
+                              strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+                              className="w-6 h-6 opacity-80">
+                              <rect x="4" y="4" width="16" height="16" rx="4" />
+                            </svg>
+                          )}
+                        </span>
+                        <span className="flex flex-col">
+                          <span className="[font-family:'Satoshi-Medium',Helvetica] text-m 
                             text-white font-semibold">{dropdownItem.label.replace('For ', '')}</span>
-                          </span>
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
+                        </span>
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </div>

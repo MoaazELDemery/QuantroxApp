@@ -18,13 +18,12 @@ export const ChallengesSection = (): JSX.Element => {
           font-bold text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center tracking-[-1.80px] 
           leading-relaxed translate-y-[-1rem] animate-fade-in opacity-0 
           [--animation-delay:200ms] py-6">
-            Systematize Alpha Generation
+            The Future of Banking AI
           </h1>
-
-          <p className="w-full max-w-[1000px] [font-family:'Satoshi-Medium',Helvetica] font-medium text-[#d9d9d9] text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[28px] text-center tracking-[0] leading-relaxed translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms] px-2">
-            A complete solution for the modern asset manager, from quantitative
-            research and factor modeling to portfolio construction and risk
-            management.
+          <p className="w-full max-w-[1000px] [font-family:'Satoshi-Medium',Helvetica] font-medium text-[#d9d9d9] 
+          text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[28px] text-center tracking-[0] leading-relaxed 
+          translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms] px-2">
+            Real workflows, executed with auditability
           </p>
         </main>
       </div>

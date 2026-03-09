@@ -17,14 +17,14 @@ export const VisionSection = (): JSX.Element => {
           [text-fill-color:transparent] [font-family:'Satoshi-Bold',Helvetica] font-bold text-4xl 
           md:text-5xl lg:text-6xl xl:text-7xl text-center tracking-[-1.80px] leading-tight translate-y-[-1rem] 
           animate-fade-in opacity-0 [--animation-delay:200ms]">
-            Engineering the Future of Finance.
+            WE ARE ENGINEERS
+            <br className="hidden sm:block" />
+            NOT MARKETERS
           </h1>
 
           <p className="w-full max-w-[95vw] sm:max-w-[800px] [font-family:'Satoshi-Medium',Helvetica] 
           font-medium text-[#d9d9d9] text-base sm:text-lg md:text-[28px] text-center tracking-[0] leading-[normal]">
-            We build the unified technology powering the next generation of
-            <br className="hidden sm:block" />
-            institutional investment.
+            Quantorx is a Quant + AI consultancy and product studio. We build QuantStation and QuantHub to help financial institutions make faster, governed decisions.
           </p>
         </div>
       </main>

@@ -1,23 +1,4 @@
-import { Card, CardContent } from "../../../../components/ui/card";
-
 export const TechnologyOverviewSection = (): JSX.Element => {
-  const challenges = [
-    {
-      title: "Challenge 1",
-      description:
-        "Achieving consistent best execution across fragmented liquidity pools.",
-    },
-    {
-      title: "Challenge 2",
-      description:
-        "High cost and complexity of building and maintaining in-house trading capabilities.",
-    },
-    {
-      title: "Challenge 3",
-      description:
-        "Increasing client demand for detailed Transaction Cost Analysis (TCA).",
-    },
-  ];
 
   return (
     <section className="w-full py-[100px] flex flex-col items-center">
@@ -38,38 +19,14 @@ export const TechnologyOverviewSection = (): JSX.Element => {
       <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms] 
       flex w-full max-w-[1000px] flex-col items-center gap-6 mt-[67px]">
         <h2 className="flex items-center justify-center text-center [font-family:'Satoshi-Bold',Helvetica] 
-        font-bold text-[#ffffff] text-5xl tracking-[0] leading-[normal]">
-          The Barriers to Superior Execution
+        font-bold text-[#ffffff] text-3xl md:text-4xl lg:text-5xl tracking-[0] leading-tight mb-4 px-4">
+          Location is a critical driver of growth, risk, and operational efficiency.
         </h2>
 
         <p className="flex items-center justify-center text-center [font-family:'Satoshi-Medium',Helvetica] 
-        font-medium text-[#d9d9d9] text-[28px] tracking-[0] leading-[normal]">
-          The operational and technological hurdles preventing brokerages from delivering consistent best execution.
+        font-medium text-[#d9d9d9] text-lg md:text-xl lg:text-[24px] tracking-[0] leading-relaxed px-4">
+          Yet in most organizations, spatial data is treated as static visualization—isolated in maps and dashboards, disconnected from decision-making, workflows, and governance. As a result, leaders struggle to turn geographic insight into defensible, repeatable actions.
         </p>
-      </div>
-
-      <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms] flex flex-col 
-      sm:flex-row w-full max-w-[1216px] items-center gap-8 mt-[138px] justify-center">
-        {challenges.map((challenge, index) => (
-          <Card
-            key={`challenge-${index}`}
-            className="flex flex-col w-96 items-center justify-center gap-4 px-0 py-8 bg-[#00000033] 
-            rounded-2xl overflow-hidden backdrop-blur-[15px] backdrop-brightness-[100%] 
-            [-webkit-backdrop-filter:blur(15px)_brightness(100%)] border-0"
-          >
-            <CardContent className="flex flex-col w-[352px] items-center gap-4 p-0">
-              <h3 className="flex items-center justify-center text-center [font-family:'Satoshi-Medium',Helvetica] 
-              font-medium text-whitewhite text-2xl tracking-[0] leading-9">
-                {challenge.title}
-              </h3>
-
-              <p className="flex items-center justify-center text-center [font-family:'Satoshi-Medium',Helvetica] 
-              font-medium text-[#d9d9d9] text-base tracking-[0] leading-[normal]">
-                {challenge.description}
-              </p>
-            </CardContent>
-          </Card>
-        ))}
       </div>
     </section>
   );

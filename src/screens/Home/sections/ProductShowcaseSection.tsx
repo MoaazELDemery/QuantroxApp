@@ -1,14 +1,14 @@
 export const ProductShowcaseSection = (): JSX.Element => {
   const contentSections = [
     {
-      title: "Where Alpha Slips Away",
+      title: "The Execution Gap",
       description:
-        "The gap between strategy and execution is where alpha disappears.",
+        "QuantStation closes the gap between analysis and execution with guided workflows.",
     },
     {
-      title: "The Need for a Unified Core",
+      title: "Repeatable Outcomes",
       description:
-        "Winning in modern markets requires a single, unified technological foundation.",
+        "Transparent scoring and optimization tools so decisions are easy to roll out across teams.",
     },
   ];
 
@@ -37,15 +37,15 @@ export const ProductShowcaseSection = (): JSX.Element => {
             <div className="flex flex-col w-full max-w-4xl gap-8 lg:gap-16">
               <div className="flex flex-col gap-4 text-center lg:text-left">
                 <h2 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-[#f0f0f0] 
-                text-3xl sm:text-4xl md:text-5xl leading-normal">
-                  The Fragmentation Barrier
+                text-3xl sm:text-4xl md:text-5xl leading-tight uppercase">
+                  AI THAT SOUNDS SMART IS NOT A BUSINESS SOLUTION.
                 </h2>
 
                 <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-[#d9d9d9] 
                 text-lg sm:text-xl md:text-2xl leading-normal">
-                  Legacy systems, siloed data, and disjointed workflows silently
-                  tax performance - creating inefficiencies that compound over
-                  time and erode competitiveness.
+                  Most “AI” stops at chat. But banking leaders need outcomes: faster
+                  approvals, smarter offers, lower risk, and consistent customer
+                  experience.
                 </p>
               </div>
 

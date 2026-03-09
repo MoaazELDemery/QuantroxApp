@@ -13,12 +13,12 @@ export const LatestInsightsSection = (): JSX.Element => {
           <div className="flex flex-col w-full max-w-[491px] items-center lg:items-start gap-5">
             <div className="gap-2.5 px-4 py-1 rounded-2xl bg-gradient-to-b from-[#4a0082] to-[#4a008280] 
             text-white text-base font-medium [font-family:'Satoshi-Medium',Helvetica] h-auto">
-              Articles
+              AI Architecture
             </div>
 
             <h2 className="text-[40px] font-bold text-white [font-family:'Satoshi-Bold',Helvetica] 
             leading-normal">
-              Advances in Execution Microstructure for EGX
+              The End of "Chat"
             </h2>
 
             {/* Date and Time - commented out for future use */}
@@ -41,8 +41,8 @@ export const LatestInsightsSection = (): JSX.Element => {
 
           <p className="text-2xl font-medium text-[#a9a9a9] [font-family:'Satoshi-Medium',Helvetica] 
           leading-normal">
-            How low-latency order routing and market-impact modeling tighten
-            slippage for institutional flow.
+            Why chat-only tools fail in regulated operations, and what real workflow automation looks like in
+            banking and enterprise teams.
           </p>
 
           {/* Read Articles Button - commented out for future use */}

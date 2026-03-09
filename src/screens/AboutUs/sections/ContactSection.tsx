@@ -23,7 +23,7 @@ export const ContactSection = (): JSX.Element => {
         {visionMissionData.map((item) => (
           <div
             key={item.type}
-            className="flex flex-col md:flex-row items-start gap-12 relative w-[1000px]"
+            className="flex flex-col md:flex-row items-start gap-12 relative w-full"
           >
             {item.titlePosition === "left" ? (
               <>
