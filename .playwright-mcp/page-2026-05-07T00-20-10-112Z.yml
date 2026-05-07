@@ -1,0 +1,198 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - link "QuantorX" [ref=e6] [cursor=pointer]:
+      - /url: /
+      - img "QuantorX" [ref=e7]
+    - navigation [ref=e8]:
+      - generic [ref=e9]:
+        - link "Home" [ref=e10] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e11]: Home
+        - button "Solutions" [ref=e13] [cursor=pointer]:
+          - generic [ref=e14]: Solutions
+          - img [ref=e15]
+        - button "Platform" [ref=e18] [cursor=pointer]:
+          - generic [ref=e19]: Platform
+          - img [ref=e20]
+        - link "Why QuantorX" [ref=e22] [cursor=pointer]:
+          - /url: /technology/why-quantorx
+          - generic [ref=e23]: Why QuantorX
+        - link "Insights" [ref=e24] [cursor=pointer]:
+          - /url: /insights
+          - generic [ref=e25]: Insights
+        - button "About" [ref=e27] [cursor=pointer]:
+          - generic [ref=e28]: About
+          - img [ref=e29]
+    - link "Request Demo" [ref=e31] [cursor=pointer]:
+      - /url: /demo
+      - button "Request Demo" [ref=e32]:
+        - generic [ref=e33]: Request Demo
+  - main [ref=e34]:
+    - generic [ref=e36]:
+      - generic [ref=e37]:
+        - paragraph [ref=e38]: PayGate™ — Merchant Onboarding
+        - heading "CR Number to Active Account. Under 5 Minutes." [level=1] [ref=e39]:
+          - text: CR Number to
+          - text: Active Account.
+          - text: Under 5 Minutes.
+        - paragraph [ref=e40]: Traditional merchant onboarding takes days or weeks — manual data entry, paper forms, back-and-forth KYC verification, and compliance delays. PayGate™ eliminates all of it.
+        - paragraph [ref=e41]: Fully compliant with SAMA and in-Kingdom data residency. Powered by Cortex™ — every step governed, every action auditable.
+        - generic [ref=e42]:
+          - link "See PayGate in Action" [ref=e43] [cursor=pointer]:
+            - /url: /contact
+          - link "How Cortex Powers It →" [ref=e44] [cursor=pointer]:
+            - /url: /technology/ai-platform
+      - generic [ref=e45]:
+        - paragraph [ref=e46]: Onboarding Flow
+        - heading "Entry to payment-ready in 3 steps." [level=3] [ref=e47]
+        - generic [ref=e48]:
+          - generic [ref=e49]:
+            - generic [ref=e51]: "01"
+            - generic [ref=e52]:
+              - strong [ref=e53]: CR / ID Entry & Auto-Fetch
+              - paragraph [ref=e54]: Merchant enters their 10-digit Commercial Registration number. Cortex auto-fetches all business details from government registries (MCI/MHRSD) — zero manual entry, zero errors.
+          - generic [ref=e55]:
+            - generic [ref=e57]: "02"
+            - generic [ref=e58]:
+              - strong [ref=e59]: Identity Verification
+              - paragraph [ref=e60]: National ID verification via Absher/Nafath. Authorized signatory confirmation and KYC/AML compliance checks — fully integrated with Saudi government APIs.
+          - generic [ref=e61]:
+            - generic [ref=e63]: "03"
+            - generic [ref=e64]:
+              - strong [ref=e65]: Account Activation & Go Live
+              - paragraph [ref=e66]: Bank account linking, payment gateway configuration, and account activation — ready to accept payments in under 5 minutes.
+        - paragraph [ref=e68]: "Also supports: Freelancer onboarding · Absher/Nafath integration · IBAN verification"
+    - generic [ref=e70]:
+      - generic [ref=e71]:
+        - generic [ref=e72]: < 5min
+        - paragraph [ref=e73]: CR number to fully active account
+      - generic [ref=e74]:
+        - generic [ref=e75]: 100%
+        - paragraph [ref=e76]: In-Kingdom data residency — SAMA compliant
+      - generic [ref=e77]:
+        - generic [ref=e78]: Zero
+        - paragraph [ref=e79]: Manual data entry — all auto-fetched from registries
+    - generic [ref=e81]:
+      - generic [ref=e82]:
+        - paragraph [ref=e83]: Core Capabilities
+        - heading "Every Step Automated. Every Step Governed." [level=2] [ref=e84]
+      - generic [ref=e85]:
+        - generic [ref=e86]:
+          - img [ref=e88]
+          - heading "Instant CR Verification" [level=3] [ref=e90]
+          - paragraph [ref=e91]: Merchant enters their CR number. Cortex auto-fetches all business details from government registries — zero manual entry, zero errors, zero delay.
+        - generic [ref=e92]:
+          - img [ref=e94]
+          - heading "AI Conversational Agent (AR/EN)" [level=3] [ref=e96]
+          - paragraph [ref=e97]: "Built-in bilingual AI assistant answers merchant questions in real-time: compliance, fees, data privacy, and account setup — in both Arabic and English."
+        - generic [ref=e98]:
+          - img [ref=e100]
+          - heading "Full SAMA Compliance" [level=3] [ref=e102]
+          - paragraph [ref=e103]: All data stored in-Kingdom. KYC/AML checks built-in. Verification flows fully aligned with Saudi regulatory requirements — every onboarding auditable through Cortex.
+        - generic [ref=e104]:
+          - img [ref=e106]
+          - heading "Absher/Nafath Integration" [level=3] [ref=e108]
+          - paragraph [ref=e109]: Direct integration with Saudi national identity infrastructure for instant signatory verification — no manual document uploads, no back-and-forth.
+        - generic [ref=e110]:
+          - img [ref=e112]
+          - heading "Freelancer & SME Support" [level=3] [ref=e114]
+          - paragraph [ref=e115]: Handles both registered businesses and individual freelancers (Musaned) — one platform, all merchant types, all fully compliant.
+        - generic [ref=e116]:
+          - img [ref=e118]
+          - heading "IBAN Verification & Bank Linking" [level=3] [ref=e120]
+          - paragraph [ref=e121]: Real-time bank account verification and payment gateway configuration — merchant goes from CR number to payment-ready in a single flow.
+    - generic [ref=e123]:
+      - heading "Onboard Merchants in Minutes, Not Weeks." [level=2] [ref=e124]
+      - paragraph [ref=e125]: Deploy PayGate™ inside your sovereign infrastructure — fully SAMA compliant, zero cloud dependency.
+      - link "See PayGate in Action" [ref=e126] [cursor=pointer]:
+        - /url: /contact
+  - contentinfo [ref=e127]:
+    - generic [ref=e128]:
+      - generic [ref=e129]:
+        - link "QuantorX" [ref=e130] [cursor=pointer]:
+          - /url: /
+          - img "QuantorX" [ref=e131]
+        - paragraph [ref=e132]: No fluff. No cookie-cutter solutions. We design, build, and execute end-to-end AI, machine learning, and quantitative solutions — taking full ownership from problem definition to production.
+        - generic [ref=e133]:
+          - generic [ref=e134]:
+            - img [ref=e135]
+            - generic [ref=e138]: 511 W Cleveland St, STE 414, Tampa, FL 33606
+          - generic [ref=e139]:
+            - img [ref=e140]
+            - link "innovation@quantorx.com" [ref=e143] [cursor=pointer]:
+              - /url: mailto:innovation@quantorx.com
+          - generic [ref=e144]:
+            - img [ref=e145]
+            - generic [ref=e147]:
+              - link "+18134471388" [ref=e148] [cursor=pointer]:
+                - /url: tel:+18134471388
+              - link "+966537507578" [ref=e149] [cursor=pointer]:
+                - /url: tel:+966537507578
+              - link "+201119974983" [ref=e150] [cursor=pointer]:
+                - /url: tel:+201119974983
+        - link "LinkedIn" [ref=e151] [cursor=pointer]:
+          - /url: https://www.linkedin.com/company/quantorx/
+          - img "LinkedIn" [ref=e152]
+      - generic [ref=e153]:
+        - generic [ref=e154]: Solutions
+        - generic [ref=e155]:
+          - link "Nexus AI" [ref=e156] [cursor=pointer]:
+            - /url: /solutions/nexus-ai
+          - link "Axon AI" [ref=e157] [cursor=pointer]:
+            - /url: /solutions/axon-ai
+          - link "PayGate™" [ref=e158] [cursor=pointer]:
+            - /url: /solutions/paygate
+          - link "Geek™" [ref=e159] [cursor=pointer]:
+            - /url: /solutions/geek
+          - link "Enterprise Solutions" [ref=e160] [cursor=pointer]:
+            - /url: /solutions/enterprise-solutions
+          - link "Case Studies" [ref=e161] [cursor=pointer]:
+            - /url: /case-studies
+      - generic [ref=e162]:
+        - generic [ref=e163]: Platform
+        - generic [ref=e164]:
+          - link "CORTEX™" [ref=e165] [cursor=pointer]:
+            - /url: /technology/ai-platform
+          - link "LLM Masonry™" [ref=e166] [cursor=pointer]:
+            - /url: /technology/llm-studio
+          - link "AI Cloud" [ref=e167] [cursor=pointer]:
+            - /url: /technology/ai-cloud
+          - link "Certifications" [ref=e168] [cursor=pointer]:
+            - /url: /technology/certifications
+      - generic [ref=e169]:
+        - generic [ref=e170]: Company
+        - generic [ref=e171]:
+          - link "About Us" [ref=e172] [cursor=pointer]:
+            - /url: /about
+          - link "Team" [ref=e173] [cursor=pointer]:
+            - /url: /about/team
+          - link "Careers" [ref=e174] [cursor=pointer]:
+            - /url: /about/careers
+          - link "Press & Media" [ref=e175] [cursor=pointer]:
+            - /url: /about/press-media
+          - link "Social Impact" [ref=e176] [cursor=pointer]:
+            - /url: /about/social-impact
+          - link "AI for MENA" [ref=e177] [cursor=pointer]:
+            - /url: /about/ai-for-mena
+      - generic [ref=e178]:
+        - generic [ref=e179]: Resources
+        - generic [ref=e180]:
+          - link "Insights" [ref=e181] [cursor=pointer]:
+            - /url: /insights
+          - link "Academy" [ref=e182] [cursor=pointer]:
+            - /url: /university
+          - link "Documentation" [ref=e183] [cursor=pointer]:
+            - /url: /docs
+          - link "Events" [ref=e184] [cursor=pointer]:
+            - /url: /events
+          - link "Partner Network" [ref=e185] [cursor=pointer]:
+            - /url: /partner-network
+    - generic [ref=e186]:
+      - generic [ref=e187]: © 2026 QuantorX. All rights reserved.
+      - generic [ref=e188]:
+        - link "Terms" [ref=e189] [cursor=pointer]:
+          - /url: /legal
+        - link "Privacy" [ref=e190] [cursor=pointer]:
+          - /url: /legal
+        - link "Security" [ref=e191] [cursor=pointer]:
+          - /url: /security/bulletins

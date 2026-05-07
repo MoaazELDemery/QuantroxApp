@@ -1,0 +1,187 @@
+- generic [ref=e4]:
+  - banner [ref=e5]:
+    - link "QuantorX" [ref=e7] [cursor=pointer]:
+      - /url: /
+      - img "QuantorX" [ref=e8]
+    - navigation [ref=e9]:
+      - generic [ref=e10]:
+        - link "Home" [ref=e11] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e12]: Home
+        - button "Solutions" [ref=e14] [cursor=pointer]:
+          - generic [ref=e15]: Solutions
+          - img [ref=e16]
+        - button "Platform" [ref=e19] [cursor=pointer]:
+          - generic [ref=e20]: Platform
+          - img [ref=e21]
+        - link "Why QuantorX" [ref=e23] [cursor=pointer]:
+          - /url: /technology/why-quantorx
+          - generic [ref=e24]: Why QuantorX
+        - link "Insights" [ref=e25] [cursor=pointer]:
+          - /url: /insights
+          - generic [ref=e26]: Insights
+        - button "About" [ref=e28] [cursor=pointer]:
+          - generic [ref=e29]: About
+          - img [ref=e30]
+    - link "Request Demo" [ref=e32] [cursor=pointer]:
+      - /url: /demo
+      - button "Request Demo" [ref=e33]:
+        - generic [ref=e34]: Request Demo
+  - main [ref=e35]:
+    - generic [ref=e37]:
+      - paragraph [ref=e38]: Agents Powered by Cortex™
+      - heading "Four Agents. One Sovereign Platform." [level=1] [ref=e39]:
+        - text: Four Agents.
+        - text: One Sovereign Platform.
+      - paragraph [ref=e40]: Every agent runs on QuantorX Cortex™ — air-gapped, governed, and mapped to your exact operational workflows through Cognitive Flux Mapping™. Sovereign by default. Auditable by design.
+      - generic [ref=e41]:
+        - link "Book a Cortex Demo" [ref=e42] [cursor=pointer]:
+          - /url: /demo
+        - link "Talk to an Expert" [ref=e43] [cursor=pointer]:
+          - /url: /contact
+    - generic [ref=e45]:
+      - link "Nexus AI — Banking Nexus AI — Banking The Bank's Digital Brain Orchestrates end-to-end banking decisions — credit approvals, KYC, offer structuring, and transaction execution — governed, auditable, and compliant by design. Explore →" [ref=e46] [cursor=pointer]:
+        - /url: /solutions/nexus-ai
+        - img "Nexus AI — Banking" [ref=e48]
+        - generic [ref=e49]:
+          - paragraph [ref=e50]: Nexus AI — Banking
+          - heading "The Bank's Digital Brain" [level=3] [ref=e51]
+          - paragraph [ref=e52]: Orchestrates end-to-end banking decisions — credit approvals, KYC, offer structuring, and transaction execution — governed, auditable, and compliant by design.
+        - generic [ref=e53]: Explore →
+      - link "Axon AI — Spatial Axon AI — Spatial The Geographic Brain Turns maps and spatial data into governed strategic decisions. Branch planning, coverage optimisation, and field operations — powered by Cortex. Explore →" [ref=e54] [cursor=pointer]:
+        - /url: /solutions/axon-ai
+        - img "Axon AI — Spatial" [ref=e56]
+        - generic [ref=e57]:
+          - paragraph [ref=e58]: Axon AI — Spatial
+          - heading "The Geographic Brain" [level=3] [ref=e59]
+          - paragraph [ref=e60]: Turns maps and spatial data into governed strategic decisions. Branch planning, coverage optimisation, and field operations — powered by Cortex.
+        - generic [ref=e61]: Explore →
+      - link "PayGate™ — Onboarding PayGate™ — Onboarding AI-Powered Merchant Onboarding From CR number to active account in under 5 minutes. Fully compliant with SAMA and in-Kingdom data residency — all orchestrated by Cortex. Explore →" [ref=e62] [cursor=pointer]:
+        - /url: /solutions/paygate
+        - img "PayGate™ — Onboarding" [ref=e64]
+        - generic [ref=e65]:
+          - paragraph [ref=e66]: PayGate™ — Onboarding
+          - heading "AI-Powered Merchant Onboarding" [level=3] [ref=e67]
+          - paragraph [ref=e68]: From CR number to active account in under 5 minutes. Fully compliant with SAMA and in-Kingdom data residency — all orchestrated by Cortex.
+        - generic [ref=e69]: Explore →
+      - link "Geek™ — Wealth Management Geek™ — Wealth Management The Wealth Management Brain AI-powered portfolio optimization, robo-advisory, and Shari'ah-compliant decisioning — built for GCC banks, wealth managers, and family offices. Explore →" [ref=e70] [cursor=pointer]:
+        - /url: /solutions/geek
+        - img "Geek™ — Wealth Management" [ref=e72]
+        - generic [ref=e73]:
+          - paragraph [ref=e74]: Geek™ — Wealth Management
+          - heading "The Wealth Management Brain" [level=3] [ref=e75]
+          - paragraph [ref=e76]: AI-powered portfolio optimization, robo-advisory, and Shari'ah-compliant decisioning — built for GCC banks, wealth managers, and family offices.
+        - generic [ref=e77]: Explore →
+    - link "Enterprise Solutions Quantitative Engines & System Integration Trading infrastructure, capital markets analytics, and full-stack system integration — for firms that need custom quantitative decision engines, not off-the-shelf software. Explore →" [ref=e80] [cursor=pointer]:
+      - /url: /solutions/enterprise-solutions
+      - generic [ref=e81]:
+        - paragraph [ref=e82]: Enterprise Solutions
+        - heading "Quantitative Engines & System Integration" [level=3] [ref=e83]
+        - paragraph [ref=e84]: Trading infrastructure, capital markets analytics, and full-stack system integration — for firms that need custom quantitative decision engines, not off-the-shelf software.
+      - generic [ref=e85]: Explore →
+    - generic [ref=e87]:
+      - generic [ref=e88]:
+        - paragraph [ref=e89]: Client Outcomes
+        - heading "Delivering Measurable Impact." [level=2] [ref=e90]
+      - generic [ref=e91]:
+        - button "Banking" [ref=e92] [cursor=pointer]
+        - button "Spatial" [ref=e93] [cursor=pointer]
+        - button "Treasury" [ref=e94] [cursor=pointer]
+      - generic [ref=e96]:
+        - paragraph [ref=e97]: "\"Nexus reduced our SME credit decisioning cycle from 5 days to under 4 hours. The compliance team can now hand regulators a complete audit trail for every decision — without lifting a finger.\""
+        - paragraph [ref=e98]: Head of Commercial Banking — Regional Bank, KSA
+    - generic [ref=e100]:
+      - heading "The Right Agent for Your Industry." [level=2] [ref=e101]
+      - paragraph [ref=e102]: One conversation. One prototype. Fully sovereign.
+      - link "Book a Cortex Demo" [ref=e103] [cursor=pointer]:
+        - /url: /demo
+  - contentinfo [ref=e104]:
+    - generic [ref=e105]:
+      - generic [ref=e106]:
+        - link "QuantorX" [ref=e107] [cursor=pointer]:
+          - /url: /
+          - img "QuantorX" [ref=e108]
+        - paragraph [ref=e109]: No fluff. No cookie-cutter solutions. We design, build, and execute end-to-end AI, machine learning, and quantitative solutions — taking full ownership from problem definition to production.
+        - generic [ref=e110]:
+          - generic [ref=e111]:
+            - img [ref=e112]
+            - generic [ref=e115]: 511 W Cleveland St, STE 414, Tampa, FL 33606
+          - generic [ref=e116]:
+            - img [ref=e117]
+            - link "innovation@quantorx.com" [ref=e120] [cursor=pointer]:
+              - /url: mailto:innovation@quantorx.com
+          - generic [ref=e121]:
+            - img [ref=e122]
+            - generic [ref=e124]:
+              - link "+18134471388" [ref=e125] [cursor=pointer]:
+                - /url: tel:+18134471388
+              - link "+966537507578" [ref=e126] [cursor=pointer]:
+                - /url: tel:+966537507578
+              - link "+201119974983" [ref=e127] [cursor=pointer]:
+                - /url: tel:+201119974983
+        - link "LinkedIn" [ref=e128] [cursor=pointer]:
+          - /url: https://www.linkedin.com/company/quantorx/
+          - img "LinkedIn" [ref=e129]
+      - generic [ref=e130]:
+        - generic [ref=e131]: Solutions
+        - generic [ref=e132]:
+          - link "Nexus AI" [ref=e133] [cursor=pointer]:
+            - /url: /solutions/nexus-ai
+          - link "Axon AI" [ref=e134] [cursor=pointer]:
+            - /url: /solutions/axon-ai
+          - link "PayGate™" [ref=e135] [cursor=pointer]:
+            - /url: /solutions/paygate
+          - link "Geek™" [ref=e136] [cursor=pointer]:
+            - /url: /solutions/geek
+          - link "Enterprise Solutions" [ref=e137] [cursor=pointer]:
+            - /url: /solutions/enterprise-solutions
+          - link "Case Studies" [ref=e138] [cursor=pointer]:
+            - /url: /case-studies
+      - generic [ref=e139]:
+        - generic [ref=e140]: Platform
+        - generic [ref=e141]:
+          - link "CORTEX™" [ref=e142] [cursor=pointer]:
+            - /url: /technology/ai-platform
+          - link "LLM Masonry™" [ref=e143] [cursor=pointer]:
+            - /url: /technology/llm-studio
+          - link "AI Cloud" [ref=e144] [cursor=pointer]:
+            - /url: /technology/ai-cloud
+          - link "Certifications" [ref=e145] [cursor=pointer]:
+            - /url: /technology/certifications
+      - generic [ref=e146]:
+        - generic [ref=e147]: Company
+        - generic [ref=e148]:
+          - link "About Us" [ref=e149] [cursor=pointer]:
+            - /url: /about
+          - link "Team" [ref=e150] [cursor=pointer]:
+            - /url: /about/team
+          - link "Careers" [ref=e151] [cursor=pointer]:
+            - /url: /about/careers
+          - link "Press & Media" [ref=e152] [cursor=pointer]:
+            - /url: /about/press-media
+          - link "Social Impact" [ref=e153] [cursor=pointer]:
+            - /url: /about/social-impact
+          - link "AI for MENA" [ref=e154] [cursor=pointer]:
+            - /url: /about/ai-for-mena
+      - generic [ref=e155]:
+        - generic [ref=e156]: Resources
+        - generic [ref=e157]:
+          - link "Insights" [ref=e158] [cursor=pointer]:
+            - /url: /insights
+          - link "Academy" [ref=e159] [cursor=pointer]:
+            - /url: /university
+          - link "Documentation" [ref=e160] [cursor=pointer]:
+            - /url: /docs
+          - link "Events" [ref=e161] [cursor=pointer]:
+            - /url: /events
+          - link "Partner Network" [ref=e162] [cursor=pointer]:
+            - /url: /partner-network
+    - generic [ref=e163]:
+      - generic [ref=e164]: © 2026 QuantorX. All rights reserved.
+      - generic [ref=e165]:
+        - link "Terms" [ref=e166] [cursor=pointer]:
+          - /url: /legal
+        - link "Privacy" [ref=e167] [cursor=pointer]:
+          - /url: /legal
+        - link "Security" [ref=e168] [cursor=pointer]:
+          - /url: /security/bulletins

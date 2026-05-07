@@ -1,0 +1,242 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - link "QuantorX" [ref=e6] [cursor=pointer]:
+      - /url: /
+      - img "QuantorX" [ref=e7]
+    - navigation [ref=e8]:
+      - generic [ref=e9]:
+        - link "Home" [ref=e11] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e12]: Home
+        - button "Solutions" [ref=e14] [cursor=pointer]:
+          - generic [ref=e15]: Solutions
+          - img [ref=e16]
+        - button "Platform" [ref=e19] [cursor=pointer]:
+          - generic [ref=e20]: Platform
+          - img [ref=e21]
+        - link "Insights" [ref=e24] [cursor=pointer]:
+          - /url: /insights
+          - generic [ref=e25]: Insights
+        - button "About" [ref=e27] [cursor=pointer]:
+          - generic [ref=e28]: About
+          - img [ref=e29]
+    - link "Request Demo" [ref=e31] [cursor=pointer]:
+      - /url: /demo
+      - button "Request Demo" [ref=e32]:
+        - generic [ref=e33]: Request Demo
+  - main [ref=e34]:
+    - generic [ref=e35]:
+      - paragraph [ref=e36]: Real-World Applications
+      - heading "How Enterprise AI Delivers Results" [level=1] [ref=e37]
+      - paragraph [ref=e38]: Illustrative deployments across banking, telecoms, government, insurance, and healthcare — showing the challenge, the approach, and what changed.
+    - generic [ref=e40]:
+      - generic [ref=e41]:
+        - button "All Industries" [ref=e42] [cursor=pointer]
+        - button "Banking" [ref=e43] [cursor=pointer]
+        - button "Telecom" [ref=e44] [cursor=pointer]
+        - button "Government" [ref=e45] [cursor=pointer]
+        - button "Insurance" [ref=e46] [cursor=pointer]
+        - button "Healthcare" [ref=e47] [cursor=pointer]
+      - generic [ref=e48]:
+        - article [ref=e49]:
+          - generic [ref=e50]:
+            - generic [ref=e51]:
+              - paragraph [ref=e52]: BANKING
+              - generic [ref=e53]:
+                - generic [ref=e54]:
+                  - generic [ref=e55]: 65%
+                  - generic [ref=e56]: Fraud loss reduction
+                - generic [ref=e57]:
+                  - generic [ref=e58]: 40%
+                  - generic [ref=e59]: Fewer false positives
+                - generic [ref=e60]:
+                  - generic [ref=e61]: <80ms
+                  - generic [ref=e62]: Decision latency
+            - heading "Reducing Fraud Losses by 65% at Scale" [level=4] [ref=e63]
+            - paragraph [ref=e64]: A large retail bank was processing 12 million transactions daily with a fraud detection system producing an unacceptably high false-positive rate. Legitimate transactions were being declined, causing customer churn, while actual fraud slipped through on novel attack vectors the rule engine hadn't seen before.
+            - button "See approach & lesson →" [ref=e65] [cursor=pointer]
+        - article [ref=e66]:
+          - generic [ref=e67]:
+            - generic [ref=e68]:
+              - paragraph [ref=e69]: TELECOM
+              - generic [ref=e70]:
+                - generic [ref=e71]:
+                  - generic [ref=e72]: 60%
+                  - generic [ref=e73]: Queries auto-resolved
+                - generic [ref=e74]:
+                  - generic [ref=e75]: 35%
+                  - generic [ref=e76]: Call center cost reduction
+                - generic [ref=e77]:
+                  - generic [ref=e78]: 4.2/5
+                  - generic [ref=e79]: CSAT score maintained
+            - heading "Automating 60% of Customer Inquiries with Bilingual AI" [level=4] [ref=e80]
+            - paragraph [ref=e81]: A major GCC telecoms operator was handling over 50,000 customer interactions per day across voice, chat, and social channels. Call center costs were rising faster than subscriber growth. Average handling time for common queries — bill explanation, plan changes, outage status — was 7 minutes per call.
+            - button "See approach & lesson →" [ref=e82] [cursor=pointer]
+        - article [ref=e83]:
+          - generic [ref=e84]:
+            - generic [ref=e85]:
+              - paragraph [ref=e86]: GOVERNMENT
+              - generic [ref=e87]:
+                - generic [ref=e88]:
+                  - generic [ref=e89]: 20%
+                  - generic [ref=e90]: Energy cost reduction
+                - generic [ref=e91]:
+                  - generic [ref=e92]: 15%
+                  - generic [ref=e93]: Peak traffic reduction
+                - generic [ref=e94]:
+                  - generic [ref=e95]: 3×
+                  - generic [ref=e96]: Faster fault detection
+            - heading "AI-Powered Urban Planning for a Smart City Authority" [level=4] [ref=e97]
+            - paragraph [ref=e98]: A GCC smart city authority needed to optimize traffic signal timing, energy usage across public buildings, and predictive maintenance scheduling for public infrastructure — across a growing district with over 200 sensor-equipped intersections and 80 monitored buildings.
+            - button "See approach & lesson →" [ref=e99] [cursor=pointer]
+        - article [ref=e100]:
+          - generic [ref=e101]:
+            - generic [ref=e102]:
+              - paragraph [ref=e103]: INSURANCE
+              - generic [ref=e104]:
+                - generic [ref=e105]:
+                  - generic [ref=e106]: 80%
+                  - generic [ref=e107]: Faster processing time
+                - generic [ref=e108]:
+                  - generic [ref=e109]: 92%
+                  - generic [ref=e110]: Extraction accuracy
+                - generic [ref=e111]:
+                  - generic [ref=e112]: 65%
+                  - generic [ref=e113]: Manual review cases eliminated
+            - 'heading "From Days to Hours: Automating Claims Document Processing" [level=4] [ref=e114]'
+            - paragraph [ref=e115]: A regional insurer was processing claims submitted as scanned documents in Arabic and English — PDFs, photos of invoices, handwritten forms. Manual review averaged 3.5 days per claim. Errors in data entry were causing payout delays and audit findings.
+            - button "See approach & lesson →" [ref=e116] [cursor=pointer]
+        - article [ref=e117]:
+          - generic [ref=e118]:
+            - generic [ref=e119]:
+              - paragraph [ref=e120]: BANKING
+              - generic [ref=e121]:
+                - generic [ref=e122]:
+                  - generic [ref=e123]: 3×
+                  - generic [ref=e124]: Faster credit decisions
+                - generic [ref=e125]:
+                  - generic [ref=e126]: 25%
+                  - generic [ref=e127]: Non-performing finance reduction
+                - generic [ref=e128]:
+                  - generic [ref=e129]: 100%
+                  - generic [ref=e130]: Audit-ready decision output
+            - heading "Shari'ah-Compliant Credit Scoring for Islamic Finance Products" [level=4] [ref=e131]
+            - paragraph [ref=e132]: An Islamic bank offering Murabaha and Ijara financing products needed a credit scoring model compliant with AAOIFI standards and capable of explaining decisions to auditors. The existing system used a generic credit bureau score that couldn't account for the specific risk profile of asset-backed financing or exclude income from prohibited activities.
+            - button "See approach & lesson →" [ref=e133] [cursor=pointer]
+        - article [ref=e134]:
+          - generic [ref=e135]:
+            - generic [ref=e136]:
+              - paragraph [ref=e137]: HEALTHCARE
+              - generic [ref=e138]:
+                - generic [ref=e139]:
+                  - generic [ref=e140]: 30%
+                  - generic [ref=e141]: Readmission rate reduction
+                - generic [ref=e142]:
+                  - generic [ref=e143]: 85%
+                  - generic [ref=e144]: Prediction accuracy (AUC)
+                - generic [ref=e145]:
+                  - generic [ref=e146]: 48hr
+                  - generic [ref=e147]: Proactive outreach triggered
+            - heading "Predicting Patient Readmissions to Enable Proactive Care" [level=4] [ref=e148]
+            - paragraph [ref=e149]: A hospital group was seeing a 30-day readmission rate significantly above the national benchmark, with high associated costs and regulatory scrutiny. The clinical team had no systematic way to identify which discharged patients were at high readmission risk — the assessment was informal and inconsistent across departments.
+            - button "See approach & lesson →" [ref=e150] [cursor=pointer]
+    - generic [ref=e152]:
+      - heading "Ready to Build Your Own Story?" [level=2] [ref=e153]
+      - paragraph [ref=e154]: Tell us your most critical operational challenge. We'll map an AI approach and show you what's possible.
+      - generic [ref=e155]:
+        - link "Request a Demo" [ref=e156] [cursor=pointer]:
+          - /url: /demo
+        - link "Read More Insights" [ref=e157] [cursor=pointer]:
+          - /url: /insights
+  - contentinfo [ref=e158]:
+    - generic [ref=e159]:
+      - generic [ref=e160]:
+        - link "QuantorX" [ref=e161] [cursor=pointer]:
+          - /url: /
+          - img "QuantorX" [ref=e162]
+        - paragraph [ref=e163]: No fluff. No cookie-cutter solutions. We design, build, and execute end-to-end AI, machine learning, and quantitative solutions — taking full ownership from problem definition to production.
+        - generic [ref=e164]:
+          - generic [ref=e165]:
+            - img [ref=e166]
+            - generic [ref=e169]: 511 W Cleveland St, STE 414, Tampa, FL 33606
+          - generic [ref=e170]:
+            - img [ref=e171]
+            - link "innovation@quantorx.com" [ref=e174] [cursor=pointer]:
+              - /url: mailto:innovation@quantorx.com
+          - generic [ref=e175]:
+            - img [ref=e176]
+            - generic [ref=e178]:
+              - link "+18134471388" [ref=e179] [cursor=pointer]:
+                - /url: tel:+18134471388
+              - link "+966537507578" [ref=e180] [cursor=pointer]:
+                - /url: tel:+966537507578
+              - link "+201119974983" [ref=e181] [cursor=pointer]:
+                - /url: tel:+201119974983
+        - link "LinkedIn" [ref=e182] [cursor=pointer]:
+          - /url: https://www.linkedin.com/company/quantorx/
+          - img "LinkedIn" [ref=e183]
+      - generic [ref=e184]:
+        - generic [ref=e185]: Solutions
+        - generic [ref=e186]:
+          - link "Enterprise AI" [ref=e187] [cursor=pointer]:
+            - /url: /solutions/enterprise-ai
+          - link "Enterprise Software" [ref=e188] [cursor=pointer]:
+            - /url: /solutions/enterprise-software
+          - link "Quantitative Engines" [ref=e189] [cursor=pointer]:
+            - /url: /solutions/quantitative-engines
+          - link "Use Cases" [ref=e190] [cursor=pointer]:
+            - /url: /solutions/use-case
+          - link "Case Studies" [ref=e191] [cursor=pointer]:
+            - /url: /case-studies
+      - generic [ref=e192]:
+        - generic [ref=e193]: Platform
+        - generic [ref=e194]:
+          - link "Why QuantorX" [ref=e195] [cursor=pointer]:
+            - /url: /technology/why-quantorx
+          - link "AI Platform" [ref=e196] [cursor=pointer]:
+            - /url: /technology/ai-platform
+          - link "LLM Studio" [ref=e197] [cursor=pointer]:
+            - /url: /technology/llm-studio
+          - link "AI Cloud" [ref=e198] [cursor=pointer]:
+            - /url: /technology/ai-cloud
+          - link "Certifications" [ref=e199] [cursor=pointer]:
+            - /url: /technology/certifications
+      - generic [ref=e200]:
+        - generic [ref=e201]: Company
+        - generic [ref=e202]:
+          - link "About Us" [ref=e203] [cursor=pointer]:
+            - /url: /about
+          - link "Team" [ref=e204] [cursor=pointer]:
+            - /url: /about/team
+          - link "Careers" [ref=e205] [cursor=pointer]:
+            - /url: /about/careers
+          - link "Press & Media" [ref=e206] [cursor=pointer]:
+            - /url: /about/press-media
+          - link "Social Impact" [ref=e207] [cursor=pointer]:
+            - /url: /about/social-impact
+          - link "AI for MENA" [ref=e208] [cursor=pointer]:
+            - /url: /about/ai-for-mena
+      - generic [ref=e209]:
+        - generic [ref=e210]: Resources
+        - generic [ref=e211]:
+          - link "Insights" [ref=e212] [cursor=pointer]:
+            - /url: /insights
+          - link "Academy" [ref=e213] [cursor=pointer]:
+            - /url: /university
+          - link "Documentation" [ref=e214] [cursor=pointer]:
+            - /url: /docs
+          - link "Events" [ref=e215] [cursor=pointer]:
+            - /url: /events
+          - link "Wiki" [ref=e216] [cursor=pointer]:
+            - /url: /wiki
+          - link "Partner Network" [ref=e217] [cursor=pointer]:
+            - /url: /partner-network
+    - generic [ref=e218]:
+      - generic [ref=e219]: © 2026 QuantorX. All rights reserved.
+      - generic [ref=e220]:
+        - link "Terms" [ref=e221] [cursor=pointer]:
+          - /url: /legal
+        - link "Privacy" [ref=e222] [cursor=pointer]:
+          - /url: /legal
+        - link "Security" [ref=e223] [cursor=pointer]:
+          - /url: /security/bulletins

@@ -1,0 +1,436 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - link "QuantorX" [ref=e6] [cursor=pointer]:
+      - /url: /
+      - img "QuantorX" [ref=e7]
+    - navigation [ref=e8]:
+      - generic [ref=e9]:
+        - link "Home" [ref=e11] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e12]: Home
+        - button "Solutions" [ref=e14] [cursor=pointer]:
+          - generic [ref=e15]: Solutions
+          - img [ref=e16]
+        - button "Platform" [ref=e19] [cursor=pointer]:
+          - generic [ref=e20]: Platform
+          - img [ref=e21]
+        - link "Insights" [ref=e24] [cursor=pointer]:
+          - /url: /insights
+          - generic [ref=e25]: Insights
+        - button "About" [ref=e27] [cursor=pointer]:
+          - generic [ref=e28]: About
+          - img [ref=e29]
+    - link "Request Demo" [ref=e31] [cursor=pointer]:
+      - /url: /demo
+      - button "Request Demo" [ref=e32]:
+        - generic [ref=e33]: Request Demo
+  - main [ref=e34]:
+    - generic [ref=e36]:
+      - generic [ref=e37]: Cognitive Mapping™ · Proprietary Technology
+      - paragraph [ref=e38]: Map the workflow. Encode the expertise. Deploy the brain.
+      - heading "We Don't Install AI. We Clone Expertise." [level=1] [ref=e39]:
+        - text: We Don't Install AI.
+        - text: We Clone Expertise.
+      - paragraph [ref=e40]:
+        - text: QuantorX Cognitive Mapping™ is the science of walking into your business, learning every workflow end-to-end — the rules, the exceptions, the "what could go wrong" — and wiring that intelligence into a
+        - strong [ref=e41]: Digital Expert
+        - text: that doesn't just answer questions. It does the job. With clear success criteria. With clear failure criteria. Not a chatbot.
+        - strong [ref=e42]: A brain built to perform.
+      - paragraph [ref=e43]: Like mapping the nodes of a mind — every decision path, every dependency, every edge case — connected into one live, evolving intelligence model that is purpose-built for your industry and your way of doing things.
+      - generic [ref=e44]:
+        - generic [ref=e45]: ISO 27001
+        - generic [ref=e46]: ·
+        - generic [ref=e47]: SOC 2 Type II
+        - generic [ref=e48]: ·
+        - generic [ref=e49]: UAE PDPL
+        - generic [ref=e50]: ·
+        - generic [ref=e51]: KSA PDPL
+        - generic [ref=e52]: ·
+        - generic [ref=e53]: Air-Gapped Ready
+      - generic [ref=e54]:
+        - link "Build Your Digital Expert" [ref=e55] [cursor=pointer]:
+          - /url: /demo
+        - link "See How It Works" [ref=e56] [cursor=pointer]:
+          - /url: "#how-it-works"
+      - paragraph [ref=e57]: A leading GCC bank cloned its chief compliance officer in 3 weeks. Zero data left the building.
+    - generic [ref=e59]:
+      - generic [ref=e60]:
+        - paragraph [ref=e61]: The $64 Billion Problem
+        - heading "Your Organisation's Biggest Risk Isn't Cyber Threats. It's Knowledge Walking Out the Door." [level=2] [ref=e62]:
+          - text: Your Organisation's Biggest Risk Isn't Cyber Threats.
+          - text: It's Knowledge Walking Out the Door.
+        - paragraph [ref=e63]:
+          - text: Every enterprise runs on institutional knowledge — the tribal rules, expert judgements, and context your people carry in their heads. When they retire, resign, or leave, it disappears. Generic AI cannot replace it. Only
+          - strong [ref=e64]: Cognitive Mapping™
+          - text: can.
+      - generic [ref=e65]:
+        - generic [ref=e66]:
+          - heading "Expert Retirement & Knowledge Loss" [level=4] [ref=e67]
+          - paragraph [ref=e68]: A senior engineer retires after 25 years. His decisions, shortcuts, and judgement calls — gone overnight. Onboarding a replacement takes 2–3 years. With Cognitive Mapping™, it takes weeks.
+        - generic [ref=e69]:
+          - heading "Inconsistent Processes Across Teams" [level=4] [ref=e70]
+          - paragraph [ref=e71]: Every organisation has a 'right way' and everyone has their own interpretation of it. Cognitive Mapping™ captures the authoritative version — from the people who define it — and makes it consistent at scale.
+        - generic [ref=e72]:
+          - heading "AI That Doesn't Know Your Business" [level=4] [ref=e73]
+          - paragraph [ref=e74]: Generic LLMs are trained on the internet, not on your policies, your standards, or your industry context. A Digital Expert built on Cognitive Mapping™ knows your business — not the world's.
+    - generic [ref=e76]:
+      - generic [ref=e77]:
+        - generic [ref=e78]: Cognitive Mapping™
+        - heading "Requirement Gathering Is Dead. We Build Brains." [level=2] [ref=e79]:
+          - text: Requirement Gathering Is Dead.
+          - text: We Build Brains.
+        - paragraph [ref=e80]: Traditional AI projects start with a requirements document. QuantorX starts with a conversation. We sit with your experts, follow how they think, and encode that intelligence into an AI model that works exactly the way they do — preserving your institutional DNA at every step.
+      - generic [ref=e81]:
+        - generic [ref=e82]:
+          - generic [ref=e83]: "01"
+          - generic [ref=e84]: Walk In
+          - heading "We Embed With Your Experts" [level=4] [ref=e85]
+          - paragraph [ref=e86]: Our cognitive engineers spend focused time with your subject matter experts — compliance officers, senior engineers, top analysts, and decision-makers. We don't hand them a form. We observe, ask, and map how they actually think and work.
+        - generic [ref=e87]:
+          - generic [ref=e88]: "02"
+          - generic [ref=e89]: Build the Brain
+          - heading "We Map the Intelligence" [level=4] [ref=e90]
+          - paragraph [ref=e91]: Using our proprietary Cognitive Mapping™ framework, we translate human expertise into a structured intelligence model — capturing reasoning patterns, decision trees, institutional rules, exceptions, and your company's unique standards. This is the Brain.
+        - generic [ref=e92]:
+          - generic [ref=e93]: "03"
+          - generic [ref=e94]: Deploy the Expert
+          - heading "You Get Your Digital Expert" [level=4] [ref=e95]
+          - paragraph [ref=e96]: The Digital Expert is deployed inside your infrastructure — on-premise, sovereign, and air-gapped. It answers in Arabic and English. It never forgets, never resigns, and never shares your knowledge outside your walls. You walk away with a Brain. Not a chatbot.
+    - generic [ref=e99]:
+      - paragraph [ref=e100]: The Outcome
+      - heading "Meet Your Digital Expert." [level=2] [ref=e101]
+      - paragraph [ref=e102]: A Digital Expert is not a chatbot. It is not a search engine. It is an AI model built from the ground up to mirror how your best people work — encoded with their knowledge, aligned to your standards, and sovereign within your organisation.
+      - generic [ref=e103]:
+        - generic [ref=e104]:
+          - heading "It Never Forgets. Not Once." [level=5] [ref=e105]
+          - paragraph [ref=e106]: Your Digital Expert holds every policy, every procedure, every exception — exactly as your best people defined them. It does not misquote. It does not guess. It does not approximate.
+        - generic [ref=e107]:
+          - heading "It Enforces Your Rules. Not Someone Else's." [level=5] [ref=e108]
+          - paragraph [ref=e109]: Your Digital Expert knows your security posture, your approval thresholds, your escalation triggers. It doesn't follow generic best practices — it follows your standards, every single time, with zero deviation.
+        - generic [ref=e110]:
+          - heading "What Happens Here, Stays Here." [level=5] [ref=e111]
+          - paragraph [ref=e112]: Your Digital Expert lives inside your walls — on your servers, under your jurisdiction. It makes no external API calls. It phones no one. Your data obeys your law, because it never leaves it.
+        - generic [ref=e113]:
+          - heading "It Verifies Before It Speaks." [level=5] [ref=e114]
+          - paragraph [ref=e115]: Your Digital Expert consults the source, cross-checks the data, and cites its reasoning before giving a single insight. It doesn't wing it. It doesn't hallucinate. It is constitutionally allergic to being wrong.
+        - generic [ref=e116]:
+          - heading "It Thinks the Way Your Region Does." [level=5] [ref=e117]
+          - paragraph [ref=e118]: Your Digital Expert works natively in Arabic and English — not translated, not approximated. It understands Islamic finance, GCC regulatory language, and local industry context without needing to be told what country it's in.
+        - generic [ref=e119]:
+          - heading "When Your Business Changes, It Keeps Up." [level=5] [ref=e120]
+          - paragraph [ref=e121]: New regulation issued? Policy updated? Senior expert added? Your Digital Expert absorbs the change and carries it forward — your institutional knowledge evolves without being rebuilt from scratch.
+        - generic [ref=e122]:
+          - heading "It Never Resigns. Never Leaves. Never Says \"Let Me Get Back to You.\"" [level=5] [ref=e123]
+          - paragraph [ref=e124]:
+            - text: No notice periods. No succession planning. No institutional knowledge walking out the door. Your Digital Expert is available to every team member — at 2am on a Friday, on day one of Eid, the moment your most senior person retires.
+            - strong [ref=e125]: Your expertise becomes infrastructure.
+    - generic [ref=e127]:
+      - generic [ref=e128]:
+        - paragraph [ref=e129]: Why We Are Different
+        - heading "Generic AI Knows the World. Digital Experts Know Your World." [level=2] [ref=e130]:
+          - text: Generic AI Knows the World.
+          - text: Digital Experts Know
+          - emphasis [ref=e131]: Your
+          - text: World.
+      - generic [ref=e132]:
+        - generic [ref=e133]:
+          - heading "Generic AI & Other LLMs" [level=4] [ref=e134]
+          - generic [ref=e135]:
+            - generic [ref=e136]: ✗
+            - generic [ref=e137]: Trained on public internet data — not your policies
+          - generic [ref=e138]:
+            - generic [ref=e139]: ✗
+            - generic [ref=e140]: Requires endless prompt engineering to get useful output
+          - generic [ref=e141]:
+            - generic [ref=e142]: ✗
+            - generic [ref=e143]: Sends your data to third-party cloud servers
+          - generic [ref=e144]:
+            - generic [ref=e145]: ✗
+            - generic [ref=e146]: Needs constant supervision — hallucinates on niche topics
+          - generic [ref=e147]:
+            - generic [ref=e148]: ✗
+            - generic [ref=e149]: Knows nothing about your company's way of doing things
+          - generic [ref=e150]:
+            - generic [ref=e151]: ✗
+            - generic [ref=e152]: Disconnected from your experts' actual reasoning
+          - generic [ref=e153]:
+            - generic [ref=e154]: ✗
+            - generic [ref=e155]: Arabic support is an afterthought
+        - generic [ref=e156]:
+          - heading "QuantorX Cognitive Mapping™" [level=4] [ref=e157]
+          - generic [ref=e158]:
+            - generic [ref=e159]: ✓
+            - generic [ref=e160]: Built from your experts' knowledge — not the internet
+          - generic [ref=e161]:
+            - generic [ref=e162]: ✓
+            - generic [ref=e163]: Purpose-trained — works out of the box for your use cases
+          - generic [ref=e164]:
+            - generic [ref=e165]: ✓
+            - generic [ref=e166]: Fully on-premise, air-gapped, sovereign — data never leaves
+          - generic [ref=e167]:
+            - generic [ref=e168]: ✓
+            - generic [ref=e169]: Confidence-grounded with citation RAG — shows its work
+          - generic [ref=e170]:
+            - generic [ref=e171]: ✓
+            - generic [ref=e172]: Encodes your company's DNA — standards, exceptions, culture
+          - generic [ref=e173]:
+            - generic [ref=e174]: ✓
+            - generic [ref=e175]: Mirrors expert reasoning — not general patterns
+          - generic [ref=e176]:
+            - generic [ref=e177]: ✓
+            - generic [ref=e178]: Built first for Arabic. English is equally native.
+    - generic [ref=e181]:
+      - generic [ref=e182]:
+        - generic [ref=e183]: Intelligence Footprint
+        - heading "We Capture Everything Your Expert Knows." [level=2] [ref=e184]
+        - paragraph [ref=e185]: Every organisation has an intelligence footprint — the accumulated knowledge, judgement, and experience of its people. Most of it is invisible, undocumented, and at risk. Cognitive Mapping™ makes it visible, structured, and permanent.
+        - list [ref=e186]:
+          - listitem [ref=e187]:
+            - generic [ref=e188]: →
+            - generic [ref=e189]: Work processes — how tasks are actually done, not how the manual says
+          - listitem [ref=e190]:
+            - generic [ref=e191]: →
+            - generic [ref=e192]: Decision frameworks — the rules your experts follow under pressure
+          - listitem [ref=e193]:
+            - generic [ref=e194]: →
+            - generic [ref=e195]: Exception handling — what to do when the standard doesn't apply
+          - listitem [ref=e196]:
+            - generic [ref=e197]: →
+            - generic [ref=e198]: Regulatory intelligence — how compliance roles are interpreted locally
+          - listitem [ref=e199]:
+            - generic [ref=e200]: →
+            - generic [ref=e201]: Institutional memory — why certain things are done a certain way
+          - listitem [ref=e202]:
+            - generic [ref=e203]: →
+            - generic [ref=e204]: Domain language — the specific terminology your industry and company use
+      - generic [ref=e205]:
+        - heading "\"We walk in, build your Cognitive Map, and you walk away with your Digital Expert.\"" [level=3] [ref=e206]
+        - paragraph [ref=e207]: No requirements document. No 12-month implementation. No generic AI that needs babysitting. Just your knowledge — structured, preserved, and available to your entire organisation instantly.
+        - generic [ref=e208]:
+          - generic [ref=e209]:
+            - generic [ref=e210]: Weeks
+            - paragraph [ref=e211]: Not years to deploy
+          - generic [ref=e212]:
+            - generic [ref=e213]: 100%
+            - paragraph [ref=e214]: On-premise sovereign
+          - generic [ref=e215]:
+            - generic [ref=e216]: 24/7
+            - paragraph [ref=e217]: Always available
+    - generic [ref=e219]:
+      - generic [ref=e220]:
+        - paragraph [ref=e221]: Where It Works
+        - heading "Digital Experts Across Every Department" [level=2] [ref=e222]
+        - paragraph [ref=e223]: One Cognitive Mapping™ engagement can produce multiple Digital Experts — one per role, department, or process.
+      - generic [ref=e224]:
+        - generic [ref=e225]:
+          - heading "Compliance Expert" [level=4] [ref=e226]
+          - paragraph [ref=e227]: Maps your compliance officer's interpretation of SAMA, CBUAE, and internal policy. Answers regulatory questions instantly with citation-backed precision.
+        - generic [ref=e228]:
+          - heading "Contract & Legal Expert" [level=4] [ref=e229]
+          - paragraph [ref=e230]: Encodes how your legal team reviews contracts — flagging risk clauses, standard deviations, and approval requirements — in Arabic and English.
+        - generic [ref=e231]:
+          - heading "Engineering SOP Expert" [level=4] [ref=e232]
+          - paragraph [ref=e233]: Preserves the expertise of your senior engineers — troubleshooting logic, maintenance standards, and exception procedures — accessible to everyone on shift.
+        - generic [ref=e234]:
+          - heading "Financial Analyst Expert" [level=4] [ref=e235]
+          - paragraph [ref=e236]: Captures your analyst's modelling methodology, data interpretation, and reporting standards. Produces consistent, audit-ready output at scale.
+        - generic [ref=e237]:
+          - heading "Sales & Onboarding Expert" [level=4] [ref=e238]
+          - paragraph [ref=e239]: Encodes your best salesperson's product knowledge and objection handling. Every new hire gets access to your top performer's playbook from Day 1.
+        - generic [ref=e240]:
+          - heading "Clinical & Policy Expert" [level=4] [ref=e241]
+          - paragraph [ref=e242]: For hospitals and government agencies — maps clinical workflows, protocol adherence, and resource allocation reasoning from your senior practitioners.
+      - generic [ref=e243]:
+        - generic [ref=e244]: Banking & Finance
+        - generic [ref=e245]: Government & Public Sector
+        - generic [ref=e246]: Telecom Operations
+        - generic [ref=e247]: Healthcare Providers
+        - generic [ref=e248]: Insurance
+        - generic [ref=e249]: Oil & Gas
+        - generic [ref=e250]: Legal Services
+        - generic [ref=e251]: Manufacturing
+        - generic [ref=e252]: Retail & FMCG
+        - generic [ref=e253]: Education
+    - generic [ref=e255]:
+      - generic [ref=e256]:
+        - paragraph [ref=e257]: The Platform Behind the Brain
+        - heading "Enterprise-Grade AI Infrastructure for Every Digital Expert" [level=2] [ref=e258]:
+          - text: Enterprise-Grade AI Infrastructure
+          - text: for Every Digital Expert
+      - generic [ref=e259]:
+        - button "Document AI" [ref=e260] [cursor=pointer]
+        - button "Multimodal" [ref=e261] [cursor=pointer]
+        - button "Code Assistant" [ref=e262] [cursor=pointer]
+        - button "Agentic AI" [ref=e263] [cursor=pointer]
+        - button "Citation RAG" [ref=e264] [cursor=pointer]
+        - button "Guardrails" [ref=e265] [cursor=pointer]
+        - button "Model Routing" [ref=e266] [cursor=pointer]
+        - button "MRM" [ref=e267] [cursor=pointer]
+      - generic [ref=e268]:
+        - heading "Document AI with Multimodal Guided JSON Generation" [level=3] [ref=e269]
+        - paragraph [ref=e270]: Grounded query responses from private data sources — document repositories, knowledge bases, and databases — using advanced vector embeddings. Built-in Document AI supports schema-driven JSON generation ideal for contract summarisation, compliance extraction, and audit-ready data structuring. Fully supports Arabic and English documents.
+    - generic [ref=e272]:
+      - generic [ref=e273]:
+        - paragraph [ref=e274]: Proven Results
+        - heading "Measurable Impact Across MENA Enterprises" [level=2] [ref=e275]
+      - generic [ref=e276]:
+        - generic [ref=e277]:
+          - generic [ref=e278]: 65%
+          - paragraph [ref=e279]: Reduction in Fraud False Positives — Leading MENA Bank
+        - generic [ref=e280]:
+          - generic [ref=e281]: 3X
+          - paragraph [ref=e282]: Faster Expert Query Resolution for GCC Enterprises
+        - generic [ref=e283]:
+          - generic [ref=e284]: 40%
+          - paragraph [ref=e285]: Cost Saving on Document & Knowledge Processing
+        - generic [ref=e286]:
+          - generic [ref=e287]: Weeks
+          - paragraph [ref=e288]: From Cognitive Map to Live Digital Expert
+    - generic [ref=e290]:
+      - generic [ref=e291]:
+        - paragraph [ref=e292]: Why QuantorX
+        - heading "Three Things No One Else Does." [level=2] [ref=e293]
+      - generic [ref=e294]:
+        - generic [ref=e295]:
+          - heading "Cognitive Mapping™" [level=4] [ref=e296]
+          - paragraph [ref=e297]: A proprietary methodology — not a product feature. We build the brain from your people, your processes, and your institutional knowledge. This cannot be replicated with a prompt.
+        - generic [ref=e298]:
+          - heading "Absolute Sovereignty" [level=4] [ref=e299]
+          - paragraph [ref=e300]: On-premise, air-gapped, and fully owned by you. No API calls to external clouds. No exposure risk. Your data obeys your country's laws — full stop.
+        - generic [ref=e301]:
+          - heading "Built for MENA First" [level=4] [ref=e302]
+          - paragraph [ref=e303]: Arabic language is native, not translated. Compliance is built for MENA regulators, not retrofitted. Our team is on the ground, in your time zone, understanding your market.
+    - generic [ref=e305]:
+      - generic [ref=e306]:
+        - paragraph [ref=e307]: The Team
+        - heading "The Cognitive Engineers Behind the Brain" [level=2] [ref=e308]
+        - paragraph [ref=e309]: Our Cognitive Mapping™ engagements are led by domain experts and ML engineers with deep experience in MENA industries — not generic AI consultants.
+      - generic [ref=e310]:
+        - generic [ref=e311]:
+          - generic [ref=e312]: 50+
+          - heading "AI & Cognitive Engineers" [level=4] [ref=e313]
+          - paragraph [ref=e314]: Dubai · Riyadh · Cairo · Amman
+        - generic [ref=e315]:
+          - generic [ref=e316]: "12"
+          - heading "MENA Markets" [level=4] [ref=e317]
+          - paragraph [ref=e318]: Active enterprise deployments
+        - generic [ref=e319]:
+          - generic [ref=e320]: 200+
+          - heading "Certifications" [level=4] [ref=e321]
+          - paragraph [ref=e322]: AWS, Azure, GCP, NVIDIA & more
+    - generic [ref=e324]:
+      - generic [ref=e325]:
+        - paragraph [ref=e326]: Trust & Compliance
+        - heading "Recognised Standards. Regional Compliance." [level=2] [ref=e327]
+      - generic [ref=e328]:
+        - generic [ref=e329]:
+          - heading "ISO 27001 & SOC 2 Type II" [level=4] [ref=e330]
+          - paragraph [ref=e331]: Independently audited. Enterprise-grade information security management — verified annually.
+          - link "View Certifications" [ref=e332] [cursor=pointer]:
+            - /url: /technology/certifications
+        - generic [ref=e333]:
+          - heading "UAE PDPL & KSA PDPL" [level=4] [ref=e334]
+          - paragraph [ref=e335]: Full compliance with GCC data protection laws and data residency requirements — built-in, not added on.
+          - link "View Certifications" [ref=e336] [cursor=pointer]:
+            - /url: /technology/certifications
+    - generic [ref=e338]:
+      - generic [ref=e339]: Cognitive Mapping™ · Start Today
+      - heading "Your Best People Shouldn't Be Irreplaceable." [level=2] [ref=e340]
+      - paragraph [ref=e341]: Walk us through your most critical knowledge gap. We'll walk out with a plan to clone it. No commitment required.
+      - generic [ref=e342]:
+        - link "Build My Digital Expert" [ref=e343] [cursor=pointer]:
+          - /url: /demo
+        - link "Talk to Us First" [ref=e344] [cursor=pointer]:
+          - /url: /contact
+  - contentinfo [ref=e345]:
+    - generic [ref=e346]:
+      - generic [ref=e347]:
+        - link "QuantorX" [ref=e348] [cursor=pointer]:
+          - /url: /
+          - img "QuantorX" [ref=e349]
+        - paragraph [ref=e350]: No fluff. No cookie-cutter solutions. We design, build, and execute end-to-end AI, machine learning, and quantitative solutions — taking full ownership from problem definition to production.
+        - generic [ref=e351]:
+          - generic [ref=e352]:
+            - img [ref=e353]
+            - generic [ref=e356]: 511 W Cleveland St, STE 414, Tampa, FL 33606
+          - generic [ref=e357]:
+            - img [ref=e358]
+            - link "innovation@quantorx.com" [ref=e361] [cursor=pointer]:
+              - /url: mailto:innovation@quantorx.com
+          - generic [ref=e362]:
+            - img [ref=e363]
+            - generic [ref=e365]:
+              - link "+18134471388" [ref=e366] [cursor=pointer]:
+                - /url: tel:+18134471388
+              - link "+966537507578" [ref=e367] [cursor=pointer]:
+                - /url: tel:+966537507578
+              - link "+201119974983" [ref=e368] [cursor=pointer]:
+                - /url: tel:+201119974983
+        - link "LinkedIn" [ref=e369] [cursor=pointer]:
+          - /url: https://www.linkedin.com/company/quantorx/
+          - img "LinkedIn" [ref=e370]
+      - generic [ref=e371]:
+        - generic [ref=e372]: Solutions
+        - generic [ref=e373]:
+          - link "Enterprise AI" [ref=e374] [cursor=pointer]:
+            - /url: /solutions/enterprise-ai
+          - link "Enterprise Software" [ref=e375] [cursor=pointer]:
+            - /url: /solutions/enterprise-software
+          - link "Quantitative Engines" [ref=e376] [cursor=pointer]:
+            - /url: /solutions/quantitative-engines
+          - link "Use Cases" [ref=e377] [cursor=pointer]:
+            - /url: /solutions/use-case
+          - link "Case Studies" [ref=e378] [cursor=pointer]:
+            - /url: /case-studies
+      - generic [ref=e379]:
+        - generic [ref=e380]: Platform
+        - generic [ref=e381]:
+          - link "Why QuantorX" [ref=e382] [cursor=pointer]:
+            - /url: /technology/why-quantorx
+          - link "AI Platform" [ref=e383] [cursor=pointer]:
+            - /url: /technology/ai-platform
+          - link "LLM Studio" [ref=e384] [cursor=pointer]:
+            - /url: /technology/llm-studio
+          - link "AI Cloud" [ref=e385] [cursor=pointer]:
+            - /url: /technology/ai-cloud
+          - link "Certifications" [ref=e386] [cursor=pointer]:
+            - /url: /technology/certifications
+      - generic [ref=e387]:
+        - generic [ref=e388]: Company
+        - generic [ref=e389]:
+          - link "About Us" [ref=e390] [cursor=pointer]:
+            - /url: /about
+          - link "Team" [ref=e391] [cursor=pointer]:
+            - /url: /about/team
+          - link "Careers" [ref=e392] [cursor=pointer]:
+            - /url: /about/careers
+          - link "Press & Media" [ref=e393] [cursor=pointer]:
+            - /url: /about/press-media
+          - link "Social Impact" [ref=e394] [cursor=pointer]:
+            - /url: /about/social-impact
+          - link "AI for MENA" [ref=e395] [cursor=pointer]:
+            - /url: /about/ai-for-mena
+      - generic [ref=e396]:
+        - generic [ref=e397]: Resources
+        - generic [ref=e398]:
+          - link "Insights" [ref=e399] [cursor=pointer]:
+            - /url: /insights
+          - link "Academy" [ref=e400] [cursor=pointer]:
+            - /url: /university
+          - link "Documentation" [ref=e401] [cursor=pointer]:
+            - /url: /docs
+          - link "Events" [ref=e402] [cursor=pointer]:
+            - /url: /events
+          - link "Wiki" [ref=e403] [cursor=pointer]:
+            - /url: /wiki
+          - link "Partner Network" [ref=e404] [cursor=pointer]:
+            - /url: /partner-network
+    - generic [ref=e405]:
+      - generic [ref=e406]: © 2026 QuantorX. All rights reserved.
+      - generic [ref=e407]:
+        - link "Terms" [ref=e408] [cursor=pointer]:
+          - /url: /legal
+        - link "Privacy" [ref=e409] [cursor=pointer]:
+          - /url: /legal
+        - link "Security" [ref=e410] [cursor=pointer]:
+          - /url: /security/bulletins

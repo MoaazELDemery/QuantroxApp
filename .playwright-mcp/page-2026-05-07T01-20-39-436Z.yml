@@ -1,0 +1,210 @@
+- generic [ref=e3]:
+  - generic [ref=e8]:
+    - generic [ref=e10]:
+      - link "QuantorX" [ref=e12] [cursor=pointer]:
+        - /url: /
+        - img "QuantorX" [ref=e13]
+      - navigation [ref=e14]:
+        - generic [ref=e15]:
+          - link "Home" [ref=e16] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e17]: Home
+          - button "Solutions" [ref=e19] [cursor=pointer]:
+            - generic [ref=e20]: Solutions
+            - img [ref=e21]
+          - button "Platform" [ref=e24] [cursor=pointer]:
+            - generic [ref=e25]: Platform
+            - img [ref=e26]
+          - link "Insights" [ref=e28] [cursor=pointer]:
+            - /url: /insights
+            - generic [ref=e29]: Insights
+          - button "About" [ref=e31] [cursor=pointer]:
+            - generic [ref=e32]: About
+            - img [ref=e33]
+      - link "Request Demo" [ref=e35] [cursor=pointer]:
+        - /url: /demo
+        - button "Request Demo" [ref=e36]:
+          - generic [ref=e37]: Request Demo
+    - main [ref=e38]:
+      - generic [ref=e39]:
+        - generic [ref=e42]: QuantorX Insights
+        - generic [ref=e43]:
+          - heading "INTELLIGENCE, DECODED" [level=1] [ref=e44]
+          - paragraph [ref=e45]: Practical insights on Banking AI, credit decisioning, treasury/FX risk, and spatial intelligence-written for leaders who ship.
+        - generic [ref=e46]:
+          - textbox "Your email" [ref=e48]
+          - button "Subscribe" [ref=e49] [cursor=pointer]:
+            - generic [ref=e50]: Subscribe
+  - generic [ref=e53]:
+    - generic [ref=e56]:
+      - paragraph [ref=e57]: Featured Article
+      - paragraph [ref=e58]:
+        - text: The End
+        - text: of "Chat"
+    - generic [ref=e59]:
+      - generic [ref=e60]:
+        - generic [ref=e61]: AI Architecture
+        - generic [ref=e62]: 8 min read
+      - heading "The End of \"Chat\"" [level=2] [ref=e63]
+      - paragraph [ref=e64]: Why chat-only tools fail in regulated operations, and what real workflow automation looks like in banking and enterprise teams.
+      - link "Read article →" [ref=e65] [cursor=pointer]:
+        - /url: /insights/the-end-of-chat
+        - text: Read article
+        - generic [ref=e66]: →
+  - generic [ref=e69]:
+    - generic [ref=e70]:
+      - heading "Latest from QuantorX" [level=2] [ref=e71]
+      - navigation [ref=e72]:
+        - button "All" [ref=e73] [cursor=pointer]
+        - button "AI Architecture" [ref=e74] [cursor=pointer]
+        - button "Credit & Risk" [ref=e75] [cursor=pointer]
+        - button "Spatial" [ref=e76] [cursor=pointer]
+        - button "Deployment" [ref=e77] [cursor=pointer]
+    - generic [ref=e78]:
+      - link "QuantorX AI Architecture The End of 'Chat' Why chat-only tools fail in regulated operations, and what real workflow automation looks like in banking and enterprise teams. 8 min read →" [ref=e79] [cursor=pointer]:
+        - /url: /insights/the-end-of-chat
+        - generic [ref=e80]:
+          - generic [ref=e84]: QuantorX
+          - generic [ref=e85]: AI Architecture
+        - generic [ref=e86]:
+          - heading "The End of 'Chat'" [level=3] [ref=e87]
+          - paragraph [ref=e88]: Why chat-only tools fail in regulated operations, and what real workflow automation looks like in banking and enterprise teams.
+          - generic [ref=e89]:
+            - generic [ref=e90]: 8 min read
+            - generic [ref=e91]: →
+      - 'link "QuantorX Spatial The Spatial Compute Revolution Moving beyond static maps: how spatial intelligence supports logistics planning, network optimization, and risk visibility. 7 min read →" [ref=e92] [cursor=pointer]':
+        - /url: /insights/spatial-compute-revolution
+        - generic [ref=e93]:
+          - generic [ref=e97]: QuantorX
+          - generic [ref=e98]: Spatial
+        - generic [ref=e99]:
+          - heading "The Spatial Compute Revolution" [level=3] [ref=e100]
+          - paragraph [ref=e101]: "Moving beyond static maps: how spatial intelligence supports logistics planning, network optimization, and risk visibility."
+          - generic [ref=e102]:
+            - generic [ref=e103]: 7 min read
+            - generic [ref=e104]: →
+      - link "QuantorX Credit & Risk Alternative Credit Scoring How banks can extend credit to thin-file SMEs using explainable signals and policy-driven decisioning. 7 min read →" [ref=e105] [cursor=pointer]:
+        - /url: /insights/alternative-credit-scoring
+        - generic [ref=e106]:
+          - generic [ref=e110]: QuantorX
+          - generic [ref=e111]: Credit & Risk
+        - generic [ref=e112]:
+          - heading "Alternative Credit Scoring" [level=3] [ref=e113]
+          - paragraph [ref=e114]: How banks can extend credit to thin-file SMEs using explainable signals and policy-driven decisioning.
+          - generic [ref=e115]:
+            - generic [ref=e116]: 7 min read
+            - generic [ref=e117]: →
+      - link "QuantorX Deployment Validating in Synthetic Reality How to safely prove decision workflows before production data and regulations slow you down. 6 min read →" [ref=e118] [cursor=pointer]:
+        - /url: /insights/validating-synthetic-reality
+        - generic [ref=e119]:
+          - generic [ref=e123]: QuantorX
+          - generic [ref=e124]: Deployment
+        - generic [ref=e125]:
+          - heading "Validating in Synthetic Reality" [level=3] [ref=e126]
+          - paragraph [ref=e127]: How to safely prove decision workflows before production data and regulations slow you down.
+          - generic [ref=e128]:
+            - generic [ref=e129]: 6 min read
+            - generic [ref=e130]: →
+  - generic [ref=e133]:
+    - heading "Whitepapers & Deep Dives" [level=2] [ref=e135]
+    - generic [ref=e136]:
+      - generic [ref=e139]:
+        - heading "Stochastic Processes in Quantitative Finance" [level=3] [ref=e140]
+        - paragraph [ref=e141]: How low-latency order routing and market-impact modeling tighten slippage for institutional flow.
+      - generic [ref=e144]:
+        - 'heading "Transaction Cost Analysis: A Practical Guide" [level=3] [ref=e145]'
+        - paragraph [ref=e146]: Measuring market impact, venue quality, and adverse selection in emerging markets.
+      - generic [ref=e149]:
+        - heading "Backtesting Pitfalls & Live Decay" [level=3] [ref=e150]
+        - paragraph [ref=e151]: From data leakage to regime shifts—guardrails for robust research.
+  - generic [ref=e154]:
+    - generic [ref=e155]:
+      - heading "RECEIVE THE QUARTERLY ENGINEERING REPORT." [level=2] [ref=e156]
+      - paragraph [ref=e157]: No marketing spam. Just clear, useful breakdowns on banking decision workflows, risk, and delivery.
+    - generic [ref=e158]:
+      - textbox "Your email" [ref=e159]
+      - button "SUBSCRIBE TO INTEGRITY" [ref=e160] [cursor=pointer]
+  - contentinfo [ref=e161]:
+    - generic [ref=e162]:
+      - generic [ref=e163]:
+        - link "QuantorX" [ref=e164] [cursor=pointer]:
+          - /url: /
+          - img "QuantorX" [ref=e165]
+        - paragraph [ref=e166]: No fluff. No cookie-cutter solutions. We design, build, and execute end-to-end AI, machine learning, and quantitative solutions — taking full ownership from problem definition to production.
+        - generic [ref=e167]:
+          - generic [ref=e168]:
+            - img [ref=e169]
+            - generic [ref=e172]: 511 W Cleveland St, STE 414, Tampa, FL 33606
+          - generic [ref=e173]:
+            - img [ref=e174]
+            - link "innovation@quantorx.com" [ref=e177] [cursor=pointer]:
+              - /url: mailto:innovation@quantorx.com
+          - generic [ref=e178]:
+            - img [ref=e179]
+            - generic [ref=e181]:
+              - link "+18134471388" [ref=e182] [cursor=pointer]:
+                - /url: tel:+18134471388
+              - link "+966537507578" [ref=e183] [cursor=pointer]:
+                - /url: tel:+966537507578
+              - link "+201119974983" [ref=e184] [cursor=pointer]:
+                - /url: tel:+201119974983
+        - link "LinkedIn" [ref=e185] [cursor=pointer]:
+          - /url: https://www.linkedin.com/company/quantorx/
+          - img "LinkedIn" [ref=e186]
+      - generic [ref=e187]:
+        - generic [ref=e188]: Solutions
+        - generic [ref=e189]:
+          - link "Nexus AI" [ref=e190] [cursor=pointer]:
+            - /url: /solutions/nexus-ai
+          - link "Axon AI" [ref=e191] [cursor=pointer]:
+            - /url: /solutions/axon-ai
+          - link "PayGate™" [ref=e192] [cursor=pointer]:
+            - /url: /solutions/paygate
+          - link "Geek™" [ref=e193] [cursor=pointer]:
+            - /url: /solutions/geek
+          - link "Enterprise Solutions" [ref=e194] [cursor=pointer]:
+            - /url: /solutions/enterprise-solutions
+          - link "Case Studies" [ref=e195] [cursor=pointer]:
+            - /url: /case-studies
+      - generic [ref=e196]:
+        - generic [ref=e197]: Platform
+        - generic [ref=e198]:
+          - link "CORTEX™" [ref=e199] [cursor=pointer]:
+            - /url: /technology/ai-platform
+          - link "LLM Masonry™" [ref=e200] [cursor=pointer]:
+            - /url: /technology/llm-studio
+          - link "AI Cloud" [ref=e201] [cursor=pointer]:
+            - /url: /technology/ai-cloud
+          - link "Certifications" [ref=e202] [cursor=pointer]:
+            - /url: /technology/certifications
+      - generic [ref=e203]:
+        - generic [ref=e204]: Company
+        - generic [ref=e205]:
+          - link "About Us" [ref=e206] [cursor=pointer]:
+            - /url: /about
+          - link "Why Us" [ref=e207] [cursor=pointer]:
+            - /url: /technology/why-quantorx
+          - link "Team" [ref=e208] [cursor=pointer]:
+            - /url: /about/team
+      - generic [ref=e209]:
+        - generic [ref=e210]: Resources
+        - generic [ref=e211]:
+          - link "Insights" [ref=e212] [cursor=pointer]:
+            - /url: /insights
+          - link "Academy" [ref=e213] [cursor=pointer]:
+            - /url: /university
+          - link "Documentation" [ref=e214] [cursor=pointer]:
+            - /url: /docs
+          - link "Events" [ref=e215] [cursor=pointer]:
+            - /url: /events
+          - link "Partner Network" [ref=e216] [cursor=pointer]:
+            - /url: /partner-network
+    - generic [ref=e217]:
+      - generic [ref=e218]: © 2026 QuantorX. All rights reserved.
+      - generic [ref=e219]:
+        - link "Terms" [ref=e220] [cursor=pointer]:
+          - /url: /legal
+        - link "Privacy" [ref=e221] [cursor=pointer]:
+          - /url: /legal
+        - link "Security" [ref=e222] [cursor=pointer]:
+          - /url: /security/bulletins
