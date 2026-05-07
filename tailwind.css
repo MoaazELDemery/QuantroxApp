@@ -120,35 +120,62 @@
   }
 }
 
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-24px); }
+}
+
+@keyframes slowRotateY {
+  0% { transform: perspective(800px) rotateY(0deg); }
+  100% { transform: perspective(800px) rotateY(360deg); }
+}
+
+@keyframes slideInUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-slow-rotate-y {
+  animation: slowRotateY 20s linear infinite;
+}
+
+.animate-slide-in-up {
+  animation: slideInUp 0.6s ease-out forwards;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 47.4% 11.2%;
+    --background: 240 33% 5%;
+    --foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 223 47% 11%;
+    --muted-foreground: 0 0% 75%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 47.4% 11.2%;
+    --popover: 240 33% 5%;
+    --popover-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
+    --border: 0 0% 100% / 0.1;
+    --input: 0 0% 100% / 0.1;
 
     --card: transparent;
-    --card-foreground: 222.2 47.4% 11.2%;
+    --card-foreground: 0 0% 100%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 271 76% 25%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 0 0% 100% / 0.05;
+    --secondary-foreground: 0 0% 100%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 0 0% 100% / 0.05;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 100% 50%;
     --destructive-foreground: 210 40% 98%;
@@ -202,5 +229,222 @@
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
     overscroll-behavior: none;
+  }
+}
+
+/* ── 2026 Aesthetic Utilities ─────────────────────────────────────────── */
+
+@layer components {
+  /* Glassmorphism card — base */
+  .glass {
+    background: linear-gradient(135deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.02) 100%);
+    backdrop-filter: blur(20px) saturate(140%);
+    -webkit-backdrop-filter: blur(20px) saturate(140%);
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow:
+      0 8px 32px -8px rgba(0,0,0,0.4),
+      inset 0 1px 0 0 rgba(255,255,255,0.06);
+    transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease;
+  }
+
+  .glass:hover {
+    background: linear-gradient(135deg, rgba(155,92,246,0.08) 0%, rgba(155,92,246,0.02) 100%);
+    border-color: rgba(155,92,246,0.35);
+    box-shadow:
+      0 0 60px -10px rgba(155,92,246,0.35),
+      0 8px 32px -8px rgba(0,0,0,0.6),
+      inset 0 1px 0 0 rgba(255,255,255,0.1);
+    transform: translateY(-2px);
+  }
+
+  .glass-amber:hover {
+    background: linear-gradient(135deg, rgba(245,158,11,0.08) 0%, rgba(245,158,11,0.02) 100%);
+    border-color: rgba(245,158,11,0.35);
+    box-shadow:
+      0 0 60px -10px rgba(245,158,11,0.3),
+      0 8px 32px -8px rgba(0,0,0,0.6),
+      inset 0 1px 0 0 rgba(255,255,255,0.1);
+  }
+
+  .glass-teal:hover {
+    background: linear-gradient(135deg, rgba(0,201,167,0.08) 0%, rgba(0,201,167,0.02) 100%);
+    border-color: rgba(0,201,167,0.4);
+    box-shadow:
+      0 0 60px -10px rgba(0,201,167,0.35),
+      0 8px 32px -8px rgba(0,0,0,0.6),
+      inset 0 1px 0 0 rgba(255,255,255,0.1);
+  }
+
+  /* Subtle gradient text — light tones only, never goes dark */
+  .text-gradient-shine {
+    background: linear-gradient(180deg, #ffffff 0%, #ffffff 60%, #d4c5f9 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  /* Multi-hue abstract gradient — for hero/feature headings */
+  .text-gradient-aurora {
+    background: linear-gradient(120deg, #ffffff 0%, #e9d5ff 35%, #c4b5fd 60%, #a78bfa 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  /* Brand purple → magenta accent gradient */
+  .text-gradient-brand {
+    background: linear-gradient(120deg, #c4b5fd 0%, #a855f7 50%, #d946ef 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  /* Aurora gradient blob — for ambient bg */
+  .aurora-blob {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    mix-blend-mode: screen;
+    filter: blur(100px);
+    opacity: 0.6;
+  }
+}
+
+/* ── Slow drift animation for aurora ─────────────────────────────────── */
+@keyframes aurora-drift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(40px, -30px) scale(1.1); }
+  66% { transform: translate(-30px, 40px) scale(0.95); }
+}
+.animate-aurora-drift {
+  animation: aurora-drift 20s ease-in-out infinite;
+}
+
+/* ── Conic gradient border sweep (animated) ──────────────────────────── */
+@keyframes border-sweep {
+  to { transform: rotate(1turn); }
+}
+.gradient-border {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: -150%;
+  background: conic-gradient(from 0deg, transparent 0%, transparent 45%, rgba(155,92,246,0.7) 50%, rgba(168,85,247,0.5) 55%, transparent 60%, transparent 100%);
+  animation: border-sweep 6s linear infinite;
+  z-index: -1;
+}
+.gradient-border::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: rgb(15,8,28);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+/* ── Dotted grid pattern utility ──────────────────────────────────────── */
+.dot-grid {
+  background-image: radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-position: 0 0;
+}
+.dot-grid-dense {
+  background-image: radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+/* ── Wireframe grid pattern (perspective lines, like the 3D coil image) ─ */
+.wireframe-grid {
+  background-image:
+    linear-gradient(rgba(155,92,246,0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(155,92,246,0.07) 1px, transparent 1px);
+  background-size: 64px 64px;
+  background-position: -1px -1px;
+}
+.wireframe-grid-fine {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* ── Horizon glow line ────────────────────────────────────────────────── */
+.horizon-glow::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(155,92,246,0.6) 50%, transparent 100%);
+  box-shadow: 0 0 60px 2px rgba(155,92,246,0.4);
+  pointer-events: none;
+}
+
+/* ── Spotlight halo behind hero text ──────────────────────────────────── */
+.text-spotlight {
+  position: relative;
+}
+.text-spotlight::before {
+  content: "";
+  position: absolute;
+  inset: -20% -10%;
+  background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(74,0,130,0.55) 0%, transparent 70%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* ── Subtle pulse for accent dots/icons ───────────────────────────────── */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(155,92,246,0.6), 0 0 16px 0 rgba(155,92,246,0.4); }
+  50% { box-shadow: 0 0 0 6px rgba(155,92,246,0), 0 0 24px 4px rgba(155,92,246,0.3); }
+}
+.animate-pulse-glow {
+  animation: pulse-glow 2.5s ease-in-out infinite;
+}
+
+/* ── Global scroll-driven section fade (modern, browser-native) ──────────
+   Every <section> on the site gently lifts + fades in as it enters the viewport.
+   Uses CSS animation-timeline (Chrome 115+, Edge, Safari TP).
+   Falls back gracefully on Firefox — sections are simply visible. */
+@keyframes section-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@supports (animation-timeline: view()) {
+  main > section,
+  main section.scroll-reveal {
+    animation: section-reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 5% cover 25%;
+  }
+}
+
+/* Per-element finer reveals — opt-in via .reveal class */
+@supports (animation-timeline: view()) {
+  .reveal {
+    animation: section-reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
+  }
+  .reveal-slow {
+    animation: section-reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
   }
 }

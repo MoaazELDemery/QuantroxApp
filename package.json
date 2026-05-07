@@ -5,6 +5,7 @@
   "name": "quantrox-project",
   "description": "Quantrox App",
   "scripts": {
+    "env": "zsh ./scripts/activate-env.sh",
     "dev": "vite",
     "build": "vite build"
   },

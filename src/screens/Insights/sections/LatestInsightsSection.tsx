@@ -1,58 +1,45 @@
-// import { ArrowRightIcon, CalendarIcon, ClockIcon } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const LatestInsightsSection = (): JSX.Element => {
   return (
-    <section className="w-full flex justify-center py-12 px-4">
-      <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-20 
-      max-w-[1175px] w-full">
-        <div className="w-full max-w-[532px] h-[429px] rounded-[44px] bg-gradient-to-br from-[#311c43] 
-        to-[#782bc0] flex-shrink-0" />
+    <section className="w-full flex justify-center py-16 px-4 sm:px-8 lg:px-16 xl:px-24">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-20 max-w-[1175px] w-full">
 
-        <div className="w-full max-w-[563px] flex flex-col items-center lg:items-start gap-[34px] 
-        text-center lg:text-left">
-          <div className="flex flex-col w-full max-w-[491px] items-center lg:items-start gap-5">
-            <div className="gap-2.5 px-4 py-1 rounded-2xl bg-gradient-to-b from-[#4a0082] to-[#4a008280] 
-            text-white text-base font-medium [font-family:'Satoshi-Medium',Helvetica] h-auto">
+        {/* Visual */}
+        <div className="w-full max-w-[532px] h-[360px] rounded-[32px] bg-gradient-to-br from-[#311c43] to-[#782bc0] flex-shrink-0 flex items-center justify-center relative overflow-hidden">
+          <div className="absolute inset-0 [background:radial-gradient(circle_at_30%_30%,rgba(155,92,246,0.4),transparent_60%)]" />
+          <div className="relative text-center p-8">
+            <p className="[font-family:'Satoshi-Medium',Helvetica] text-white/50 text-xs uppercase tracking-widest mb-3">Featured Article</p>
+            <p className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-3xl leading-tight">
+              The End<br />of "Chat"
+            </p>
+          </div>
+        </div>
+
+        {/* Text */}
+        <div className="w-full max-w-[563px] flex flex-col items-start gap-6">
+          <div className="flex items-center gap-2">
+            <span className="bg-[#4a0082]/30 border border-[#9b5cf6]/30 text-[#9b5cf6] text-xs px-3 py-1 rounded-full [font-family:'Satoshi-Medium',Helvetica]">
               AI Architecture
-            </div>
-
-            <h2 className="text-[40px] font-bold text-white [font-family:'Satoshi-Bold',Helvetica] 
-            leading-normal">
-              The End of "Chat"
-            </h2>
-
-            {/* Date and Time - commented out for future use */}
-            {/* <div className="flex items-center gap-[26px]">
-              <div className="flex items-center justify-center gap-2">
-                <ClockIcon className="w-[22px] h-[22px] text-[#a9a9a9]" />
-                <span className="text-base font-medium text-[#a9a9a9] [font-family:'Satoshi-Medium',Helvetica]">
-                  12 min
-                </span>
-              </div>
-
-              <div className="flex items-center justify-center gap-2">
-                <CalendarIcon className="w-[22px] h-[22px] text-[#a9a9a9]" />
-                <span className="text-base font-medium text-[#a9a9a9] [font-family:'Satoshi-Medium',Helvetica]">
-                  May 10, 2025
-                </span>
-              </div>
-            </div> */}
+            </span>
+            <span className="text-white/75 text-xs [font-family:'Satoshi-Regular',Helvetica]">8 min read</span>
           </div>
 
-          <p className="text-2xl font-medium text-[#a9a9a9] [font-family:'Satoshi-Medium',Helvetica] 
-          leading-normal">
-            Why chat-only tools fail in regulated operations, and what real workflow automation looks like in
-            banking and enterprise teams.
+          <h2 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-4xl leading-tight tracking-[-1.80px]">
+            The End of "Chat"
+          </h2>
+
+          <p className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-white/75 text-xl leading-relaxed">
+            Why chat-only tools fail in regulated operations, and what real workflow automation looks like
+            in banking and enterprise teams.
           </p>
 
-          {/* Read Articles Button - commented out for future use */}
-          {/* <button
-            className="flex items-center gap-3 p-0 h-auto text-2xl font-medium text-[#8a2be2] 
-            [font-family:'Satoshi-Medium',Helvetica] hover:bg-transparent"
+          <Link
+            to="/insights/the-end-of-chat"
+            className="inline-flex items-center gap-2 text-[#9b5cf6] [font-family:'Satoshi-Medium',Helvetica] font-medium text-base hover:gap-3 transition-all"
           >
-            Read articles
-            <ArrowRightIcon className="w-[22px] h-[22px]" />
-          </button> */}
+            Read article <span>→</span>
+          </Link>
         </div>
       </div>
     </section>

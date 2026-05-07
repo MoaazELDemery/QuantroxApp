@@ -88,12 +88,12 @@ export const ResearchSection = (): JSX.Element => {
       lg:justify-between gap-8 px-4">
           <div className="flex flex-col max-w-[658px] w-full items-center lg:items-start justify-between 
         gap-6 translate-y-[-1rem] animate-fade-in opacity-0 text-center lg:text-left">
-            <h2 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-[#f2f2f2] text-5xl 
+            <h2 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-5xl 
           tracking-[0] leading-[normal] w-full">
               RECEIVE THE QUARTERLY ENGINEERING REPORT.
             </h2>
 
-            <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-[#d9d9d9] text-2xl 
+            <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/85 text-2xl 
           tracking-[0] leading-[normal] w-full">
               No marketing spam. Just clear, useful breakdowns on banking decision workflows, risk, and delivery.
             </p>
@@ -112,7 +112,7 @@ export const ResearchSection = (): JSX.Element => {
               required
               className="w-[300px] h-12 px-4 py-2 rounded-[32px] border-[0.8px] border-solid 
             border-[#a9a9a9] bg-transparent [font-family:'Satoshi-Regular',Helvetica] font-normal 
-            text-[#a9a9a9] text-base placeholder:text-[#a9a9a9]"
+            text-white/75 text-base placeholder:text-white/75"
             />
 
             <button
@@ -121,7 +121,7 @@ export const ResearchSection = (): JSX.Element => {
               className="px-12 py-3 h-auto bg-[#4a0082] rounded-[32px] hover:bg-[#4a0082]/90 
             transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              <span className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-[#ffffff] 
+              <span className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-white 
             text-sm text-center tracking-[0] leading-6 whitespace-nowrap">
                 {isSubmitting ? "Subscribing..." : submitStatus === "success" ? "Subscribed!" : "SUBSCRIBE TO INTEGRITY"}
               </span>

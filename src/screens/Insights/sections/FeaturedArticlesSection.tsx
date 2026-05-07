@@ -92,20 +92,26 @@ export const FeaturedArticlesSection = (): JSX.Element => {
         {/* Header */}
         <Header />
 
-        {/* Main content - centered with auto layout */}
-        <main className="relative z-10 flex flex-col items-center justify-center px-4 py-20 min-h-[850px]">
-          <div className="flex flex-col items-center gap-10 max-w-[1200px] w-full mx-auto">
+        {/* Main content - tightened spacing */}
+        <main className="relative z-10 flex flex-col items-center justify-center px-4 pt-32 pb-16">
+          <div className="flex flex-col items-center gap-8 max-w-[1200px] w-full mx-auto">
+            {/* Eyebrow pill */}
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#9b5cf6] animate-pulse-glow" />
+              <span className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-white/65 text-xs uppercase tracking-[0.2em]">
+                QuantorX Insights
+              </span>
+            </div>
+
             {/* Hero text section */}
-            <div className="flex flex-col items-center gap-8 text-center">
-              <h1 className="bg-[linear-gradient(180deg,rgba(255,255,255,1)_0%,rgba(235,228,245,1)_39%,rgba(222,210,238,1)_65%,rgba(82,61,109,1)_100%)] 
-            [-webkit-background-clip:text] bg-clip-text [-webkit-text-fill-color:transparent] 
-            [text-fill-color:transparent] [font-family:'Satoshi-Bold',Helvetica] font-bold text-4xl md:text-5xl 
-            lg:text-6xl xl:text-7xl text-center tracking-[-1.80px] leading-tight translate-y-[-1rem] 
+            <div className="flex flex-col items-center gap-6 text-center">
+              <h1 className="text-gradient-aurora [font-family:'Satoshi-Bold',Helvetica] font-bold text-4xl md:text-5xl
+            lg:text-6xl xl:text-7xl text-center tracking-[-1.80px] leading-[1.05] translate-y-[-1rem]
             animate-fade-in opacity-0 [--animation-delay:200ms]">
                 INTELLIGENCE, DECODED
               </h1>
 
-              <p className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-[#d9d9d9] text-lg 
+              <p className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-white/85 text-lg 
             md:text-xl lg:text-2xl xl:text-[28px] text-center tracking-[0] leading-normal max-w-[1001px] 
             translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
                 Practical insights on Banking AI, credit decisioning, treasury/FX risk, and spatial intelligence-written for leaders who ship.
@@ -124,7 +130,7 @@ export const FeaturedArticlesSection = (): JSX.Element => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="flex-1 bg-transparent border-0 p-0 [font-family:'Satoshi-Regular',Helvetica] 
-                font-normal text-[#a9a9a9] text-base tracking-[0] leading-6 placeholder:text-[#a9a9a9] 
+                font-normal text-white/75 text-base tracking-[0] leading-6 placeholder:text-white/75 
                 focus-visible:ring-0 focus-visible:ring-offset-0"
                   placeholder="Your email"
                   type="email"
@@ -137,7 +143,7 @@ export const FeaturedArticlesSection = (): JSX.Element => {
                 disabled={isSubmitting || submitStatus === "success"}
                 className="px-12 py-3 h-12 bg-[#4a0082] rounded-[32px] hover:bg-[#4a0082]/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                <span className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-[#ffffff] text-sm 
+                <span className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-white text-sm 
               text-center tracking-[0] leading-6 whitespace-nowrap">
                   {isSubmitting ? "Subscribing..." : submitStatus === "success" ? "Subscribed!" : "Subscribe"}
                 </span>

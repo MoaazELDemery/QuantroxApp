@@ -1,6 +1,7 @@
 export { FeaturesSection } from './FeaturesSection';
-export { FooterSection } from './FooterSection';
-export { HeroSection } from './HeroSection';
+export { LogoStripSection } from './LogoStripSection';
+export { CortexSection } from './CortexSection';
 export { ProductDetailsSection } from './ProductDetailsSection';
+export { MetricsSection } from './MetricsSection';
 export { ProductShowcaseSection } from './ProductShowcaseSection';
-export { TestimonialsSection } from './TestimonialsSection';
+export { CTABannerSection } from './CTABannerSection';
