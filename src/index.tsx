@@ -44,6 +44,9 @@ import { Contact } from "./screens/Contact/Contact";
 import { Demo } from "./screens/Demo/Demo";
 import { DemoCenter } from "./screens/DemoCenter/DemoCenter";
 
+// Promo (launch film preview)
+import { Promo } from "./screens/Promo/Promo";
+
 // Content
 import { CaseStudies } from "./screens/CaseStudies/CaseStudies";
 import { PartnerNetwork } from "./screens/PartnerNetwork/PartnerNetwork";
@@ -108,6 +111,9 @@ createRoot(document.getElementById("app") as HTMLElement).render(
         <Route path="/contact" element={<Contact />} />
         <Route path="/demo" element={<Demo />} />
         <Route path="/demo-center" element={<DemoCenter />} />
+
+        {/* ── Launch film preview ── */}
+        <Route path="/promo" element={<Promo />} />
 
         {/* ── Content ── */}
         <Route path="/case-studies" element={<CaseStudies />} />
