@@ -1,0 +1,54 @@
+- generic [ref=e3]:
+  - generic [ref=e5]:
+    - generic:
+      - img "QuantorX"
+    - generic [ref=e28]:
+      - generic [ref=e29]: CONNECTED BY ONE BRAIN.
+      - generic [ref=e30]: Q CORTEX™
+      - generic [ref=e31]:
+        - generic [ref=e32]:
+          - generic [ref=e33]: INFLUX
+          - generic [ref=e34]: Signal enters. PII stripped.
+        - generic [ref=e35]: →
+        - generic [ref=e36]:
+          - generic [ref=e37]: COGNITIVE MAPPING
+          - generic [ref=e38]: Data · People · Rules · Tools · Outcomes
+        - generic [ref=e39]: →
+        - generic [ref=e40]:
+          - generic [ref=e41]: ACT
+          - generic [ref=e42]: Agents deploy from the map.
+      - generic [ref=e43]: One Brain. Every Agent. Zero Exposure.
+  - generic [ref=e8]:
+    - generic [ref=e9]:
+      - button "S1 · THE OMNI" [ref=e10] [cursor=pointer]
+      - button "S2 · THE FLOW" [ref=e11] [cursor=pointer]
+      - button "S3 · THE WORKFORCE" [ref=e12] [cursor=pointer]
+      - button "S4 · THE REFUSAL" [ref=e13] [cursor=pointer]
+      - button "S5 · THE KNOW-HOW" [ref=e14] [cursor=pointer]
+      - button "AUTO ▶" [ref=e16] [cursor=pointer]
+    - generic [ref=e17]:
+      - button "← Prev" [disabled] [ref=e18]
+      - button "Pause" [ref=e19] [cursor=pointer]
+      - button "Restart" [ref=e20] [cursor=pointer]
+      - button "Next →" [ref=e21] [cursor=pointer]
+      - generic [ref=e22]: 22.5s / 40s
+    - generic [ref=e23]:
+      - slider [ref=e24] [cursor=pointer]: "22.5"
+      - generic:
+        - generic: Anchor
+      - generic:
+        - generic: Pen
+      - generic:
+        - generic: Act 1
+      - generic:
+        - generic: Act 2
+      - generic:
+        - generic: Act 3
+      - generic:
+        - generic: Act 4
+      - generic:
+        - generic: Close
+    - generic [ref=e26]:
+      - text: Now playing ·
+      - generic [ref=e27]: S1 · THE OMNI
+      - text: · Category declaration · Arrival film · 1 of 5 · auto-advance through reviewer-recommended order

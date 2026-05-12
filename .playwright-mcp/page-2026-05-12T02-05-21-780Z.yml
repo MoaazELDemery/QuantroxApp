@@ -1,0 +1,41 @@
+- generic [ref=e3]:
+  - generic [ref=e5]:
+    - generic:
+      - generic: S3 · 03 OF 05
+      - generic: BUILDER · WORKFORCE CREATION
+    - generic [ref=e28]:
+      - img "QuantorX"
+  - generic [ref=e8]:
+    - generic [ref=e9]:
+      - button "S1 · THE OMNI" [ref=e10] [cursor=pointer]
+      - button "S2 · THE FLOW" [ref=e11] [cursor=pointer]
+      - button "S3 · THE WORKFORCE" [active] [ref=e12] [cursor=pointer]
+      - button "S4 · THE REFUSAL" [ref=e13] [cursor=pointer]
+      - button "S5 · THE KNOW-HOW" [ref=e14] [cursor=pointer]
+      - button "AUTO ▶" [ref=e16] [cursor=pointer]
+    - generic [ref=e17]:
+      - button "← Prev" [ref=e18] [cursor=pointer]
+      - button "Pause" [ref=e19] [cursor=pointer]
+      - button "Restart" [ref=e20] [cursor=pointer]
+      - button "Next →" [ref=e21] [cursor=pointer]
+      - generic [ref=e22]: 1.0s / 40s
+    - generic [ref=e23]:
+      - slider [ref=e24] [cursor=pointer]: "0.95"
+      - generic:
+        - generic: Anchor
+      - generic:
+        - generic: Pen
+      - generic:
+        - generic: Act 1
+      - generic:
+        - generic: Act 2
+      - generic:
+        - generic: Act 3
+      - generic:
+        - generic: Act 4
+      - generic:
+        - generic: Close
+    - generic [ref=e26]:
+      - text: Now playing ·
+      - generic [ref=e27]: S3 · THE WORKFORCE
+      - text: · Builder · Workforce creation · 3 of 5 · auto-advance through reviewer-recommended order

@@ -1,0 +1,55 @@
+- generic [ref=e3]:
+  - generic [ref=e5]:
+    - generic:
+      - img "QuantorX"
+    - generic [ref=e53]:
+      - generic [ref=e54]: CONNECTED BY ONE BRAIN.
+      - generic [ref=e55]: Q CORTEX™
+      - generic [ref=e56]: COGNITIVE FLUX MAPPING™
+      - generic [ref=e57]:
+        - generic [ref=e58]:
+          - generic [ref=e59]: OBSERVE
+          - generic [ref=e60]: Systems, data flows, decisions — zero process docs.
+        - generic [ref=e61]: →
+        - generic [ref=e62]:
+          - generic [ref=e63]: DECOMPOSE
+          - generic [ref=e64]: Discrete tasks. Governance checkpoint at every node.
+        - generic [ref=e65]: →
+        - generic [ref=e66]:
+          - generic [ref=e67]: ACTIVATE
+          - generic [ref=e68]: Trained. Deployed. Live on your infrastructure in weeks.
+      - generic [ref=e69]: One Brain. Every Agent. Zero Exposure.
+  - generic [ref=e8]:
+    - generic [ref=e9]:
+      - button "S1 · THE OMNI" [ref=e10] [cursor=pointer]
+      - button "S2 · THE FLOW" [active] [ref=e11] [cursor=pointer]
+      - button "S3 · THE WORKFORCE" [ref=e12] [cursor=pointer]
+      - button "S4 · THE REFUSAL" [ref=e13] [cursor=pointer]
+      - button "S5 · THE KNOW-HOW" [ref=e14] [cursor=pointer]
+      - button "AUTO ▶" [ref=e16] [cursor=pointer]
+    - generic [ref=e17]:
+      - button "← Prev" [ref=e18] [cursor=pointer]
+      - button "Pause" [ref=e19] [cursor=pointer]
+      - button "Restart" [ref=e20] [cursor=pointer]
+      - button "Next →" [ref=e21] [cursor=pointer]
+      - generic [ref=e22]: 21.4s / 40s
+    - generic [ref=e23]:
+      - slider [ref=e24] [cursor=pointer]: "21.4"
+      - generic:
+        - generic: Anchor
+      - generic:
+        - generic: Pen
+      - generic:
+        - generic: Act 1
+      - generic:
+        - generic: Act 2
+      - generic:
+        - generic: Act 3
+      - generic:
+        - generic: Act 4
+      - generic:
+        - generic: Close
+    - generic [ref=e26]:
+      - text: Now playing ·
+      - generic [ref=e27]: S2 · THE FLOW
+      - text: · Architecture · Machine cinema · 2 of 5 · auto-advance through reviewer-recommended order

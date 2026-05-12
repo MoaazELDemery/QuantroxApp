@@ -1,0 +1,25 @@
+- generic [ref=e3]:
+  - generic [ref=e7]:
+    - img "QuantorX"
+  - generic [ref=e8]:
+    - generic [ref=e9]:
+      - button "Pause" [ref=e10] [cursor=pointer]
+      - button "Restart" [ref=e11] [cursor=pointer]
+      - generic [ref=e12]: 0.0s / 40s
+    - generic [ref=e13]:
+      - slider [ref=e14] [cursor=pointer]: "0"
+      - generic:
+        - generic: Anchor
+      - generic:
+        - generic: Pen
+      - generic:
+        - generic: Act 1
+      - generic:
+        - generic: Act 2
+      - generic:
+        - generic: Act 3
+      - generic:
+        - generic: Act 4
+      - generic:
+        - generic: Close
+    - generic [ref=e16]: Preview is silent · 3D scene + logo active · Variant A — DIRECT · 40s LinkedIn launch film

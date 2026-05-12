@@ -46,7 +46,11 @@
       "Bash(xargs -0 sed -i '' -e 's|bg-\\\\[#05111e\\\\] px-4 sm:px-8 lg:px-16 xl:px-24 py-16 lg:py-24|bg-transparent px-4 sm:px-8 lg:px-16 xl:px-24 py-16 lg:py-24 border-t border-white/5|g' -e 's|bg-\\\\[#05111e\\\\] border border-\\\\[#9b5cf6\\\\]/20|glass border border-[#9b5cf6]/20|g' -e 's|className=\"bg-\\\\[#05111e\\\\] rounded-\\\\[20px\\\\]|className=\"glass rounded-[20px]|g')",
       "Bash(git add *)",
       "Bash(git commit *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "mcp__plugin_playwright_playwright__browser_wait_for",
+      "mcp__plugin_playwright_playwright__browser_click",
+      "mcp__plugin_playwright_playwright__browser_resize",
+      "Bash(zip -r quantorx-promo-review.zip promo-review --exclude \"promo-review/node_modules/*\" --exclude \"promo-review/dist/*\")"
     ]
   }
 }
