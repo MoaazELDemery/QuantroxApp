@@ -1,6 +1,5 @@
 import {
   FeaturesSection,
-  LogoStripSection,
   CortexSection,
   ProductDetailsSection,
   MetricsSection,
@@ -18,11 +17,6 @@ export const Home = (): JSX.Element => {
       <div className="relative z-10 flex flex-col">
         {/* Hero with animated GIF background + nav */}
         <FeaturesSection />
-
-        {/* Trusted by Sovereign Enterprises logo strip */}
-        <ScrollReveal>
-          <LogoStripSection />
-        </ScrollReveal>
 
         {/* Four Agents: Nexus AI, Axon AI, PayGate™, Geek™ */}
         <ScrollReveal>
