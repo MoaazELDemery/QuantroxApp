@@ -165,7 +165,7 @@ export const Header = (): JSX.Element => {
           <img
             className="object-contain -ml-2 sm:ml-0 cursor-pointer"
             alt="QuantorX"
-            src="/FullLogo_Transparent_NoBuffer.png"
+            src="/NewLogoWhite.png"
             style={{ filter: "brightness(0) invert(1)", height: "48px", width: "auto", maxWidth: "180px" }}
           />
         </Link>

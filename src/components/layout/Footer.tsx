@@ -51,7 +51,7 @@ export const Footer = (): JSX.Element => (
           <img
             className="w-28 h-8 sm:w-32 sm:h-9 lg:w-[137px] lg:h-10 object-cover filter invert brightness-0 cursor-pointer hover:opacity-80 transition-opacity"
             alt="QuantorX"
-            src="/LOGO_SVG.svg"
+            src="/NewLogoWhite.png"
           />
         </Link>
         <p className="w-full max-w-sm [font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-sm tracking-[0.32px] leading-relaxed">

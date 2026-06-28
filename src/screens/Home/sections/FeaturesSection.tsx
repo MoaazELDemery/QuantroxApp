@@ -64,8 +64,8 @@ export const FeaturesSection = (): JSX.Element => {
             <h1 className="text-gradient-aurora [font-family:'Satoshi-Bold',Helvetica] font-bold text-4xl
             md:text-5xl lg:text-6xl xl:text-7xl text-center tracking-[-1.80px] leading-[1.05]
             drop-shadow-[0_8px_40px_rgba(155,92,246,0.45)]
-            translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
-              QuantorX AI Omni-Agents for MENA
+            translate-y-[-1rem] animate-fade-in opacity-0 lg:py-1 [--animation-delay:200ms]">
+              The Digital Workforce Company
             </h1>
 
             <p className="w-[98vw] max-w-[98vw] [font-family:'Satoshi-Medium',Helvetica]
