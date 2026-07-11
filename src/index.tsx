@@ -2,16 +2,21 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { ScrollToTop } from "./components/ScrollToTop";
+import { SmoothScroll } from "./components/scroll/SmoothScroll";
+import { Preloader } from "./components/layout/Preloader";
+import { CursorFX } from "./components/layout/CursorFX";
+import { RouteTransition } from "./components/layout/RouteTransition";
 
 // Home
 import { Home } from "./screens";
 
 // Solutions
 import { Solutions } from "./screens/Solutions/Solutions";
+import { Nodus } from "./screens/Solutions/Nodus/Nodus";
 import { NexusAI } from "./screens/Solutions/NexusAI/NexusAI";
 import { AxonAI } from "./screens/Solutions/AxonAI/AxonAI";
 import { PayGate } from "./screens/Solutions/PayGate/PayGate";
-import { Geek } from "./screens/Solutions/Geek/Geek";
+import { Nextra } from "./screens/Solutions/Nextra/Nextra";
 import { EnterpriseSolutions } from "./screens/Solutions/EnterpriseSolutions/EnterpriseSolutions";
 import { UseCase } from "./screens/Solutions/UseCase/UseCase";
 
@@ -60,8 +65,14 @@ import { Legal } from "./screens/Legal/Legal";
 
 createRoot(document.getElementById("app") as HTMLElement).render(
   <StrictMode>
-    <BrowserRouter>
+    {/* future flags: opt into the v7 behaviours now and silence the nags */}
+    <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <ScrollToTop />
+      <Preloader />
+      <CursorFX />
+      <RouteTransition />
+      <div className="grain-overlay" aria-hidden="true" />
+      <SmoothScroll>
       <Routes>
         {/* ── Core ── */}
         <Route path="/" element={<Home />} />
@@ -69,18 +80,21 @@ createRoot(document.getElementById("app") as HTMLElement).render(
         {/* ── Solutions ── */}
         <Route path="/solutions" element={<Solutions />} />
         {/* Canonical agent routes */}
+        <Route path="/solutions/nodus" element={<Nodus />} />
         <Route path="/solutions/nexus-ai" element={<NexusAI />} />
         <Route path="/solutions/axon-ai" element={<AxonAI />} />
         <Route path="/solutions/paygate" element={<PayGate />} />
-        <Route path="/solutions/geek" element={<Geek />} />
-        <Route path="/solutions/enterprise-solutions" element={<EnterpriseSolutions />} />
+        <Route path="/solutions/nextra" element={<Nextra />} />
+        <Route path="/solutions/bookworm" element={<EnterpriseSolutions />} />
+        <Route path="/solutions/enterprise-solutions" element={<Navigate to="/solutions/bookworm" replace />} />
+        <Route path="/solutions/geek" element={<Navigate to="/solutions/bookworm" replace />} />
         <Route path="/solutions/use-case" element={<UseCase />} />
         {/* Legacy solution paths → canonical */}
         <Route path="/solutions/enterprise-ai" element={<Navigate to="/solutions/nexus-ai" replace />} />
         <Route path="/solutions/enterprise-software" element={<Navigate to="/solutions/axon-ai" replace />} />
-        <Route path="/solutions/capital-markets" element={<Navigate to="/solutions/geek" replace />} />
-        <Route path="/solutions/quantitative-engines" element={<Navigate to="/solutions/enterprise-solutions" replace />} />
-        <Route path="/solutions/robo-advisory" element={<Navigate to="/solutions/geek" replace />} />
+        <Route path="/solutions/capital-markets" element={<Navigate to="/solutions/bookworm" replace />} />
+        <Route path="/solutions/quantitative-engines" element={<Navigate to="/solutions/bookworm" replace />} />
+        <Route path="/solutions/robo-advisory" element={<Navigate to="/solutions/bookworm" replace />} />
         <Route path="/solutions/q-core" element={<Navigate to="/solutions" replace />} />
 
         {/* ── Technology ── */}
@@ -140,6 +154,7 @@ createRoot(document.getElementById("app") as HTMLElement).render(
         <Route path="/company/ai-for-mena" element={<Navigate to="/about/ai-for-mena" replace />} />
         <Route path="/request-demo" element={<Navigate to="/demo" replace />} />
       </Routes>
+      </SmoothScroll>
     </BrowserRouter>
   </StrictMode>
 );

@@ -83,26 +83,23 @@ export const ResearchSection = (): JSX.Element => {
           />
         </div>
       )}
-      <section className="w-full h-[450px] flex items-center justify-center py-16">
-        <div className="flex flex-col lg:flex-row max-w-[1248px] w-full items-center justify-center 
-      lg:justify-between gap-8 px-4">
-          <div className="flex flex-col max-w-[658px] w-full items-center lg:items-start justify-between 
-        gap-6 translate-y-[-1rem] animate-fade-in opacity-0 text-center lg:text-left">
-            <h2 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-5xl 
-          tracking-[0] leading-[normal] w-full">
-              RECEIVE THE QUARTERLY ENGINEERING REPORT.
+      <section className="w-full px-4 sm:px-8 lg:px-16 xl:px-24 py-20 lg:py-28">
+        <div className="max-w-6xl mx-auto border-t border-white/15 pt-14 grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-x-16 gap-y-10 items-center">
+          <div className="max-w-xl">
+            <p className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-[#9b5cf6] text-xs uppercase tracking-[0.25em] mb-4">
+              The Quarterly Engineering Report
+            </p>
+            <h2 className="[font-family:'Satoshi-Bold',Helvetica] font-bold tracking-[-1.80px] text-gradient-shine text-3xl md:text-4xl lg:text-5xl leading-[1.08] mb-5">
+              Intelligence, delivered quarterly.
             </h2>
-
-            <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/85 text-2xl 
-          tracking-[0] leading-[normal] w-full">
+            <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/60 text-base lg:text-lg leading-relaxed">
               No marketing spam. Just clear, useful breakdowns on banking decision workflows, risk, and delivery.
             </p>
           </div>
 
           <form
             onSubmit={handleSubscribe}
-            className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6 flex-shrink-0 
-          translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]"
+            className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full lg:w-auto"
           >
             <input
               type="email"
@@ -110,20 +107,19 @@ export const ResearchSection = (): JSX.Element => {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Your email"
               required
-              className="w-[300px] h-12 px-4 py-2 rounded-[32px] border-[0.8px] border-solid 
-            border-[#a9a9a9] bg-transparent [font-family:'Satoshi-Regular',Helvetica] font-normal 
-            text-white/75 text-base placeholder:text-white/75"
+              className="glass-panel w-full sm:w-[300px] h-12 px-5 rounded-[32px] bg-transparent [font-family:'Satoshi-Regular',Helvetica] font-normal text-white text-sm placeholder:text-white/40 focus:outline-none focus:border-[#9b5cf6]/50 transition-colors"
             />
 
             <button
               type="submit"
               disabled={isSubmitting || submitStatus === "success"}
-              className="px-12 py-3 h-auto bg-[#4a0082] rounded-[32px] hover:bg-[#4a0082]/90 
-            transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="group h-12 px-8 bg-white text-[#0b0713] rounded-[32px] hover:bg-white/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed shrink-0"
             >
-              <span className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-white 
-            text-sm text-center tracking-[0] leading-6 whitespace-nowrap">
-                {isSubmitting ? "Subscribing..." : submitStatus === "success" ? "Subscribed!" : "SUBSCRIBE TO INTEGRITY"}
+              <span className="inline-flex items-center gap-2 [font-family:'Satoshi-Medium',Helvetica] font-medium text-sm whitespace-nowrap">
+                {isSubmitting ? "Subscribing..." : submitStatus === "success" ? "Subscribed!" : "Subscribe"}
+                {!isSubmitting && submitStatus !== "success" && (
+                  <span className="transition-transform group-hover:translate-x-0.5">→</span>
+                )}
               </span>
             </button>
           </form>

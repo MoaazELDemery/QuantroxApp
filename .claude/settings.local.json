@@ -50,7 +50,8 @@
       "mcp__plugin_playwright_playwright__browser_wait_for",
       "mcp__plugin_playwright_playwright__browser_click",
       "mcp__plugin_playwright_playwright__browser_resize",
-      "Bash(zip -r quantorx-promo-review.zip promo-review --exclude \"promo-review/node_modules/*\" --exclude \"promo-review/dist/*\")"
+      "Bash(zip -r quantorx-promo-review.zip promo-review --exclude \"promo-review/node_modules/*\" --exclude \"promo-review/dist/*\")",
+      "WebFetch(domain:oryzo.ai)"
     ]
   }
 }

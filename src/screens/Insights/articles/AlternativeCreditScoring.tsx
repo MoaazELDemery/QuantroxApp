@@ -21,7 +21,7 @@ export const AlternativeCreditScoring = (): JSX.Element => (
         </h1>
         <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-lg leading-relaxed">
           More than half of MENA's small businesses are underserved by traditional credit systems.
-          Not because they're bad credit risks — because the bureau has never seen them.
+          Not because they're bad credit risks - because the bureau has never seen them.
           Machine learning changes that equation.
         </p>
       </div>
@@ -38,12 +38,12 @@ export const AlternativeCreditScoring = (): JSX.Element => (
           </h2>
           <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-base leading-relaxed">
             Traditional credit bureaus work well for individuals and large corporates who have been
-            borrowing for years — mortgages, credit cards, trade lines. For a five-year-old logistics SME
+            borrowing for years - mortgages, credit cards, trade lines. For a five-year-old logistics SME
             or a first-generation retail entrepreneur, the bureau file is often empty or minimal.
             No score. No history. No lending.
           </p>
           <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-base leading-relaxed">
-            This is the thin-file problem. It's structural — bureaus can only score what they can see,
+            This is the thin-file problem. It's structural - bureaus can only score what they can see,
             and for much of the MENA SME economy, there's nothing to see. The result is a credit gap:
             businesses that are genuinely creditworthy get no access to capital, and banks leave
             profitable lending on the table because their models can't make the call.
@@ -52,7 +52,7 @@ export const AlternativeCreditScoring = (): JSX.Element => (
             <p className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-white text-base leading-relaxed italic">
               "The SME doesn't have a credit score. But they've processed 3,000 invoices in 18 months,
               maintained 45-day average payment cycles, and never bounced a supplier payment.
-              That's a creditworthy business — the bureau just can't see it."
+              That's a creditworthy business - the bureau just can't see it."
             </p>
           </div>
         </section>
@@ -63,7 +63,7 @@ export const AlternativeCreditScoring = (): JSX.Element => (
             What Alternative Data Looks Like
           </h2>
           <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-base leading-relaxed">
-            Alternative credit models don't replace bureau data — they supplement it, or substitute for it
+            Alternative credit models don't replace bureau data - they supplement it, or substitute for it
             when the bureau is silent. The signals come from operating behavior rather than borrowing history:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -99,8 +99,8 @@ export const AlternativeCreditScoring = (): JSX.Element => (
             and auditable by the regulator. "The model said no" is not an acceptable reason for decline.
           </p>
           <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-base leading-relaxed">
-            This is why explainable ML techniques — gradient boosted trees with SHAP attribution, logistic
-            regression ensembles, rule-based hybrid models — are the workhorses of production credit scoring,
+            This is why explainable ML techniques - gradient boosted trees with SHAP attribution, logistic
+            regression ensembles, rule-based hybrid models - are the workhorses of production credit scoring,
             not black-box deep learning. Every score must come with a ranked list of factors: "primary reason
             for decline: high customer concentration in single buyer; secondary: DSO trending up for 3 consecutive quarters."
           </p>
@@ -127,7 +127,7 @@ export const AlternativeCreditScoring = (): JSX.Element => (
                 </div>
               ))}
               <p className="text-xs text-white/75 mt-1 [font-family:'Satoshi-Regular',Helvetica]">
-                Illustrative SHAP attribution — relative feature importance for a sample decline decision.
+                Illustrative SHAP attribution - relative feature importance for a sample decline decision.
               </p>
             </div>
           </div>
@@ -139,7 +139,7 @@ export const AlternativeCreditScoring = (): JSX.Element => (
             Shari'ah Considerations
           </h2>
           <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-base leading-relaxed">
-            For Islamic finance products — Murabaha, Ijara, Musharaka — the credit scoring model must
+            For Islamic finance products - Murabaha, Ijara, Musharaka - the credit scoring model must
             account for the structure of the underlying product, not just the borrower's default probability.
             The profit rate is fixed at origination; the risk model must therefore price risk accurately
             at that point, because unlike a conventional loan, the rate cannot be adjusted post-origination.
@@ -147,7 +147,7 @@ export const AlternativeCreditScoring = (): JSX.Element => (
           <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-base leading-relaxed">
             Additionally, income derived from prohibited activities (interest income, certain commodities)
             must be excluded from revenue signals. Building a compliant scoring model means the feature
-            engineering pipeline itself must be Shari'ah-aware — not just the policy layer.
+            engineering pipeline itself must be Shari'ah-aware - not just the policy layer.
           </p>
         </section>
 

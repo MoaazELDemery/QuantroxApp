@@ -2,7 +2,7 @@ import { Fragment, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 /* ────────────────────────────────────────────────────────────────────────────
-   QUANTORX — Launch Film Preview
+   QUANTORX - Launch Film Preview
    Five 40s variants. Plays in reviewer-recommended order: V3 → V5 → V2 → V1 → V4
    Each variant: same 6-block timeline, same locked Act 2/3/4, varies PEN + ACT 1 + CLOSE.
    Visual: glassmorphism shards + breathing aurora (no canvas 3D).
@@ -41,7 +41,7 @@ type Script = {
 };
 
 const SCRIPTS: Script[] = [
-  // 1 — THE OMNI · category declaration, arrival film
+  // 1 - THE OMNI · category declaration, arrival film
   {
     number: 1, code: "S1", title: "THE OMNI", register: "Category declaration · Arrival film",
     pen: [
@@ -53,7 +53,7 @@ const SCRIPTS: Script[] = [
     close: "THE OMNI-AGENTS COMPANY.",
     closeAccent: "OMNI-AGENTS",
   },
-  // 2 — THE FLOW · machine revealed · Influx → Cognitive Mapping → Act as cinema
+  // 2 - THE FLOW · machine revealed · Influx → Cognitive Mapping → Act as cinema
   {
     number: 2, code: "S2", title: "THE FLOW", register: "Architecture · Machine cinema",
     pen: [
@@ -61,11 +61,11 @@ const SCRIPTS: Script[] = [
       "Decisions locked inside silos.",
       "Data locked inside the firewall.",
     ],
-    reveal: "One signal enters — and an entire institution learns to act.",
+    reveal: "One signal enters - and an entire institution learns to act.",
     close: "Observe. Decompose. Activate.",
     closeAccent: "Activate.",
   },
-  // 3 — THE WORKFORCE · builder's promise · train on your experts
+  // 3 - THE WORKFORCE · builder's promise · train on your experts
   {
     number: 3, code: "S3", title: "THE WORKFORCE", register: "Builder · Workforce creation",
     pen: [
@@ -77,7 +77,7 @@ const SCRIPTS: Script[] = [
     close: "Your experts. Your workforce. Yours permanently.",
     closeAccent: "Yours permanently.",
   },
-  // 4 — THE REFUSAL · five nots, then the verdict
+  // 4 - THE REFUSAL · five nots, then the verdict
   {
     number: 4, code: "S4", title: "THE REFUSAL", register: "Contrast · The refusal film",
     pen: [
@@ -85,11 +85,11 @@ const SCRIPTS: Script[] = [
       "Not rented. Not cloud. Not borrowed.",
       "Not yours to configure. Yours to own.",
     ],
-    reveal: "A sovereign agentic workforce that lives inside your institution — permanently.",
+    reveal: "A sovereign agentic workforce that lives inside your institution - permanently.",
     close: "Not a Tool. An Omni-Agent.",
     closeAccent: "Omni-Agent.",
   },
-  // 5 — THE KNOW-HOW · institutional memory · the line that sticks
+  // 5 - THE KNOW-HOW · institutional memory · the line that sticks
   {
     number: 5, code: "S5", title: "THE KNOW-HOW", register: "Memory · The line that sticks",
     pen: [
@@ -183,7 +183,7 @@ export const Promo = (): JSX.Element => {
 };
 
 /* ────────────────────────────────────────────────────────────────────────────
-   BACKDROP — aurora + breathing hue-shift radial (no canvas 3D)
+   BACKDROP - aurora + breathing hue-shift radial (no canvas 3D)
    ──────────────────────────────────────────────────────────────────────────── */
 const intensityAt = (t: number) => {
   if (t < 2) return 0.1; if (t < 9) return 0.22; if (t < 17) return 0.58;
@@ -232,7 +232,7 @@ const BreathingBackdrop = ({ time }: { time: number }) => {
         />
       </motion.div>
 
-      {/* Breathing hue-shift radial — one slow color volume, contained */}
+      {/* Breathing hue-shift radial - one slow color volume, contained */}
       <motion.div
         className="absolute pointer-events-none"
         animate={{
@@ -262,7 +262,7 @@ const BreathingBackdrop = ({ time }: { time: number }) => {
 };
 
 /* ────────────────────────────────────────────────────────────────────────────
-   GLASS SHARDS — 5 translucent rectangles drifting in parallax
+   GLASS SHARDS - 5 translucent rectangles drifting in parallax
    Glassmorphism, subtle. Replaces 3D scene.
    ──────────────────────────────────────────────────────────────────────────── */
 const SHARDS = [
@@ -325,7 +325,7 @@ const CornerMark = ({ time }: { time: number }) => {
 };
 
 /* ────────────────────────────────────────────────────────────────────────────
-   VARIANT BADGE — small tag in upper-left showing current variant title
+   VARIANT BADGE - small tag in upper-left showing current variant title
    Appears briefly at variant start.
    ──────────────────────────────────────────────────────────────────────────── */
 const VariantBadge = ({ script, time }: { script: Script; time: number }) => {
@@ -379,7 +379,7 @@ const Stage = ({ script, time }: { script: Script; time: number }) => {
 };
 
 /* ────────────────────────────────────────────────────────────────────────────
-   ANCHOR (0:00–0:02)
+   ANCHOR (0:00-0:02)
    ──────────────────────────────────────────────────────────────────────────── */
 const Anchor = ({ t }: { t: number }) => {
   const moving = t > 1.2;
@@ -395,7 +395,7 @@ const Anchor = ({ t }: { t: number }) => {
 };
 
 /* ────────────────────────────────────────────────────────────────────────────
-   PEN (0:02–0:09) — 7s, three lines, ~2.3s each
+   PEN (0:02-0:09) - 7s, three lines, ~2.3s each
    ──────────────────────────────────────────────────────────────────────────── */
 const Pen = ({ t, pen }: { t: number; pen: string[] }) => {
   const PER = 2.3;
@@ -429,7 +429,7 @@ const Pen = ({ t, pen }: { t: number; pen: string[] }) => {
 };
 
 /* ────────────────────────────────────────────────────────────────────────────
-   ACT 1 (0:09–0:17) — Reveal + category definition
+   ACT 1 (0:09-0:17) - Reveal + category definition
    ──────────────────────────────────────────────────────────────────────────── */
 const Act1 = ({ t, reveal }: { t: number; reveal: string }) => {
   const showLogo = t >= 0.4;
@@ -472,11 +472,11 @@ const Particles = () => (
 );
 
 /* ────────────────────────────────────────────────────────────────────────────
-   ACT 2 (0:17–0:23) — Q Cortex (locked) · Cognitive Flux Mapping™
+   ACT 2 (0:17-0:23) - Q Cortex (locked) · Cognitive Flux Mapping™
    Observe → Decompose → Activate. Visual grammar across all 5 scripts.
    ──────────────────────────────────────────────────────────────────────────── */
 const FLOW_PHASES = [
-  { id: "observe",   label: "OBSERVE",   sub: "Systems, data flows, decisions — zero process docs." },
+  { id: "observe",   label: "OBSERVE",   sub: "Systems, data flows, decisions - zero process docs." },
   { id: "decompose", label: "DECOMPOSE", sub: "Discrete tasks. Governance checkpoint at every node." },
   { id: "activate",  label: "ACTIVATE",  sub: "Trained. Deployed. Live on your infrastructure in weeks." },
 ] as const;
@@ -513,7 +513,7 @@ const Act2 = ({ t }: { t: number }) => {
         COGNITIVE FLUX MAPPING<span style={{ fontSize: 8, verticalAlign: "super", marginLeft: 2 }}>™</span>
       </motion.div>
 
-      {/* 3-phase flow glyph — Observe → Decompose → Activate */}
+      {/* 3-phase flow glyph - Observe → Decompose → Activate */}
       <div className="flex items-stretch" style={{ width: 860 }}>
         {FLOW_PHASES.map((phase, i) => {
           const active = activePhase >= i;
@@ -563,7 +563,7 @@ const Act2 = ({ t }: { t: number }) => {
         })}
       </div>
 
-      {/* Tagline — LOCKED */}
+      {/* Tagline - LOCKED */}
       <motion.div className="mt-8 text-center"
         initial={{ opacity: 0, y: 14 }} animate={showTag ? { opacity: 1, y: 0 } : { opacity: 0, y: 14 }}
         transition={{ duration: 0.7, ease: EASE }}
@@ -575,7 +575,7 @@ const Act2 = ({ t }: { t: number }) => {
 };
 
 /* ────────────────────────────────────────────────────────────────────────────
-   ACT 3 (0:23–0:32) — Four Omni Agents (locked)
+   ACT 3 (0:23-0:32) - Four Omni Agents (locked)
    ──────────────────────────────────────────────────────────────────────────── */
 const AGENTS = [
   { name: "NEXUS",   domain: "BANKING · DECISIONS",  outcome: "Credit approved in 4 hours. Fraud escalated in seconds." },
@@ -584,7 +584,7 @@ const AGENTS = [
   { name: "GEEK",    domain: "WEALTH · ADVISORY",     outcome: "Shari'ah-native portfolio intelligence. Fully governed." },
 ];
 const Act3 = ({ t }: { t: number }) => {
-  // 0–1.0 intro line. 1.0–1.8 cards fly in. 1.8–8.0 sequential spotlight ~1.5s each. 8.0–9.0 unison.
+  // 0-1.0 intro line. 1.0-1.8 cards fly in. 1.8-8.0 sequential spotlight ~1.5s each. 8.0-9.0 unison.
   const showIntro = t < 1.5;
   const cardEntry = t >= 1.0;
   const sStart = 2.0;
@@ -648,7 +648,7 @@ const Act3 = ({ t }: { t: number }) => {
 };
 
 /* ────────────────────────────────────────────────────────────────────────────
-   ACT 4 (0:32–0:36) — Flag plant (locked)
+   ACT 4 (0:32-0:36) - Flag plant (locked)
    ──────────────────────────────────────────────────────────────────────────── */
 const ACT4_LINES = ["Inside your walls.", "Under your law.", "Built in MENA."];
 const Act4 = ({ t }: { t: number }) => {
@@ -680,7 +680,7 @@ const Act4 = ({ t }: { t: number }) => {
 };
 
 /* ────────────────────────────────────────────────────────────────────────────
-   CLOSE (0:36–0:40) — Brand stamp (variant-specific line)
+   CLOSE (0:36-0:40) - Brand stamp (variant-specific line)
    ──────────────────────────────────────────────────────────────────────────── */
 const renderCloseLine = (close: string, accent?: string) => {
   if (!accent) return close;
@@ -731,7 +731,7 @@ const Close = ({ t, close, accent }: { t: number; close: string; accent?: string
 };
 
 /* ────────────────────────────────────────────────────────────────────────────
-   CONTROLS — play / pause / restart / scrub / prev / next / auto-advance
+   CONTROLS - play / pause / restart / scrub / prev / next / auto-advance
    ──────────────────────────────────────────────────────────────────────────── */
 const BEAT_MARKS = [
   { label: "Anchor", t: 0 }, { label: "Pen", t: 2 }, { label: "Act 1", t: 9 },

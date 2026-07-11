@@ -1,10 +1,12 @@
 import { PageLayout } from "../../../components/layout/PageLayout";
+import { PageCTA, SpecimenFrame } from "../../../components/page/primitives";
+import { PageHero } from "../../../components/layout/PageHero";
 
 const COLORS = [
-  { name: "Purple", hex: "#4a0082", bg: "bg-[#4a0082]" },
-  { name: "Black", hex: "#000000", bg: "bg-black border border-white/20" },
-  { name: "White", hex: "#FFFFFF", bg: "bg-white" },
-  { name: "Muted", hex: "#a9a9a9", bg: "bg-[#a9a9a9]" },
+  { name: "Purple", hex: "#4A0082", swatch: "#4a0082" },
+  { name: "Accent", hex: "#9B5CF6", swatch: "#9b5cf6" },
+  { name: "Black", hex: "#000000", swatch: "#000000" },
+  { name: "White", hex: "#FFFFFF", swatch: "#ffffff" },
 ];
 
 const USAGE_RULES = [
@@ -14,128 +16,127 @@ const USAGE_RULES = [
   "Always pair the logo mark with the 'QuantorX' wordmark in official materials.",
 ];
 
+const SectionKicker = ({ children }: { children: string }): JSX.Element => (
+  <p className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-[#9b5cf6] text-xs uppercase tracking-[0.25em] mb-8">
+    {children}
+  </p>
+);
+
 export const BrandKit = (): JSX.Element => (
   <PageLayout>
     {/* HERO */}
-    <section className="px-6 py-20 md:py-28 text-center max-w-4xl mx-auto">
-      <p className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-[#9b5cf6] text-sm uppercase tracking-[0.15em] mb-4">
-        Brand Assets
-      </p>
-      <h1 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-4xl md:text-5xl lg:text-6xl tracking-[-1.80px] leading-tight mb-6">
-        Brand Kit
-      </h1>
-      <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-lg leading-relaxed max-w-2xl mx-auto">
-        Official QuantorX brand assets, guidelines, and usage rules.
-      </p>
-    </section>
+    <PageHero
+      eyebrow="Brand Assets"
+      title="Brand Kit"
+      lede="Official QuantorX brand assets, guidelines, and usage rules."
+      video="/videos/sovereign-ring.mp4"
+      plainTitle
+    />
 
-    <section className="px-6 py-12 max-w-4xl mx-auto flex flex-col gap-16">
-      {/* LOGO */}
+    <section className="px-6 py-12 lg:py-16 max-w-5xl mx-auto flex flex-col gap-20 lg:gap-24">
+      {/* LOGO - specimen exhibits */}
       <div>
-        <h2 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-2xl tracking-[-1.80px] mb-6">
-          Logo
-        </h2>
-        <div className="flex flex-col sm:flex-row gap-4">
-          <div className="flex-1 bg-[#ffffff0a] rounded-[20px] border border-white/10 p-10 flex flex-col items-center gap-4 hover:bg-[#ffffff12] transition-colors">
-            <span className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-[#4a0082] text-5xl">QX</span>
-            <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-sm">
-              Primary Mark — Purple
-            </p>
-          </div>
-          <div className="flex-1 bg-[#4a0082] rounded-[20px] p-10 flex flex-col items-center gap-4">
-            <span className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-5xl">QX</span>
-            <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/70 text-sm">
-              Reverse Mark — White
-            </p>
-          </div>
+        <SectionKicker>Exhibit 01 · The Mark</SectionKicker>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <SpecimenFrame>
+            <div className="flex flex-col items-center gap-6 py-14 px-8">
+              <img src="/NewLogoWhite.png" alt="QuantorX mark - white" className="h-16 w-auto" />
+              <p className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-white/40 text-[11px] uppercase tracking-[0.25em]">
+                Primary Mark · Dark Surfaces
+              </p>
+            </div>
+          </SpecimenFrame>
+          <SpecimenFrame>
+            <div className="flex flex-col items-center gap-6 py-14 px-8 bg-white rounded-[10px]">
+              <img src="/NewLogoPurple.png" alt="QuantorX mark - purple" className="h-16 w-auto" />
+              <p className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-black/45 text-[11px] uppercase tracking-[0.25em]">
+                Reverse Mark · Light Surfaces
+              </p>
+            </div>
+          </SpecimenFrame>
         </div>
       </div>
 
-      {/* COLORS */}
+      {/* COLORS - swatch register */}
       <div>
-        <h2 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-2xl tracking-[-1.80px] mb-6">
-          Colors
-        </h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {COLORS.map((color) => (
-            <div
-              key={color.name}
-              className="bg-[#ffffff0a] rounded-[20px] border border-white/10 p-6 hover:bg-[#ffffff12] transition-colors flex flex-col items-center gap-3"
-            >
-              <div className={`w-14 h-14 rounded-lg ${color.bg}`} />
-              <div className="text-center">
-                <p className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-sm">
-                  {color.name}
-                </p>
-                <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-xs mt-1">
-                  {color.hex}
-                </p>
-              </div>
+        <SectionKicker>Exhibit 02 · The Palette</SectionKicker>
+        <div className="border-t border-b border-white/15 divide-y divide-white/10 sm:divide-y-0 sm:grid sm:grid-cols-4 sm:divide-x sm:divide-white/10">
+          {COLORS.map((color, i) => (
+            <div key={color.name} className={`py-8 ${i > 0 ? "sm:pl-8" : ""} sm:pr-8`}>
+              <div
+                className="h-24 rounded-[10px] mb-5 border border-white/10"
+                style={{ background: color.swatch }}
+                aria-hidden="true"
+              />
+              <p className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-base tracking-[-0.01em]">
+                {color.name}
+              </p>
+              <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/40 text-xs mt-1 tabular-nums uppercase">
+                {color.hex}
+              </p>
             </div>
           ))}
         </div>
       </div>
 
-      {/* TYPOGRAPHY */}
+      {/* TYPOGRAPHY - type specimens */}
       <div>
-        <h2 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-2xl tracking-[-1.80px] mb-6">
-          Typography
-        </h2>
-        <div className="flex flex-col gap-4">
-          <div className="bg-[#ffffff0a] rounded-[20px] border border-white/10 p-6 hover:bg-[#ffffff12] transition-colors">
-            <h4 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-xl mb-2">
-              Satoshi Bold — Headings
+        <SectionKicker>Exhibit 03 · The Voice</SectionKicker>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-10">
+          <div className="border-t border-white/15 pt-8">
+            <p className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-7xl lg:text-8xl tracking-[-0.04em] leading-none mb-6">
+              Aa
+            </p>
+            <h4 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-lg tracking-[-0.01em]">
+              Satoshi Bold
             </h4>
-            <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-sm">
-              Weights: Bold, Medium
+            <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/45 text-sm mt-1">
+              Headings · Weights: Bold, Medium
             </p>
           </div>
-          <div className="bg-[#ffffff0a] rounded-[20px] border border-white/10 p-6 hover:bg-[#ffffff12] transition-colors">
-            <h4 className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white text-xl mb-2">
-              Satoshi Regular — Body Text
+          <div className="border-t border-white/15 pt-8">
+            <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white text-7xl lg:text-8xl tracking-[-0.04em] leading-none mb-6">
+              Aa
+            </p>
+            <h4 className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white text-lg tracking-[-0.01em]">
+              Satoshi Regular
             </h4>
-            <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-sm">
-              Weights: Regular, Medium
+            <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/45 text-sm mt-1">
+              Body text · Weights: Regular, Medium
             </p>
           </div>
         </div>
       </div>
 
-      {/* USAGE GUIDELINES */}
+      {/* USAGE GUIDELINES - the rulebook */}
       <div>
-        <h2 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-2xl tracking-[-1.80px] mb-6">
-          Usage Guidelines
-        </h2>
-        <ul className="flex flex-col gap-3">
+        <SectionKicker>Exhibit 04 · The Rules</SectionKicker>
+        <div className="border-t border-white/10">
           {USAGE_RULES.map((rule, i) => (
-            <li
+            <div
               key={i}
-              className="flex gap-3 items-start [font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-base leading-relaxed"
+              className="flex items-start gap-6 lg:gap-8 py-6 border-b border-white/10 transition-colors duration-300 hover:border-white/25"
             >
-              <span className="text-[#9b5cf6] font-bold mt-0.5 shrink-0">{i + 1}.</span>
-              {rule}
-            </li>
+              <span
+                className="[font-family:'Satoshi-Black',Helvetica] font-black text-2xl leading-none w-12 shrink-0 text-transparent"
+                style={{ WebkitTextStroke: "1px rgba(155,92,246,0.4)" }}
+                aria-hidden="true"
+              >
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/70 text-base leading-relaxed">
+                {rule}
+              </p>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
     </section>
 
-    {/* CTA */}
-    <section className="px-6 py-20 text-center">
-      <div className="max-w-2xl mx-auto">
-        <h2 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-3xl md:text-4xl tracking-[-1.80px] mb-4">
-          Need Brand Assets?
-        </h2>
-        <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-base leading-relaxed mb-8">
-          Contact us for high-resolution logos, brand guidelines PDF, and media kits.
-        </p>
-        <a
-          href="/contact"
-          className="inline-flex items-center justify-center bg-[#4a0082] rounded-[32px] px-8 py-3 text-white [font-family:'Satoshi-Medium',Helvetica] hover:bg-[#4a0082]/90 transition-colors"
-        >
-          Request Assets
-        </a>
-      </div>
-    </section>
+    <PageCTA
+      title={<>Need Brand Assets?</>}
+      sub={<>Contact us for high-resolution logos, brand guidelines PDF, and media kits.</>}
+      primary={{ label: "Request Assets", href: "/contact" }}
+    />
   </PageLayout>
 );

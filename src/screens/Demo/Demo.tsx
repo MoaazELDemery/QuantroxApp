@@ -1,9 +1,12 @@
 import { useState, FormEvent } from "react";
 import emailjs from "@emailjs/browser";
 import { PageLayout } from "../../components/layout/PageLayout";
-import { Input } from "../../components/ui/input";
-import { Textarea } from "../../components/ui/textarea";
+import { PageHero } from "../../components/layout/PageHero";
+import { EditorialRows } from "../../components/page/primitives";
 import { Toast } from "../../components/ui/toast";
+
+const FIELD_CLASS =
+  "w-full bg-transparent border-0 border-b border-white/20 px-0 py-3.5 text-white placeholder:text-white/35 [font-family:'Satoshi-Regular',Helvetica] text-sm rounded-none focus:border-[#9b5cf6] focus:outline-none transition-colors";
 
 const SERVICE_ID = "service_zban55p";
 const TEMPLATE_ID = "template_ee7n6g8";
@@ -12,22 +15,22 @@ const PUBLIC_KEY = "ldyxcf_QiGp4t_arv";
 const PROCESS_STEPS = [
   {
     num: "01",
-    title: "Week 1 — Discovery",
+    title: "Week 1 - Discovery",
     desc: "We map your data landscape and operational bottlenecks. By the end of week one, we know exactly what the problem is.",
   },
   {
     num: "02",
-    title: "Week 2 — Use-Case Blueprint",
-    desc: "We define the decision workflow, the success metrics, and the governance requirements — before any code is written.",
+    title: "Week 2 - Use-Case Blueprint",
+    desc: "We define the decision workflow, the success metrics, and the governance requirements - before any code is written.",
   },
   {
     num: "03",
-    title: "Weeks 3–5 — Prototype Demo",
+    title: "Weeks 3-5 - Prototype Demo",
     desc: "We configure Cortex and map your workflows through Cognitive Flux Mapping. You see the system running on your data.",
   },
   {
     num: "04",
-    title: "Week 6+ — Rollout Plan",
+    title: "Week 6+ - Rollout Plan",
     desc: "We align on integration, operating model, and a phased production rollout. No surprises.",
   },
 ];
@@ -142,17 +145,13 @@ export const Demo = (): JSX.Element => {
         </div>
       )}
 
-      {/* HERO */}
-      <section className="px-6 py-20 md:py-28 text-center max-w-4xl mx-auto">
-        <p className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-[#9b5cf6] text-sm uppercase tracking-[0.15em] mb-4">
-          Live Product Demo
-        </p>
-        <h1 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-4xl md:text-5xl lg:text-6xl tracking-[-1.80px] leading-tight mb-6">
-          See QuantorX in Action.
-        </h1>
-        <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-lg leading-relaxed max-w-2xl mx-auto mb-8">
-          Book a personalized live demo and see Cortex deployed against your real decision workflows.
-        </p>
+      <PageHero
+        eyebrow="Live Product Demo"
+        title="See QuantorX in Action."
+        lede="Book a personalized live demo and see Cortex deployed against your real decision workflows."
+        video="/videos/cortex-core.mp4"
+        plainTitle
+      >
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="https://calendly.com/quantorx"
@@ -164,198 +163,197 @@ export const Demo = (): JSX.Element => {
           </a>
           <button
             onClick={scrollToForm}
-            className="inline-flex items-center justify-center bg-[#4a0082] rounded-[32px] px-8 py-3 text-white [font-family:'Satoshi-Medium',Helvetica] hover:bg-[#4a0082]/90 transition-colors"
+            className="glass-panel glass-hover inline-flex items-center justify-center rounded-[32px] px-8 py-3 text-white/90 [font-family:'Satoshi-Medium',Helvetica] hover:text-white hover:-translate-y-px transition-all duration-300"
           >
             Request a Demo
           </button>
         </div>
-      </section>
+      </PageHero>
 
-      {/* PROCESS */}
-      <section className="px-6 py-16">
-        <div className="max-w-5xl mx-auto">
-          <p className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-[#9b5cf6] text-sm uppercase tracking-[0.15em] mb-3 text-center">
-            The Path to Deployment
-          </p>
-          <h2 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-3xl md:text-4xl tracking-[-1.80px] text-center mb-4">
-            What Happens After You Reach Out.
-          </h2>
-          <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-base text-center mb-10">
-            We move fast and don't waste your time.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {PROCESS_STEPS.map((step) => (
-              <div
-                key={step.num}
-                className="bg-[#ffffff0a] rounded-[20px] border border-white/10 p-6 hover:bg-[#ffffff12] transition-colors flex flex-col gap-3"
-              >
-                <span className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-[#9b5cf6] text-2xl">
-                  {step.num}.
-                </span>
-                <h3 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-base">
-                  {step.title}
-                </h3>
-                <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-sm leading-relaxed">
-                  {step.desc}
-                </p>
-              </div>
-            ))}
+      {/* PROCESS - deployment timeline */}
+      <section className="px-4 sm:px-8 lg:px-16 xl:px-24 py-16 lg:py-24">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-12">
+            <p className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-[#9b5cf6] text-xs uppercase tracking-[0.25em] mb-4">
+              The Path to Deployment
+            </p>
+            <h2 className="[font-family:'Satoshi-Bold',Helvetica] font-bold tracking-[-1.80px] text-gradient-shine text-3xl md:text-4xl lg:text-5xl leading-tight mb-4">
+              What happens after<br />you reach out.
+            </h2>
+            <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/55 text-base lg:text-lg">
+              We move fast and don't waste your time.
+            </p>
           </div>
+          <EditorialRows
+            rows={PROCESS_STEPS.map((step) => {
+              const [when, what] = step.title.split(" - ");
+              return { tag: when, title: what, body: step.desc };
+            })}
+          />
         </div>
       </section>
 
-      {/* FORM */}
-      <section id="demo-form" className="px-6 py-16 bg-[#ffffff04]">
-        <div className="max-w-2xl mx-auto">
-          <p className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-[#9b5cf6] text-sm uppercase tracking-[0.15em] mb-3">
-            Request a Demo
-          </p>
-          <h2 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-3xl tracking-[-1.80px] mb-8">
-            Tell Us About the Decision You Need to Automate.
-          </h2>
+      {/* FORM - editorial split */}
+      <section id="demo-form" className="px-4 sm:px-8 lg:px-16 xl:px-24 py-16 lg:py-24 bg-[#ffffff04]">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.25fr] gap-x-20 gap-y-12">
+          <div>
+            <p className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-[#9b5cf6] text-xs uppercase tracking-[0.25em] mb-4">
+              Request a Demo
+            </p>
+            <h2 className="[font-family:'Satoshi-Bold',Helvetica] font-bold tracking-[-1.80px] text-gradient-shine text-3xl md:text-4xl lg:text-5xl leading-[1.08] mb-6">
+              Tell us about the decision you need to automate.
+            </h2>
+            <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/55 text-base leading-relaxed max-w-md">
+              What's manual, what's breaking, and what outcome you're trying to reach - we'll map
+              the rest.
+            </p>
+          </div>
 
-          <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Input
+          <form onSubmit={handleSubmit} className="flex flex-col gap-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10">
+              <input
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="Name"
                 required
-                className="flex-1 bg-[#ffffff0d] rounded-2xl border border-white/20 px-4 py-3 text-white placeholder:text-white/40 [font-family:'Satoshi-Regular',Helvetica] text-sm h-auto focus:border-white/40 outline-none"
+                className={FIELD_CLASS}
               />
-              <Input
+              <input
                 name="company"
                 value={formData.company}
                 onChange={handleChange}
                 placeholder="Company"
                 required
-                className="flex-1 bg-[#ffffff0d] rounded-2xl border border-white/20 px-4 py-3 text-white placeholder:text-white/40 [font-family:'Satoshi-Regular',Helvetica] text-sm h-auto focus:border-white/40 outline-none"
+                className={FIELD_CLASS}
               />
             </div>
 
-            <Input
+            <input
               name="email"
               value={formData.email}
               onChange={handleChange}
               placeholder="Corporate Email"
               type="email"
               required
-              className="w-full bg-[#ffffff0d] rounded-2xl border border-white/20 px-4 py-3 text-white placeholder:text-white/40 [font-family:'Satoshi-Regular',Helvetica] text-sm h-auto focus:border-white/40 outline-none"
+              className={FIELD_CLASS}
             />
 
-            <select
-              name="vertical"
-              value={formData.vertical}
-              onChange={handleChange}
-              required
-              className={`w-full bg-[#ffffff0d] rounded-2xl border border-white/20 px-4 py-3 [font-family:'Satoshi-Regular',Helvetica] text-sm appearance-none cursor-pointer outline-none focus:border-white/40 ${formData.vertical || formData.interest ? "text-white/70" : "text-white/40"}`}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10">
+              <select
+                name="vertical"
+                value={formData.vertical}
+                onChange={handleChange}
+                required
+                className={`${FIELD_CLASS} appearance-none cursor-pointer ${formData.vertical ? "text-white" : "text-white/35"}`}
+              >
+                <option value="" disabled className="text-white/40 bg-black">Industry Vertical</option>
+                <option value="Banking/FinTech" className="bg-black text-white">Banking / FinTech</option>
+                <option value="Logistics/Spatial" className="bg-black text-white">Logistics / Spatial</option>
+                <option value="Government" className="bg-black text-white">Government</option>
+                <option value="Healthcare" className="bg-black text-white">Healthcare</option>
+                <option value="Other" className="bg-black text-white">Other</option>
+              </select>
 
-            >
-              <option value="" disabled className="text-white/40 bg-black">Select Industry Vertical</option>
-              <option value="Banking/FinTech" className="bg-black text-white">Banking / FinTech</option>
-              <option value="Logistics/Spatial" className="bg-black text-white">Logistics / Spatial</option>
-              <option value="Government" className="bg-black text-white">Government</option>
-              <option value="Healthcare" className="bg-black text-white">Healthcare</option>
-              <option value="Other" className="bg-black text-white">Other</option>
-            </select>
+              <select
+                name="interest"
+                value={formData.interest}
+                onChange={handleChange}
+                required
+                className={`${FIELD_CLASS} appearance-none cursor-pointer ${formData.interest ? "text-white" : "text-white/35"}`}
+              >
+                <option value="" disabled className="text-white/40 bg-black">Solution of Interest</option>
+                <option value="Nodus · The Digital Factory" className="bg-black text-white">Nodus · The Digital Factory</option>
+                <option value="Axon · Urban Intelligence" className="bg-black text-white">Axon · Urban Intelligence</option>
+                <option value="Nexus · Customer Success" className="bg-black text-white">Nexus · Customer Success</option>
+                <option value="PayGate · Partner Enablement" className="bg-black text-white">PayGate · Partner Enablement</option>
+                <option value="Nextra · Money Advisory" className="bg-black text-white">Nextra · Money Advisory</option>
+                <option value="BookWorm · Brokerage Platform" className="bg-black text-white">BookWorm · Brokerage Platform</option>
+                <option value="Custom Engineering" className="bg-black text-white">Custom Engineering</option>
+              </select>
+            </div>
 
-            <select
-              name="interest"
-              value={formData.interest}
-              onChange={handleChange}
-              required
-              className={`w-full bg-[#ffffff0d] rounded-2xl border border-white/20 px-4 py-3 [font-family:'Satoshi-Regular',Helvetica] text-sm appearance-none cursor-pointer outline-none focus:border-white/40 ${formData.vertical || formData.interest ? "text-white/70" : "text-white/40"}`}
-
-            >
-              <option value="" disabled className="text-white/40 bg-black">Select Solution of Interest</option>
-              <option value="Nexus AI — Banking" className="bg-black text-white">Nexus AI — Banking</option>
-              <option value="Axon AI — Spatial" className="bg-black text-white">Axon AI — Spatial</option>
-              <option value="PayGate — Merchant Onboarding" className="bg-black text-white">PayGate — Merchant Onboarding</option>
-              <option value="Geek - Wealth Management" className="bg-black text-white">Geek™ — Wealth Management</option>
-              <option value="Credit Bundle Optimizer" className="bg-black text-white">Credit Bundle Optimizer</option>
-              <option value="Treasury / FX Risk" className="bg-black text-white">Treasury / FX Risk</option>
-              <option value="Custom Engineering" className="bg-black text-white">Custom Engineering</option>
-            </select>
-
-            <Textarea
+            <textarea
               name="message"
               value={formData.message}
               onChange={handleChange}
-              placeholder="Describe the workflow you want an AI Agent to handle — what's manual, what's breaking, and what outcome you're trying to reach."
-              className="w-full h-32 bg-[#ffffff0d] rounded-2xl border border-white/20 px-4 py-3 text-white placeholder:text-white/40 [font-family:'Satoshi-Regular',Helvetica] text-sm resize-none focus:border-white/40 outline-none"
+              placeholder="Describe the workflow you want an AI Agent to handle."
+              className={`${FIELD_CLASS} h-28 resize-none`}
             />
 
-            <button
-              type="submit"
-              disabled={isSubmitting || submitStatus === "success"}
-              className="w-full inline-flex items-center justify-center bg-[#4a0082] rounded-[32px] px-8 py-4 text-white [font-family:'Satoshi-Medium',Helvetica] text-base hover:bg-[#4a0082]/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed mt-2"
-            >
-              {isSubmitting ? "Sending..." : submitStatus === "success" ? "Sent!" : "Initiate Engineering Feasibility"}
-            </button>
-            <p className="text-center [font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-sm">
-              We respond within one business day. No spam, no sales pressure.
-            </p>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-5 mt-8">
+              <button
+                type="submit"
+                disabled={isSubmitting || submitStatus === "success"}
+                className="group inline-flex items-center justify-center gap-2 bg-white text-[#0b0713] rounded-[32px] px-9 py-3.5 [font-family:'Satoshi-Medium',Helvetica] font-medium text-sm hover:bg-white/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed shrink-0"
+              >
+                {isSubmitting ? "Sending..." : submitStatus === "success" ? "Sent!" : "Initiate Engineering Feasibility"}
+                {!isSubmitting && submitStatus !== "success" && (
+                  <span className="transition-transform group-hover:translate-x-0.5">→</span>
+                )}
+              </button>
+              <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/40 text-xs leading-relaxed">
+                We respond within one business day.<br className="hidden sm:block" /> No spam, no sales pressure.
+              </p>
+            </div>
           </form>
         </div>
       </section>
 
-      {/* CONTACT DETAILS */}
-      <section className="px-6 py-16">
-        <div className="max-w-5xl mx-auto">
-          <p className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-[#9b5cf6] text-sm uppercase tracking-[0.15em] mb-3 text-center">
-            Direct Contact
-          </p>
-          <h2 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-3xl md:text-4xl tracking-[-1.80px] text-center mb-10">
-            Prefer to Reach Us Directly?
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Office */}
-            <div className="bg-[#ffffff0a] rounded-[20px] border border-white/10 p-6 hover:bg-[#ffffff12] transition-colors flex flex-col items-center text-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-[#ffffff10] flex items-center justify-center">
-                <svg className="w-5 h-5 text-[#9b5cf6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
+      {/* CONTACT DETAILS - direct register */}
+      <section className="px-4 sm:px-8 lg:px-16 xl:px-24 py-16 lg:py-24">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-12">
+            <p className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-[#9b5cf6] text-xs uppercase tracking-[0.25em] mb-4">
+              Direct Contact
+            </p>
+            <h2 className="[font-family:'Satoshi-Bold',Helvetica] font-bold tracking-[-1.80px] text-gradient-shine text-3xl md:text-4xl lg:text-5xl leading-tight">
+              Prefer to reach us directly?
+            </h2>
+          </div>
+          <div className="border-t border-b border-white/15 divide-y divide-white/10 sm:divide-y-0 sm:grid sm:grid-cols-3 sm:divide-x sm:divide-white/10">
+            <div className="py-9 sm:pr-10">
+              <div className="flex items-center gap-2.5 mb-5">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#9b5cf6] shadow-[0_0_8px_rgba(155,92,246,0.8)]" aria-hidden="true" />
+                <span className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-white/35 text-[11px] uppercase tracking-[0.25em]">
+                  Office
+                </span>
               </div>
-              <h4 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-base">Office</h4>
-              <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-sm leading-relaxed">
+              <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/70 text-sm leading-relaxed">
                 Maadi, Al-Ma'arag City<br />Building No. 5158<br />Cairo, Egypt
               </p>
             </div>
 
-            {/* Email */}
-            <div className="bg-[#ffffff0a] rounded-[20px] border border-white/10 p-6 hover:bg-[#ffffff12] transition-colors flex flex-col items-center text-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-[#ffffff10] flex items-center justify-center">
-                <svg className="w-5 h-5 text-[#9b5cf6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
+            <div className="py-9 sm:pl-10 sm:pr-10">
+              <div className="flex items-center gap-2.5 mb-5">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#9b5cf6] shadow-[0_0_8px_rgba(155,92,246,0.8)]" aria-hidden="true" />
+                <span className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-white/35 text-[11px] uppercase tracking-[0.25em]">
+                  Email
+                </span>
               </div>
-              <h4 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-base">Email</h4>
               <a
                 href="mailto:innovation@quantorx.com"
-                className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-sm hover:text-white transition-colors"
+                className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/70 text-sm hover:text-white transition-colors"
               >
                 innovation@quantorx.com
               </a>
             </div>
 
-            {/* Phone */}
-            <div className="bg-[#ffffff0a] rounded-[20px] border border-white/10 p-6 hover:bg-[#ffffff12] transition-colors flex flex-col items-center text-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-[#ffffff10] flex items-center justify-center">
-                <svg className="w-5 h-5 text-[#9b5cf6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
+            <div className="py-9 sm:pl-10">
+              <div className="flex items-center gap-2.5 mb-5">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#9b5cf6] shadow-[0_0_8px_rgba(155,92,246,0.8)]" aria-hidden="true" />
+                <span className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-white/35 text-[11px] uppercase tracking-[0.25em]">
+                  Phone
+                </span>
               </div>
-              <h4 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-base">Phone</h4>
-              <div className="flex flex-col gap-1">
-                <a href="tel:+18134471388" className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-sm hover:text-white transition-colors">
+              <div className="flex flex-col gap-1.5">
+                <a href="tel:+18134471388" className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/70 text-sm hover:text-white transition-colors tabular-nums">
                   +1 813 447 1388
                 </a>
-                <a href="tel:+966537507578" className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-sm hover:text-white transition-colors">
+                <a href="tel:+966537507578" className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/70 text-sm hover:text-white transition-colors tabular-nums">
                   +966 537 507 578
                 </a>
-                <a href="tel:+201119974983" className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-sm hover:text-white transition-colors">
+                <a href="tel:+201119974983" className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/70 text-sm hover:text-white transition-colors tabular-nums">
                   +20 111 997 4983
                 </a>
               </div>

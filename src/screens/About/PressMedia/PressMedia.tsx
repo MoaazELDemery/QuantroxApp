@@ -1,4 +1,6 @@
 import { PageLayout } from "../../../components/layout/PageLayout";
+import { PageHero } from "../../../components/layout/PageHero";
+import { EditorialRows } from "../../../components/page/primitives";
 
 const PRESS_ITEMS = [
   {
@@ -42,38 +44,17 @@ const PRESS_ITEMS = [
 export const PressMedia = (): JSX.Element => (
   <PageLayout>
     {/* HERO */}
-    <section className="px-6 py-20 md:py-28 text-center max-w-4xl mx-auto">
-      <p className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-[#9b5cf6] text-sm uppercase tracking-[0.15em] mb-4">
-        Newsroom
-      </p>
-      <h1 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-4xl md:text-5xl lg:text-6xl tracking-[-1.80px] leading-tight mb-6">
-        Press & Media
-      </h1>
-      <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-lg leading-relaxed max-w-2xl mx-auto">
-        Latest news, press releases, and media mentions.
-      </p>
-    </section>
+    <PageHero
+      eyebrow="Newsroom"
+      title="Press & Media"
+      lede="Latest news, press releases, and media mentions."
+      video="/videos/mena-horizon.mp4"
+      plainTitle
+    />
 
     {/* PRESS GRID */}
     <section className="px-6 py-12 max-w-6xl mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {PRESS_ITEMS.map((item) => (
-          <article
-            key={item.title}
-            className="bg-[#ffffff0a] rounded-[20px] border border-white/10 p-6 hover:bg-[#ffffff12] transition-colors flex flex-col gap-3"
-          >
-            <p className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-[#9b5cf6] text-xs uppercase tracking-[0.15em]">
-              {item.type} — {item.year}
-            </p>
-            <h4 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-base leading-snug">
-              {item.title}
-            </h4>
-            <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-sm leading-relaxed">
-              {item.desc}
-            </p>
-          </article>
-        ))}
-      </div>
+      <EditorialRows className="max-w-5xl" rows={PRESS_ITEMS.map((item) => ({ tag: item.type, title: item.title, body: item.desc, value: item.year }))} />
     </section>
 
     {/* MEDIA INQUIRIES */}

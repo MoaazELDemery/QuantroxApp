@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { PageLayout } from "../../../components/layout/PageLayout";
+import { PageHero } from "../../../components/layout/PageHero";
 
 type Industry = "financial-services" | "public-sector" | "telecom" | "strategic-advisory";
 
@@ -18,23 +19,19 @@ const ArrowIcon = () => (
 
 function UseCaseCard({ title, body }: { title: string; body: string }) {
   return (
-    <div className="bg-[#ffffff0a] rounded-[20px] border border-white/10 p-6 hover:bg-[#ffffff12] transition-all hover:-translate-y-1 hover:border-[#4a0082]/40 hover:shadow-lg hover:shadow-[#4a0082]/10 duration-200 flex flex-col">
-      <div className="w-9 h-9 rounded-lg bg-[#9b5cf6]/10 flex items-center justify-center mb-4 shrink-0">
-        <svg className="w-5 h-5 text-[#9b5cf6]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-          <circle cx="12" cy="12" r="10" />
-        </svg>
-      </div>
-      <h5 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white mb-2">{title}</h5>
-      <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal leading-relaxed text-white/75 text-sm flex-1 mb-4">{body}</p>
+    <div className="group border-t border-white/15 pt-5 hover:border-[#9b5cf6]/60 transition-colors duration-300 flex flex-col">
+      <h5 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white mb-2 group-hover:translate-x-1 transition-transform duration-300">{title}</h5>
+      <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal leading-relaxed text-white/55 text-sm flex-1 mb-4">{body}</p>
       <Link
         to="/contact"
-        className="text-[#9b5cf6] text-xs font-semibold [font-family:'Satoshi-Medium',Helvetica] inline-flex items-center gap-1.5 hover:text-[#9b5cf6] transition-colors"
+        className="text-[#9b5cf6] text-xs font-semibold [font-family:'Satoshi-Medium',Helvetica] inline-flex items-center gap-1.5 opacity-70 group-hover:opacity-100 transition-opacity"
       >
         View Use Case <ArrowIcon />
       </Link>
     </div>
   );
 }
+
 
 export const UseCase = (): JSX.Element => {
   const [activeTab, setActiveTab] = useState<Industry>("financial-services");
@@ -49,34 +46,29 @@ export const UseCase = (): JSX.Element => {
   return (
     <PageLayout>
       {/* ── Hero ── */}
-      <section className="px-4 sm:px-8 lg:px-16 xl:px-24 py-16 lg:py-24">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="[font-family:'Satoshi-Bold',Helvetica] font-bold tracking-[-1.80px] text-4xl md:text-5xl lg:text-6xl text-gradient-aurora mb-6 italic">
-            Solutions Built for<br className="hidden md:block" /> Business Reality.
-          </h1>
-          <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal leading-relaxed text-white/75 text-lg mb-10 max-w-xl mx-auto">
-            Outcome-focused AI for regulated industries. Every solution is designed to reduce risk, accelerate
-            decisions, and deliver measurable impact.
-          </p>
-
-          {/* Industry tabs */}
-          <div className="flex flex-wrap justify-center gap-2 max-w-2xl mx-auto">
-            {tabs.map((t) => (
-              <button
-                key={t.id}
-                onClick={() => setActiveTab(t.id)}
-                className={`px-6 py-2.5 rounded-full text-sm [font-family:'Satoshi-Medium',Helvetica] transition-all border ${
-                  activeTab === t.id
-                    ? "bg-[#4a0082] border-[#4a0082] text-white"
-                    : "border-white/10 bg-white/4 text-white/75 hover:text-white hover:border-white/25 hover:bg-white/6"
-                }`}
-              >
-                {t.label}
-              </button>
-            ))}
-          </div>
+      <PageHero
+        eyebrow="Use Cases"
+        title={<span className="italic">Solutions Built for<br className="hidden md:block" /> Business Reality.</span>}
+        lede="Outcome-focused AI for regulated industries. Every solution is designed to reduce risk, accelerate decisions, and deliver measurable impact."
+        video="/videos/solutions-city.mp4"
+      >
+        {/* Industry tabs */}
+        <div className="flex flex-wrap justify-center gap-2 max-w-2xl mx-auto">
+          {tabs.map((t) => (
+            <button
+              key={t.id}
+              onClick={() => setActiveTab(t.id)}
+              className={`px-6 py-2.5 rounded-full text-sm [font-family:'Satoshi-Medium',Helvetica] transition-all border ${
+                activeTab === t.id
+                  ? "bg-[#4a0082] border-[#4a0082] text-white"
+                  : "border-white/10 bg-white/4 text-white/75 hover:text-white hover:border-white/25 hover:bg-white/6"
+              }`}
+            >
+              {t.label}
+            </button>
+          ))}
         </div>
-      </section>
+      </PageHero>
 
       {/* ── Tab Content ── */}
       <section className="px-4 sm:px-8 lg:px-16 xl:px-24 pb-16 lg:pb-24">
@@ -115,7 +107,7 @@ export const UseCase = (): JSX.Element => {
                   {[
                     { title: "Automated Risk Assessment", body: "Consolidate credit, market, and operational risk into a single scoring framework. Replace spreadsheet-driven reviews with real-time, explainable risk scores." },
                     { title: "Anti-Money Laundering", body: "Detect suspicious patterns and reduce false positives by up to 60%. AI models built to meet SAMA, CBUAE, and FATF compliance standards out of the box." },
-                    { title: "Regulatory Reporting", body: "Automate capital adequacy and liquidity reporting for central bank submissions. One workflow for SAMA, QCB, and CBUAE — no more manual reconciliation." },
+                    { title: "Regulatory Reporting", body: "Automate capital adequacy and liquidity reporting for central bank submissions. One workflow for SAMA, QCB, and CBUAE - no more manual reconciliation." },
                   ].map((c) => <UseCaseCard key={c.title} title={c.title} body={c.body} />)}
                 </div>
               </div>
@@ -127,7 +119,7 @@ export const UseCase = (): JSX.Element => {
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
                   {[
                     { title: "Credit Scoring & Lending", body: "Evaluate creditworthiness using alternative data sources alongside traditional metrics. Support both Islamic and conventional lending with fully explainable models." },
-                    { title: "Customer Churn Prevention", body: "Predict at-risk customers from transaction cadence and behavioral patterns. Surface actionable retention offers before customers leave — not after." },
+                    { title: "Customer Churn Prevention", body: "Predict at-risk customers from transaction cadence and behavioral patterns. Surface actionable retention offers before customers leave - not after." },
                     { title: "KYC Automation", body: "Verify documents using image RAG, flag expired IDs, and cross-check across watchlists. Reduce onboarding friction while staying audit-ready." },
                   ].map((c) => <UseCaseCard key={c.title} title={c.title} body={c.body} />)}
                 </div>
@@ -166,7 +158,7 @@ export const UseCase = (): JSX.Element => {
                 </p>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
                   {[
-                    { title: "Citizen Service Automation", body: "Bilingual Arabic/English virtual assistants for government portals. Resolve 70%+ of citizen inquiries without human handoff — available 24/7." },
+                    { title: "Citizen Service Automation", body: "Bilingual Arabic/English virtual assistants for government portals. Resolve 70%+ of citizen inquiries without human handoff - available 24/7." },
                     { title: "Document & Archive AI", body: "Process, classify, and summarize Arabic government documents at scale. Turn decades of paper archives into searchable, structured knowledge bases." },
                     { title: "Policy Simulation", body: 'Model the impact of fiscal, trade, and immigration policies before implementation. Give decision-makers quantified "what-if" scenarios instead of guesswork.' },
                   ].map((c) => <UseCaseCard key={c.title} title={c.title} body={c.body} />)}
@@ -183,7 +175,7 @@ export const UseCase = (): JSX.Element => {
                   Telecommunications
                 </h2>
                 <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal leading-relaxed text-white/75 max-w-lg mx-auto">
-                  Predict, optimize, and automate — from the network operations center to the customer call.
+                  Predict, optimize, and automate - from the network operations center to the customer call.
                 </p>
               </div>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -205,15 +197,15 @@ export const UseCase = (): JSX.Element => {
                   Strategic Advisory
                 </h2>
                 <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal leading-relaxed text-white/75 max-w-lg mx-auto">
-                  For organizations building long-term AI capability — not just buying tools.
+                  For organizations building long-term AI capability - not just buying tools.
                 </p>
               </div>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
                 {[
                   { title: "Sovereign AI Infrastructure", body: "Design and deploy AI platforms that keep data, models, and inference within national borders. Full architecture consulting for GCC data sovereignty requirements." },
                   { title: "Air-Gapped LLM Deployment", body: "Run large language models on fully disconnected, air-gapped infrastructure. Designed for defense, intelligence, and classified government environments." },
-                  { title: "AI Governance & MLOps", body: "Build model governance frameworks from day one — versioning, bias monitoring, drift detection, and audit trails. Meet regulatory expectations before they become mandates." },
-                  { title: "AI Capability Building", body: "Structured programs to upskill your team — from executive AI literacy to hands-on MLOps training. We build internal capability, not long-term dependency." },
+                  { title: "AI Governance & MLOps", body: "Build model governance frameworks from day one - versioning, bias monitoring, drift detection, and audit trails. Meet regulatory expectations before they become mandates." },
+                  { title: "AI Capability Building", body: "Structured programs to upskill your team - from executive AI literacy to hands-on MLOps training. We build internal capability, not long-term dependency." },
                 ].map((c) => <UseCaseCard key={c.title} title={c.title} body={c.body} />)}
               </div>
             </div>
@@ -229,7 +221,7 @@ export const UseCase = (): JSX.Element => {
             Turn Complexity Into a Clear Decision.
           </h2>
           <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal leading-relaxed text-white/75 text-lg mb-10">
-            If you lead banking, public sector, or technology teams — we're built to help you move faster with
+            If you lead banking, public sector, or technology teams - we're built to help you move faster with
             confidence.
           </p>
           <Link

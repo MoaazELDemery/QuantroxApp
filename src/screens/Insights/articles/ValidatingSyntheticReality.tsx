@@ -22,7 +22,7 @@ export const ValidatingSyntheticReality = (): JSX.Element => (
         <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-lg leading-relaxed">
           You can't test a fraud model on real transactions without consequences.
           You can't run a credit scoring pilot on live applicants ethically.
-          Synthetic validation environments solve this — and they're becoming a production requirement.
+          Synthetic validation environments solve this - and they're becoming a production requirement.
         </p>
       </div>
     </section>
@@ -37,7 +37,7 @@ export const ValidatingSyntheticReality = (): JSX.Element => (
           </h2>
           <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-base leading-relaxed">
             In software development, you test before you ship. In AI for regulated industries, testing is the problem.
-            Your most valuable test cases — real fraud events, real credit defaults, real compliance breaches —
+            Your most valuable test cases - real fraud events, real credit defaults, real compliance breaches -
             are exactly the data you cannot use freely. They're sensitive, subject to data residency rules,
             and in many cases involve customers who never consented to being part of a model experiment.
           </p>
@@ -54,8 +54,8 @@ export const ValidatingSyntheticReality = (): JSX.Element => (
             What Synthetic Data Is (and Isn't)
           </h2>
           <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-base leading-relaxed">
-            Synthetic data is machine-generated data that statistically replicates the properties of real data —
-            its distributions, correlations, edge cases, and anomalies — without containing any real individuals'
+            Synthetic data is machine-generated data that statistically replicates the properties of real data -
+            its distributions, correlations, edge cases, and anomalies - without containing any real individuals'
             information. A synthetic transaction dataset looks behaviorally identical to a real one,
             passes the same statistical tests, and can contain deliberate fraud scenarios at any frequency you choose.
           </p>
@@ -91,7 +91,7 @@ export const ValidatingSyntheticReality = (): JSX.Element => (
               {
                 stage: "01",
                 title: "Synthetic Environment Testing",
-                body: "Build a replica of your production data environment using synthetic data. Run the model against deliberately crafted scenarios — high fraud rates, unusual transaction patterns, edge cases that your historical data may have had only a handful of examples of. Measure precision, recall, and false positive rates under controlled conditions.",
+                body: "Build a replica of your production data environment using synthetic data. Run the model against deliberately crafted scenarios - high fraud rates, unusual transaction patterns, edge cases that your historical data may have had only a handful of examples of. Measure precision, recall, and false positive rates under controlled conditions.",
               },
               {
                 stage: "02",
@@ -101,12 +101,12 @@ export const ValidatingSyntheticReality = (): JSX.Element => (
               {
                 stage: "03",
                 title: "Constrained Live Pilot",
-                body: "Apply the model to a defined subset of live decisions — lower-risk applications, a specific product type, a single branch or region. Define a success threshold before you start: if precision stays above X and false positive rate stays below Y after Z decisions, proceed to broader rollout. If not, you've learned without systemic exposure.",
+                body: "Apply the model to a defined subset of live decisions - lower-risk applications, a specific product type, a single branch or region. Define a success threshold before you start: if precision stays above X and false positive rate stays below Y after Z decisions, proceed to broader rollout. If not, you've learned without systemic exposure.",
               },
               {
                 stage: "04",
                 title: "Staged Rollout with Drift Monitoring",
-                body: "Expand the model progressively, with continuous monitoring for performance drift. Models degrade when the data distribution they're running on shifts away from the distribution they were trained on. An early warning system — tracking feature drift, prediction confidence, and outcome rates — catches this before it becomes a problem.",
+                body: "Expand the model progressively, with continuous monitoring for performance drift. Models degrade when the data distribution they're running on shifts away from the distribution they were trained on. An early warning system - tracking feature drift, prediction confidence, and outcome rates - catches this before it becomes a problem.",
               },
             ].map((step, i) => (
               <div key={step.stage} className={`bg-[#ffffff08] border border-white/10 rounded-[16px] p-6 ${i < 3 ? "border-b border-white/10" : ""}`}>
@@ -136,13 +136,13 @@ export const ValidatingSyntheticReality = (): JSX.Element => (
           <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-base leading-relaxed">
             A synthetic validation environment provides exactly that paper trail. You can show the regulator
             the scenarios you tested, the edge cases you deliberately introduced, and the performance
-            thresholds that triggered each stage gate. That's not just good practice — in many product categories,
+            thresholds that triggered each stage gate. That's not just good practice - in many product categories,
             it's becoming a licensing prerequisite.
           </p>
           <div className="bg-[#ffffff08] border-l-4 border-[#9b5cf6] rounded-r-[12px] p-5">
             <p className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-white text-base leading-relaxed italic">
               "The regulator doesn't want to know that your model works. They want to know how you know
-              it works — and what you'll do when it stops."
+              it works - and what you'll do when it stops."
             </p>
           </div>
         </section>

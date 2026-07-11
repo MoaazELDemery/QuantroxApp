@@ -36,14 +36,14 @@ export const SpatialComputeRevolution = (): JSX.Element => (
           </h2>
           <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-base leading-relaxed">
             Geographic Information Systems have been enterprise infrastructure since the 1980s.
-            They store, visualize, and query spatial data — where your assets are, what's inside a boundary,
+            They store, visualize, and query spatial data - where your assets are, what's inside a boundary,
             which points are within a radius. For decades, that was sufficient. A utilities company knew
             where its pipes were. A retailer knew which districts had stores. A logistics firm knew its depot locations.
           </p>
           <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-base leading-relaxed">
             The limitation is that traditional GIS is descriptive, not prescriptive. It answers "where."
-            It does not answer "what should happen next." That gap — between knowing the spatial state
-            of your operations and knowing what decision to make — is where spatial AI operates.
+            It does not answer "what should happen next." That gap - between knowing the spatial state
+            of your operations and knowing what decision to make - is where spatial AI operates.
           </p>
         </section>
 
@@ -59,7 +59,7 @@ export const SpatialComputeRevolution = (): JSX.Element => (
                 industry: "Logistics & Last-Mile Delivery",
                 problem: "Static route planning based on time-of-day estimates.",
                 solution: "Real-time spatial AI combines live traffic, vehicle location, package priority, and customer time windows to re-route continuously. Decisions happen every few minutes, not once at dispatch.",
-                impact: "15–20% reduction in delivery hours. Significant fuel cost reduction across large fleets.",
+                impact: "15-20% reduction in delivery hours. Significant fuel cost reduction across large fleets.",
               },
               {
                 industry: "Telecoms Network Coverage",
@@ -70,7 +70,7 @@ export const SpatialComputeRevolution = (): JSX.Element => (
               {
                 industry: "Retail & FMCG Site Selection",
                 problem: "Site selection committees relying on foot traffic counts and gut feel.",
-                solution: "Spatial models analyze mobility patterns, competitive density, income proxies from surrounding property data, and cannibalization risk from existing stores — before a single lease is signed.",
+                solution: "Spatial models analyze mobility patterns, competitive density, income proxies from surrounding property data, and cannibalization risk from existing stores - before a single lease is signed.",
                 impact: "Higher first-year revenue in new stores versus unmodeled site selection. Fewer underperforming openings.",
               },
             ].map((item) => (
@@ -98,7 +98,7 @@ export const SpatialComputeRevolution = (): JSX.Element => (
             The Data Infrastructure Question
           </h2>
           <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-base leading-relaxed">
-            Spatial AI requires spatial data at scale — and that's where most organizations hit the first barrier.
+            Spatial AI requires spatial data at scale - and that's where most organizations hit the first barrier.
             Point-in-time snapshots are not enough. The most useful spatial signals are continuous: vehicle tracks,
             mobility flows, satellite imagery updated daily, IoT sensor readings by the second.
           </p>
@@ -106,7 +106,7 @@ export const SpatialComputeRevolution = (): JSX.Element => (
             The practical architecture requires a spatial data pipeline: ingestion of streaming location events,
             geospatial indexing (H3, S2 or similar), enrichment with contextual layers (land use, census,
             point-of-interest density), and a feature store that makes those enriched features available to models
-            at inference time. Without that infrastructure, you're building spatial AI on static snapshots —
+            at inference time. Without that infrastructure, you're building spatial AI on static snapshots -
             and you're back to traditional GIS.
           </p>
           <div className="bg-[#ffffff08] border-l-4 border-[#9b5cf6] rounded-r-[12px] p-5">
@@ -131,7 +131,7 @@ export const SpatialComputeRevolution = (): JSX.Element => (
               { title: "Rapid urban expansion", body: "GCC cities are building new districts faster than traditional demographic data can track. Spatial AI using satellite imagery and mobility data captures growth in near-real-time." },
               { title: "Desert and mixed-terrain logistics", body: "Route optimization in environments without established road networks requires terrain-aware models, not simple graph routing." },
               { title: "Hajj and Ramadan demand patterns", body: "Hospitality, retail, and logistics operations face extreme seasonal demand concentration. Spatial models calibrated to these patterns outperform generic approaches significantly." },
-              { title: "Smart city investment", body: "Government-driven smart city programs across UAE, KSA, and Qatar are generating spatial data infrastructure that private enterprises can build on — IoT networks, mobility APIs, urban digital twins." },
+              { title: "Smart city investment", body: "Government-driven smart city programs across UAE, KSA, and Qatar are generating spatial data infrastructure that private enterprises can build on - IoT networks, mobility APIs, urban digital twins." },
             ].map((item) => (
               <div key={item.title} className="flex items-start gap-4 bg-[#ffffff05] rounded-[12px] p-4">
                 <span className="text-[#9b5cf6] font-bold flex-shrink-0 mt-0.5">→</span>
@@ -150,7 +150,7 @@ export const SpatialComputeRevolution = (): JSX.Element => (
             to="/solutions/axon-ai"
             className="inline-flex items-center justify-center bg-[#4a0082] rounded-[32px] px-8 py-3 text-white [font-family:'Satoshi-Medium',Helvetica] hover:bg-[#4a0082]/90 transition-colors"
           >
-            Explore Axon AI — Spatial Solutions
+            Explore Axon · The Urban Intelligence Unit
           </Link>
           <Link
             to="/insights"

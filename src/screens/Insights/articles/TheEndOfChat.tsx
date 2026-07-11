@@ -21,7 +21,7 @@ export const TheEndOfChat = (): JSX.Element => (
         </h1>
         <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-lg leading-relaxed">
           Chat interfaces were a useful starting point for enterprise AI. But in banking, insurance, and government,
-          the next step isn't a better chatbot — it's a completely different paradigm.
+          the next step isn't a better chatbot - it's a completely different paradigm.
         </p>
       </div>
     </section>
@@ -42,12 +42,12 @@ export const TheEndOfChat = (): JSX.Element => (
           <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-base leading-relaxed">
             A chat interface is single-turn by nature. It answers the question you asked. It does not
             initiate the next step, update the system of record, file the compliance report, or escalate
-            to the right person when something falls outside policy. Those are workflow tasks — and workflows
+            to the right person when something falls outside policy. Those are workflow tasks - and workflows
             are not conversations.
           </p>
           <div className="bg-[#ffffff08] border-l-4 border-[#9b5cf6] rounded-r-[12px] p-5 my-2">
             <p className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-white text-base leading-relaxed italic">
-              "A compliance officer doesn't want to chat about regulations. They want the regulation applied —
+              "A compliance officer doesn't want to chat about regulations. They want the regulation applied -
               to this transaction, right now, with a complete audit trail."
             </p>
           </div>
@@ -59,12 +59,12 @@ export const TheEndOfChat = (): JSX.Element => (
             What Regulated Industries Actually Need
           </h2>
           <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-base leading-relaxed">
-            Regulated operations — banking, insurance, government, healthcare — share three requirements
+            Regulated operations - banking, insurance, government, healthcare - share three requirements
             that chat interfaces fundamentally cannot meet:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 my-2">
             {[
-              { title: "Audit Trails", body: "Every AI-assisted decision must be traceable — what data was used, what model produced it, what policy governed it, who reviewed it." },
+              { title: "Audit Trails", body: "Every AI-assisted decision must be traceable - what data was used, what model produced it, what policy governed it, who reviewed it." },
               { title: "Multi-Step Execution", body: "A credit decision isn't one action. It's data retrieval, policy check, scoring, documentation, and handoff. Chat handles step one." },
               { title: "Deterministic Outputs", body: "Regulated operations cannot accept probabilistic answers to yes/no questions. Approval or rejection must map to an auditable rule." },
             ].map((item) => (
@@ -82,13 +82,13 @@ export const TheEndOfChat = (): JSX.Element => (
             Agentic AI: The Replacement Architecture
           </h2>
           <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-base leading-relaxed">
-            An AI agent doesn't wait to be asked. It monitors the input — a new loan application, a flagged transaction,
-            an incoming document — and executes the full workflow autonomously: retrieve context, apply policy,
+            An AI agent doesn't wait to be asked. It monitors the input - a new loan application, a flagged transaction,
+            an incoming document - and executes the full workflow autonomously: retrieve context, apply policy,
             generate documentation, and hand off with evidence.
           </p>
           <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-base leading-relaxed">
             The key distinction is orchestration. A single LLM call produces text. An agent orchestrates
-            multiple tools — database queries, document retrieval, calculation engines, system writes —
+            multiple tools - database queries, document retrieval, calculation engines, system writes -
             in sequence, with conditional logic at each step. That's what makes it useful for real operations.
           </p>
 
@@ -103,7 +103,7 @@ export const TheEndOfChat = (): JSX.Element => (
                 </div>
               ))}
             </div>
-            <div className="glass border border-[#9b5cf6]/20 rounded-[16px] p-6">
+            <div className="glass-panel glass-hover border border-[#9b5cf6]/20 rounded-[16px] p-6">
               <h4 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-[#9b5cf6] text-sm mb-4">Agentic Workflow</h4>
               {["Event triggers the agent (new document, transaction)", "Agent retrieves relevant policy and context", "Agent applies rules and scores the case", "Agent writes output to system of record", "Agent generates audit-ready documentation"].map((step, i) => (
                 <div key={i} className="flex items-start gap-3 py-2 border-b border-white/5 text-sm text-white/80 [font-family:'Satoshi-Regular',Helvetica]">
@@ -123,7 +123,7 @@ export const TheEndOfChat = (): JSX.Element => (
           <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-base leading-relaxed">
             Consider a KYC (Know Your Customer) workflow at a retail bank. The traditional process involves
             a compliance analyst manually reviewing uploaded documents, cross-referencing against sanction lists,
-            drafting a risk memo, and routing to a senior officer. Average time: 2–3 business days.
+            drafting a risk memo, and routing to a senior officer. Average time: 2-3 business days.
           </p>
           <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-base leading-relaxed">
             An agentic AI handling the same workflow: ingests documents via multimodal Document AI,
@@ -155,15 +155,15 @@ export const TheEndOfChat = (): JSX.Element => (
             The Practical Takeaway
           </h2>
           <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-base leading-relaxed">
-            Chat interfaces were a useful forcing function — they pushed enterprises to think about what
+            Chat interfaces were a useful forcing function - they pushed enterprises to think about what
             information workers actually need. But the right answer to "what information do you need"
             in a regulated business is not a better answer. It's a workflow that produces the outcome without
             requiring a human to be in the loop for every step.
           </p>
           <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-base leading-relaxed">
             The enterprises moving fastest on AI right now are not the ones with the best chatbots.
-            They're the ones that identified two or three high-volume, rule-governed workflows —
-            onboarding, claims review, transaction monitoring — and replaced the manual steps with agents
+            They're the ones that identified two or three high-volume, rule-governed workflows -
+            onboarding, claims review, transaction monitoring - and replaced the manual steps with agents
             that execute, document, and hand off. That's where the leverage is.
           </p>
         </section>

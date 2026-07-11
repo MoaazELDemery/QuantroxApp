@@ -1,47 +1,37 @@
 import { Link } from "react-router-dom";
+import { PlateBand, Reveal } from "../../../components/page/primitives";
 
-export const LatestInsightsSection = (): JSX.Element => {
-  return (
-    <section className="w-full flex justify-center py-16 px-4 sm:px-8 lg:px-16 xl:px-24">
-      <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-20 max-w-[1175px] w-full">
-
-        {/* Visual */}
-        <div className="w-full max-w-[532px] h-[360px] rounded-[32px] bg-gradient-to-br from-[#311c43] to-[#782bc0] flex-shrink-0 flex items-center justify-center relative overflow-hidden">
-          <div className="absolute inset-0 [background:radial-gradient(circle_at_30%_30%,rgba(155,92,246,0.4),transparent_60%)]" />
-          <div className="relative text-center p-8">
-            <p className="[font-family:'Satoshi-Medium',Helvetica] text-white/50 text-xs uppercase tracking-widest mb-3">Featured Article</p>
-            <p className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-3xl leading-tight">
-              The End<br />of "Chat"
+export const LatestInsightsSection = (): JSX.Element => (
+  <section className="w-full px-4 sm:px-8 lg:px-16 xl:px-24 py-12 lg:py-16">
+    <div className="max-w-7xl mx-auto">
+      <Reveal>
+        <PlateBand image="/worlds/constellation.webp">
+          <div className="max-w-xl">
+            <div className="flex flex-wrap items-baseline gap-x-5 gap-y-2 mb-5">
+              <p className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-[#9b5cf6] text-xs uppercase tracking-[0.25em]">
+                Featured · AI Architecture
+              </p>
+              <p className="[font-family:'Satoshi-Regular',Helvetica] text-white/40 text-xs">
+                8 min read
+              </p>
+            </div>
+            <h2 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-3xl lg:text-5xl tracking-[-0.02em] leading-[1.08] mb-5">
+              The End of "Chat"
+            </h2>
+            <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/65 text-base lg:text-lg leading-relaxed mb-8">
+              Why chat-only tools fail in regulated operations, and what real workflow automation
+              looks like in banking and enterprise teams.
             </p>
+            <Link
+              to="/insights/the-end-of-chat"
+              className="group inline-flex items-center gap-2 [font-family:'Satoshi-Medium',Helvetica] font-medium text-white/90 text-sm hover:text-white transition-colors"
+            >
+              Read the article
+              <span className="text-[#9b5cf6] transition-transform group-hover:translate-x-1">→</span>
+            </Link>
           </div>
-        </div>
-
-        {/* Text */}
-        <div className="w-full max-w-[563px] flex flex-col items-start gap-6">
-          <div className="flex items-center gap-2">
-            <span className="bg-[#4a0082]/30 border border-[#9b5cf6]/30 text-[#9b5cf6] text-xs px-3 py-1 rounded-full [font-family:'Satoshi-Medium',Helvetica]">
-              AI Architecture
-            </span>
-            <span className="text-white/75 text-xs [font-family:'Satoshi-Regular',Helvetica]">8 min read</span>
-          </div>
-
-          <h2 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-4xl leading-tight tracking-[-1.80px]">
-            The End of "Chat"
-          </h2>
-
-          <p className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-white/75 text-xl leading-relaxed">
-            Why chat-only tools fail in regulated operations, and what real workflow automation looks like
-            in banking and enterprise teams.
-          </p>
-
-          <Link
-            to="/insights/the-end-of-chat"
-            className="inline-flex items-center gap-2 text-[#9b5cf6] [font-family:'Satoshi-Medium',Helvetica] font-medium text-base hover:gap-3 transition-all"
-          >
-            Read article <span>→</span>
-          </Link>
-        </div>
-      </div>
-    </section>
-  );
-};
+        </PlateBand>
+      </Reveal>
+    </div>
+  </section>
+);

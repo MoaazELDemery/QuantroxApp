@@ -1,4 +1,6 @@
 import { PageLayout } from "../../components/layout/PageLayout";
+import { PageHero } from "../../components/layout/PageHero";
+import { EditorialRows } from "../../components/page/primitives";
 
 const docSections = [
   {
@@ -44,35 +46,20 @@ export const Docs = (): JSX.Element => {
   return (
     <PageLayout>
       {/* Hero */}
-      <section className="w-full flex flex-col items-center justify-center px-6 sm:px-8 lg:px-16 xl:px-24 pt-12 pb-20 text-center">
-        <p className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-[#9b5cf6] text-sm uppercase tracking-[0.15em] mb-4">
-          Developer Resources
-        </p>
-        <h1 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-4xl md:text-5xl lg:text-6xl tracking-[-1.80px] leading-tight mb-6 max-w-3xl">
-          Documentation
-        </h1>
-        <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-lg md:text-xl leading-relaxed max-w-2xl">
-          Technical guides, API references, and platform documentation.
-        </p>
-      </section>
+      <PageHero
+        eyebrow="Developer Resources"
+        title={<>Documentation</>}
+        lede="Technical guides, API references, and platform documentation."
+        video="/videos/tech-circuit.mp4"
+        plainTitle
+      />
 
-      {/* Doc Cards */}
+      {/* The manual, as chapters */}
       <section className="w-full px-6 sm:px-8 lg:px-16 xl:px-24 pb-24">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {docSections.map((doc) => (
-            <a
-              key={doc.title}
-              href="/demo"
-              className="bg-[#ffffff0a] rounded-[20px] border border-white/10 p-6 hover:bg-[#ffffff12] transition-colors flex flex-col gap-3 no-underline group"
-            >
-              <h4 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-lg tracking-[-1.80px] group-hover:text-[#9b5cf6] transition-colors">
-                {doc.title}
-              </h4>
-              <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-sm leading-relaxed">
-                {doc.description}
-              </p>
-            </a>
-          ))}
+        <div className="max-w-5xl mx-auto">
+          <EditorialRows
+            rows={docSections.map((doc) => ({ title: doc.title, body: doc.description, href: "/demo" }))}
+          />
         </div>
       </section>
     </PageLayout>

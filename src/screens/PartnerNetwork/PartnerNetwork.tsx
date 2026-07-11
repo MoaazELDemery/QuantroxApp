@@ -1,5 +1,7 @@
 import { useState } from "react";
+import { EditorialRows } from "../../components/page/primitives";
 import { PageLayout } from "../../components/layout/PageLayout";
+import { PageHero } from "../../components/layout/PageHero";
 
 type PartnerType = "si" | "tech" | "reseller" | "cloud";
 
@@ -25,7 +27,7 @@ const partnerContent: Record<PartnerType, { title: string; description: string; 
   tech: {
     title: "Technology Partners",
     description:
-      "Integrate QuantorX with complementary technology platforms — data warehouses, BI tools, CRM systems, and cloud infrastructure.",
+      "Integrate QuantorX with complementary technology platforms - data warehouses, BI tools, CRM systems, and cloud infrastructure.",
     items: [
       "API and SDK integration support",
       "Joint solution architecture",
@@ -47,7 +49,7 @@ const partnerContent: Record<PartnerType, { title: string; description: string; 
   cloud: {
     title: "Cloud Partners",
     description:
-      "Deploy QuantorX on your cloud infrastructure — AWS, Azure, GCP, or sovereign regional clouds.",
+      "Deploy QuantorX on your cloud infrastructure - AWS, Azure, GCP, or sovereign regional clouds.",
     items: [
       "Marketplace listings",
       "Co-sell programs",
@@ -61,7 +63,7 @@ const benefits = [
   {
     title: "Revenue Growth",
     description:
-      "Expand your portfolio with AI services — increase deal sizes and recurring revenue through QuantorX licensing and deployment.",
+      "Expand your portfolio with AI services - increase deal sizes and recurring revenue through QuantorX licensing and deployment.",
   },
   {
     title: "Technical Enablement",
@@ -102,17 +104,13 @@ export const PartnerNetwork = (): JSX.Element => {
   return (
     <PageLayout>
       {/* Hero */}
-      <section className="w-full flex flex-col items-center justify-center px-6 sm:px-8 lg:px-16 xl:px-24 pt-12 pb-20 text-center">
-        <p className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-[#9b5cf6] text-sm uppercase tracking-[0.15em] mb-4">
-          Partners
-        </p>
-        <h1 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-4xl md:text-5xl lg:text-6xl tracking-[-1.80px] leading-tight mb-6 max-w-3xl">
-          Partner Network
-        </h1>
-        <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-lg md:text-xl leading-relaxed max-w-2xl">
-          Build, sell, and deliver sovereign AI solutions with QuantorX across the MENA region.
-        </p>
-      </section>
+      <PageHero
+        eyebrow="Partners"
+        title={<>Partner Network</>}
+        lede="Build, sell, and deliver sovereign AI solutions with QuantorX across the MENA region."
+        video="/videos/agents-flow.mp4"
+        plainTitle
+      />
 
       {/* Why Partner */}
       <section className="w-full px-6 sm:px-8 lg:px-16 xl:px-24 pb-20">
@@ -120,21 +118,7 @@ export const PartnerNetwork = (): JSX.Element => {
           <h2 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-3xl md:text-4xl tracking-[-1.80px]">
             Why Partner With QuantorX?
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((b) => (
-              <div
-                key={b.title}
-                className="bg-[#ffffff0a] rounded-[20px] border border-white/10 p-6 hover:bg-[#ffffff12] transition-colors"
-              >
-                <h4 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-lg tracking-[-1.80px] mb-3">
-                  {b.title}
-                </h4>
-                <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal text-white/75 text-sm leading-relaxed">
-                  {b.description}
-                </p>
-              </div>
-            ))}
-          </div>
+          <EditorialRows className="max-w-5xl" rows={benefits.map((b) => ({ title: b.title, body: b.description ?? b.body ?? b.desc }))} />
         </div>
       </section>
 
@@ -153,7 +137,7 @@ export const PartnerNetwork = (): JSX.Element => {
                 className={`px-5 py-2 rounded-[32px] text-sm [font-family:'Satoshi-Medium',Helvetica] transition-colors ${
                   activeTab === tab.id
                     ? "bg-[#4a0082] text-white"
-                    : "bg-[#ffffff0a] text-white/75 border border-white/10 hover:bg-[#ffffff12]"
+                    : "glass-panel glass-hover text-white/75"
                 }`}
               >
                 {tab.label}
@@ -161,7 +145,7 @@ export const PartnerNetwork = (): JSX.Element => {
             ))}
           </div>
           {/* Tab content */}
-          <div className="bg-[#ffffff0a] rounded-[20px] border border-white/10 p-8">
+          <div className="glass-panel glass-hover rounded-[20px] p-8">
             <h3 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-2xl tracking-[-1.80px] mb-4">
               {content.title}
             </h3>
@@ -192,7 +176,7 @@ export const PartnerNetwork = (): JSX.Element => {
             {partners.map((p) => (
               <div
                 key={p}
-                className="bg-[#ffffff0a] rounded-[20px] border border-white/10 px-8 py-4 [font-family:'Satoshi-Medium',Helvetica] font-medium text-white/75 text-sm hover:bg-[#ffffff12] transition-colors"
+                className="glass-panel glass-hover rounded-[20px] px-8 py-4 [font-family:'Satoshi-Medium',Helvetica] font-medium text-white/75 text-sm hover:bg-[#ffffff12] transition-colors"
               >
                 {p}
               </div>

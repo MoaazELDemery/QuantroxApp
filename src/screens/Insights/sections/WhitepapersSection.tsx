@@ -1,91 +1,59 @@
-// import { DownloadIcon } from "lucide-react";
-// import { Badge } from "../../../components/ui/badge";
-// import { Button } from "../../../components/ui/button";
-import { Card, CardContent } from "../../../components/ui/card";
+import { Reveal } from "../../../components/page/primitives";
 
 const whitepapers = [
   {
     title: "Stochastic Processes in Quantitative Finance",
-    // date: "May 10, 2025",
     description:
       "How low-latency order routing and market-impact modeling tighten slippage for institutional flow.",
   },
   {
     title: "Transaction Cost Analysis: A Practical Guide",
-    // date: "May 10, 2025",
     description:
       "Measuring market impact, venue quality, and adverse selection in emerging markets.",
   },
   {
     title: "Backtesting Pitfalls & Live Decay",
-    // date: "May 10, 2025",
     description:
-      "From data leakage to regime shifts—guardrails for robust research.",
+      "From data leakage to regime shifts-guardrails for robust research.",
   },
 ];
 
-export const WhitepapersSection = (): JSX.Element => {
-  return (
-    <section className="w-full py-8 px-2 sm:px-4 md:px-8 lg:px-16 xl:px-24">
-      <div className="max-w-5xl mx-auto flex flex-col items-start gap-8">
-        <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:0ms]">
-          <h2 className="[font-family:'Satoshi-Bold',Helvetica] font-bold text-white text-3xl 
-          md:text-4xl lg:text-5xl tracking-[0] leading-[normal]">
-            Whitepapers & Deep Dives
-          </h2>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8 w-full">
-          {whitepapers.map((whitepaper, index) => (
-            <Card
-              key={index}
-              className={`w-full min-w-[220px] max-w-[340px] mx-auto rounded-2xl border-[0.2px] 
-                border-[#6e6179]/30 bg-transparent translate-y-[-1rem] animate-fade-in opacity-0 
-                [--animation-delay:${200 + index * 200}ms]`}
-            >
-              <CardContent className="p-4 sm:p-6 h-full flex flex-col justify-between">
-                <div className="flex flex-col gap-2.5">
-                  <h3 className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-white 
-                  text-lg sm:text-xl md:text-2xl tracking-[0] leading-[normal]">
-                    {whitepaper.title}
-                  </h3>
-
-                  {/* Date - commented out for future use */}
-                  {/* <p className="text-xs sm:text-sm [font-family:'Satoshi-Medium',Helvetica] font-medium 
-                  text-white/75 tracking-[0] leading-[normal]">
-                    {whitepaper.date}
-                  </p> */}
-
-                  <p className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-white/75 
-                  text-sm sm:text-base tracking-[0] leading-[normal]">
-                    {whitepaper.description}
-                  </p>
-                </div>
-
-                {/* PDF Badge and Download Button - commented out for future use */}
-                {/* <div className="flex items-center justify-between mt-6">
-                  <Badge
-                    variant="secondary"
-                    className="bg-[#1f1f1f] text-white text-[12.5px] leading-[15px] px-2.5 py-[5px] 
-                    rounded-[10px] [font-family:'Satoshi-Medium',Helvetica] font-medium"
-                  >
-                    PDF
-                  </Badge>
-
-                  <Button
-                    variant="ghost"
-                    className="h-auto p-0 text-[#9b5cf6] text-[18.4px] [font-family:'Satoshi-Medium',Helvetica] 
-                    font-medium hover:text-[#9b5cf6]/80 transition-colors"
-                  >
-                    <DownloadIcon className="w-[14.47px] h-[14.47px] mr-[7.89px]" />
-                    Download
-                  </Button>
-                </div> */}
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+export const WhitepapersSection = (): JSX.Element => (
+  <section className="w-full px-4 sm:px-8 lg:px-16 xl:px-24 py-16 lg:py-24 bg-[#ffffff04]">
+    <div className="max-w-6xl mx-auto">
+      <div className="mb-14">
+        <p className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-[#9b5cf6] text-xs uppercase tracking-[0.25em] mb-4">
+          The Library
+        </p>
+        <h2 className="[font-family:'Satoshi-Bold',Helvetica] font-bold tracking-[-1.80px] text-gradient-shine text-3xl md:text-4xl lg:text-5xl leading-tight">
+          Whitepapers &amp; deep dives.
+        </h2>
       </div>
-    </section>
-  );
-};
+
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-12 gap-y-10">
+        {whitepapers.map((wp, i) => (
+          <Reveal key={wp.title} order={i * 2}>
+            <div className="relative border-t border-white/15 pt-8 h-full">
+              <span
+                className="pointer-events-none select-none absolute top-3 right-0 [font-family:'Satoshi-Black',Helvetica] font-black text-lg leading-none text-transparent"
+                style={{ WebkitTextStroke: "1px rgba(255,255,255,0.28)" }}
+                aria-hidden="true"
+              >
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <p className="[font-family:'Satoshi-Medium',Helvetica] font-medium text-white/35 text-[11px] uppercase tracking-[0.25em] mb-4">
+                Whitepaper
+              </p>
+              <h3 className="[font-family:'Satoshi-Bold',Helvetica] font-bold tracking-[-0.02em] text-white text-xl mb-3 pr-10">
+                {wp.title}
+              </h3>
+              <p className="[font-family:'Satoshi-Regular',Helvetica] font-normal leading-relaxed text-white/60 text-sm lg:text-base">
+                {wp.description}
+              </p>
+            </div>
+          </Reveal>
+        ))}
+      </div>
+    </div>
+  </section>
+);

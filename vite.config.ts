@@ -20,4 +20,17 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        // Split the heavy engines into their own long-cacheable chunks so
+        // the app shell loads and parses without waiting on all of them.
+        manualChunks: {
+          three: ["three", "@react-three/fiber"],
+          gsap: ["gsap"],
+          react: ["react", "react-dom", "react-router-dom"],
+        },
+      },
+    },
+  },
 });

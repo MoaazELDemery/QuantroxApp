@@ -1,5 +1,5 @@
 /**
- * LogoStripSection — animated marquee of partner logos.
+ * LogoStripSection - animated marquee of partner logos.
  * Uses placeholder badges (initials in glass pills) until real client logos are provided.
  * Replace each `BrandBadge` below with an `<img src="..." />` when assets land.
  */
@@ -33,7 +33,7 @@ export const LogoStripSection = (): JSX.Element => {
 
   return (
     <section className="w-full bg-transparent border-y border-white/5 py-14 relative overflow-hidden">
-      {/* Edge fade masks — bleed track into page bg */}
+      {/* Edge fade masks - bleed track into page bg */}
       <div className="pointer-events-none absolute top-0 bottom-0 left-0 w-32 z-10 bg-gradient-to-r from-[#060010] to-transparent" />
       <div className="pointer-events-none absolute top-0 bottom-0 right-0 w-32 z-10 bg-gradient-to-l from-[#060010] to-transparent" />
 
