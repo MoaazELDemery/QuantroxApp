@@ -1,5 +1,6 @@
 import { AgentSolutionPage } from "../../../components/page/AgentSolutionPage";
 import { AGENT_IDENTITIES } from "../../../lib/agentIdentity";
+import { AxonPricing, AxonValueSimulator } from "./AxonCommercial";
 
 const features = [
   {
@@ -69,6 +70,12 @@ export const AxonAI = (): JSX.Element => (
     features={features}
     worldTitle="The city, rendered as a decision surface."
     worldBody="Axon fuses your PostGIS layers, live datasets and spatial models into one conversational surface - where every district, corridor and site carries a number a planner can trace back to a real query."
+    extra={
+      <>
+        <AxonValueSimulator />
+        <AxonPricing />
+      </>
+    }
     quote="Our planners stopped filing GIS requests and started asking questions. Axon answers on the map in seconds, in Arabic, from our own PostGIS - and every figure traces back to a query we can inspect."
     quoteAttribution="Director of Urban Planning - Development Authority, KSA"
     ctaTitle={<>Turn your maps into masterplans.</>}

@@ -1,5 +1,6 @@
 import { AgentSolutionPage } from "../../../components/page/AgentSolutionPage";
 import { AGENT_IDENTITIES } from "../../../lib/agentIdentity";
+import { NexusPricing, NexusValueSimulator } from "./NexusCommercial";
 
 const features = [
   {
@@ -69,6 +70,12 @@ export const NexusAI = (): JSX.Element => (
     features={features}
     worldTitle="Built where your customers already are."
     worldBody="Nexus fronts your core-banking, cards and bills APIs - cloud, on-prem, or inside your own perimeter. New tenants and journeys go live by configuration, and the workforce scales linearly with your traffic."
+    extra={
+      <>
+        <NexusValueSimulator />
+        <NexusPricing />
+      </>
+    }
     quote="Our customers stopped navigating the app and started talking to it. Transfers that took five screens now take one sentence and one confirmation - in Arabic - and containment went up in the first month of the pilot."
     quoteAttribution="Head of Digital Banking - Retail Bank, KSA"
     ctaTitle={<>Turn VOC into action.</>}

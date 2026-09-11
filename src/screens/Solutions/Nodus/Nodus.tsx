@@ -1,5 +1,6 @@
 import { AgentSolutionPage } from "../../../components/page/AgentSolutionPage";
 import { AGENT_IDENTITIES } from "../../../lib/agentIdentity";
+import { NodusFactoryBuilder, NodusPricing } from "./NodusCommercial";
 
 const features = [
   {
@@ -71,6 +72,12 @@ export const Nodus = (): JSX.Element => (
     features={features}
     worldTitle="The factory floor, always running."
     worldBody="Nodus is QuantorX's proprietary AI hive - engineering delivery managers, software engineers, architects, QA and business analysts working your backlog in parallel. Budgets cap spend per team and per goal; every change traces to a task and an owner."
+    extra={
+      <>
+        <NodusFactoryBuilder />
+        <NodusPricing />
+      </>
+    }
     quote="We handed Nodus a goal on Monday morning and reviewed a tested, documented deliverable the same day. The org chart works around the clock - our engineers now spend their time approving and directing, not grinding."
     quoteAttribution="Engineering Director - Enterprise Software, MENA"
     ctaTitle={<>Put a digital factory to work.</>}

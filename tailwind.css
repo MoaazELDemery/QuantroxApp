@@ -656,6 +656,65 @@
     0 8px 40px -12px rgba(var(--glass-accent), 0.35);
 }
 
+/* ── Range slider — hairline track + glowing accent thumb ──────────────
+   Accent rides the --qx-range-accent custom prop (defaults to violet). */
+.qx-range {
+  --qx-range-accent: #9b5cf6;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 20px;
+  background: transparent;
+  cursor: pointer;
+}
+.qx-range::-webkit-slider-runnable-track {
+  height: 2px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.14);
+}
+.qx-range::-moz-range-track {
+  height: 2px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.14);
+}
+.qx-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  margin-top: -6px;
+  border-radius: 9999px;
+  border: none;
+  background: var(--qx-range-accent);
+  box-shadow: 0 0 12px 2px color-mix(in srgb, var(--qx-range-accent) 45%, transparent);
+  transition: transform 0.2s ease;
+}
+.qx-range::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 9999px;
+  border: none;
+  background: var(--qx-range-accent);
+  box-shadow: 0 0 12px 2px color-mix(in srgb, var(--qx-range-accent) 45%, transparent);
+  transition: transform 0.2s ease;
+}
+.qx-range:hover::-webkit-slider-thumb,
+.qx-range:active::-webkit-slider-thumb {
+  transform: scale(1.3);
+}
+.qx-range:hover::-moz-range-thumb,
+.qx-range:active::-moz-range-thumb {
+  transform: scale(1.3);
+}
+.qx-range:focus-visible {
+  outline: none;
+}
+.qx-range:focus-visible::-webkit-slider-thumb {
+  box-shadow:
+    0 0 0 3px rgba(255, 255, 255, 0.25),
+    0 0 12px 2px color-mix(in srgb, var(--qx-range-accent) 45%, transparent);
+}
+
 /* ── Ambient glow breathing (agents chapter halos) ────────────────────── */
 @keyframes qx-breathe {
   0%, 100% { opacity: 0.55; }
